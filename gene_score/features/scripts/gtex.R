@@ -11,7 +11,7 @@ download.file(gtex_download_url,
 unzip(zipfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"))  
 
 # load data
-rna_tissue_gtex_nTPM <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv") %>% 
+rna_tissue_gtex_nTPM <- read.delim(paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv")) %>% 
   dplyr::select(Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
