@@ -107,6 +107,6 @@ canonical_TSS <- canonical_TSS %>%
 
 # write results
 write.csv(canonical_TSS[, c("ensembl_gene_id", "CpG_o2e_ratio")], 
-          paste0("gene_score/features/results/canonical_CpG_obs_to_exp_ratio_" , creation_date, ".csv"), 
+          paste0("gene_score/features/results/canonical_promoter_CpG_obs_to_exp_ratio_" , creation_date, ".csv"), 
           row.names=FALSE)
 
