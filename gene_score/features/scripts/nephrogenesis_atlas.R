@@ -4,7 +4,6 @@
 library(dplyr)
 library(Seurat)
 library(data.table)
-set.seed(123)
 
 # download Seurat object
 nephrogenesis_atlas_url <- "https://sckidney.flatironinstitute.org/media/Human_nephrogenesis_atlas.Robj"
