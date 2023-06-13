@@ -50,15 +50,6 @@ sums_z_scores <- sums_z_scores_HP0000079 %>%
   left_join(sums_z_scores_HP0012210, by="ensembl_id") 
   
 # write results
-write.csv(sums_z_scores, paste0("Kidney_Network_sums_z_scores_" , creation_date, ".csv"), row.names=FALSE)
-
-
-                                             
-                                             
-                                             
-                                             
-                                             
-
-gtex_download_url <- "https://www.proteinatlas.org/download/rna_tissue_gtex.tsv.zip"
-download.file(gtex_download_url, 
-              destfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"))
+write.csv(sums_z_scores, paste0("gene_score/features/results/Kidney_Network_sums_z_scores_" , creation_date, ".csv"), row.names=FALSE)
+                              
+                                           
