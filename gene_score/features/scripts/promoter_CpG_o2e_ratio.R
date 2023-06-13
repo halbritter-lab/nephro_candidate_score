@@ -1,4 +1,4 @@
-# Title: Expected to observed CpG ratio of canonical transcripts
+# Title: Expected to observed CpG ratio of promoter region of canonical transcripts
 
 # load libraries
 library(biomaRt) # http://www.ensembl.org/info/data/biomart/biomart_r_package.html#biomartexamples
