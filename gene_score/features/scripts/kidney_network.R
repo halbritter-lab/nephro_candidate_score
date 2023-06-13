@@ -3,10 +3,8 @@
 # load libraries and source helper function
 library(tidyverse)
 library(R.utils)
-
-options(timeout=300) #download timeout = 5min
-
 source("gene_score/features/helper_functions.R") 
+options(timeout=300) #download timeout = 5min
 
 # download and unzip gene-pathway prediction z-scores of bonferroni corrected significantly predicted pathways (approx. 1GB)
 download_url <- "https://molgenis26.gcc.rug.nl/downloads/KidneyNetwork/gene_pathway_scores_bonf.txt.gz"
