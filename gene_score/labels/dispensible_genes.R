@@ -23,7 +23,7 @@ hom_lof_genes_final <- hom_ko_genes_converted[[1]]$approved_symbol
 
 
 
-# TODO: add download of genemap2.txt from OMIM
+# TODO: add note in master file to download of genemap2.txt from OMIM manually (registration required, access expires after 1 year)
 names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"),
                      col_names = FALSE,
                      skip = 3,
@@ -53,5 +53,6 @@ omim_morbid_all <– omim_genes_hg38_annot %>%
 
 # dispensible genes
 # TODO: replace HGNC_symbols_allChr_approved with our df
+# TODO: filter out positive genes
 disp_df <- HGNC_symbols_allChr_approved %>% 
   filter(!(`Approved symbol` %in% omim_morbid_all$`Approved Symbol`), `Approved symbol` %in% hom_ko_genes_final) 
