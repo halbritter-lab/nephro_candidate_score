@@ -42,10 +42,7 @@ colnames(omim_genes_hg38) <-  names_col
 omim_genes_hg38_annot <-  omim_genes_hg38 %>%
   rename(Chromosome = "# Chromosome") %>%
   rowwise() %>%
-  mutate(Chromosome = str_replace(Chromosome, "chr", "")) %>%
-  mutate(Chromosome = factor(Chromosome, levels = c(as.character(1:22), "X", "Y"))) %>%
-  mutate(morbid = case_when(!is.na(`Approved Symbol`) & !is.na(Phenotypes) ~ T,
-                            T ~ F))
+  mutate(morbid = case_when(!is.na(`Approved Symbol`) & !is.na(Phenotypes) ~ T, T ~ F))
 
 # OMIM morbid genes (subset of genes that have "Approved Symbol" & "Phenotype")
 omim_morbid_all <– omim_genes_hg38_annot %>% 
