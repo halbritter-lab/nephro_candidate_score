@@ -64,8 +64,18 @@ response <- GET(prim_filt_url, add_headers(headers))
 # get the response content
 content <- content(response, as="text")
 
+# x <- fromJSON(content)
+x <- read_json(content)
 
-x <- fromJSON(content)
+# https://www.geeksforgeeks.org/how-to-read-large-json-file-in-r/
+
+setwd("/Users/nrank/Desktop/BioInf/halbritter/nephro_gene_score/")
+
+writeLines(content[[1]], "junk_content.txt")                 # Apply writeLines function
+
+data <- jsonlite::read_json("junk_content.txt")
+
+head(data, 3)
 
 
 
