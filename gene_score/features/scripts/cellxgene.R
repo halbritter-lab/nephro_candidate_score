@@ -65,7 +65,7 @@ response <- GET(prim_filt_url, add_headers(headers))
 content <- content(response, as="text")
 
 # x <- fromJSON(content)
-x <- read_json(content)
+# x <- read_json(content)
 
 # https://www.geeksforgeeks.org/how-to-read-large-json-file-in-r/
 
