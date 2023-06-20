@@ -24,7 +24,7 @@ hom_lof_genes_final <- hom_ko_genes_converted[[1]]$approved_symbol
 
 # download OMIM genemap
 download.file(url = omim_download_url,
-              destfile = paste0("omim/genemap2_", creation_date, ".txt"))
+              destfile = paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
 
 names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"),
                      col_names = FALSE,
