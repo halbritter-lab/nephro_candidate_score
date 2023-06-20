@@ -22,8 +22,10 @@ hom_lof_genes_converted <- convert_genes_to_approved(hom_ko_genes_leitao$X1)
 hom_lof_genes_final <- hom_ko_genes_converted[[1]]$approved_symbol
 
 
+# download OMIM genemap
+download.file(url = omim_download_url,
+              destfile = paste0("omim/genemap2_", creation_date, ".txt"))
 
-# TODO: add note in master file to download of genemap2.txt from OMIM manually (registration required, access expires after 1 year)
 names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"),
                      col_names = FALSE,
                      skip = 3,
