@@ -92,7 +92,9 @@ pfd_tt_df <- pfd_tt %>%
 
 
 
-### QUERY EXPRESSION VALUES ####
+########## QUERY EXPRESSION VALUES ##########
+# TODO: customize, rewrite etc. 
+
 # set the URL
 query_url <- "https://api.cellxgene.cziscience.com/wmg/v1/query"
 
