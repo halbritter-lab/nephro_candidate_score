@@ -105,8 +105,9 @@ headers <- c("Content-Type" = "application/json")
 ds_id <- c("0b4a15a7-4e9e-4555-9733-2423e5c66469")
 query_taxon <- "NCBITaxon:9606"
 gene_vec <- pfd_gt_df %>% filter(taxon_id %in% query_taxon) %>% .$ensembl_id %>% as.vector()
+# TODO: filter only genes of interest of big identification table when available
 
-# NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately lenght 1000
+# NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
 gene_split_list <- split(gene_vec, ceiling(seq_along(gene_vec) / 1000))
 
 # functions for querying get expression values from cellxgene
