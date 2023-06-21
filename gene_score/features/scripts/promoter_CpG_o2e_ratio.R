@@ -36,10 +36,9 @@ canonical_prom <- mart_exp %>%
          end = transcription_start_site + 2000) %>% 
   dplyr::select(ensembl_gene_id, ensembl_transcript_id, chrom=chromosome_name, start, end)
 
-# write results
-write_csv(canonical_prom, 
-          paste0("gene_score_features_results/canonical_ts_" , creation_date, ".csv"))
-
+# write canonical transcripts
+write_csv(mart_exp[, c("ensembl_gene_id", "ensembl_transcript_id")], 
+          paste0("gene_score/features/results/ensembl_canonical_ts_" , creation_date, ".csv"))
 
 # create a GRanges object
 canonical_prom_granges <- GRanges(
