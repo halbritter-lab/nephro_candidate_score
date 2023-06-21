@@ -32,42 +32,17 @@ The repository has the following structure:
 ```
 .
 ├── gene_score/
-│   ├── 01_PanelApp/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 01_PanelApp.R
-│   ├── 02_Literature/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 02_Literature.R
-│   ├── 03_DiagnosticPanels/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 03_DiagnosticPanels.R
-│   ├── 04_HPO/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 04_HPO.R
-│   ├── 05_PubTator/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 05_PubTator.R
-│   ├── MergeAnalysesSources.R
-│   └── AnnotateMergedTable.R
-└── functions/
-    ├── blueprintgenetics-functions.R
-    ├── hgnc-functions.R
-    ├── hpo-functions.R
-    ├── natera-functions.R
-    ├── NCBI-datasets-v2-API-functions.R
-    ├── phantomjs-functions.R
-    └── PubTator-functions.R
+│   ├── features/
+│   │   ├── TODO
+│   │   ├── TODO
+│   
+└── TODO
 ```
 
-- The `analyses/` directory contains the R scripts for different analyses.
-- The `functions/` directory contains the necessary functions for HGNC processing.
-- The `data/` sub-directory in each analysis folder stores the input data files, including the publication-specific files and the curated overview Excel table.
-- The `results/` sub-directory in each analysis folder stores the generated results.
+- The `gene_score/` directory contains TODO
+- The `functions/` directory contains TODO
+- The `data/` TODO
+- The `results/` TODO
 
 
 ## License
