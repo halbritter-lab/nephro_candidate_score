@@ -9,10 +9,8 @@ library(progress)
 library(phastCons100way.UCSC.hg38)  # PhastCons score ranges from 0 to 1 and represents the probability that a given nucleotide is conserved
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_trans <- read.csv(paste0("gene_score/features/results/canonical_TSS_", creation_date, ".csv"),
+canon_ts <- read.csv(paste0("gene_score/features/results/ensembl_canonical_ts_", creation_date, ".csv"),
                        na.strings = c("NA", "NaN", " ", ""))
-
-#TODO: check genes without canoncical transcripts !!!
 
 # download Ensembl data 
 bm_version <- 109  # Ensembl Biomart Genes version
@@ -29,15 +27,11 @@ exons_coordinates <- getBM(attributes = c("ensembl_gene_id",
                                          "cds_end",
                                          "genomic_coding_start",
                                          "genomic_coding_end"),
-                          filters = c("ensembl_transcript_id"),
-                          values = list(canon_trans$canon_transcript_id),
+                          filters = "ensembl_transcript_id",
+                          values = list(canon_ts$ensembl_transcript_id),
                           mart = ensembl) %>% 
-  mutate(all_coding = case_when((cds_end - cds_start + 1) == (exon_chrom_end - exon_chrom_start + 1) ~ TRUE, TRUE ~ FALSE)) %>% 
-  na.omit()
-
-# TODO: CAVE!!! review this code with Bernt, especially the mutate statement. Why omit all NA? 
-# => leads to around 3000 genes getting excluded. Also, in Leitao's code, there is an additional TRUE ~ FALSE statement, but then you don't get any NA values for 'all_coding'
-
+  filter(!is.na(cds_start)) %>% # filter non-coding exons
+  mutate(all_coding = case_when((cds_end - cds_start) == (exon_chrom_end - exon_chrom_start) ~ TRUE, TRUE ~ FALSE)) 
 
 ## Exon conservation scores
 # function to return average of phastCons scores of a given transcript
