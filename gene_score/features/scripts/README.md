@@ -9,7 +9,7 @@ The scripts in this directory retrieve features from different open-source datab
 CZ CELLxGENE Discover (https://cellxgene.cziscience.com/, Chan Zuckerberg Initiative. (n.d.).)
 
 #### Description
-This script extracts ssRNA expression values from cellxgene via the cellxgene API.
+This script extracts ssRNA expression values from cellxgene via the cellxgene API. In specific, it pulls the expression data from TODO
 
 #### Required libraries
 - `tidyverse`: for data processing.
