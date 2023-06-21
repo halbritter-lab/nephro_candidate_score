@@ -32,7 +32,7 @@ exons_coordinates <- getBM(attributes = c("ensembl_gene_id",
                           filters = c("ensembl_transcript_id"),
                           values = list(canon_trans$canon_transcript_id),
                           mart = ensembl) %>% 
-  mutate(all_coding = case_when((cds_end - cds_start + 1) == (exon_chrom_end - exon_chrom_start + 1) ~ TRUE)) %>% 
+  mutate(all_coding = case_when((cds_end - cds_start + 1) == (exon_chrom_end - exon_chrom_start + 1) ~ TRUE, TRUE ~ FALSE)) %>% 
   na.omit()
 
 # TODO: CAVE!!! review this code with Bernt, especially the mutate statement. Why omit all NA? 
@@ -102,16 +102,3 @@ write.csv(avg_phasCons_prom,
           row.names=FALSE)
 
 
-## Coding sequence lengths
-CDS_length <- exons_coordinates %>%
-  mutate(CDS_length = genomic_coding_end - genomic_coding_start + 1) %>%
-  group_by(ensembl_transcript_id) %>%
-  summarize(CDS_length = sum(CDS_length)) %>% 
-  filter(ensembl_transcript_id %in% canon_trans$canon_transcript_id) %>% 
-  left_join(canon_trans[, c("ensembl_gene_id", "canon_transcript_id")], by = c("ensembl_transcript_id" = "canon_transcript_id")) %>% 
-  dplyr::select(ensembl_gene_id, CDS_length)
-
-# write results
-write.csv(CDS_length, 
-          paste0("gene_score/features/results/CDS_length_" , creation_date, ".csv"), 
-          row.names=FALSE)
