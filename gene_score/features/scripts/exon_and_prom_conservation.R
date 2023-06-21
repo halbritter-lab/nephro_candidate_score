@@ -81,8 +81,8 @@ avg_phastCons_score_promoter <- function(chrom, start, end){
 }
 
 # get average phasCons scores for each promoter (long calculation time)
-pb <- progress_bar$new(total = length(unique(canon_trans$ensembl_gene_id)))
-avg_phasCons_prom <- canon_trans %>% 
+pb <- progress_bar$new(total = length(unique(canon_ts$ensembl_gene_id)))
+avg_phasCons_prom <- canon_ts %>% 
   unique() %>% 
   rowwise() %>% 
   mutate(avg_phasCons_promoter = {
