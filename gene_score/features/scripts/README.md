@@ -6,7 +6,7 @@ The scripts in this directory retrieve features from different open-source datab
 ## Script description
 ### cellxgene.R
 #### Datasource: 
-cellxgene (https://cellxgene.cziscience.com/, Chan Zuckerberg Initiative. (n.d.). CZ CELLxGENE Discover.)
+CZ CELLxGENE Discover (https://cellxgene.cziscience.com/, Chan Zuckerberg Initiative. (n.d.).)
 
 #### Description
 This script extracts ssRNA expression values from cellxgene via the cellxgene API.
