@@ -1,6 +1,6 @@
 # CAVE: unfinished => check TODO's !!
 
-# Title: Exon and promoter conservation scores and coding sequence lengths
+# Title: Exon and promoter conservation scores
 
 # load libraries
 library(tidyverse)
