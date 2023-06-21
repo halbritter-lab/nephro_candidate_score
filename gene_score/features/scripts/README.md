@@ -16,8 +16,7 @@ This script extracts ssRNA expression values from cellxgene via the cellxgene AP
 - `httr`: for sending GET and POST requests.
 - `jsonlite`: for parsing .json files.
 
-#### Number of extracted features
-TODO
+#### Number of extracted features: TODO
 ---
 
 ### exon_and_prom_conservation.R
@@ -34,8 +33,7 @@ The promoter region is defined as +-2kb around the transcription start site. The
 - `progress`: for progress bars for long calculation time.
 - `phastCons100way.UCSC.hg38`: contains the PhastCons scores. 
 
-#### Number of extracted features
-2
+#### Number of extracted features: 2
 ---
 
 ### gnomad.R
@@ -49,7 +47,6 @@ This script extracts gnomAD gene constraint metrics, which are published here: h
 - `tidyverse`: for data processing.
 - `utils`: for downloading data.
 
-#### Number of extracted features
-TODO
+#### Number of extracted features: TODO
 
 
