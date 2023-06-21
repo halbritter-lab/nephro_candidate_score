@@ -30,7 +30,7 @@ exons_coordinates <- getBM(attributes = c("ensembl_gene_id",
                           filters = "ensembl_transcript_id",
                           values = list(canon_ts$ensembl_transcript_id),
                           mart = ensembl) %>% 
-  filter(!is.na(cds_start)) %>% # filter non-coding exons
+  filter(!is.na(cds_start)) %>% # filter out non-coding exons
   mutate(all_coding = case_when((cds_end - cds_start) == (exon_chrom_end - exon_chrom_start) ~ TRUE, TRUE ~ FALSE)) 
 
 ## Exon conservation scores
