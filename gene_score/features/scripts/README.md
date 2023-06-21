@@ -3,7 +3,9 @@
 The scripts in this directory retrieve features from different open-source databases that are used for training the machine learning algorithm in a later step.
 
 
-## Prerequisites
+## Script Description
+### cellxgene.R
+#### Datasource: cellxgene (https://cellxgene.cziscience.com/)
 
 Make sure you have the following libraries installed:
 
