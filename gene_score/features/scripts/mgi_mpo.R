@@ -66,28 +66,34 @@ colnames(mgi_pg_mp) <- c("allellic_composition", "allele_symbols", "genetic_back
 mgi_pg_mp <- mgi_pg_mp %>% 
   filter(mpo_id %in% kidney_mpo_terms) 
 
-# separate multigenic genotypes
-mgi_pg_mp <- separate(data = mgi_pg_mp, col = mgi_marker_accession_id, into = c("mgi_marker_accession_id1", "mgi_marker_accession_id2"), sep = "\\|")
+# tidy, filter out polygenic genotypes, check for heterozygosity/homozygosity in monogenic phenotypes, join with human entrez IDs
+get_number_of_genes <- function(string){
+  no_genes <- string %>%
+    strsplit("\\|") %>%
+    "[["(1) %>%
+    gsub("<[^>]+>", "", .) %>%
+    unique() %>%
+    length()
+  return(no_genes)
+}
 
-# get human entrez IDs correlates that are associated with "MP:0005367" and its children in mice
-hmd_hp_mpo_kidney <- hmd_hp %>% 
-  filter(mgi_marker_accession_id %in% unique(c(mgi_pg_mp$mgi_marker_accession_id1, mgi_pg_mp$mgi_marker_accession_id2))) %>% 
-  dplyr::select(human_entrez_id) %>% 
-  unique %>% 
-  mutate(mpo_kidney_gene = TRUE) 
+mgi_pg_mp <- separate_rows(data = mgi_pg_mp, mgi_marker_accession_id, sep = "\\|") %>% 
+  rowwise %>% 
+  mutate(no_genes = get_number_of_genes(allele_symbols)) %>% 
+  filter(no_genes == 1) %>% # remove polygenic genotypes
+  mutate(wt_alleles = sum(grepl("<\\+>", (strsplit(allele_symbols, "\\|")[[1]]))),
+         mpo_kidney_gene_het = (wt_alleles == 1),
+         mpo_kidney_gene_hom = (wt_alleles == 0)) %>% 
+  left_join(hmd_hp[, c("human_entrez_id", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many")
+
+hmd_hp_mpo_kidney <- mgi_pg_mp %>% 
+  filter(!is.na(human_entrez_id)) %>% 
+  dplyr::select(human_entrez_id, mpo_kidney_gene_het, mpo_kidney_gene_hom) %>% 
+  distinct() %>% 
+  group_by(human_entrez_id) %>% 
+  summarize(mpo_kidney_gene_het = any(mpo_kidney_gene_het), mpo_kidney_gene_hom = any(mpo_kidney_gene_hom))
 
 # write results
 write.csv(hmd_hp_mpo_kidney, 
           paste0("gene_score/features/results/mgi_human_genes_associated_MP_0005367_" , creation_date, ".csv"), 
           row.names=FALSE)
-
-
-################################################################
-# TODO: discuss with Bernt whether only phenotypes directly attributed to mutations/alleles should be used or also multigenic phenotypes
-# Example: MGI:1339949 Adamts4
-hmd_hp_mpo_kidney %>% filter(mgi_marker_accession_id == "MGI:1339949") 
-# => does not include a kidney mpo term, only attributed to kidney phenotype in multigenic phenotype Adamts1<tm1Mapr>|Adamts4<tm1.1Boer>
-
-
-
-
