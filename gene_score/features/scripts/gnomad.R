@@ -15,8 +15,7 @@ gunzip(filename = "gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt
 
 # load and select gnomad gene constraints
 gnomad_constraints <- read.delim("gnomad.v2.1.1.lof_metrics.by_gene.txt") %>%
-  dplyr::select(gene, 
-                gene_id,
+  dplyr::select(gene_id,
                 obs_mis,
                 exp_mis,
                 oe_mis,
@@ -54,7 +53,7 @@ gnomad_constraints <- read.delim("gnomad.v2.1.1.lof_metrics.by_gene.txt") %>%
                 )
 
 # add prefix
-names(gnomad_constraints)[3:length(names(gnomad_constraints))] <- paste0("gnomad_", names(gnomad_constraints)[3:length(names(gnomad_constraints))])
+names(gnomad_constraints)[2:length(names(gnomad_constraints))] <- paste0("gnomad_", names(gnomad_constraints)[2:length(names(gnomad_constraints))])
 
 # write results
 write.csv(gnomad_constraints, paste0("gene_score/features/results/gnomad_constraints_", creation_date, ".csv"), row.names = FALSE)
