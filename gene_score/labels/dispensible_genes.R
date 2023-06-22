@@ -7,6 +7,7 @@
 # load libraries
 library(tidyverse)
 library(readr)
+source("../hgnc-functions.R") # TODO:  change PATH and change 'select' into 'dplyr::select' in hgnc-functions.R
 
 # download and unzip file with homozygous loss of function variants from gnomad publication
 download_url <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7334197/bin/41586_2020_2308_MOESM4_ESM.zip"
@@ -14,13 +15,12 @@ download.file(url = download_url,
               destfile = paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date, ".zip"))
 unzip(paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date, ".zip"))
 
-# load data
-hom_lof_genes <- read.table(paste0("gene_score/labels/raw/supplement/supplementary_dataset_7_hom_ko_genes.txt"))
-
-# TODO: add convert function!!
-hom_lof_genes_converted <- convert_genes_to_approved(hom_ko_genes_leitao$X1)
-hom_lof_genes_final <- hom_ko_genes_converted[[1]]$approved_symbol
-
+# load homozygous knockout genes
+hom_ko_genes <- read.table(paste0("gene_score/labels/raw/supplement/supplementary_dataset_7_hom_ko_genes.txt")) %>% 
+  hgnc_id_from_symbol_grouped(tibble(value = hom_lof_genes$V1)) %>% 
+  tibble() %>% 
+  dplyr::rename(c("hgnc_id" = ".")) %>% 
+  drop_na(hgnc_id)
 
 # download OMIM genemap
 download.file(url = omim_download_url,
@@ -31,27 +31,20 @@ names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".
                      skip = 3,
                      n_max = 1,
                      col_types = cols())
+clean_names <- gsub(" ", "_", gsub("# ", "", names_col[1,]))
 
-omim_genes_hg38 <-  read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"),
-                           skip = 2,
-                           col_names = TRUE,
-                           comment = "#",
-                           col_types = cols()) 
 
-colnames(omim_genes_hg38) <-  names_col
+omim_genes_hg38 <-  read.delim2(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"), 
+                                header = FALSE, 
+                                comment.char = "#") %>% 
+  dplyr::mutate_all(~ifelse(. == "", NA, .))
 
-# annotate with "morbid" if gene is associated with a phenotype in OMIM
-omim_genes_hg38_annot <-  omim_genes_hg38 %>%
-  rename(Chromosome = "# Chromosome") %>%
-  rowwise() %>%
-  mutate(morbid = case_when(!is.na(`Approved Symbol`) & !is.na(Phenotypes) ~ T, T ~ F))
+colnames(omim_genes_hg38) <-  clean_names
 
-# OMIM morbid genes (subset of genes that have "Approved Symbol" & "Phenotype")
-omim_morbid_all <– omim_genes_hg38_annot %>% 
-  filter(morbid == T)
+# filter for morbid genes (a gene associated with a phenotype in OMIM)
+omim_hg38_morbid <- omim_genes_hg38 %>% filter(!is.na(Phenotypes))
 
-# dispensible genes
-# TODO: replace HGNC_symbols_allChr_approved with our df
+# get dispensible genes
 # TODO: filter out positive genes
-disp_df <- HGNC_symbols_allChr_approved %>% 
+disp_genes <- hom_ko_genes %>% 
   filter(!(`Approved symbol` %in% omim_morbid_all$`Approved Symbol`), `Approved symbol` %in% hom_ko_genes_final) 
