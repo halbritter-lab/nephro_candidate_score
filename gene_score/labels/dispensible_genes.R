@@ -1,6 +1,3 @@
-# UNFINISHED - CHECK TODOs!
-# TODO: check ALPK1 in final df
-
 # Title: Dispensible genes - genes with homozygous loss of fucnction variants, but not associated with any phenotype in OMIM
 
 # load libraries
