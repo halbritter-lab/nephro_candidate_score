@@ -24,6 +24,7 @@ hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>
 download.file(url = omim_download_url,
               destfile = paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
 
+# extract and clean column names
 names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"),
                      col_names = FALSE,
                      skip = 3,
@@ -31,12 +32,11 @@ names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".
                      col_types = cols())
 clean_names <- gsub(" ", "_", gsub("# ", "", names_col[1,]))
 
-
+# read omim genemap
 omim_genes_hg38 <-  read.delim2(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"), 
                                 header = FALSE, 
                                 comment.char = "#") %>% 
   dplyr::mutate_all(~ ifelse(. == "", NA, .))
-
 colnames(omim_genes_hg38) <- clean_names
 
 # filter for morbid genes (genes associated with a phenotype in OMIM)
