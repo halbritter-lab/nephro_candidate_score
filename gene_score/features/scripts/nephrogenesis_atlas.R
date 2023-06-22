@@ -51,6 +51,19 @@ cluster_avg <- AverageExpression(fetal, return.seurat = FALSE,
   as.data.frame() %>% 
   rownames_to_column(var = "gene")
 
+# prefilter for protein coding genes from HGNC table
+all_prot_coding_gene_symbols_cap <- toupper(all_prot_coding_gene_symbols)
+
+cluster_avg <- cluster_avg %>% 
+  rowwise %>% 
+  mutate(gene = toupper(gene)) %>% 
+  filter(gene %in% all_prot_coding_gene_symbols_cap)
+
+# annotate with HGNC IDs
+cluster_avg$hgnc_id <- hgnc_id_from_symbol_grouped(tibble(value = cluster_avg$gene)) %>% 
+  dplyr::select(-gene)
+
+
 # write results
 write.csv(cluster_avg, 
           paste("gene_score/features/results/fetal_avg_expr_nephrogenesis_atalas", creation_date, ".csv")) 
