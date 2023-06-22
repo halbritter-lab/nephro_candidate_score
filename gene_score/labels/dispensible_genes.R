@@ -42,7 +42,7 @@ omim_genes_hg38 <-  read.delim2(paste0("gene_score/labels/raw/genemap2", creatio
 
 colnames(omim_genes_hg38) <- clean_names
 
-# filter for morbid genes (a gene associated with a phenotype in OMIM)
+# filter for morbid genes (genes associated with a phenotype in OMIM)
 omim_hg38_morbid <- omim_genes_hg38 %>% 
   filter(!is.na(Phenotypes), !is.na(Approved_Gene_Symbol)) # so far no genes with Phenotypes but without Approved_Symbol exists in hom_ko_genes
 
