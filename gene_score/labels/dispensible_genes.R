@@ -1,4 +1,4 @@
-# Title: Dispensible genes - genes with homozygous loss of fucnction variants, but not associated with any phenotype in OMIM
+# Title: Dispensible genes - genes with homozygous loss of function variants, not associated with any phenotype in OMIM and not listed in kidney-genetics
 
 # load libraries
 library(tidyverse)
