@@ -17,7 +17,7 @@ unzip(paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date,
 # load homozygous knockout genes
 hom_ko_genes <- read.table("gene_score/labels/raw/supplement/supplementary_dataset_7_hom_ko_genes.txt")
 
-# get HGNC ID for from gene symbol  
+# get HGNC ID from gene symbol  
 hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>% 
   tibble() %>% 
   dplyr::rename(c("hgnc_id" = ".")) %>% 
