@@ -54,17 +54,17 @@ avg_phastCons_score_per_transcript <- function(transcript_id){
 # get average phasCons scores for each canonical transcript (long calculation time)
 pb <- progress_bar$new(total = length(unique(exons_coordinates$ensembl_gene_id)))
 
-avg_phasCons_scores <- exons_coordinates %>%  
+avg_phasCons_ex <- exons_coordinates %>%  
   dplyr::select(ensembl_gene_id, ensembl_transcript_id) %>% 
   unique() %>% 
   rowwise() %>% 
-  mutate(avg_phasCons = {
+  mutate(avg_phasCons_exons = {
     pb$tick()
     avg_phastCons_score_per_transcript(ensembl_transcript_id)
     })
 
 # write results
-write.csv(avg_phasCons_scores, 
+write.csv(avg_phasCons_ex, 
           paste0("gene_score/features/results/avg_phasCons_scores_per_transcript_" , creation_date, ".csv"), 
           row.names=FALSE)
 
