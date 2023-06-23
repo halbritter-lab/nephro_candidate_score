@@ -3,13 +3,15 @@
 # load libraries
 library(tidyverse)
 library(readr)
+library(jsonlite) # required in hgnc-functions.R
 source("https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/functions/hgnc-functions.R") # TODO: maybe change this
 
 # download and unzip file with homozygus loss of function variants from gnomad publication
 download_url <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7334197/bin/41586_2020_2308_MOESM4_ESM.zip"
-download.file(url = download_url, 
+download.file(url = download_url,
               destfile = paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date, ".zip"))
-unzip(paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date, ".zip"))
+unzip(zipfile = paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date, ".zip"),
+      exdir = "gene_score/labels/raw/")
 
 # load homozygous knockout genes
 hom_ko_genes <- read.table("gene_score/labels/raw/supplement/supplementary_dataset_7_hom_ko_genes.txt")
@@ -20,12 +22,12 @@ hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>
   dplyr::rename(c("hgnc_id" = ".")) %>% 
   drop_na(hgnc_id)
 
-# download OMIM genemap
+# download OMIM genemap #TODO: resolve download issue
 download.file(url = omim_download_url,
               destfile = paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
 
 # extract and clean column names
-names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"),
+names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"),
                      col_names = FALSE,
                      skip = 3,
                      n_max = 1,
@@ -33,7 +35,7 @@ names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2", creation_date, ".
 clean_names <- gsub(" ", "_", gsub("# ", "", names_col[1,]))
 
 # read omim genemap
-omim_genes_hg38 <-  read.delim2(paste0("gene_score/labels/raw/genemap2", creation_date, ".txt"), 
+omim_genes_hg38 <-  read.delim2(paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"), 
                                 header = FALSE, 
                                 comment.char = "#") %>% 
   dplyr::mutate_all(~ ifelse(. == "", NA, .))
