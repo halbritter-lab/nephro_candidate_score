@@ -8,6 +8,7 @@ source(config.R)
 # attach tidyr to second position for resolving the select() problem
 if ("package:tidyr" %in% search()) detach("package:tidyr", unload = TRUE)
 attachNamespace("tidyr", pos = 2)
+library(dplyr)
 
 
 # download HGNC gene table from github repository "kidney-genetics"
@@ -31,7 +32,7 @@ all_prot_coding_gene_symbols <- unlist(strsplit(c(HGNC_table$symbol, HGNC_table$
 cat("get positive genes...")
 source("gene_score/labels/positive_genes.R")
 
-# get dipensible genes
+# get dipensible genes #TODO: test with stable internet connection
 cat("get dispensible genes...")
 source("gene_score/labels/dispensible_genes.R")
 
@@ -41,7 +42,8 @@ source("gene_score/labels/dispensible_genes.R")
 cat("get cellXgene features...")
 source("gene_score/features/scripts/cellxgene.R")
 cellXgene_ds1 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"))
-HGNC_table <- HGNC_table %>% left_join(cellXgene_ds1, by = "ensembl_gene_id")
+HGNC_table <- HGNC_table %>% left_join(cellXgene_ds1, by = c("ensembl_gene_id" = "ensembl_id"))
+
 
 # get gnomAD features and join with HGNC table
 cat("get gnomad features...")
@@ -52,9 +54,9 @@ HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = c("ensembl_gene_
 # get GTEX features and join with HGNC table
 cat("get GTEX features...")
 source("gene_score/features/scripts/gtex.R")
-gtex_nTPM <- read_csv(paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_" , creation_date, ".csv"))
-gtex_tau <- read_csv(paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_tau_val_" , creation_date, ".csv"))
-HGNC_table <- HGNC_table %>% left_join(gtex_nTPM, by = c("ensembl_gene_id" = "Gene")) %>% left_join(gtex_tau, by = c("ensembl_gene_id" = "Gene"))
+gtex_nTPM <- read_csv(paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_", creation_date, ".csv"))
+gtex_tau <- read_csv(paste0("gene_score/features/results/rna_tissues_gtex_nTPM_agg_tau_val_", creation_date, ".csv"))
+HGNC_table <- HGNC_table %>% left_join(gtex_nTPM, by = c("ensembl_gene_id" = "Gene")) %>% left_join(gtex_tau, by = c("ensembl_gene_id" = "gene"))
 
 # get KidneyNetwork features and join with HGNC table
 cat("get KidneyNetwork features...")
