@@ -67,4 +67,4 @@ cluster_avg <- cluster_avg %>% dplyr::select(-gene)
 
 # write results
 write.csv(cluster_avg, 
-          paste("gene_score/features/results/fetal_avg_expr_nephrogenesis_atalas", creation_date, ".csv")) 
+          paste("gene_score/features/results/fetal_avg_expr_nephrogenesis_atlas_", creation_date, ".csv")) 
