@@ -3,9 +3,9 @@
 # load libraries
 library(tidyverse)
 library(readr)
-source("../hgnc-functions.R") # TODO:  change PATH and change 'select' into 'dplyr::select' in hgnc-functions.R
+source("https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/functions/hgnc-functions.R") # TODO: maybe change this
 
-# download and unzip file with homozygous loss of function variants from gnomad publication
+# download and unzip file with homozygus loss of function variants from gnomad publication
 download_url <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7334197/bin/41586_2020_2308_MOESM4_ESM.zip"
 download.file(url = download_url, 
               destfile = paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", creation_date, ".zip"))

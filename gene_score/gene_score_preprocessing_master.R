@@ -3,7 +3,12 @@
 library(tidyverse)
 library(utils)
 library(R.utils)
-source(config.R) 
+source(config.R)
+
+# attach tidyr to second position for resolving the select() problem
+if ("package:tidyr" %in% search()) detach("package:tidyr", unload = TRUE)
+attachNamespace("tidyr", pos = 2)
+
 
 # download HGNC gene table from github repository "kidney-genetics"
 # hgnc_gt_version <- "2023-06-21"
