@@ -7,18 +7,17 @@ source(config.R)
 # download HGNC gene table from github repository "kidney-genetics"
 # hgnc_gt_version <- "2023-06-21"
 gene_table_url <- paste0("https://github.com/halbritter-lab/kidney-genetics/raw/main/analyses/A_AnnotationHGNC/results/non_alt_loci_set_coordinates.", hgnc_gt_version, ".csv.gz")
-download.file(url = gene_table_url, destfile = paste0("HGNC_", hgnc_gt_version, ".csv.gz"))
-gunzip(filename = paste0("HGNC_", hgnc_gt_version, ".csv.gz"), 
-       destname = paste0("HGNC_", hgnc_gt_version, "csv"))
+download.file(url = gene_table_url, destfile = paste0("gene_score/raw/HGNC_", hgnc_gt_version, ".csv.gz"))
+gunzip(filename = paste0("gene_score/raw/HGNC_", hgnc_gt_version, ".csv.gz"), 
+       destname = paste0("gene_score/raw/HGNC_", hgnc_gt_version, "csv"))
 
 # load HGNC gene table and filter for protein-coding genes # TODO: change paths
-HGNC_table <- read.csv("~/Desktop/BioInf/halbritter/nephro_gene_score/HGNC_2023-06-21.csv") %>% 
+HGNC_table <- read.csv("gene_score/raw/HGNC_2023-06-21.csv") %>% 
   filter(locus_group == "protein-coding gene") %>% 
   dplyr::select(hgnc_id, entrez_id, ensembl_gene_id, symbol, alias_symbol, prev_symbol)
 
 # extract all symbols
-all_prot_coding_gene_symbols <- unlist(strsplit(c(HGNC_table$symbol, HGNC_table$alias_symbol, HGNC_table$prev_symbol), "\\|")) %>% 
-  unique()
+all_prot_coding_gene_symbols <- unlist(strsplit(c(HGNC_table$symbol, HGNC_table$alias_symbol, HGNC_table$prev_symbol), "\\|")) %>% unique()
 
 
 ##### LABELS ##### 
