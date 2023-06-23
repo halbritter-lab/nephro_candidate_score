@@ -49,4 +49,36 @@ This script extracts gnomAD gene constraint metrics, which are published here: h
 
 #### Number of extracted features: TODO
 
+---
+
+### gtex.R
+#### Datasource: 
+The Human Protein Atlas (https://www.proteinatlas.org/downloads, RNA GTEx tissue gene data). The data was originally obtained from GTEx and is based on The Human Protein Atlas version 23.0 and Ensembl version 109.
+
+#### Description
+This script extracts bulk RNA tissue normalized expression ("nTPM") values from 'The Human Protein Atlas' (primary data source GTEx). It aggregates the nTPM values for the different brain regions to one brain_nTPM_med value. Additionally, it calculates the normalized &tau;  tissue specificity index for each gene according to Yanai et al (Yanai et al. Genome-wide midrange transcription profiles reveal expression level relationships in human tissue specification, Bioinformatics, Volume 21, Issue 5, March 2005, Pages 650?659, https://doi.org/10.1093/bioinformatics/bti042). &tau; is a metric to quantify the tissue specificity of gene expression. It ranges from 0 to 1, with values closer to 1 indicating higher tissue specificity. &tau; = 1 suggests that the gene is exclusively expressed in a single tissue, while a &tau; closer to 0 indicates a more widespread or ubiquitous expression across multiple tissues.
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `utils`: for downloading data.
+
+#### Number of extracted features: 29 + 1
+---
+
+### kidney_network.R
+#### Datasource: 
+KidneyNetwork (https://kidney.genenetwork.nl)
+
+#### Description
+This script extracts gene-pathway prediction z-scores of bonferroni corrected significantly predicted pathways from KidneyNetwork. It sums up the positive (negative z-scores) of all children of each of the following HPO-terms:
+1. "Abnormal renal morphology", HP:0012210  
+2. "Abnormal renal physiology", HP:0012211  
+3. "Abnormality of the urinary system", HP:0000079 (includes the upper two HPO-terms)
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `utils`: for downloading data.
+
+#### Number of extracted features: 6
+
 
