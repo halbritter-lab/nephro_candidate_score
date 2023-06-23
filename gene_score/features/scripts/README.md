@@ -49,4 +49,20 @@ This script extracts gnomAD gene constraint metrics, which are published here: h
 
 #### Number of extracted features: TODO
 
+---
+
+### gtex.R
+#### Datasource: 
+The Human Protein Atlas (https://www.proteinatlas.org/downloads). 
+RNA GTEx tissue gene data. The data was obtained from GTEx and is based on The Human Protein Atlas version 23.0 and Ensembl version 109.
+
+#### Description
+This script extracts gnomAD gene constraint metrics, which are published here: https://gnomad.broadinstitute.org/downloads.
+  
+#### Required libraries
+- `tidyverse`: for data processing.
+- `utils`: for downloading data.
+
+#### Number of extracted features: TODO
+
 
