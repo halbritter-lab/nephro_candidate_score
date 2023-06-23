@@ -14,7 +14,7 @@ gunzip(filename = "gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt
        destname = "gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt")
 
 # load and select gnomad gene constraints
-gnomad_constraints <- read.delim("gnomad.v2.1.1.lof_metrics.by_gene.txt") %>%
+gnomad_constraints <- read.delim("gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt") %>%
   dplyr::select(gene_id,
                 obs_mis,
                 exp_mis,
