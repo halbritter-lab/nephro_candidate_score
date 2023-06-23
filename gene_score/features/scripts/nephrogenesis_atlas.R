@@ -60,8 +60,9 @@ cluster_avg <- cluster_avg %>%
   filter(gene %in% all_prot_coding_gene_symbols_cap)
 
 # annotate with HGNC IDs
-cluster_avg$hgnc_id <- hgnc_id_from_symbol_grouped(tibble(value = cluster_avg$gene)) %>% 
-  dplyr::select(-gene)
+cluster_avg$hgnc_id <- hgnc_id_from_symbol_grouped(tibble(value = cluster_avg$gene)) 
+
+cluster_avg <- cluster_avg %>% dplyr::select(-gene)
 
 
 # write results
