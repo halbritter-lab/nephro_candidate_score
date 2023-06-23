@@ -5,13 +5,14 @@ library(tidyverse)
 
 # download and unzip GTEx RNA expression data of different tissues
 gtex_download_url <- "https://www.proteinatlas.org/download/rna_tissue_gtex.tsv.zip"
-download.file(gtex_download_url, 
+download.file(gtex_download_url,
               destfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"))
 
-unzip(zipfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"))  
+unzip(zipfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"),
+      exdir = "gene_score/features/raw/")  
 
 # load data
-rna_tissue_gtex_nTPM <- read.delim(paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv")) %>% 
+rna_tissue_gtex_nTPM <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv") %>% 
   dplyr::select(Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
@@ -27,7 +28,7 @@ brain_nTPM_med <- data.frame(Gene = brain_nTPM$Gene, brain_median = apply(brain_
 
 # join median brain nTPM values with other tissue df
 rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM %>% 
-  dplyr::select(-brain_regions) %>% 
+  dplyr::select(-all_of(brain_regions)) %>% 
   left_join(brain_nTPM_med, by = "Gene") %>%
   column_to_rownames(var = "Gene")
 
