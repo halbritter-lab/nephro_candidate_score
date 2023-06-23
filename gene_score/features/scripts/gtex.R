@@ -50,10 +50,10 @@ rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM_agg %>%
   rename_all(~ str_replace_all(.x, " ", "_"))
 
 # write results - nTPM values
-write.csv(rna_tissue_gtex_nTPM_agg, paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_" , creation_date, ".csv"), row.names=FALSE)
+write.csv(rna_tissue_gtex_nTPM_agg, paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_" , creation_date, ".csv"), row.names = FALSE)
 
 # write results - tau values
-write.csv(tau_df, paste0("gene_score/features/results/rna_tissues_gtex_nTPM_agg_tau_val_" , creation_date, ".csv"), row.names=FALSE)
+write.csv(tau_df, paste0("gene_score/features/results/rna_tissues_gtex_nTPM_agg_tau_val_" , creation_date, ".csv"), row.names = FALSE)
 
 
 
