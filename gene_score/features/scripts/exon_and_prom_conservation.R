@@ -64,6 +64,9 @@ avg_phasCons_ex <- exons_coordinates %>%
     }) %>%
   dplyr::select(-ensembl_transcript_id)
 
+#TODO: check which columns to discard
+
+
 # write results
 write.csv(avg_phasCons_ex, 
           paste0("gene_score/features/results/avg_phasCons_scores_per_transcript_" , creation_date, ".csv"), 
@@ -90,6 +93,8 @@ avg_phasCons_prom <- canon_ts %>%
     pb$tick()
     avg_phastCons_score_promoter(chrom = chrom, start = start, end = end)
   })
+
+#TODO: check which columns to discard
 
 # write results
 write.csv(avg_phasCons_prom, 
