@@ -61,7 +61,8 @@ avg_phasCons_ex <- exons_coordinates %>%
   mutate(avg_phasCons_exons = {
     pb$tick()
     avg_phastCons_score_per_transcript(ensembl_transcript_id)
-    })
+    }) %>%
+  dplyr::select(-ensembl_transcript_id)
 
 # write results
 write.csv(avg_phasCons_ex, 
