@@ -203,7 +203,6 @@ get_cellxgene_expr_val <- function(datasets_vec,
                                    
 
 # get expression values chunk wise
-
 expr_val_combined <- data.frame()
 iter <- 0
 
@@ -220,8 +219,9 @@ for (i in gene_split_list){
                                  url = "https://api.cellxgene.cziscience.com/wmg/v1/query")
   
   expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
-  print(iter)
 }
+
+expr_val_combined <- expr_val_combined %>% dplyr::select(-uberon_id)
 
 # write results
 write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), row.names = FALSE)
