@@ -53,16 +53,15 @@ This script extracts gnomAD gene constraint metrics, which are published here: h
 
 ### gtex.R
 #### Datasource: 
-The Human Protein Atlas (https://www.proteinatlas.org/downloads). 
-RNA GTEx tissue gene data. The data was obtained from GTEx and is based on The Human Protein Atlas version 23.0 and Ensembl version 109.
+The Human Protein Atlas (https://www.proteinatlas.org/downloads, RNA GTEx tissue gene data). The data was originally obtained from GTEx and is based on The Human Protein Atlas version 23.0 and Ensembl version 109.
 
 #### Description
-This script extracts gnomAD gene constraint metrics, which are published here: https://gnomad.broadinstitute.org/downloads.
-  
+This script extracts bulk RNA tissue normalized expression ("nTPM") values from 'The Human Protein Atlas' (primary data source GTEx). It aggregates the nTPM values for the different brain regions to one brain_nTPM_med value. Additionally, it calculates the normalized tau expression value according to Yanai et al (Yanai et al. Genome-wide midrange transcription profiles reveal expression level relationships in human tissue specification, Bioinformatics, Volume 21, Issue 5, March 2005, Pages 650–659, https://doi.org/10.1093/bioinformatics/bti042). The tau tissue specificity index is a metric to quantify the tissue specificity of gene expression. It ranges from 0 to 1, with values closer to 1 indicating higher tissue specificity. A Tau index of 1 suggests that the gene is exclusively expressed in a single tissue or cell type, while a Tau index closer to 0 indicates a more widespread or ubiquitous expression across multiple tissues or cell types.
+
 #### Required libraries
 - `tidyverse`: for data processing.
 - `utils`: for downloading data.
 
-#### Number of extracted features: TODO
+#### Number of extracted features: 29 + 1
 
 
