@@ -63,5 +63,23 @@ This script extracts bulk RNA tissue normalized expression ("nTPM") values from 
 - `utils`: for downloading data.
 
 #### Number of extracted features: 29 + 1
+---
+
+### kidney_network.R
+#### Datasource: 
+KidneyNetwork (https://kidney.genenetwork.nl)
+
+#### Description
+This script extracts gene-pathway prediction z-scores of bonferroni corrected significantly predicted pathways from KidneyNetwork. It sums up the positive (negative z-scores) of all children of each of the following HPO-terms:
+1. "Abnormal renal morphology", HP:0012210  
+2. "Abnormal renal physiology", HP:0012211  
+3. "Abnormality of the urinary system", HP:0000079 (includes the upper two HPO-terms)
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `utils`: for downloading data.
+
+#### Number of extracted features: 6
+
 
 
