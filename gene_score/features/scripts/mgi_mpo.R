@@ -49,7 +49,7 @@ kidney_mpo_terms <- mpo_all_children_from_term("MP_0005367", relations) %>%
 download_url <- "https://www.informatics.jax.org/downloads/reports/HMD_HumanPhenotype.rpt"
 download.file(url = download_url, 
               destfile = paste0("gene_score/features/raw/HMD_HumanPhenotype_", creation_date, ".rpt"))
-hmd_hp <- read.table(paste0("gene_score/features/raw/HMD_HumanPhenotype_", creation_date, ".rpt"), sep="\t", header=FALSE) %>% select(-V6)
+hmd_hp <- read.table(paste0("gene_score/features/raw/HMD_HumanPhenotype_", creation_date, ".rpt"), sep="\t", header=FALSE) %>% dplyr::select(-V6)
 colnames(hmd_hp) <- c("human_marker_symbol", "human_entrez_id", "mouse_marker_symbol", "mgi_marker_accession_id", "mpo_id")
 
 
@@ -96,4 +96,4 @@ hmd_hp_mpo_kidney <- mgi_pg_mp %>%
 # write results
 write.csv(hmd_hp_mpo_kidney, 
           paste0("gene_score/features/results/mgi_human_genes_associated_MP_0005367_" , creation_date, ".csv"), 
-          row.names=FALSE)
+          row.names = FALSE)
