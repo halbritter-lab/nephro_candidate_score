@@ -45,7 +45,7 @@ paralogues_95 <- paralogues %>%
 
 # write results
 write.csv(paralogues_95, 
-          paste0("gene_score/features_results/paralogues_95_", creation_date, ".csv"), 
+          paste0("gene_score/features/results/paralogues_95_", creation_date, ".csv"), 
           row.names = FALSE)
 
 
