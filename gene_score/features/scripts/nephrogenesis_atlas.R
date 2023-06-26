@@ -11,7 +11,7 @@ download.file(nephrogenesis_atlas_url,
               destfile = paste0("gene_score/features/raw/Human_nephrogenesis_atlas", creation_date, ".Robj"))
 
 # load data
-load(paste0("gene_score/features/raw/Human_nephrogenesis_atlas", creation_date, ".Robj"))
+load(paste0("gene_score/features/raw/Human_nephrogenesis_atlas_", creation_date, ".Robj"))
 fetal <- Sharing_is_Caring
 
 # map cluster values to cluster names
@@ -67,4 +67,4 @@ cluster_avg <- cluster_avg %>% dplyr::select(-gene)
 
 # write results
 write.csv(cluster_avg, 
-          paste("gene_score/features/results/fetal_avg_expr_nephrogenesis_atlas_", creation_date, ".csv")) 
+          paste0("gene_score/features/results/fetal_avg_expr_nephrogenesis_atlas_", creation_date, ".csv")) 
