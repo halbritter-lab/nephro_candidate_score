@@ -93,7 +93,7 @@ avg_phasCons_prom <- canon_ts %>%
     pb$tick()
     avg_phastCons_score_promoter(chrom = chrom, start = start, end = end)
   }) %>% 
-  dplyr::select(-ensembl_transcript_id, -ensembl_transcript_id, -chrom, -start, -end)
+  dplyr::select(-ensembl_transcript_id, -chrom, -start, -end)
 
 
 # write results
