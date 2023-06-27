@@ -22,9 +22,11 @@ hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>
   dplyr::rename(c("hgnc_id" = ".")) %>% 
   drop_na(hgnc_id)
 
-# download OMIM genemap #TODO: resolve download issue
-download.file(url = omim_download_url,
-              destfile = paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
+# download OMIM genemap 
+# download.file(url = omim_download_url,
+#               destfile = paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
+response <- GET(omim_download_url)
+writeBin(content(response, "raw"), paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
 
 # extract and clean column names
 names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"),
