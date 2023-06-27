@@ -82,3 +82,23 @@ This script extracts gene-pathway prediction z-scores of bonferroni corrected si
 #### Number of extracted features: 6
 
 
+---
+
+### mgi_mpo.R
+#### Datasource: 
+Mouse Genome Informatics (https://www.informatics.jax.org)
+
+#### Description
+This script identifies which mouse genotypes (homozygous or heterozygous knock-out mice) are  associated with mouse phenotype ontology (MPO) term "MP:0005367" (= "renal/urinary system phenotype") or any of its children. It then annotates the respective mouse genes with the corresponding human ortholog.
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `utils`: for downloading data.
+- `jsonlite`: for parsing .json files.
+
+#### Number of extracted features: 2 (heterozygous/homozygous)
+
+
+
+
+
