@@ -92,9 +92,9 @@ avg_phasCons_prom <- canon_ts %>%
   mutate(avg_phasCons_promoter = {
     pb$tick()
     avg_phastCons_score_promoter(chrom = chrom, start = start, end = end)
-  })
+  }) %>% 
+  dplyr::select(-ensembl_transcript_id, -ensembl_transcript_id, -chrom, -start, -end)
 
-#TODO: check which columns to discard
 
 # write results
 write.csv(avg_phasCons_prom, 
