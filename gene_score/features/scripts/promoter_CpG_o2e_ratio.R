@@ -34,7 +34,8 @@ canonical_prom <- mart_exp %>%
   filter(transcript_is_canonical == 1) %>% 
   mutate(start = transcription_start_site - 2000,
          end = transcription_start_site + 2000) %>% 
-  dplyr::select(ensembl_gene_id, ensembl_transcript_id, chrom=chromosome_name, start, end)
+  dplyr::select(ensembl_gene_id, ensembl_transcript_id, chrom=chromosome_name, start, end) %>% 
+  distinct()
 
 # write canonical transcripts
 write_csv(canonical_prom, 
