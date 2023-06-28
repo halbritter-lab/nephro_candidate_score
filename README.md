@@ -33,10 +33,25 @@ The repository has the following structure:
 .
 ├── gene_score/
 │   ├── features/
-│   │   ├── TODO
-│   │   ├── TODO
-│   
-└── TODO
+│   │   ├── raw/
+│   │   ├── results/
+│   │   ├── scripts/
+│   │   │   ├── cellxgene.R
+│   │   │   ├── exon_and_prom_conservation.R
+│   │   │   ├── gnomad.R
+│   │   │   ├── gtex.R
+│   │   │   ├── kidney_network.R
+│   │   │   ├── mgi_mpo.R
+│   │   │   ├── nephrogenesis_atlas.R
+│   │   │   ├── paralogues.R
+│   │   │   ├── promoter_CpG_o2e_ratio.R
+│   ├── labels/
+│   │   ├── raw/
+│   │   ├── results/
+│   │   ├── scripts/
+│   │   │   ├── dispensable_genes.R
+│   │   │   ├── positive_genes.R
+└── variant_score/
 ```
 
 - The `gene_score/` directory contains TODO
