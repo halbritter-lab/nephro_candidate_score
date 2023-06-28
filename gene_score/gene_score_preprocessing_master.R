@@ -34,11 +34,11 @@ all_prot_coding_gene_symbols <- unlist(strsplit(c(HGNC_table$symbol, HGNC_table$
 ##### LABELS ##### 
 # get positive genes
 cat("get positive genes...")
-source("gene_score/labels/positive_genes.R")
+source("gene_score/labels/scripts/positive_genes.R")
 
 # get dipensible genes #TODO: test with stable internet connection
 cat("get dispensible genes...")
-source("gene_score/labels/dispensible_genes.R")
+source("gene_score/labels/scripts/dispensable_genes.R")
 
 
 ##### FEATURES ##### 
