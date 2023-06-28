@@ -57,4 +57,3 @@ omim_hg38_morbid_hgnc <- hgnc_id_from_symbol_grouped(tibble(value = omim_hg38_mo
 disp_genes <- hom_ko_genes %>% 
   filter(!(hgnc_id %in% omim_hg38_morbid_hgnc$hgnc_id), !(hgnc_id %in% kid_gen$hgnc_id)) 
 
-

@@ -23,4 +23,3 @@ pos_genes <- kid_gen %>%
 
 
 # TODO: selection of evidence group etc...
-
