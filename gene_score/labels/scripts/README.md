@@ -20,8 +20,9 @@ This scripts determines dispensable genes - genes with homozygous loss of functi
 - `jsonlite`: for parsing .json files.   
 
 This script sources an R-script from the github repository kidney-genetics.   
-
 Downloading the genemap2.txt file from OMIM requires registration at the OMIM website (https://www.omim.org/downloads). The personal download link has to be added to the config file of this repository.
+
+
 ---
 
 ### positive_genes.R
