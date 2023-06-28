@@ -19,10 +19,10 @@ response <- GET(datasets_url, add_headers(headers))
 content <- content(response, as="text")
 
 # write json file
-writeLines(content[[1]], paste0("gene_score/features/results/cellxgene_datasets_", creation_date, ".json"))   
+writeLines(content[[1]], paste0("gene_score/features/raw/cellxgene_datasets_", creation_date, ".json"))   
 
 # read json file
-datasets_list<- jsonlite::read_json(paste0("gene_score/features/results/cellxgene_datasets_", creation_date, ".json")) 
+datasets_list<- jsonlite::read_json(paste0("gene_score/features/raw/cellxgene_datasets_", creation_date, ".json")) 
 
 # wrap list in a tibble
 datasets <- tibble(ds = datasets_list)
@@ -63,10 +63,10 @@ response <- GET(prim_filt_url, add_headers(headers))
 content <- content(response, as="text")
 
 # save content (workaround as fromJSON() is too slow, read_json() reads the file a memory-efficient way)
-writeLines(content[[1]], paste0("primary_filter_dim_content_", creation_date, ".json"))            
+writeLines(content[[1]], paste0("gene_score/features/raw/primary_filter_dim_content_", creation_date, ".json"))            
 
 # read in json file line by line
-prim_filt_dim_list <- jsonlite::read_json(paste0("primary_filter_dim_content_", creation_date, ".json"))
+prim_filt_dim_list <- jsonlite::read_json(paste0("gene_score/features/raw/primary_filter_dim_content_", creation_date, ".json"))
 
 # wrap list in a tibble
 prim_filt_dim <- tibble(pfd = prim_filt_dim_list)
