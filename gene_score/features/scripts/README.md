@@ -98,6 +98,54 @@ This script identifies which mouse genotypes (homozygous or heterozygous knock-o
 
 #### Number of extracted features: 2 (heterozygous/homozygous)
 
+---
+
+### nephrogenesis_atlas.R
+#### Datasource: 
+TODO
+
+#### Description
+TODO
+
+#### Required libraries
+TODO
+
+#### Number of extracted features: TODO
+
+---
+
+### paralogues.R
+#### Datasource: 
+Ensembl Biomart (doi:10.1093/nar/gkab1049)
+
+#### Description
+This script extracts paralogues of protein-coding genes from Ensembl Biomart. It determines the number of close paralogues above the 95th percentile (Target \%ID and Query \%ID).   
+Target \%ID = percentage of identical amino acids in the paralogue compared with the gene of interest 
+Query \%ID = percentage of identical amino acids in the gene of interest compared with the paralogue.
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `biomaRt`: for extracting data from Ensembl biomart.
+
+#### Number of extracted features: 1
+
+---
+
+### promoter_CpG_o2e_ratio.R
+#### Datasource: 
+Ensembl Biomart (doi:10.1093/nar/gkab1049)
+
+#### Description
+This script extracts positional information from canonical transcripts of protein coding genes from Ensembl Biomart. It the calculates the observed-to-expected-CpG-ratio of the promoter region of each gene. The promoter region is defined as +- 2kb around the transcription start site. 
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `biomaRt`: for extracting data from Ensembl biomart.
+- `BSgenome.Hsapiens.UCSC.hg38`: for extracting the promoter sequences. 
+
+#### Number of extracted features: 1
+
+
 
 
 
