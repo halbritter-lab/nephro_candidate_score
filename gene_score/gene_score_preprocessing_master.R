@@ -46,7 +46,11 @@ source("gene_score/labels/scripts/dispensable_genes.R")
 cat("get cellXgene features...")
 source("gene_score/features/scripts/cellxgene.R")
 cellXgene_ds1 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(cellXgene_ds1, by = c("ensembl_gene_id" = "ensembl_id"))
+cellXgene_ds2 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), show_col_types = FALSE)
+
+HGNC_table <- HGNC_table %>%
+  left_join(cellXgene_ds1, by = c("ensembl_gene_id" = "ensembl_id")) %>%
+  left_join(cellXgene_ds2, by = c("ensembl_gene_id" = "ensembl_id"))
 
 
 # get gnomAD features and join with HGNC table
