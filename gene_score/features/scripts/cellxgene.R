@@ -230,7 +230,8 @@ for (i in gene_split_list){
   expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
 }
 
-expr_val_combined <- expr_val_combined %>% dplyr::select(-uberon_id)
+expr_val_combined <- expr_val_combined %>%
+  dplyr::select(ensembl_id, ends_with("_me"), ends_with("_pc"))
 
 # write results
 write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), row.names = FALSE)
@@ -267,7 +268,8 @@ for (i in gene_split_list){
   expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
 }
 
-expr_val_combined <- expr_val_combined %>% dplyr::select(-uberon_id)
+expr_val_combined <- expr_val_combined %>%
+  dplyr::select(ensembl_id, ends_with("_me"), ends_with("_pc"))
 
 # write results
 write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), row.names = FALSE)
