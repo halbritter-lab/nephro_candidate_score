@@ -16,13 +16,13 @@ unzip(zipfile = paste0("gene_score/labels/raw/41586_2020_2308_MOESM4_ESM_", crea
 # load homozygous knockout genes
 hom_ko_genes <- read.table("gene_score/labels/raw/supplement/supplementary_dataset_7_hom_ko_genes.txt")
 
-# get HGNC ID from gene symbol  
-hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>% 
-  tibble() %>% 
-  dplyr::rename(c("hgnc_id" = ".")) %>% 
+# get HGNC ID from gene symbol
+hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>%
+  tibble() %>%
+  dplyr::rename(c("hgnc_id" = ".")) %>%
   drop_na(hgnc_id)
 
-# download OMIM genemap 
+# download OMIM genemap
 # download.file(url = omim_download_url,
 #               destfile = paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"))
 response <- GET(omim_download_url)
@@ -34,7 +34,7 @@ names_col <- read_tsv(paste0("gene_score/labels/raw/genemap2_", creation_date, "
                      skip = 3,
                      n_max = 1,
                      col_types = cols())
-clean_names <- gsub(" ", "_", gsub("# ", "", names_col[1,]))
+clean_names <- gsub(" ", "_", gsub("# ", "", names_col[1, ]))
 
 # read omim genemap
 omim_genes_hg38 <-  read.delim2(paste0("gene_score/labels/raw/genemap2_", creation_date, ".txt"), 
