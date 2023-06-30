@@ -38,10 +38,11 @@ query_95_perc <-  quantile(paralogues$hsapiens_paralog_perc_id_r1, probs = seq(0
 
 # determine number of paralogues above the 95th percentile (target% and query%) per gene 
 paralogues_95 <- paralogues %>%
-  filter(hsapiens_paralog_perc_id > target_95_perc & hsapiens_paralog_perc_id_r1 > query_95_perc) %>% 
-  unique() %>%
+  mutate(perc_95 = (hsapiens_paralog_perc_id > target_95_perc & hsapiens_paralog_perc_id_r1 > query_95_perc)) %>% 
+  distinct() %>%
   group_by(ensembl_gene_id) %>%
-  summarize(no_paralogues_95 = n())
+  summarize(no_paralogues_95 = sum(perc_95, na.rm = TRUE))
+
 
 # write results
 write.csv(paralogues_95, 
