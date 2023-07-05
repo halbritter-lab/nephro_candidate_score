@@ -57,14 +57,14 @@ HGNC_table <- HGNC_table %>%
 cat("get gnomad features...")
 source("gene_score/features/scripts/gnomad.R")
 gnomad_constraints <- read_csv(paste0("gene_score/features/results/gnomad_constraints_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = c("ensembl_gene_id" = "gene_id"))
+HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = c("ensembl_gene_id" = "ensembl_gene_id"))
 
 # get GTEX features and join with HGNC table
 cat("get GTEX features...")
 source("gene_score/features/scripts/gtex.R")
 gtex_nTPM <- read_csv(paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_", creation_date, ".csv"), show_col_types = FALSE)
 gtex_tau <- read_csv(paste0("gene_score/features/results/rna_tissues_gtex_nTPM_agg_tau_val_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(gtex_nTPM, by = c("ensembl_gene_id" = "Gene")) %>% left_join(gtex_tau, by = c("ensembl_gene_id" = "gene"))
+HGNC_table <- HGNC_table %>% left_join(gtex_nTPM, by = "ensembl_gene_id") %>% left_join(gtex_tau, by = "ensembl_gene_id")
 
 
 # get KidneyNetwork features and join with HGNC table
@@ -82,17 +82,23 @@ nephrogenesis_atlas <- read_csv(paste0("gene_score/features/results/fetal_avg_ex
 HGNC_table <- HGNC_table %>% left_join(nephrogenesis_atlas, by = c("hgnc_id_int" = "hgnc_id"))
 
 
-# get number of paralogues (above 95th percentile Query% and Target%) and join with HGNC table
+# get number of paralogues (above xth percentile Query% and Target%) and join with HGNC table
 cat("get nunber of close paralogues...")
 source("gene_score/features/scripts/paralogues.R")
-paralogues_95 <- read_csv(paste0("gene_score/features/results/paralogues_95_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(paralogues_95, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+no_paralogues <- read_csv(paste0("gene_score/features/results/paralogues_95_85_75_", creation_date, ".csv"), show_col_types = FALSE)
+HGNC_table <- HGNC_table %>% left_join(no_paralogues, by = c("ensembl_gene_id" = "ensembl_gene_id"))
 
 
 # get promoter CpG observed-to-expected-ratio and join with HGNC table
 cat("get promoter CpG observed-to-expected-ratio...")
 source("gene_score/features/scripts/promoter_CpG_o2e_ratio.R")
 promoter_CpG_o2e_ratio <- read_csv(paste0("gene_score/features/results/canonical_promoter_CpG_obs_to_exp_ratio_", creation_date, ".csv"), show_col_types = FALSE)
+HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+
+# get average exons CpG observed-to-expected-ratio and join with HGNC table
+cat("get average exons CpG observed-to-expected-ratio...")
+source("gene_score/features/scripts/exon_CpG_o2e_ratio.R")
+exons_CpG_o2e_ratio <- read_csv(paste0("gene_score/features/results/canonical_ts_exons_CpG_obs_to_exp_ratio_", creation_date, ".csv"), show_col_types = FALSE)
 HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = c("ensembl_gene_id" = "ensembl_gene_id"))
 
 
@@ -112,5 +118,82 @@ mgi_mpo_kidney <- read_csv(paste0("gene_score/features/results/mgi_human_genes_a
 HGNC_table <- HGNC_table %>% left_join(mgi_mpo_kidney, by = c("entrez_id" = "human_entrez_id"))
 
 
+# TODO: CONTINUE HERE
+# create a left_join function that joins by second identifier, if first identifier does not hit
+
+left_join_rescue <- function(x, y, by_1_l, by_1_r, by_2_l, by_2_r) {
+  y_sub <- y %>% dplyr::select(-{{ by_2_r }})
+  colnames(y_sub)[which(colnames(y_sub) %in% by_1_r)] <- by_1_l
+  
+  joined_sub <- left_join(x, y_sub, by = by_1_l)
+  not_joined_ids <- setdiff(data.frame(y)[, by_1_r], data.frame(x)[, by_1_l])
+
+  # 
+  return(not_joined_ids)
+
+}
+
+y <- gnomad_constraints
+x <- HGNC_table
+by_1_l <- "ensembl_gene_id"
+by_1_r <- "gene_id"
+by_2_l <- "symbol"
+by_2_r <- "gene"
+
+j <- left_join_rescue(HGNC_table, gnomad_constraints, "ensembl_gene_id", "gene_id", "symbol", "gene")
+
+setdiff(as.vector(HGNC_table[, by_1_l]), as.vector(gnomad_constraints[, by_1_r]))
+
+
+setdiff(df[, "A"], df[, "C"])
+
+
+setdiff(gnomad_constraints[, by_1_r], data.frame(HGNC_table)[, by_1_l])
+
+
+
+
+my_function <- function(A, dataframe) {
+  selected_column <- dataframe %>%
+    dplyr::select({{ A }})
+  
+  return(selected_column)
+}
+
+
+# Create a sample dataframe
+df <- data.frame(A = 1:5, B = letters[1:5], C = 5:9)
+
+# Call the function to select the "B" column from the dataframe
+result <- my_function("B", df)
+
+# Print the result
+print(result)
+
+
+library(dplyr)
+library(rlang)
+
+my_function <- function(var1, var2, x, y_sub) {
+  joined_sub <- x %>%
+    left_join(y_sub, by = setNames(!!!syms(c(var1, var2))))
+  
+  return(joined_sub)
+}
+
+
+# Create sample dataframes
+x <- data.frame(var1 = c(1, 2, 3), var2 = c("A", "B", "C"), value = c(10, 20, 30))
+y_sub <- data.frame(var2 = c("A", "C"), value2 = c(100, 300))
+
+# Call the function to perform the left join
+result <- my_function("var1", "var2", x, y_sub)
+
+# Print the result
+print(result)
+
+
+
+# SAME PROBLEM FOR GTEX => check!
 
 
