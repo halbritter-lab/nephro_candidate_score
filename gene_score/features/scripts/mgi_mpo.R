@@ -74,8 +74,8 @@ kid_pos_gt <- kid_pos_gt %>%
   filter(length(strsplit(mgi_marker_accession_id, split = "|", fixed = TRUE)[[1]]) == 1) %>% # remove polygenic genotypes
   mutate(wt_alleles = sum(grepl("<\\+>", (strsplit(allele_symbols, "\\|")[[1]]))), 
          mpo_kidney_gene_het = (wt_alleles == 1),
-         mpo_kidney_gene_hom = (wt_alleles == 0))# %>%
-  # left_join(hmd_hp[, c("human_entrez_id", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many")
+         mpo_kidney_gene_hom = (wt_alleles == 0))
+
 
 # heterozygous and homozygous genotypes associated with "MP:0005367" 
 het_kid_genes <- kid_pos_gt %>% filter(mpo_kidney_gene_het == TRUE) %>% .$mgi_marker_accession_id %>% unique()
