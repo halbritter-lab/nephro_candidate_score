@@ -101,5 +101,5 @@ write.csv(mgi_pg_mp,
           paste0("gene_score/features/results/mgi_human_genes_associated_MP_0005367_" , creation_date, ".csv"), 
           row.names = FALSE)
 
-
+# TODO: soilve multiple values for one entrez id!!!
 

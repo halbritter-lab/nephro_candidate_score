@@ -49,15 +49,15 @@ cellXgene_ds1 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_0b4
 cellXgene_ds2 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), show_col_types = FALSE)
 
 HGNC_table <- HGNC_table %>%
-  left_join(cellXgene_ds1, by = c("ensembl_gene_id" = "ensembl_id")) %>%
-  left_join(cellXgene_ds2, by = c("ensembl_gene_id" = "ensembl_id"))
+  left_join(cellXgene_ds1, by = "ensembl_gene_id") %>%
+  left_join(cellXgene_ds2, by = "ensembl_gene_id")
 
 
 # get gnomAD features and join with HGNC table
 cat("get gnomad features...")
 source("gene_score/features/scripts/gnomad.R")
 gnomad_constraints <- read_csv(paste0("gene_score/features/results/gnomad_constraints_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = "ensembl_gene_id")
 
 # get GTEX features and join with HGNC table
 cat("get GTEX features...")
@@ -86,20 +86,21 @@ HGNC_table <- HGNC_table %>% left_join(nephrogenesis_atlas, by = c("hgnc_id_int"
 cat("get nunber of close paralogues...")
 source("gene_score/features/scripts/paralogues.R")
 no_paralogues <- read_csv(paste0("gene_score/features/results/paralogues_95_85_75_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(no_paralogues, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+HGNC_table <- HGNC_table %>% left_join(no_paralogues, by = "ensembl_gene_id")
 
 
 # get promoter CpG observed-to-expected-ratio and join with HGNC table
 cat("get promoter CpG observed-to-expected-ratio...")
 source("gene_score/features/scripts/promoter_CpG_o2e_ratio.R")
 promoter_CpG_o2e_ratio <- read_csv(paste0("gene_score/features/results/canonical_promoter_CpG_obs_to_exp_ratio_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = "ensembl_gene_id")
+
 
 # get average exons CpG observed-to-expected-ratio and join with HGNC table
 cat("get average exons CpG observed-to-expected-ratio...")
 source("gene_score/features/scripts/exon_CpG_o2e_ratio.R")
 exons_CpG_o2e_ratio <- read_csv(paste0("gene_score/features/results/canonical_ts_exons_CpG_obs_to_exp_ratio_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = "ensembl_gene_id")
 
 
 # get exon and promoter conservation scores and join with HGNC table
@@ -107,15 +108,20 @@ cat("get exon and promoter conservation scores...")
 source("gene_score/features/scripts/exon_and_prom_conservation.R")
 avg_phasCons_ex <- read_csv(paste0("gene_score/features/results/avg_phasCons_scores_per_transcript_", creation_date, ".csv"), show_col_types = FALSE)
 avg_phasCons_prom <- read_csv(paste0("gene_score/features/results/avg_phasCons_promoter_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(avg_phasCons_ex, by = c("ensembl_gene_id" = "ensembl_gene_id"))
-HGNC_table <- HGNC_table %>% left_join(avg_phasCons_prom, by = c("ensembl_gene_id" = "ensembl_gene_id"))
+HGNC_table <- HGNC_table %>% left_join(avg_phasCons_ex, by = "ensembl_gene_id")
+HGNC_table <- HGNC_table %>% left_join(avg_phasCons_prom, by = "ensembl_gene_id")
 
 
 # get annotation for which genes are associated with MGI MPO MP_0005367
+
+
+# TODO: soilve multiple values for one entrez id!!!
 cat("get MGI MPO annotation...")
 source("gene_score/features/scripts/mgi_mpo.R")
 mgi_mpo_kidney <- read_csv(paste0("gene_score/features/results/mgi_human_genes_associated_MP_0005367_" , creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(mgi_mpo_kidney, by = c("entrez_id" = "human_entrez_id"))
+HGNC_table <- HGNC_table %>% left_join(mgi_mpo_kidney, by = "entrez_id")
+# TODO: soilve multiple values for one entrez id!!!
+
 
 
 # TODO: CONTINUE HERE
