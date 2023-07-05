@@ -81,7 +81,7 @@ pfd_ot_df <- imap_dfr(pfd_ot, ~ tibble(taxon_id = names(.x), organism = unlist(.
 pfd_gt <- prim_filt_dim_list$gene_terms 
 
 pfd_gt_df <- pfd_gt %>%
-  imap_dfr(~ map_df(.x, ~ tibble(ensembl_id = names(.x), symbol = as.character(.x)))) %>%
+  imap_dfr(~ map_df(.x, ~ tibble(ensembl_gene_id = names(.x), symbol = as.character(.x)))) %>%
   mutate(taxon_id = rep(names(pfd_gt), lengths(pfd_gt)))
 
 # primary filter dimensions: tissue_terms
@@ -145,7 +145,7 @@ query_cellxgene_POST <- function(url, body) {
 
 list_to_expr_df <- function(content_list) {
   expr_vals_df <- imap_dfr(content_list$expression_summary, ~ tibble(
-    ensembl_id = .y,
+    ensembl_gene_id = .y,
     uberon_id = names(.x),
     cell_id = names(.x[[1]]),
     me = unname(unlist(lapply(lapply(.x[[1]], "[[", 1), "[[", "me"))),
@@ -201,8 +201,8 @@ ds_id <- c("0b4a15a7-4e9e-4555-9733-2423e5c66469")
 query_taxon <- "NCBITaxon:9606"
 query_tissue <- "UBERON:0002113"
 gene_vec <- pfd_gt_df %>%
-  filter(taxon_id %in% query_taxon, ensembl_id %in% HGNC_table$ensembl_gene_id) %>%
-  .$ensembl_id %>%
+  filter(taxon_id %in% query_taxon, ensembl_gene_id %in% HGNC_table$ensembl_gene_id) %>%
+  .$ensembl_gene_id %>%
   as.vector()
 
 # NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
@@ -231,7 +231,7 @@ for (i in gene_split_list){
 }
 
 expr_val_combined <- expr_val_combined %>%
-  dplyr::select(ensembl_id, ends_with("_me"), ends_with("_pc"))
+  dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
 
 # write results
 write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), row.names = FALSE)
@@ -241,8 +241,8 @@ ds_id <- c("d7dcfd8f-2ee7-4385-b9ac-e074c23ed190")
 query_taxon <- "NCBITaxon:9606"
 query_tissue <- "UBERON:0002113"
 gene_vec <- pfd_gt_df %>%
-  filter(taxon_id %in% query_taxon, ensembl_id %in% HGNC_table$ensembl_gene_id) %>%
-  .$ensembl_id %>%
+  filter(taxon_id %in% query_taxon, ensembl_gene_id %in% HGNC_table$ensembl_gene_id) %>%
+  .$ensembl_gene_id %>%
   as.vector()
 
 # NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
@@ -269,7 +269,7 @@ for (i in gene_split_list){
 }
 
 expr_val_combined <- expr_val_combined %>%
-  dplyr::select(ensembl_id, ends_with("_me"), ends_with("_pc"))
+  dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
 
 # write results
 write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), row.names = FALSE)
