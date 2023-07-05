@@ -92,7 +92,7 @@ mgi_pg_mp <- mgi_pg_mp %>%
                              .default = 0)) %>% 
   left_join(hmd_hp[, c("human_entrez_id", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many") %>% 
   filter(!is.na(human_entrez_id)) %>% 
-  dplyr::select(human_entrez_id, mgi_kid) %>% 
+  dplyr::select(entrez_id = human_entrez_id, mgi_kid) %>% 
   distinct() 
 
 
