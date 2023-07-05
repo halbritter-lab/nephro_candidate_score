@@ -15,6 +15,7 @@ This script extracts ssRNA expression values from cellxgene via the cellxgene AP
 - `tidyverse`: for data processing.
 - `httr`: for sending GET and POST requests.
 - `jsonlite`: for parsing .json files.
+- `progress`: for progress bars.
 
 #### Number of extracted features: TODO
 ---
@@ -38,7 +39,7 @@ The promoter region is defined as +-2kb around the transcription start site. The
 
 ### gnomad.R
 #### Datasource: 
-gnomAD (https://gnomad.broadinstitute.org/, https://doi.org/10.1038/s41586-020-2308-7)
+gnomAD, v2.1.1 (https://gnomad.broadinstitute.org/, https://doi.org/10.1038/s41586-020-2308-7)
 
 #### Description
 This script extracts gnomAD gene constraint metrics, which are published here: https://gnomad.broadinstitute.org/downloads.
