@@ -13,7 +13,7 @@ unzip(zipfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date
 
 # load data
 rna_tissue_gtex_nTPM <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv") %>% 
-  dplyr::select(Gene, Tissue, nTPM) %>% 
+  dplyr::select(ensembl_gene_id = Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
 # dataset contains expression values for all tissues for 19764 genes - except for retina: here for 20090 genes
@@ -23,17 +23,16 @@ rna_tissue_gtex_nTPM <- rna_tissue_gtex_nTPM[complete.cases(rna_tissue_gtex_nTPM
 # aggregate brain tissues
 brain_regions <- c("amygdala", "caudate", "cerebellum", "cerebral cortex", "hippocampus", "hypothalamus", "nucleus accumbens", "putamen", "substantia nigra")
 brain_nTPM <- rna_tissue_gtex_nTPM %>%
-  dplyr::select(Gene, all_of(brain_regions))
-brain_nTPM_med <- data.frame(Gene = brain_nTPM$Gene, brain_median = apply(brain_nTPM[, -1], 1, median))
+  dplyr::select(ensembl_gene_id, all_of(brain_regions))
+brain_nTPM_med <- data.frame(ensembl_gene_id = brain_nTPM$ensembl_gene_id, brain_median = apply(brain_nTPM[, -1], 1, median))
 
 # join median brain nTPM values with other tissue df
 rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM %>% 
   dplyr::select(-all_of(brain_regions)) %>% 
-  left_join(brain_nTPM_med, by = "Gene") %>%
-  column_to_rownames(var = "Gene")
+  left_join(brain_nTPM_med, by = "ensembl_gene_id") %>%
+  column_to_rownames(var = "ensembl_gene_id")
 
-# calculate the robust tissue specifity measure tau
-# calculate the normalized tau values according to Yanai et al. for all genes
+# calculate the normalized tissue specifitiy index tau according to Yanai et al. for all genes
 N <- ncol(rna_tissue_gtex_nTPM_agg)
 max_row <- apply(rna_tissue_gtex_nTPM_agg, 1, max)
 norm_data <- rna_tissue_gtex_nTPM_agg / max_row
@@ -42,11 +41,13 @@ tau_values <- sapply(1:nrow(norm_data), function(i) {
   sum((1 - xi) / (N - 1))
 })
 
-tau_df <- data.frame(gene = rownames(norm_data), tau = tau_values)
+tau_df <- data.frame(ensembl_gene_id = rownames(norm_data), gtex_tau = tau_values)
 
-# rownames back to column
+# add prefix and get rownames back to column
+names(rna_tissue_gtex_nTPM_agg) <- paste0("gtex_", names(rna_tissue_gtex_nTPM_agg))
+
 rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM_agg %>% 
-  rownames_to_column(var = "Gene") %>% 
+  rownames_to_column(var = "ensembl_gene_id") %>% 
   rename_all(~ str_replace_all(.x, " ", "_"))
 
 # write results - nTPM values
