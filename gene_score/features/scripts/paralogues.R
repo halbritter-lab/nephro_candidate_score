@@ -36,6 +36,15 @@ paralogues <- getBM(attributes = c("ensembl_gene_id",
 target_95_perc <-  quantile(paralogues$hsapiens_paralog_perc_id, probs = seq(0, 1, 0.01), na.rm = TRUE)[96] # 95% percentile Target%
 query_95_perc <-  quantile(paralogues$hsapiens_paralog_perc_id_r1, probs = seq(0, 1, 0.01), na.rm = TRUE)[96] # 95% percentile Query%
 
+# Calculate 85th percentiles of the Target% and Query%
+target_85_perc <-  quantile(paralogues$hsapiens_paralog_perc_id, probs = seq(0, 1, 0.01), na.rm = TRUE)[86] # 85% percentile Target%
+query_85_perc <-  quantile(paralogues$hsapiens_paralog_perc_id_r1, probs = seq(0, 1, 0.01), na.rm = TRUE)[86] # 85% percentile Query%
+
+# Calculate 75th percentiles of the Target% and Query%
+target_75_perc <-  quantile(paralogues$hsapiens_paralog_perc_id, probs = seq(0, 1, 0.01), na.rm = TRUE)[76] # 75% percentile Target%
+query_75_perc <-  quantile(paralogues$hsapiens_paralog_perc_id_r1, probs = seq(0, 1, 0.01), na.rm = TRUE)[76] # 75% percentile Query%
+
+
 # determine number of paralogues above the 95th percentile (target% and query%) per gene 
 paralogues_95 <- paralogues %>%
   mutate(perc_95 = (hsapiens_paralog_perc_id > target_95_perc & hsapiens_paralog_perc_id_r1 > query_95_perc)) %>% 
@@ -43,10 +52,29 @@ paralogues_95 <- paralogues %>%
   group_by(ensembl_gene_id) %>%
   summarize(no_paralogues_95 = sum(perc_95, na.rm = TRUE))
 
+# determine number of paralogues above the 85th percentile (target% and query%) per gene 
+paralogues_85 <- paralogues %>%
+  mutate(perc_85 = (hsapiens_paralog_perc_id > target_85_perc & hsapiens_paralog_perc_id_r1 > query_85_perc)) %>% 
+  distinct() %>%
+  group_by(ensembl_gene_id) %>%
+  summarize(no_paralogues_85 = sum(perc_85, na.rm = TRUE))
+
+# determine number of paralogues above the 75th percentile (target% and query%) per gene 
+paralogues_75 <- paralogues %>%
+  mutate(perc_75 = (hsapiens_paralog_perc_id > target_75_perc & hsapiens_paralog_perc_id_r1 > query_75_perc)) %>% 
+  distinct() %>%
+  group_by(ensembl_gene_id) %>%
+  summarize(no_paralogues_75 = sum(perc_75, na.rm = TRUE))
+
+
+# join dataframes
+no_paralogues <- paralogues_95 %>% 
+  left_join(paralogues_85, by = "ensembl_gene_id") %>%
+  left_join(paralogues_75, by = "ensembl_gene_id")
 
 # write results
-write.csv(paralogues_95, 
-          paste0("gene_score/features/results/paralogues_95_", creation_date, ".csv"), 
+write.csv(no_paralogues, 
+          paste0("gene_score/features/results/paralogues_95_85_75_", creation_date, ".csv"), 
           row.names = FALSE)
 
 
