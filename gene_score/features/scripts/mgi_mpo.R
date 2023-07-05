@@ -62,38 +62,44 @@ mgi_pg_mp <- read.delim(paste0("gene_score/features/raw/MGI_PhenoGenoMP_", creat
 colnames(mgi_pg_mp) <- c("allellic_composition", "allele_symbols", "genetic_background", "mpo_id", "pubmed_id", "mgi_marker_accession_id")
 
 
-# filter genotypes for association with "MP:0005367" (= "renal/urinary system phenotype") and its children
-mgi_pg_mp <- mgi_pg_mp %>% 
-  filter(mpo_id %in% kidney_mpo_terms) 
+# check which genotypes are associated with "MP:0005367" (= "renal/urinary system phenotype") or any of its children
+mgi_pg_mp <- mgi_pg_mp %>% rowwise() %>% mutate(mpo_kid_pos = mpo_id %in% kidney_mpo_terms) 
 
-# tidy, filter out polygenic genotypes, check for heterozygosity/homozygosity in monogenic phenotypes, join with human entrez IDs
-get_number_of_genes <- function(string){
-  no_genes <- string %>%
-    strsplit("\\|") %>%
-    "[["(1) %>%
-    gsub("<[^>]+>", "", .) %>%
-    unique() %>%
-    length()
-  return(no_genes)
-}
+# kidney positive genotypes 
+kid_pos_gt <- mgi_pg_mp %>% filter(mpo_kid_pos == TRUE)
 
-mgi_pg_mp <- separate_rows(data = mgi_pg_mp, mgi_marker_accession_id, sep = "\\|") %>% 
-  rowwise %>% 
-  mutate(no_genes = get_number_of_genes(allele_symbols)) %>% 
-  filter(no_genes == 1) %>% # remove polygenic genotypes
-  mutate(wt_alleles = sum(grepl("<\\+>", (strsplit(allele_symbols, "\\|")[[1]]))),
+# filter out polygenic genotypes, check for heterozygosity/homozygosity in monogenic phenotypes
+kid_pos_gt <- kid_pos_gt %>% 
+  rowwise() %>% 
+  filter(length(strsplit(mgi_marker_accession_id, split = "|", fixed = TRUE)[[1]]) == 1) %>% # remove polygenic genotypes
+  mutate(wt_alleles = sum(grepl("<\\+>", (strsplit(allele_symbols, "\\|")[[1]]))), 
          mpo_kidney_gene_het = (wt_alleles == 1),
-         mpo_kidney_gene_hom = (wt_alleles == 0)) %>% 
-  left_join(hmd_hp[, c("human_entrez_id", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many")
+         mpo_kidney_gene_hom = (wt_alleles == 0))# %>%
+  # left_join(hmd_hp[, c("human_entrez_id", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many")
 
-hmd_hp_mpo_kidney <- mgi_pg_mp %>% 
-  filter(!is.na(human_entrez_id)) %>% 
-  dplyr::select(human_entrez_id, mpo_kidney_gene_het, mpo_kidney_gene_hom) %>% 
+# heterozygous and homozygous genotypes associated with "MP:0005367" 
+het_kid_genes <- kid_pos_gt %>% filter(mpo_kidney_gene_het == TRUE) %>% .$mgi_marker_accession_id %>% unique()
+hom_kid_genes <- kid_pos_gt %>% filter(mpo_kidney_gene_hom == TRUE) %>% .$mgi_marker_accession_id %>% unique()
+
+# annotate raw dataframe
+mgi_pg_mp <- mgi_pg_mp %>% 
+  dplyr::select(mgi_marker_accession_id) %>% 
   distinct() %>% 
-  group_by(human_entrez_id) %>% 
-  summarize(mpo_kidney_gene_het = any(mpo_kidney_gene_het), mpo_kidney_gene_hom = any(mpo_kidney_gene_hom))
+  rowwise() %>% 
+  filter(length(strsplit(mgi_marker_accession_id, split = "|", fixed = TRUE)[[1]]) == 1) %>% # remove polygenic genotypes
+  mutate(mgi_kid = case_when(mgi_marker_accession_id %in% het_kid_genes ~ 2,
+                             mgi_marker_accession_id %in% hom_kid_genes ~ 1,
+                             .default = 0)) %>% 
+  left_join(hmd_hp[, c("human_entrez_id", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many") %>% 
+  filter(!is.na(human_entrez_id)) %>% 
+  dplyr::select(human_entrez_id, mgi_kid) %>% 
+  distinct() 
+
 
 # write results
-write.csv(hmd_hp_mpo_kidney, 
+write.csv(mgi_pg_mp, 
           paste0("gene_score/features/results/mgi_human_genes_associated_MP_0005367_" , creation_date, ".csv"), 
           row.names = FALSE)
+
+
+
