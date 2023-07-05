@@ -55,8 +55,6 @@ The repository has the following structure:
 ```
 
 - The `gene_score/` directory contains TODO
-- The `functions/` directory contains TODO
-- The `data/` TODO
 - The `results/` TODO
 
 
@@ -78,6 +76,12 @@ This project is licensed under the terms of the MIT license. For more informatio
 - <https://github.com/berntpopp>
 - <https://orcid.org/0000-0002-3679-1081>
 - <https://scholar.google.com/citations?user=Uvhu3t0AAAAJ>
+
+
+**Sören Lukassen**
+
+TODO
+
 
 **Constantin Aaron Wolff**
 
