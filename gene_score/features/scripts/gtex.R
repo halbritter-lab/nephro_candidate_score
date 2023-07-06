@@ -16,6 +16,10 @@ rna_tissue_gtex_nTPM <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv"
   dplyr::select(ensembl_gene_id = Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
+symbol_df <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv") %>% 
+  dplyr::select(ensembl_gene_id = Gene, symbol = Gene.name) %>% 
+  distinct()
+
 # dataset contains expression values for all tissues for 19764 genes - except for retina: here for 20090 genes
 # => remove genes, that only have expression values for retina, but no other tissues
 rna_tissue_gtex_nTPM <- rna_tissue_gtex_nTPM[complete.cases(rna_tissue_gtex_nTPM), ]
@@ -41,14 +45,16 @@ tau_values <- sapply(1:nrow(norm_data), function(i) {
   sum((1 - xi) / (N - 1))
 })
 
-tau_df <- data.frame(ensembl_gene_id = rownames(norm_data), gtex_tau = tau_values)
+tau_df <- data.frame(ensembl_gene_id = rownames(norm_data), gtex_tau = tau_values) %>% 
+  left_join(symbol_df, by = "ensembl_gene_id")
 
 # add prefix and get rownames back to column
 names(rna_tissue_gtex_nTPM_agg) <- paste0("gtex_", names(rna_tissue_gtex_nTPM_agg))
 
 rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM_agg %>% 
   rownames_to_column(var = "ensembl_gene_id") %>% 
-  rename_all(~ str_replace_all(.x, " ", "_"))
+  rename_all(~ str_replace_all(.x, " ", "_")) %>% 
+  left_join(symbol_df, by = "ensembl_gene_id")
 
 # write results - nTPM values
 write.csv(rna_tissue_gtex_nTPM_agg, paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_" , creation_date, ".csv"), row.names = FALSE)
