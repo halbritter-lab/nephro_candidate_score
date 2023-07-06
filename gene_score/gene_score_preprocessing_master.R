@@ -58,13 +58,24 @@ cat("get gnomad features...")
 source("gene_score/features/scripts/gnomad.R")
 gnomad_constraints <- read_csv(paste0("gene_score/features/results/gnomad_constraints_", creation_date, ".csv"), show_col_types = FALSE)
 HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = "ensembl_gene_id")
+j1 <- left_join_rescue(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id", by2 = "symbol")
+j2 <- left_join_rescue_symbol(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id")
+
+
+j1 %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
+j2 %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
+HGNC_table %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
+
+
 
 # get GTEX features and join with HGNC table
 cat("get GTEX features...")
 source("gene_score/features/scripts/gtex.R")
 gtex_nTPM <- read_csv(paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_", creation_date, ".csv"), show_col_types = FALSE)
 gtex_tau <- read_csv(paste0("gene_score/features/results/rna_tissues_gtex_nTPM_agg_tau_val_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(gtex_nTPM, by = "ensembl_gene_id") %>% left_join(gtex_tau, by = "ensembl_gene_id")
+# HGNC_table <- HGNC_table %>% left_join(gtex_nTPM, by = "ensembl_gene_id") %>% left_join(gtex_tau, by = "ensembl_gene_id")
+HGNC_table <- left_join_rescue(HGNC_table, gtex_nTPM, by1 = "ensembl_gene_id", by2 = "symbol")
+HGNC_table <- left_join_rescue(HGNC_table, gtex_tau, by1 = "ensembl_gene_id", by2 = "symbol")
 
 
 # get KidneyNetwork features and join with HGNC table
@@ -126,6 +137,74 @@ HGNC_table <- HGNC_table %>% left_join(mgi_mpo_kidney, by = "entrez_id")
 
 # TODO: CONTINUE HERE
 # create a left_join function that joins by second identifier, if first identifier does not hit
+left_join_rescue <- function(x, y, by1, by2) {
+  
+  # try to join by first column ('by1')
+  y_sub1 <- y %>% dplyr::select(-{{ by2 }})
+  by_by1_match <- inner_join(x, y_sub1, by = by1) # joined df that was joined by column 'by1'
+  by_by1_no_match <- anti_join(x, y_sub1, by = by1) # df that had no match by column 'by1'
+  
+  # try to join by first column ('by2')
+  y_sub2 <- y %>% dplyr::select(-{{ by1 }})
+  by_by2_match <- inner_join(by_by1_no_match, y_sub2, by = by2) # joined df that was joined by column 'by1'
+  no_match <- anti_join(by_by1_no_match, y_sub2, by = by2) # df that had no match at all (neither by 'by1' nor by 'by2')
+  
+  # combine subset dataframes
+  res <- dplyr::bind_rows(by_by1_match, by_by2_match, no_match)
+
+  return(res)
+}
+
+# create a left_join function that joins by hgnc_id (from symbol), if first identifier does not hit
+left_join_rescue_symbol <- function(x, y, by1) {
+  
+  # try to join by first column ('by1')
+  y_sub1 <- y %>% dplyr::select(-symbol)
+  by_by1_match <- inner_join(x, y_sub1, by = by1) # joined df that was joined by column 'by1'
+  by_by1_no_match_x <- anti_join(x, y_sub1, by = by1) # subdf of x that had no match by column 'by1'
+  
+  by_by1_no_match_y <- anti_join(y, x, by = by1) %>% filter(symbol %in% all_prot_coding_gene_symbols)
+  
+  # get hgnc_id for symbols
+  by_by1_no_match_y$hgnc_id_int <- hgnc_id_from_symbol_grouped(tibble(value = by_by1_no_match_y$symbol)) 
+  
+  by_by1_no_match_y <- by_by1_no_match_y %>% dplyr::select(-{{ by1 }}, -symbol)
+  
+  # in case two symbols match the same hgnc_id use only the first row
+  by_by1_no_match_y <- by_by1_no_match_y[!duplicated(by_by1_no_match_y$hgnc_id_int), ]
+  
+  # try to join by "hgnc_id_int"
+  by_hgnc_id_match <- inner_join(by_by1_no_match_x, by_by1_no_match_y, by = "hgnc_id_int") 
+  no_match <- anti_join(by_by1_no_match_x, by_by1_no_match_y, by = "hgnc_id_int") # df that had no match at all 
+  
+  # combine subset dataframes
+  res <- dplyr::bind_rows(by_by1_match, by_hgnc_id_match, no_match)
+  
+  return(res)
+}
+
+
+# NOTE: these functions work slightly different, in both cases matching issues arrive. In general left_join_rescue_symbol() should be used.
+
+
+y <- gnomad_constraints
+x <- HGNC_table
+by1 <- "ensembl_gene_id"
+
+
+
+
+left_join_rescue_symbol(df1, df2, "A", "B")
+
+
+# Create a sample dataframe
+df1 <- data.frame(A = c(1,2,3,4,5, 100), B = c("a", "b", "c", "d", "e", "f"), C = 5:10)
+df2 <- data.frame(A = c(1,2,3,10,6, 100), B = c("z", "b", "x", "d", "r", "l"), D = c(33, 31, 23, 45, 44, 100))
+df1
+df2
+
+df1 %>% left_join(df2, by=c("A", "B"))
+
 
 left_join_rescue <- function(x, y, by_1_l, by_1_r, by_2_l, by_2_r) {
   y_sub <- y %>% dplyr::select(-{{ by_2_r }})
