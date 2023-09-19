@@ -94,7 +94,7 @@ mgi_pg_mp <- mgi_pg_mp %>%
   filter(!is.na(human_entrez_id)) %>% 
   dplyr::select(entrez_id = human_entrez_id, mgi_kid) %>% 
   distinct() %>% 
-  group_by(entrez_id) %>% summarize(max_mgi_kid = max(mgi_kid, na.rm = TRUE)) # if there are two values for one human entrez_id, take the worst (2 > 1 > 0, heterozygous > homozygous > no kidney phenotype)
+  group_by(entrez_id) %>% summarize(max_mgi_kid = max(mgi_kid, na.rm = TRUE)) # if there are two values for one human entrez_id, take the highest (2 > 1 > 0, heterozygous > homozygous > no kidney phenotype)
 
 
 # write results
