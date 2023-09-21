@@ -52,7 +52,7 @@ write.csv(datasets_df, paste0("gene_score/features/results/cellxgene_datasets_su
 
 ########## PRIMARY FILTER DIMENSIONS ##################
 # set the URL
-prim_filt_url <- "https://api.cellxgene.cziscience.com/wmg/v1/primary_filter_dimensions"
+prim_filt_url <- "https://api.cellxgene.cziscience.com/wmg/v2/primary_filter_dimensions"
 
 # set the header
 headers <- c("Content-Type" = "application/json")
@@ -97,7 +97,7 @@ pfd_tt_df <- pfd_tt %>%
 # TODO: customize, rewrite etc. 
 
 # set the URL
-query_url <- "https://api.cellxgene.cziscience.com/wmg/v1/query"
+query_url <- "https://api.cellxgene.cziscience.com/wmg/v2/query"
 
 # set the header
 headers <- c("Content-Type" = "application/json")
@@ -106,7 +106,7 @@ headers <- c("Content-Type" = "application/json")
 # TODO: if needed, customize for more than one tissue etc.
 create_query_body <- function(datasets_vec,
                               query_taxon,
-                              query_tissue,
+                              # query_tissue,
                               development_stage_list = list(),
                               disease_list = list(),
                               gene_list = list(),
@@ -121,9 +121,9 @@ create_query_body <- function(datasets_vec,
       gene_ontology_term_ids = gene_list,
       organism_ontology_term_id = unbox(query_taxon),
       self_reported_ethnicity_ontology_term_ids = self_reported_ethnicity_list,
-      sex_ontology_term_ids = sex_list,
-      tissue_ontology_term_ids = c(query_tissue)
-    ),
+      sex_ontology_term_ids = sex_list),
+      # tissue_ontology_term_ids = c(query_tissue)
+    # ),
     is_rollup = unbox(TRUE) #TODO: change?
   )
   return(body)
@@ -150,7 +150,7 @@ list_to_expr_df <- function(content_list) {
     cell_id = names(.x[[1]]),
     me = unname(unlist(lapply(lapply(.x[[1]], "[[", 1), "[[", "me"))),
     n = unname(unlist(lapply(lapply(.x[[1]], "[[", 1), "[[", "n"))),
-    pc = unname(unlist(lapply(lapply(.x[[1]], "[[", 1), "[[", "pc"))),
+    pc = c(unname(unlist(lapply(lapply(.x[[1]], "[[", 1), "[[", "pc"))), NA),
     tpc = unname(unlist(lapply(lapply(.x[[1]], "[[", 1), "[[", "tpc")))
   )) 
   
@@ -167,7 +167,7 @@ list_to_expr_df <- function(content_list) {
 
 get_cellxgene_expr_val <- function(datasets_vec,
                                    query_taxon,
-                                   query_tissue,
+                                   # query_tissue,
                                    development_stage_list = list(),
                                    disease_list = list(),
                                    gene_ontology_term_ids = list(),
@@ -175,14 +175,14 @@ get_cellxgene_expr_val <- function(datasets_vec,
                                    sex_ontology_term_ids = list(),
                                    url
                                    ) {
-  body <- create_query_body(datasets_vec,
-                            query_taxon,
-                            query_tissue,
-                            development_stage_list,
-                            disease_list,
-                            gene_ontology_term_ids,
-                            self_reported_ethnicity_ontology_term_ids,
-                            sex_ontology_term_ids)
+  body <- create_query_body(datasets_vec = datasets_vec,
+                            query_taxon = query_taxon,
+                            # query_tissue,
+                            development_stage_list = development_stage_list,
+                            disease_list = disease_list,
+                            gene_list = gene_ontology_term_ids,
+                            self_reported_ethnicity_list = self_reported_ethnicity_ontology_term_ids,
+                            sex_list = sex_ontology_term_ids)
   
   content_list <- query_cellxgene_POST(url, body)
   
@@ -197,9 +197,11 @@ get_cellxgene_expr_val <- function(datasets_vec,
 
 
 ###### GET EXPRESSION VALUES FOR "0b4a15a7-4e9e-4555-9733-2423e5c66469" ######
+# 'Single cell RNA-seq data from normal adult kidney tissue', Bitzer, Michigan
+
 ds_id <- c("0b4a15a7-4e9e-4555-9733-2423e5c66469")
 query_taxon <- "NCBITaxon:9606"
-query_tissue <- "UBERON:0002113"
+# query_tissue <- "UBERON:0002113"
 gene_vec <- pfd_gt_df %>%
   filter(taxon_id %in% query_taxon, ensembl_gene_id %in% HGNC_table$ensembl_gene_id) %>%
   .$ensembl_gene_id %>%
@@ -212,67 +214,102 @@ gene_split_list <- split(gene_vec, ceiling(seq_along(gene_vec) / 1000))
 # get expression values chunk wise
 expr_val_combined <- data.frame()
 pb <- progress_bar$new(total = length(gene_split_list))
-
+iter = 0
 
 for (i in gene_split_list){
   pb$tick()  # Increment progress bar
-  cat("\n")
   sub_df <- get_cellxgene_expr_val(datasets_vec = ds_id,
                                  query_taxon = query_taxon,
-                                 query_tissue = query_tissue,
+                                 # query_tissue = query_tissue,
                                  development_stage_list = list(),
                                  disease_list = list(),
                                  gene_ontology_term_ids = i,
                                  self_reported_ethnicity_ontology_term_ids = list(),
                                  sex_ontology_term_ids = list(),
-                                 url = "https://api.cellxgene.cziscience.com/wmg/v1/query")
+                                 url = "https://api.cellxgene.cziscience.com/wmg/v2/query")
   
   expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
 }
 
+
+
+##### get cell ids
+cell_types <- datasets %>%
+  unnest_wider(ds) %>%
+  filter(str_detect(explorer_url, ds_id)) %>%
+  unnest_longer(cell_type) %>%
+  unnest_wider(cell_type) %>% 
+  select(cell_label = label, cell_ontogolgy_term_id = ontology_term_id)
+
+kidney_cell_types <- c("endothelial cell",
+                       "podocyte",
+                       "renal interstitial pericyte",
+                       "epithelial cell of proximal tubule",
+                       "kidney interstitial fibroblast",
+                       "kidney collecting duct intercalated cell",
+                       "kidney collecting duct principal cell",
+                       "kidney loop of Henle thin ascending limb epithelial cell",
+                       "kidney loop of Henle thick ascending limb epithelial cell",
+                       "kidney distal convoluted tubule epithelial cell",
+                       "parietal epithelial cell",
+                       "kidney connecting tubule epithelial cell",
+                       "kidney loop of Henle thin descending limb epithelial cell"
+                       )
+
+cell_ontology_term_ids_kid <- cell_types %>%
+  filter(cell_label %in% kidney_cell_types) %>% 
+  .$cell_ontogolgy_term_id
+
+
 expr_val_combined <- expr_val_combined %>%
-  dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
+  dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc")) %>% 
+  dplyr::select(ensembl_gene_id, matches(paste0("^(", paste(cell_ontology_term_ids_kid, collapse = "|"), ")")))
 
 # write results
 write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), row.names = FALSE)
 
-###### GET EXPRESSION VALUES FOR "d7dcfd8f-2ee7-4385-b9ac-e074c23ed190" (FETAL KIDNEY) ######
-ds_id <- c("d7dcfd8f-2ee7-4385-b9ac-e074c23ed190")
-query_taxon <- "NCBITaxon:9606"
-query_tissue <- "UBERON:0002113"
-gene_vec <- pfd_gt_df %>%
-  filter(taxon_id %in% query_taxon, ensembl_gene_id %in% HGNC_table$ensembl_gene_id) %>%
-  .$ensembl_gene_id %>%
-  as.vector()
+# 
+# ###### GET EXPRESSION VALUES FOR "d7dcfd8f-2ee7-4385-b9ac-e074c23ed190" (FETAL KIDNEY) ######
+# ds_id <- c("d7dcfd8f-2ee7-4385-b9ac-e074c23ed190")
+# query_taxon <- "NCBITaxon:9606"
+# query_tissue <- "UBERON:0002113"
+# gene_vec <- pfd_gt_df %>%
+#   filter(taxon_id %in% query_taxon, ensembl_gene_id %in% HGNC_table$ensembl_gene_id) %>%
+#   .$ensembl_gene_id %>%
+#   as.vector()
+# 
+# # NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
+# gene_split_list <- split(gene_vec, ceiling(seq_along(gene_vec) / 1000))
+# 
+# # get expression values chunk wise
+# expr_val_combined <- data.frame()
+# pb <- progress_bar$new(total = length(gene_split_list))
+# 
+# for (i in gene_split_list){
+#   pb$tick()  # Increment progress bar
+#   cat("\n")
+#   sub_df <- get_cellxgene_expr_val(datasets_vec = ds_id,
+#                                    query_taxon = query_taxon,
+#                                    query_tissue = query_tissue,
+#                                    development_stage_list = list(),
+#                                    disease_list = list(),
+#                                    gene_ontology_term_ids = i,
+#                                    self_reported_ethnicity_ontology_term_ids = list(),
+#                                    sex_ontology_term_ids = list(),
+#                                    url = "https://api.cellxgene.cziscience.com/wmg/v1/query")
+#   
+#   expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
+# }
+# 
+# expr_val_combined <- expr_val_combined %>%
+#   dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
+# 
+# # write results
+# write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), row.names = FALSE)
+# 
+# 
+# 
 
-# NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
-gene_split_list <- split(gene_vec, ceiling(seq_along(gene_vec) / 1000))
-
-# get expression values chunk wise
-expr_val_combined <- data.frame()
-pb <- progress_bar$new(total = length(gene_split_list))
-
-for (i in gene_split_list){
-  pb$tick()  # Increment progress bar
-  cat("\n")
-  sub_df <- get_cellxgene_expr_val(datasets_vec = ds_id,
-                                   query_taxon = query_taxon,
-                                   query_tissue = query_tissue,
-                                   development_stage_list = list(),
-                                   disease_list = list(),
-                                   gene_ontology_term_ids = i,
-                                   self_reported_ethnicity_ontology_term_ids = list(),
-                                   sex_ontology_term_ids = list(),
-                                   url = "https://api.cellxgene.cziscience.com/wmg/v1/query")
-  
-  expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
-}
-
-expr_val_combined <- expr_val_combined %>%
-  dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
-
-# write results
-write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), row.names = FALSE)
 
 
 
