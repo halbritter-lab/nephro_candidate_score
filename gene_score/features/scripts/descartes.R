@@ -1,9 +1,5 @@
 # Title: Descartes - ssRNA fetal kidney
 
-#https://descartes.brotmanbaty.org/bbi/human-gene-expression-during-development/cell/mesangial/in/kidney
-
-
-
 # load libraries
 library(tidyverse)	
 library(jsonlite) 
@@ -38,19 +34,8 @@ get_cell_percentage <- function(cell_type){
                 destfile = paste0("gene_score/features/raw/descartes_", cell_type, "_percentage_", creation_date, ".csv"))
 }
 
-# get_cell_tpm("mesangial")
-# get_cell_percentage("mesangial")
-# get_cell_tpm("metanephric")
-# get_cell_percentage("metanephric")
-# get_cell_tpm("uretic_bud")
-# get_cell_percentage("uretic_bud")
-# get_cell_tpm("stromal")
-# get_cell_percentage("stromal")
-# get_cell_tpm("vascular_endothelial")
-# get_cell_percentage("vascular_endothelial")
-
-
 cell_types <- c("mesangial", "metanephric", "ureteric_bud", "stromal", "vascular_endothelial")
+# cell_types <- str_replace(main_clusters[,1], " ", "_")
 
 perc_expr_df <- gene_ids %>% 
   filter(ensembl_gene_id %in% HGNC_table$ensembl_gene_id)
@@ -93,6 +78,45 @@ write.csv(perc_expr_df, paste0("gene_score/features/results/descartes_fetal_kidn
 write.csv(tpm_df, paste0("gene_score/features/results/descartes_fetal_kidney_tpm_", creation_date, ".csv"), row.names = FALSE)
 
 
+## Calculate nTPM values
+# Calculate the effective library sizes on complete rows
+tpm_df_cc <- tpm_df %>% column_to_rownames(var = "ensembl_gene_id")
+tpm_df_cc <- tpm_df_cc[complete.cases(tpm_df_cc),] 
 
+
+# Perform quantile normalization (https://davetang.org/muse/2014/07/07/quantile-normalisation-in-r/)
+# define function
+quantile_normalisation <- function(df){
+  df_rank <- apply(df, 2, rank, ties.method="min")
+  df_sorted <- data.frame(apply(df, 2, sort))
+  df_mean <- apply(df_sorted, 1, mean)
+  
+  index_to_mean <- function(my_index, my_mean){
+    return(my_mean[my_index])
+  }
+  
+  df_final <- apply(df_rank, 2, index_to_mean, my_mean=df_mean)
+  rownames(df_final) <- rownames(df)
+  return(df_final)
+}
+
+# perform quantile normalization on TPM complete cases dataframe
+ntpm_df_cc <- quantile_normalisation(tpm_df_cc)
+ntpm_df_cc_with_id <- ntpm_df_cc %>% data.frame() %>% rownames_to_column(var = "ensembl_gene_id")
+
+# calculate the normalized tissue specifitiy index tau according to Yanai et al. 
+N <- ncol(ntpm_df_cc)
+max_row <- apply(ntpm_df_cc, 1, max)
+norm_data <- ntpm_df_cc / max_row
+tau_values <- sapply(1:nrow(norm_data), function(i) {
+  xi <- norm_data[i, ]
+  sum((1 - xi) / (N - 1))
+})
+
+fetal_kidney_tau_df <- data.frame(ensembl_gene_id = rownames(norm_data), fetal_kidney_tau = tau_values) 
+
+# write results
+write.csv(fetal_kidney_tau_df, paste0("gene_score/features/results/descartes_fetal_kidney_tau_", creation_date, ".csv"), row.names = FALSE)
+write.csv(ntpm_df_cc_with_id, paste0("gene_score/features/results/descartes_fetal_nptm_", creation_date, ".csv"), row.names = FALSE)
 
 
