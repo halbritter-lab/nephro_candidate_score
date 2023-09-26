@@ -5,7 +5,7 @@ library(tidyverse)
 library(jsonlite) 
 
 
-# download and read in files
+# download and read in main clusters and gene IDs
 main_clusters_url <- "https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/labels/kidney_main_cluster_name_lbls.json"
 
 download.file(main_clusters_url, 
@@ -21,7 +21,7 @@ gene_ids<- read.csv(paste0("gene_score/features/raw/descartes_gene_ids_url_", cr
   rename(gene_symbol = V1, ensembl_gene_id = V2)
 
 
-# download tpm and cell percentage for each kidney cell type
+# function for downloading TPM values and cell percentage for each kidney cell type
 get_cell_tpm <- function(cell_type){
   download_url <- paste0("https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/tables/cell_tpm/kidney/", cell_type, ".csv")
   download.file(download_url, 
@@ -34,15 +34,19 @@ get_cell_percentage <- function(cell_type){
                 destfile = paste0("gene_score/features/raw/descartes_", cell_type, "_percentage_", creation_date, ".csv"))
 }
 
+# kidney cell types
 cell_types <- c("mesangial", "metanephric", "ureteric_bud", "stromal", "vascular_endothelial")
 # cell_types <- str_replace(main_clusters[,1], " ", "_")
 
+
+# create dataframes for TPM values and cell expression data
 perc_expr_df <- gene_ids %>% 
   filter(ensembl_gene_id %in% HGNC_table$ensembl_gene_id)
 
 tpm_df <- gene_ids %>% 
   filter(ensembl_gene_id %in% HGNC_table$ensembl_gene_id)
 
+# fill dataframes
 for (cell_type in cell_types){
   get_cell_percentage(cell_type)
   get_cell_tpm(cell_type)
@@ -83,9 +87,7 @@ write.csv(tpm_df, paste0("gene_score/features/results/descartes_fetal_kidney_tpm
 tpm_df_cc <- tpm_df %>% column_to_rownames(var = "ensembl_gene_id")
 tpm_df_cc <- tpm_df_cc[complete.cases(tpm_df_cc),] 
 
-
-# Perform quantile normalization (https://davetang.org/muse/2014/07/07/quantile-normalisation-in-r/)
-# define function
+# function for quantile normalization (https://davetang.org/muse/2014/07/07/quantile-normalisation-in-r/)
 quantile_normalisation <- function(df){
   df_rank <- apply(df, 2, rank, ties.method="min")
   df_sorted <- data.frame(apply(df, 2, sort))
@@ -102,6 +104,7 @@ quantile_normalisation <- function(df){
 
 # perform quantile normalization on TPM complete cases dataframe
 ntpm_df_cc <- quantile_normalisation(tpm_df_cc)
+colnames(ntpm_df_cc) <- gsub("_tpm", "_nTPM", colnames(ntpm_df_cc))
 ntpm_df_cc_with_id <- ntpm_df_cc %>% data.frame() %>% rownames_to_column(var = "ensembl_gene_id")
 
 # calculate the normalized tissue specifitiy index tau according to Yanai et al. 
