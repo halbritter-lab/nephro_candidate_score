@@ -19,8 +19,8 @@ hom_ko_genes <- read.table("gene_score/labels/raw/supplement/supplementary_datas
 # get HGNC ID from gene symbol
 hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>%
   tibble() %>%
-  dplyr::rename(c("hgnc_id" = ".")) %>%
-  drop_na(hgnc_id)
+  dplyr::rename(c("hgnc_id_int" = ".")) %>%
+  drop_na(hgnc_id_int)
 
 # download OMIM genemap
 # download.file(url = omim_download_url,
@@ -50,10 +50,13 @@ omim_hg38_morbid <- omim_genes_hg38 %>%
 # get HGNC ID for omim morbid genes
 omim_hg38_morbid_hgnc <- hgnc_id_from_symbol_grouped(tibble(value = omim_hg38_morbid$Approved_Gene_Symbol)) %>%
   tibble() %>% 
-  dplyr::rename(c("hgnc_id" = ".")) %>% 
-  drop_na(hgnc_id)
+  dplyr::rename(c("hgnc_id_int" = ".")) %>% 
+  drop_na(hgnc_id_int)
 
 # get dispensible genes (homozygous ko genes without Phenotypes entry in OMIM and not listed in kidney-genetics)
 disp_genes <- hom_ko_genes %>% 
-  filter(!(hgnc_id %in% omim_hg38_morbid_hgnc$hgnc_id), !(hgnc_id %in% kid_gen$hgnc_id)) 
+  filter(!(hgnc_id_int %in% omim_hg38_morbid_hgnc$hgnc_id_int), !(hgnc_id_int %in% kid_gen$hgnc_id_int)) 
+
+write.csv(disp_genes, paste0("gene_score/labels/results/dispensible_genes_", creation_date, ".csv"), row.names = FALSE)
+
 

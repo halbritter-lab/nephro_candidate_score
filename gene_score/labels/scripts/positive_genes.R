@@ -14,12 +14,17 @@ gunzip(filename = paste0("gene_score/labels/raw/A_MergeAnalysesSources.", kidney
        destname = paste0("gene_score/labels/raw/A_MergeAnalysesSources.", kidney_genetics_version, ".csv"))
 
 # load data
-kid_gen <- read.csv(paste0("gene_score/labels/raw/A_MergeAnalysesSources.", kidney_genetics_version, ".csv"))
+kid_gen <- read.csv(paste0("gene_score/labels/raw/A_MergeAnalysesSources.", kidney_genetics_version, ".csv")) %>% 
+  rename(hgnc_id_int = "hgnc_id")
 
-# filter genes above a specific evidence count
-evid_thresh <- 0 # TODO change
-pos_genes <- kid_gen %>% 
-  filter(evidence_count >= evid_thresh)
+# # filter genes above a specific evidence count
+# evid_thresh <- 0 # TODO change
+# pos_genes <- kid_gen %>% 
+#   filter(evidence_count >= evid_thresh)
 
 
 # TODO: selection of evidence group etc...
+
+# write results
+
+write.csv(kid_gen, paste0("gene_score/labels/results/positive_genes_", creation_date, ".csv"), row.names = FALSE)
