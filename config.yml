@@ -1,0 +1,7 @@
+default:
+  PROJECT_DIR: "/Users/nrank/Desktop/BioInf/halbritter/nephro_candidate_score/" # set your project directory here
+  creation_date: "2023-10-12"
+  kidney_genetics_version: "2023-10-04" # date of kidney-genetics version, check for latest version on https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/A_MergeAnalysesSources/results
+  hgnc_gt_version: "2023-10-10" # date of most recent HGNC annotated gene table version, https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/B_AnnotationHGNC/results
+  omim_download_url: "https://data.omim.org/downloads/1R83aw9QTZ66GmeYgYPVAQ/genemap2.txt" # set your omim download link for genemap
+
