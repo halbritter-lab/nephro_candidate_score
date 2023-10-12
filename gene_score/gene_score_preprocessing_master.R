@@ -1,27 +1,30 @@
 # Title: Gene score data preprocessing master script
 
+# load libraries
 library(tidyverse)
 library(utils)
 library(R.utils)
-source("config.R")
+library(config)
 
-# attach tidyr to second position for resolving the select() problem
-if ("package:tidyr" %in% search()) detach("package:tidyr", unload = TRUE)
-attachNamespace("tidyr", pos = 2)
-library(dplyr)
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score"
 
-# TODO: missing value imputation
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
 
+# source additional functions
+source("hgnc_functions.R")
+source("helper_functions.R")
 
 # download HGNC gene table from github repository "kidney-genetics"
-# hgnc_gt_version <- "2023-06-21"
-gene_table_url <- paste0("https://github.com/halbritter-lab/kidney-genetics/raw/main/analyses/A_AnnotationHGNC/results/non_alt_loci_set_coordinates.", hgnc_gt_version, ".csv.gz")
-download.file(url = gene_table_url, destfile = paste0("gene_score/raw/HGNC_", hgnc_gt_version, ".csv.gz"))
-gunzip(filename = paste0("gene_score/raw/HGNC_", hgnc_gt_version, ".csv.gz"), 
-       destname = paste0("gene_score/raw/HGNC_", hgnc_gt_version, ".csv"))
+gene_table_url <- paste0("https://github.com/halbritter-lab/kidney-genetics/blob/main/analyses/B_AnnotationHGNC/results/non_alt_loci_set_coordinates.", config_vars$hgnc_gt_version, ".csv.gz?raw=TRUE")
+download.file(url = gene_table_url, destfile = paste0("raw/HGNC_", config_vars$hgnc_gt_version, ".csv.gz"))
+gunzip(filename = paste0("raw/HGNC_", config_vars$hgnc_gt_version, ".csv.gz"), 
+       destname = paste0("raw/HGNC_", config_vars$hgnc_gt_version, ".csv"))
 
 # load HGNC gene table and filter for protein-coding genes # TODO: change paths
-HGNC_table <- read.csv("gene_score/raw/HGNC_2023-06-21.csv") %>% 
+HGNC_table <- read.csv(paste0("raw/HGNC_", config_vars$hgnc_gt_version, ".csv")) %>% 
   filter(locus_group == "protein-coding gene") %>% 
   dplyr::select(hgnc_id, entrez_id, ensembl_gene_id, symbol, alias_symbol, prev_symbol) %>% 
   rowwise() %>% 
@@ -34,37 +37,50 @@ all_prot_coding_gene_symbols <- unlist(strsplit(c(HGNC_table$symbol, HGNC_table$
 ##### LABELS ##### 
 # get positive genes
 cat("get positive genes...")
-source("gene_score/labels/scripts/positive_genes.R")
+source("labels/scripts/positive_genes.R")
 
 # get dipensible genes #TODO: test with stable internet connection
 cat("get dispensible genes...")
-source("gene_score/labels/scripts/dispensable_genes.R")
+source("labels/scripts/dispensable_genes.R")
 
 
 ##### FEATURES ##### 
 # get cellXgene features and join with HGNC table
 cat("get cellXgene features...")
-source("gene_score/features/scripts/cellxgene.R")
+source("features/scripts/cellxgene.R")
 cellXgene_ds1 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), show_col_types = FALSE)
-cellXgene_ds2 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), show_col_types = FALSE)
+# cellXgene_ds2 <- read_csv(paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), show_col_types = FALSE)
 
 HGNC_table <- HGNC_table %>%
-  left_join(cellXgene_ds1, by = "ensembl_gene_id") %>%
-  left_join(cellXgene_ds2, by = "ensembl_gene_id")
+  left_join(cellXgene_ds1, by = "ensembl_gene_id") #%>%
+  # left_join(cellXgene_ds2, by = "ensembl_gene_id")
 
+
+# get Descartes features and join with HGNC table
+cat("get descartes fetal kidney features...")
+source("gene_score/features/scripts/descartes.R")
+descartes_fetal_kid_tau <- read_csv(paste0("gene_score/features/results/descartes_fetal_kidney_tau_", creation_date, ".csv"), show_col_types = FALSE)
+descartes_fetal_kid_pe <- read_csv(paste0("gene_score/features/results/descartes_fetal_kidney_percent_expression_", creation_date, ".csv"), show_col_types = FALSE)
+descartes_fetal_kid_nptm <- read_csv(paste0("gene_score/features/results/descartes_fetal_nptm_", creation_date, ".csv"), show_col_types = FALSE)
+
+HGNC_table <- HGNC_table %>%
+  left_join(descartes_fetal_kid_tau, by = "ensembl_gene_id") %>% 
+  left_join(descartes_fetal_kid_pe, by = "ensembl_gene_id") %>% 
+  left_join(descartes_fetal_kid_nptm, by = "ensembl_gene_id")
+  
 
 # get gnomAD features and join with HGNC table
 cat("get gnomad features...")
 source("gene_score/features/scripts/gnomad.R")
 gnomad_constraints <- read_csv(paste0("gene_score/features/results/gnomad_constraints_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = "ensembl_gene_id")
-j1 <- left_join_rescue(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id", by2 = "symbol")
-j2 <- left_join_rescue_symbol(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id")
+# HGNC_table <- HGNC_table %>% left_join(gnomad_constraints, by = "ensembl_gene_id")
+# HGNC_table <- left_join_rescue(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id", by2 = "symbol")
+HGNC_table <- left_join_rescue_symbol(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id")
 
 
-j1 %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
-j2 %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
-HGNC_table %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
+# j1 %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
+# j2 %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
+# HGNC_table %>% filter(!is.na(gnomad_gene_length)) %>% .$hgnc_id %>% unique() %>% length()
 
 
 
@@ -78,19 +94,19 @@ HGNC_table <- left_join_rescue(HGNC_table, gtex_nTPM, by1 = "ensembl_gene_id", b
 HGNC_table <- left_join_rescue(HGNC_table, gtex_tau, by1 = "ensembl_gene_id", by2 = "symbol")
 
 
-# get KidneyNetwork features and join with HGNC table
-cat("get KidneyNetwork features...")
-source("gene_score/features/scripts/kidney_network.R")
-kidney_network_sums_z_scores <- read_csv(paste0("gene_score/features/results/Kidney_Network_sums_z_scores_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(kidney_network_sums_z_scores, by = c("ensembl_gene_id" = "ensembl_id"))
+# # get KidneyNetwork features and join with HGNC table
+# cat("get KidneyNetwork features...")
+# source("gene_score/features/scripts/kidney_network.R")
+# kidney_network_sums_z_scores <- read_csv(paste0("gene_score/features/results/Kidney_Network_sums_z_scores_", creation_date, ".csv"), show_col_types = FALSE)
+# HGNC_table <- HGNC_table %>% left_join(kidney_network_sums_z_scores, by = c("ensembl_gene_id" = "ensembl_id"))
 
 
-# get Nephrogenesis Atlas features and join with HGNC table
-#TODO: problem with double gene expression values for the same gene!
-cat("get Nephrogenesis Atlas features...")
-source("gene_score/features/scripts/nephrogenesis_atlas.R")
-nephrogenesis_atlas <- read_csv(paste0("gene_score/features/results/fetal_avg_expr_nephrogenesis_atlas_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(nephrogenesis_atlas, by = c("hgnc_id_int" = "hgnc_id"))
+# # get Nephrogenesis Atlas features and join with HGNC table
+# #TODO: problem with double gene expression values for the same gene!
+# cat("get Nephrogenesis Atlas features...")
+# source("gene_score/features/scripts/nephrogenesis_atlas.R")
+# nephrogenesis_atlas <- read_csv(paste0("gene_score/features/results/fetal_avg_expr_nephrogenesis_atlas_", creation_date, ".csv"), show_col_types = FALSE)
+# HGNC_table <- HGNC_table %>% left_join(nephrogenesis_atlas, by = c("hgnc_id_int" = "hgnc_id"))
 
 
 # get number of paralogues (above xth percentile Query% and Target%) and join with HGNC table
@@ -111,7 +127,7 @@ HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = "ensembl_gen
 cat("get average exons CpG observed-to-expected-ratio...")
 source("gene_score/features/scripts/exon_CpG_o2e_ratio.R")
 exons_CpG_o2e_ratio <- read_csv(paste0("gene_score/features/results/canonical_ts_exons_CpG_obs_to_exp_ratio_", creation_date, ".csv"), show_col_types = FALSE)
-HGNC_table <- HGNC_table %>% left_join(promoter_CpG_o2e_ratio, by = "ensembl_gene_id")
+HGNC_table <- HGNC_table %>% left_join(exons_CpG_o2e_ratio, by = "ensembl_gene_id")
 
 
 # get exon and promoter conservation scores and join with HGNC table
@@ -124,161 +140,135 @@ HGNC_table <- HGNC_table %>% left_join(avg_phasCons_prom, by = "ensembl_gene_id"
 
 
 # get annotation for which genes are associated with MGI MPO MP_0005367
-
-
-# TODO: soilve multiple values for one entrez id!!!
 cat("get MGI MPO annotation...")
 source("gene_score/features/scripts/mgi_mpo.R")
 mgi_mpo_kidney <- read_csv(paste0("gene_score/features/results/mgi_human_genes_associated_MP_0005367_" , creation_date, ".csv"), show_col_types = FALSE)
 HGNC_table <- HGNC_table %>% left_join(mgi_mpo_kidney, by = "entrez_id")
-# TODO: soilve multiple values for one entrez id!!!
 
 
 
-# TODO: CONTINUE HERE
-# create a left_join function that joins by second identifier, if first identifier does not hit
-left_join_rescue <- function(x, y, by1, by2) {
-  
-  # try to join by first column ('by1')
-  y_sub1 <- y %>% dplyr::select(-{{ by2 }})
-  by_by1_match <- inner_join(x, y_sub1, by = by1) # joined df that was joined by column 'by1'
-  by_by1_no_match <- anti_join(x, y_sub1, by = by1) # df that had no match by column 'by1'
-  
-  # try to join by first column ('by2')
-  y_sub2 <- y %>% dplyr::select(-{{ by1 }})
-  by_by2_match <- inner_join(by_by1_no_match, y_sub2, by = by2) # joined df that was joined by column 'by1'
-  no_match <- anti_join(by_by1_no_match, y_sub2, by = by2) # df that had no match at all (neither by 'by1' nor by 'by2')
-  
-  # combine subset dataframes
-  res <- dplyr::bind_rows(by_by1_match, by_by2_match, no_match)
-
-  return(res)
-}
-
-# create a left_join function that joins by hgnc_id (from symbol), if first identifier does not hit
-left_join_rescue_symbol <- function(x, y, by1) {
-  
-  # try to join by first column ('by1')
-  y_sub1 <- y %>% dplyr::select(-symbol)
-  by_by1_match <- inner_join(x, y_sub1, by = by1) # joined df that was joined by column 'by1'
-  by_by1_no_match_x <- anti_join(x, y_sub1, by = by1) # subdf of x that had no match by column 'by1'
-  
-  by_by1_no_match_y <- anti_join(y, x, by = by1) %>% filter(symbol %in% all_prot_coding_gene_symbols)
-  
-  # get hgnc_id for symbols
-  by_by1_no_match_y$hgnc_id_int <- hgnc_id_from_symbol_grouped(tibble(value = by_by1_no_match_y$symbol)) 
-  
-  by_by1_no_match_y <- by_by1_no_match_y %>% dplyr::select(-{{ by1 }}, -symbol)
-  
-  # in case two symbols match the same hgnc_id use only the first row
-  by_by1_no_match_y <- by_by1_no_match_y[!duplicated(by_by1_no_match_y$hgnc_id_int), ]
-  
-  # try to join by "hgnc_id_int"
-  by_hgnc_id_match <- inner_join(by_by1_no_match_x, by_by1_no_match_y, by = "hgnc_id_int") 
-  no_match <- anti_join(by_by1_no_match_x, by_by1_no_match_y, by = "hgnc_id_int") # df that had no match at all 
-  
-  # combine subset dataframes
-  res <- dplyr::bind_rows(by_by1_match, by_hgnc_id_match, no_match)
-  
-  return(res)
-}
-
-
-# NOTE: these functions work slightly different, in both cases matching issues arrive. In general left_join_rescue_symbol() should be used.
-
-
-y <- gnomad_constraints
-x <- HGNC_table
-by1 <- "ensembl_gene_id"
+# write results
+write.csv(HGNC_table, paste0("gene_score/features/results/gene_features_", creation_date, ".csv"), row.names = FALSE)
 
 
 
 
-left_join_rescue_symbol(df1, df2, "A", "B")
-
-
-# Create a sample dataframe
-df1 <- data.frame(A = c(1,2,3,4,5, 100), B = c("a", "b", "c", "d", "e", "f"), C = 5:10)
-df2 <- data.frame(A = c(1,2,3,10,6, 100), B = c("z", "b", "x", "d", "r", "l"), D = c(33, 31, 23, 45, 44, 100))
-df1
-df2
-
-df1 %>% left_join(df2, by=c("A", "B"))
-
-
-left_join_rescue <- function(x, y, by_1_l, by_1_r, by_2_l, by_2_r) {
-  y_sub <- y %>% dplyr::select(-{{ by_2_r }})
-  colnames(y_sub)[which(colnames(y_sub) %in% by_1_r)] <- by_1_l
-  
-  joined_sub <- left_join(x, y_sub, by = by_1_l)
-  not_joined_ids <- setdiff(data.frame(y)[, by_1_r], data.frame(x)[, by_1_l])
-
-  # 
-  return(not_joined_ids)
-
-}
-
-y <- gnomad_constraints
-x <- HGNC_table
-by_1_l <- "ensembl_gene_id"
-by_1_r <- "gene_id"
-by_2_l <- "symbol"
-by_2_r <- "gene"
-
-j <- left_join_rescue(HGNC_table, gnomad_constraints, "ensembl_gene_id", "gene_id", "symbol", "gene")
-
-setdiff(as.vector(HGNC_table[, by_1_l]), as.vector(gnomad_constraints[, by_1_r]))
-
-
-setdiff(df[, "A"], df[, "C"])
-
-
-setdiff(gnomad_constraints[, by_1_r], data.frame(HGNC_table)[, by_1_l])
 
 
 
 
-my_function <- function(A, dataframe) {
-  selected_column <- dataframe %>%
-    dplyr::select({{ A }})
-  
-  return(selected_column)
-}
+write.xlsx(data.frame(features=names(HGNC_table)),
+           file = "feature_names.xlsx",
+           row.names = F)
 
 
-# Create a sample dataframe
-df <- data.frame(A = 1:5, B = letters[1:5], C = 5:9)
-
-# Call the function to select the "B" column from the dataframe
-result <- my_function("B", df)
-
-# Print the result
-print(result)
-
-
-library(dplyr)
-library(rlang)
-
-my_function <- function(var1, var2, x, y_sub) {
-  joined_sub <- x %>%
-    left_join(y_sub, by = setNames(!!!syms(c(var1, var2))))
-  
-  return(joined_sub)
-}
-
-
-# Create sample dataframes
-x <- data.frame(var1 = c(1, 2, 3), var2 = c("A", "B", "C"), value = c(10, 20, 30))
-y_sub <- data.frame(var2 = c("A", "C"), value2 = c(100, 300))
-
-# Call the function to perform the left join
-result <- my_function("var1", "var2", x, y_sub)
-
-# Print the result
-print(result)
+data.frame(features=names(HGNC_table))
 
 
 
-# SAME PROBLEM FOR GTEX => check!
+# TODO
+# add descartes percent expression, tau, and kidney genes
 
+
+
+
+
+
+# NOTES - TO BE DELETED!!
+# 
+# 
+# y <- gnomad_constraints
+# x <- HGNC_table
+# by1 <- "ensembl_gene_id"
+# 
+# 
+# 
+# 
+# left_join_rescue_symbol(df1, df2, "A", "B")
+# 
+# 
+# # Create a sample dataframe
+# df1 <- data.frame(A = c(1,2,3,4,5, 100), B = c("a", "b", "c", "d", "e", "f"), C = 5:10)
+# df2 <- data.frame(A = c(1,2,3,10,6, 100), B = c("z", "b", "x", "d", "r", "l"), D = c(33, 31, 23, 45, 44, 100))
+# df1
+# df2
+# 
+# df1 %>% left_join(df2, by=c("A", "B"))
+# 
+# 
+# left_join_rescue <- function(x, y, by_1_l, by_1_r, by_2_l, by_2_r) {
+#   y_sub <- y %>% dplyr::select(-{{ by_2_r }})
+#   colnames(y_sub)[which(colnames(y_sub) %in% by_1_r)] <- by_1_l
+#   
+#   joined_sub <- left_join(x, y_sub, by = by_1_l)
+#   not_joined_ids <- setdiff(data.frame(y)[, by_1_r], data.frame(x)[, by_1_l])
+# 
+#   # 
+#   return(not_joined_ids)
+# 
+# }
+# 
+# y <- gnomad_constraints
+# x <- HGNC_table
+# by_1_l <- "ensembl_gene_id"
+# by_1_r <- "gene_id"
+# by_2_l <- "symbol"
+# by_2_r <- "gene"
+# 
+# j <- left_join_rescue(HGNC_table, gnomad_constraints, "ensembl_gene_id", "gene_id", "symbol", "gene")
+# 
+# setdiff(as.vector(HGNC_table[, by_1_l]), as.vector(gnomad_constraints[, by_1_r]))
+# 
+# 
+# setdiff(df[, "A"], df[, "C"])
+# 
+# 
+# setdiff(gnomad_constraints[, by_1_r], data.frame(HGNC_table)[, by_1_l])
+# 
+# 
+# 
+# 
+# my_function <- function(A, dataframe) {
+#   selected_column <- dataframe %>%
+#     dplyr::select({{ A }})
+#   
+#   return(selected_column)
+# }
+# 
+# 
+# # Create a sample dataframe
+# df <- data.frame(A = 1:5, B = letters[1:5], C = 5:9)
+# 
+# # Call the function to select the "B" column from the dataframe
+# result <- my_function("B", df)
+# 
+# # Print the result
+# print(result)
+# 
+# 
+# library(dplyr)
+# library(rlang)
+# 
+# my_function <- function(var1, var2, x, y_sub) {
+#   joined_sub <- x %>%
+#     left_join(y_sub, by = setNames(!!!syms(c(var1, var2))))
+#   
+#   return(joined_sub)
+# }
+# 
+# 
+# # Create sample dataframes
+# x <- data.frame(var1 = c(1, 2, 3), var2 = c("A", "B", "C"), value = c(10, 20, 30))
+# y_sub <- data.frame(var2 = c("A", "C"), value2 = c(100, 300))
+# 
+# # Call the function to perform the left join
+# result <- my_function("var1", "var2", x, y_sub)
+# 
+# # Print the result
+# print(result)
+# 
+# 
+# 
+# # SAME PROBLEM FOR GTEX => check!
+# 
 
