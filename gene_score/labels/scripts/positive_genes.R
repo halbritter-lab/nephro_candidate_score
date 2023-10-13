@@ -10,7 +10,7 @@ config_vars <- config::get(file = "config.yml")
 script_path <- "gene_score/labels"
 
 # save current working directory
-current_wd <- getwd()
+wd_bef_script_exe <- getwd()
 
 # set new working directory
 setwd(file.path(config_vars$PROJECT_DIR, script_path))
@@ -33,4 +33,4 @@ kid_gen <- read.csv(paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_gen
 write.csv(kid_gen, paste0("results/positive_genes_", config_vars$creation_date, ".csv"), row.names = FALSE)
 
 # set back former working directory
-setwd(current_wd)
+setwd(wd_bef_script_exe)
