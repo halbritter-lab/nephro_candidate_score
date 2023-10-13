@@ -3,7 +3,7 @@
 # load libraries
 library(tidyverse)
 library(readr)
-library(jsonlite) # required in hgnc-functions.R
+library(config)
 
 
 # read configs
