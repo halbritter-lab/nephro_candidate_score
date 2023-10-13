@@ -4,17 +4,28 @@
 library(tidyverse)
 library(R.utils)
 
+
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
+
 # download and unzip gnomad constraint data
 download_url <- "https://storage.googleapis.com/gcp-public-data--gnomad/release/2.1.1/constraint/gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz"
 
 download.file(url = download_url, 
-              destfile = "gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz")
+              destfile = "raw/gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz")
 
-gunzip(filename = "gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz", 
-       destname = "gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt")
+gunzip(filename = "raw/gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz", 
+       destname = "raw/gnomad.v2.1.1.lof_metrics.by_gene.txt")
 
 # load and select gnomad gene constraints
-gnomad_constraints <- read.delim("gene_score/features/raw/gnomad.v2.1.1.lof_metrics.by_gene.txt") %>%
+gnomad_constraints <- read.delim("raw/gnomad.v2.1.1.lof_metrics.by_gene.txt") %>%
   dplyr::select(ensembl_gene_id = gene_id, 
                 symbol = gene,
                 obs_mis,
@@ -57,4 +68,8 @@ gnomad_constraints <- read.delim("gene_score/features/raw/gnomad.v2.1.1.lof_metr
 names(gnomad_constraints)[3:length(names(gnomad_constraints))] <- paste0("gnomad_", names(gnomad_constraints)[3:length(names(gnomad_constraints))])
 
 # write results
-write.csv(gnomad_constraints, paste0("gene_score/features/results/gnomad_constraints_", creation_date, ".csv"), row.names = FALSE)
+write.csv(gnomad_constraints, paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"), row.names = FALSE)
+
+# set back former working directory
+setwd(wd_bef_script_exe)
+

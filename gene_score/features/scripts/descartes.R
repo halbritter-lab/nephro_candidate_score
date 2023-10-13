@@ -3,21 +3,31 @@
 # load libraries
 library(tidyverse)	
 library(jsonlite) 
+library(config)
 
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
 
 # download and read in main clusters and gene IDs
 main_clusters_url <- "https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/labels/kidney_main_cluster_name_lbls.json"
 
 download.file(main_clusters_url, 
-              destfile = paste0("gene_score/features/raw/descartes_fetal_kidney_main_clusters_", creation_date, ".json"))
+              destfile = paste0("raw/descartes_fetal_kidney_main_clusters_", config_vars$creation_date, ".json"))
 
-main_clusters <- fromJSON( paste0("gene_score/features/raw/descartes_fetal_kidney_main_clusters_", creation_date, ".json")) 
+main_clusters <- fromJSON( paste0("raw/descartes_fetal_kidney_main_clusters_", config_vars$creation_date, ".json")) 
 
 gene_ids_url <- "https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/counts/gene2ens.csv"
 download.file(gene_ids_url, 
-              destfile = paste0("gene_score/features/raw/descartes_gene_ids_url_", creation_date, ".csv"))
+              destfile = paste0("raw/descartes_gene_ids_url_", config_vars$creation_date, ".csv"))
 
-gene_ids<- read.csv(paste0("gene_score/features/raw/descartes_gene_ids_url_", creation_date, ".csv"), header=FALSE) %>% 
+gene_ids <- read.csv(paste0("raw/descartes_gene_ids_url_", config_vars$creation_date, ".csv"), header=FALSE) %>% 
   rename(gene_symbol = V1, ensembl_gene_id = V2)
 
 
@@ -25,19 +35,17 @@ gene_ids<- read.csv(paste0("gene_score/features/raw/descartes_gene_ids_url_", cr
 get_cell_tpm <- function(cell_type){
   download_url <- paste0("https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/tables/cell_tpm/kidney/", cell_type, ".csv")
   download.file(download_url, 
-                destfile = paste0("gene_score/features/raw/descartes_", cell_type, "_tpm_", creation_date, ".csv"))
+                destfile = paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date, ".csv"))
 }
 
 get_cell_percentage <- function(cell_type){
   download_url <- paste0("https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/tables/cell_percentage/kidney/", cell_type, ".csv")
   download.file(download_url, 
-                destfile = paste0("gene_score/features/raw/descartes_", cell_type, "_percentage_", creation_date, ".csv"))
+                destfile = paste0("raw/descartes_", cell_type, "_percentage_", config_vars$creation_date, ".csv"))
 }
 
 # kidney cell types
 cell_types <- c("mesangial", "metanephric", "ureteric_bud", "stromal", "vascular_endothelial")
-# cell_types <- str_replace(main_clusters[,1], " ", "_")
-
 
 # create dataframes for TPM values and cell expression data
 perc_expr_df <- gene_ids %>% 
@@ -52,7 +60,7 @@ for (cell_type in cell_types){
   get_cell_tpm(cell_type)
   
   ## percent expression
-  ct_perc <- read.csv(paste0("gene_score/features/raw/descartes_", cell_type, "_percentage_", creation_date, ".csv"), header=FALSE)
+  ct_perc <- read.csv(paste0("raw/descartes_", cell_type, "_percentage_", config_vars$creation_date, ".csv"), header=FALSE)
 
   # in case multiple values are available for one gene, take the highest number
   ct_perc <- ct_perc %>% 
@@ -63,7 +71,7 @@ for (cell_type in cell_types){
   perc_expr_df <- left_join(perc_expr_df, ct_perc, by = "gene_symbol")
   
   ## tpm values
-  ct_tpm <- read.csv(paste0("gene_score/features/raw/descartes_", cell_type, "_tpm_", creation_date, ".csv"), header=FALSE)
+  ct_tpm <- read.csv(paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date, ".csv"), header=FALSE)
   
   # in case multiple values are available for one gene, take the highest number
   ct_tpm <- ct_tpm %>% 
@@ -78,8 +86,8 @@ perc_expr_df <- perc_expr_df %>% select(-gene_symbol)
 tpm_df <- tpm_df %>% select(-gene_symbol)
 
 # write results
-write.csv(perc_expr_df, paste0("gene_score/features/results/descartes_fetal_kidney_percent_expression_", creation_date, ".csv"), row.names = FALSE)
-write.csv(tpm_df, paste0("gene_score/features/results/descartes_fetal_kidney_tpm_", creation_date, ".csv"), row.names = FALSE)
+write.csv(perc_expr_df, paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(tpm_df, paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date, ".csv"), row.names = FALSE)
 
 
 ## Calculate nTPM values
@@ -119,7 +127,10 @@ tau_values <- sapply(1:nrow(norm_data), function(i) {
 fetal_kidney_tau_df <- data.frame(ensembl_gene_id = rownames(norm_data), fetal_kidney_tau = tau_values) 
 
 # write results
-write.csv(fetal_kidney_tau_df, paste0("gene_score/features/results/descartes_fetal_kidney_tau_", creation_date, ".csv"), row.names = FALSE)
-write.csv(ntpm_df_cc_with_id, paste0("gene_score/features/results/descartes_fetal_nptm_", creation_date, ".csv"), row.names = FALSE)
+write.csv(fetal_kidney_tau_df, paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(ntpm_df_cc_with_id, paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), row.names = FALSE)
+
+# set back former working directory
+setwd(wd_bef_script_exe)
 
 

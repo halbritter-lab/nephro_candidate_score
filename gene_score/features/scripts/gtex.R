@@ -2,21 +2,33 @@
 
 # load libraries
 library(tidyverse)
+library(R.utils)
+library(config)
+
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
 
 # download and unzip GTEx RNA expression data of different tissues
 gtex_download_url <- "https://www.proteinatlas.org/download/rna_tissue_gtex.tsv.zip"
 download.file(gtex_download_url,
-              destfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"))
+              destfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv.zip"))
 
-unzip(zipfile = paste0("gene_score/features/raw/rna_tissue_gtex_", creation_date, ".tsv.zip"),
-      exdir = "gene_score/features/raw/")  
+unzip(zipfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv.zip"),
+      exdir = "raw/")  
 
 # load data
-rna_tissue_gtex_nTPM <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv") %>% 
+rna_tissue_gtex_nTPM <- read.delim("raw/rna_tissue_gtex.tsv") %>% 
   dplyr::select(ensembl_gene_id = Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
-symbol_df <- read.delim("gene_score/features/raw/rna_tissue_gtex.tsv") %>% 
+symbol_df <- read.delim("raw/rna_tissue_gtex.tsv") %>% 
   dplyr::select(ensembl_gene_id = Gene, symbol = Gene.name) %>% 
   distinct()
 
@@ -57,10 +69,11 @@ rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM_agg %>%
   left_join(symbol_df, by = "ensembl_gene_id")
 
 # write results - nTPM values
-write.csv(rna_tissue_gtex_nTPM_agg, paste0("gene_score/features/results/rna_tissue_gtex_nTPM_agg_" , creation_date, ".csv"), row.names = FALSE)
+write.csv(rna_tissue_gtex_nTPM_agg, paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date, ".csv"), row.names = FALSE)
 
 # write results - tau values
-write.csv(tau_df, paste0("gene_score/features/results/rna_tissues_gtex_nTPM_agg_tau_val_" , creation_date, ".csv"), row.names = FALSE)
+write.csv(tau_df, paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date, ".csv"), row.names = FALSE)
 
-
+# set back former working directory
+setwd(wd_bef_script_exe)
 
