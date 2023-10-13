@@ -5,6 +5,7 @@ library(tidyverse)
 library(httr)
 library(jsonlite)
 library(progress)
+library(config)
 
 
 # read configs

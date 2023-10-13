@@ -3,6 +3,17 @@
 # load libraries 
 library(tidyverse)
 library(biomaRt)
+library(config)
+
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
 
 # "Paralogues are defined in Ensembl as genes for which the most common ancestor node is a duplication event
 # These ancestral duplications are represented by red nodes in the gene trees.
@@ -74,7 +85,9 @@ no_paralogues <- paralogues_95 %>%
 
 # write results
 write.csv(no_paralogues, 
-          paste0("gene_score/features/results/paralogues_95_85_75_", creation_date, ".csv"), 
+          paste0("results/paralogues_95_85_75_", config_vars$creation_date, ".csv"), 
           row.names = FALSE)
 
+# set back former working directory
+setwd(wd_bef_script_exe)
 

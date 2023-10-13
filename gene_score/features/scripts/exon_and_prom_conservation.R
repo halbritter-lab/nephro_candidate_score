@@ -7,18 +7,30 @@ library(tidyverse)
 library(biomaRt)
 library(progress)
 library(phastCons100way.UCSC.hg38)  # PhastCons score ranges from 0 to 1 and represents the probability that a given nucleotide is conserved
+library(config)
+
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
+
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_ts <- read.csv(paste0("gene_score/features/results/ensembl_canonical_ts_", creation_date, ".csv"),
+canon_ts <- read.csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date, ".csv"),
                        na.strings = c("NA", "NaN", " ", ""))
 
 # download Ensembl data 
-bm_version <- 109  # Ensembl Biomart Genes version
 ensembl <- useEnsembl(biomart = "ensembl", 
                       dataset = "hsapiens_gene_ensembl", 
-                      version = bm_version)
+                      version = config_vars$ensembl_biomart_version)
 
 exons_coordinates <- getBM(attributes = c("ensembl_gene_id",
+                                          "external_gene_name",
                                          "ensembl_transcript_id",
                                          "chromosome_name",
                                          "exon_chrom_start",
@@ -31,7 +43,8 @@ exons_coordinates <- getBM(attributes = c("ensembl_gene_id",
                           values = list(canon_ts$ensembl_transcript_id),
                           mart = ensembl) %>% 
   filter(!is.na(cds_start)) %>% # filter out non-coding exons
-  mutate(all_coding = case_when((cds_end - cds_start) == (exon_chrom_end - exon_chrom_start) ~ TRUE, TRUE ~ FALSE)) 
+  mutate(all_coding = case_when((cds_end - cds_start) == (exon_chrom_end - exon_chrom_start) ~ TRUE, TRUE ~ FALSE)) %>% 
+  dplyr::rename(symbol = external_gene_name)
 
 ## Exon conservation scores
 # function to return average of phastCons scores of a given transcript
@@ -55,7 +68,7 @@ avg_phastCons_score_per_transcript <- function(transcript_id){
 pb <- progress_bar$new(total = length(unique(exons_coordinates$ensembl_gene_id)))
 
 avg_phasCons_ex <- exons_coordinates %>%  
-  dplyr::select(ensembl_gene_id, ensembl_transcript_id) %>% 
+  dplyr::select(ensembl_gene_id, symbol, ensembl_transcript_id) %>% 
   unique() %>% 
   rowwise() %>% 
   mutate(avg_phasCons_exons = {
@@ -69,7 +82,7 @@ avg_phasCons_ex <- exons_coordinates %>%
 
 # write results
 write.csv(avg_phasCons_ex, 
-          paste0("gene_score/features/results/avg_phasCons_scores_per_transcript_" , creation_date, ".csv"), 
+          paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
 
 
@@ -98,7 +111,9 @@ avg_phasCons_prom <- canon_ts %>%
 
 # write results
 write.csv(avg_phasCons_prom, 
-          paste0("gene_score/features/results/avg_phasCons_promoter_" , creation_date, ".csv"), 
+          paste0("results/avg_phasCons_promoter_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
 
 
+# set back former working directory
+setwd(wd_bef_script_exe)

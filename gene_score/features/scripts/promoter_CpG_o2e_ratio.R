@@ -5,16 +5,28 @@ library(biomaRt) # http://www.ensembl.org/info/data/biomart/biomart_r_package.ht
 library(tidyverse)
 library(jsonlite)
 library(BSgenome.Hsapiens.UCSC.hg38) # approx 700MB
+library(config)
+
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
+
 
 # download Ensembl data for all protein coding transcripts in Homo sapiens, Human genes (GRCh38.p13), GRCh38.p13
 
 # download Ensembl data 
-bm_version <- 109  # Ensembl Biomart Genes version
 ensembl <- useEnsembl(biomart = "ensembl", 
                       dataset = "hsapiens_gene_ensembl", 
-                      version = bm_version)
+                      version = config_vars$ensembl_biomart_version)
 
 mart_exp <- getBM(attributes = c('ensembl_gene_id',
+                                 'external_gene_name',
                                  'ensembl_transcript_id',
                                  'ensembl_transcript_id_version',
                                  'hgnc_id',
@@ -34,12 +46,12 @@ canonical_prom <- mart_exp %>%
   filter(transcript_is_canonical == 1) %>% 
   mutate(start = transcription_start_site - 2000,
          end = transcription_start_site + 2000) %>% 
-  dplyr::select(ensembl_gene_id, ensembl_transcript_id, chrom=chromosome_name, start, end) %>% 
+  dplyr::select(ensembl_gene_id, symbol = external_gene_name, ensembl_transcript_id, chrom=chromosome_name, start, end) %>% 
   distinct()
 
 # write canonical transcripts
 write_csv(canonical_prom, 
-          paste0("gene_score/features/results/ensembl_canonical_ts_" , creation_date, ".csv"))
+          paste0("results/ensembl_canonical_ts_" , config_vars$creation_date, ".csv"))
 
 # create a GRanges object
 canonical_prom_granges <- GRanges(
@@ -67,7 +79,9 @@ canonical_prom <- canonical_prom %>%
   mutate(CpG_o2e_ratio = calculate_CpG_obs_to_exp_ratio(sequence))
 
 # write results
-write.csv(canonical_prom[, c("ensembl_gene_id", "CpG_o2e_ratio")], 
-          paste0("gene_score/features/results/canonical_promoter_CpG_obs_to_exp_ratio_" , creation_date, ".csv"), 
+write.csv(canonical_prom[, c("ensembl_gene_id", "symbol", "CpG_o2e_ratio")], 
+          paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
 
+# set back former working directory
+setwd(wd_bef_script_exe)
