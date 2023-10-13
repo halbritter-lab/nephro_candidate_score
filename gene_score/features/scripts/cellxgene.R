@@ -6,6 +6,21 @@ library(httr)
 library(jsonlite)
 library(progress)
 
+
+# read configs
+config_vars <- config::get(file = "config.yml")
+script_path <- "gene_score/features"
+
+# save current working directory
+wd_bef_script_exe <- getwd()
+
+# set working directory
+setwd(file.path(config_vars$PROJECT_DIR, script_path))
+
+# source additional functions
+source(file.path(config_vars$PROJECT_DIR, "gene_score", "hgnc_functions.R"))
+
+
 ########## DATASETS ##################
 # get all datasets from cellxgene
 datasets_url <- "https://api.cellxgene.cziscience.com/dp/v1/datasets/index"
@@ -20,10 +35,10 @@ response <- GET(datasets_url, add_headers(headers))
 content <- content(response, as = "text", encoding = "UTF-8")
 
 # write json file
-writeLines(content[[1]], paste0("gene_score/features/raw/cellxgene_datasets_", creation_date, ".json"))
+writeLines(content[[1]], paste0("raw/cellxgene_datasets_", config_vars$creation_date, ".json"))
 
 # read json file
-datasets_list <- jsonlite::read_json(paste0("gene_score/features/raw/cellxgene_datasets_", creation_date, ".json"))
+datasets_list <- jsonlite::read_json(paste0("raw/cellxgene_datasets_", config_vars$creation_date, ".json"))
 
 # wrap list in a tibble
 datasets <- tibble(ds = datasets_list)
@@ -47,7 +62,7 @@ datasets_df <- datasets %>%
 )
 
 # write results
-write.csv(datasets_df, paste0("gene_score/features/results/cellxgene_datasets_summary", creation_date, ".csv"), row.names = FALSE)
+write.csv(datasets_df, paste0("results/cellxgene_datasets_summary", config_vars$creation_date, ".csv"), row.names = FALSE)
 
 
 ########## PRIMARY FILTER DIMENSIONS ##################
@@ -64,10 +79,10 @@ response <- GET(prim_filt_url, add_headers(headers))
 content <- content(response, as = "text", encoding = "UTF-8")
 
 # save content (workaround as fromJSON() is too slow, read_json() reads the file a memory-efficient way)
-writeLines(content[[1]], paste0("gene_score/features/raw/primary_filter_dim_content_", creation_date, ".json"))            
+writeLines(content[[1]], paste0("raw/primary_filter_dim_content_", config_vars$creation_date, ".json"))            
 
 # read in json file line by line
-prim_filt_dim_list <- jsonlite::read_json(paste0("gene_score/features/raw/primary_filter_dim_content_", creation_date, ".json"))
+prim_filt_dim_list <- jsonlite::read_json(paste0("raw/primary_filter_dim_content_", config_vars$creation_date, ".json"))
 
 # wrap list in a tibble
 prim_filt_dim <- tibble(pfd = prim_filt_dim_list)
@@ -265,8 +280,17 @@ expr_val_combined <- expr_val_combined %>%
   dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc")) %>% 
   dplyr::select(ensembl_gene_id, matches(paste0("^(", paste(cell_ontology_term_ids_kid, collapse = "|"), ")")))
 
+# replace ":" by "_" in colnames
+colnames(expr_val_combined) <- gsub(":", "_", colnames(expr_val_combined))
+
 # write results
-write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", creation_date, ".csv"), row.names = FALSE)
+write.csv(expr_val_combined, paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"), row.names = FALSE)
+
+# set back former working directory
+setwd(wd_bef_script_exe)
+
+
+
 
 # 
 # ###### GET EXPRESSION VALUES FOR "d7dcfd8f-2ee7-4385-b9ac-e074c23ed190" (FETAL KIDNEY) ######
@@ -305,7 +329,7 @@ write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_
 #   dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
 # 
 # # write results
-# write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", creation_date, ".csv"), row.names = FALSE)
+# write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", config_vars$creation_date, ".csv"), row.names = FALSE)
 # 
 # 
 # 
