@@ -255,7 +255,7 @@ cell_types <- datasets %>%
   filter(str_detect(explorer_url, ds_id)) %>%
   unnest_longer(cell_type) %>%
   unnest_wider(cell_type) %>% 
-  select(cell_label = label, cell_ontogolgy_term_id = ontology_term_id)
+  dplyr::select(cell_label = label, cell_ontogolgy_term_id = ontology_term_id)
 
 kidney_cell_types <- c("endothelial cell",
                        "podocyte",
@@ -283,6 +283,9 @@ expr_val_combined <- expr_val_combined %>%
 
 # replace ":" by "_" in colnames
 colnames(expr_val_combined) <- gsub(":", "_", colnames(expr_val_combined))
+
+# annotate symbols
+expr_val_combined <- left_join(expr_val_combined, distinct(pfd_gt_df[, c("ensembl_gene_id", "symbol")]), by = "ensembl_gene_id")
 
 # write results
 write.csv(expr_val_combined, paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"), row.names = FALSE)

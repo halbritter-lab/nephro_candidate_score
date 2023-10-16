@@ -28,7 +28,7 @@ download.file(gene_ids_url,
               destfile = paste0("raw/descartes_gene_ids_url_", config_vars$creation_date, ".csv"))
 
 gene_ids <- read.csv(paste0("raw/descartes_gene_ids_url_", config_vars$creation_date, ".csv"), header=FALSE) %>% 
-  rename(gene_symbol = V1, ensembl_gene_id = V2)
+  dplyr::rename(symbol = V1, ensembl_gene_id = V2)
 
 
 # function for downloading TPM values and cell percentage for each kidney cell type
@@ -66,9 +66,9 @@ for (cell_type in cell_types){
   ct_perc <- ct_perc %>% 
     group_by(V1) %>% 
     summarise(V2 = max(V2, na.rm = TRUE))
-  colnames(ct_perc) <- c("gene_symbol", paste0(cell_type, "_perc_expr"))
+  colnames(ct_perc) <- c("symbol", paste0(cell_type, "_perc_expr"))
   
-  perc_expr_df <- left_join(perc_expr_df, ct_perc, by = "gene_symbol")
+  perc_expr_df <- left_join(perc_expr_df, ct_perc, by = "symbol")
   
   ## tpm values
   ct_tpm <- read.csv(paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date, ".csv"), header=FALSE)
@@ -77,13 +77,13 @@ for (cell_type in cell_types){
   ct_tpm <- ct_tpm %>% 
     group_by(V1) %>% 
     summarise(V2 = max(V2, na.rm = TRUE))
-  colnames(ct_tpm) <- c("gene_symbol", paste0(cell_type, "_tpm"))
+  colnames(ct_tpm) <- c("symbol", paste0(cell_type, "_tpm"))
   
-  tpm_df <- left_join(tpm_df, ct_tpm, by = "gene_symbol")
+  tpm_df <- left_join(tpm_df, ct_tpm, by = "symbol")
 }
 
-perc_expr_df <- perc_expr_df %>% select(-gene_symbol)
-tpm_df <- tpm_df %>% select(-gene_symbol)
+# perc_expr_df <- perc_expr_df %>% dplyr::rename(symbol = symbol)
+# tpm_df <- tpm_df %>% dplyr::rename(symbol = symbol)
 
 # write results
 write.csv(perc_expr_df, paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"), row.names = FALSE)
@@ -92,7 +92,7 @@ write.csv(tpm_df, paste0("results/descartes_fetal_kidney_tpm_", config_vars$crea
 
 ## Calculate nTPM values
 # Calculate the effective library sizes on complete rows
-tpm_df_cc <- tpm_df %>% column_to_rownames(var = "ensembl_gene_id")
+tpm_df_cc <- tpm_df %>% column_to_rownames(var = "ensembl_gene_id") %>% dplyr::select(-symbol)
 tpm_df_cc <- tpm_df_cc[complete.cases(tpm_df_cc),] 
 
 # function for quantile normalization (https://davetang.org/muse/2014/07/07/quantile-normalisation-in-r/)
@@ -125,6 +125,10 @@ tau_values <- sapply(1:nrow(norm_data), function(i) {
 })
 
 fetal_kidney_tau_df <- data.frame(ensembl_gene_id = rownames(norm_data), fetal_kidney_tau = tau_values) 
+
+# add symbol column
+fetal_kidney_tau_df <- fetal_kidney_tau_df %>% left_join(distinct(tpm_df[, c("ensembl_gene_id", "symbol")]), by = "ensembl_gene_id")
+ntpm_df_cc_with_id <- ntpm_df_cc_with_id %>% left_join(distinct(tpm_df[, c("ensembl_gene_id", "symbol")]), by = "ensembl_gene_id")
 
 # write results
 write.csv(fetal_kidney_tau_df, paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"), row.names = FALSE)

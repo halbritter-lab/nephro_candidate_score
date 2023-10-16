@@ -76,10 +76,10 @@ calculate_CpG_obs_to_exp_ratio <- function(seq){
 }
 
 canonical_prom <- canonical_prom %>% 
-  mutate(CpG_o2e_ratio = calculate_CpG_obs_to_exp_ratio(sequence))
+  mutate(prom_CpG_o2e_ratio = calculate_CpG_obs_to_exp_ratio(sequence))
 
 # write results
-write.csv(canonical_prom[, c("ensembl_gene_id", "symbol", "CpG_o2e_ratio")], 
+write.csv(canonical_prom[, c("ensembl_gene_id", "symbol", "prom_CpG_o2e_ratio")], 
           paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
 
