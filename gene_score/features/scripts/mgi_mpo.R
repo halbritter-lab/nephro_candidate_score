@@ -104,13 +104,13 @@ mgi_pg_mp <- mgi_pg_mp %>%
   filter(length(strsplit(mgi_marker_accession_id, split = "|", fixed = TRUE)[[1]]) == 1) %>% # remove polygenic genotypes
   mutate(mgi_kid = case_when(mgi_marker_accession_id %in% het_kid_genes ~ 2,
                              mgi_marker_accession_id %in% hom_kid_genes ~ 1,
-                             .default = 0)) %>% 
+                             .default = -1)) %>% 
   left_join(hmd_hp[, c("human_entrez_id", "human_marker_symbol", "mgi_marker_accession_id")], by = "mgi_marker_accession_id", relationship = "many-to-many") %>% # Note: some human entrez ids have multiple mouse ids
   filter(!is.na(human_entrez_id)) %>% 
   dplyr::select(entrez_id = human_entrez_id, symbol = human_marker_symbol, mgi_kid) %>% 
   distinct() %>% 
   group_by(entrez_id, symbol) %>% 
-  summarize(max_mgi_kid = max(mgi_kid, na.rm = TRUE)) # if there are two values for one human entrez_id, take the highest (2 > 1 > 0, heterozygous > homozygous > no kidney phenotype)
+  summarize(max_mgi_kid = max(mgi_kid, na.rm = TRUE)) # if there are two values for one human entrez_id, take the highest (2 > 1 > -1, heterozygous > homozygous > no kidney phenotype)
 
 
 # write results
