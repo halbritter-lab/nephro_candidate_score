@@ -15,7 +15,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.inspection import permutation_importance
 
 def is_numeric(x):
-    return (all(isinstance(i, (int, float)) for i in x))
+    return (all(isinstance(i, (int, float, np.number)) for i in x))
 
 def init_config_ML_training_file(config_dir, date_time):
     """
@@ -209,7 +209,7 @@ def get_features_from_groups(groups, feature_df):
 
 # function to return the pre-defined method of filling missing values for each model and feature
 def get_filling_method(model, feature):
-    filling_methods = pd.read_csv(f'{raw_data_dir}/fill_missing_methods_{creation_date}.csv', delimiter=";")
+    filling_methods = pd.read_csv(f'{raw_data_dir}/fill_missing_methods_{creation_date}.csv')
     method = filling_methods.loc[filling_methods['feature'] == feature, model].values[0]
     return(method)
 
@@ -407,8 +407,16 @@ def plot_2D_heatmap(ID, cv_results, param1, param2, figsize, save, show):
     # set the tick labels for C and gamma
     ax.set_xticks(range(len(heatmap_data.columns)))
     ax.set_yticks(range(len(heatmap_data.index)))
-    ax.set_xticklabels(['{:.1e}'.format(i) for i in heatmap_data.columns.values])
-    ax.set_yticklabels(['{:.1e}'.format(i) for i in heatmap_data.index.values])
+    
+    if is_numeric(heatmap_data.columns.values):
+        ax.set_xticklabels(['{:.1e}'.format(i) for i in heatmap_data.columns.values])
+    else:
+        ax.set_xticklabels([i for i in heatmap_data.columns.values])
+        
+    if is_numeric(heatmap_data.index.values):
+        ax.set_yticklabels(['{:.1e}'.format(i) for i in heatmap_data.index.values])
+    else:
+        ax.set_yticklabels([i for i in heatmap_data.index.values])
 
     # label the axes
     ax.set_xlabel(param2)
