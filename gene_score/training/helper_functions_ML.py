@@ -14,6 +14,19 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score
 from sklearn.inspection import permutation_importance
 
+class Tee:
+    def __init__(self, *files):
+        self.files = files
+
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+
+    def flush(self):
+        for f in self.files:
+            f.flush()
+
+
 def is_numeric(x):
     return (all(isinstance(i, (int, float, np.number)) for i in x))
 
@@ -332,18 +345,24 @@ def train_with_grid_search(ID,
     # training starting time 
     start_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
     
+    print(f"start_time: {start_time}")
+    
     # create a GridSearchCV object with X-fold cross-validation
     grid_search = GridSearchCV(estimator=estimator, 
                                param_grid=param_grid, 
                                cv=cv, 
                                scoring=scoring, 
                                verbose=verbose)
+    
 
     # fit the model to the training data
     grid_search.fit(X_train, y_train)
     
     # training ending time
     end_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
+    
+    print(f"end_time: {end_time}")
+
 
     # get the best parameters and estimator
     best_params = grid_search.best_params_
@@ -379,6 +398,7 @@ def train_with_grid_search(ID,
     file_name = f'{results_dir}/cv_results_ID{ID}.csv'
     cv_results.to_csv(file_name, index=False)
     
+
     return cv_results, best_params, best_classifier
 
 
