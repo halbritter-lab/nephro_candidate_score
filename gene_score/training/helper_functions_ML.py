@@ -32,7 +32,7 @@ def is_numeric(x):
 
 def init_config_ML_training_file(config_dir, date_time):
     """
-    Initialized a config_ML_training file with the current datetime, ID=0, and NaN as values.
+    Initializes a config_ML_training file with the current datetime, ID=0, and NaN as values.
     """
     
     config_dic = {'date_time': [date_time],
@@ -184,14 +184,6 @@ def create_ML_config(config_dir,
     print(f"New config file: 'config_ML_training_{date_time}.csv' created.")
     
     return(new_ID)
-
-
-
-
-
-
-
-
 
 
 # function to select only specific feature names based on feature group
@@ -398,6 +390,15 @@ def train_with_grid_search(ID,
     file_name = f'{results_dir}/cv_results_ID{ID}.csv'
     cv_results.to_csv(file_name, index=False)
     
+    
+    results_dic = {
+                  'cv_results': cv_results,
+                  'best_params': best_params,
+                  'best_classifier': best_classifier
+                  }
+    
+    with open(f'{results_dir}/results_ID{ID}.pkl', 'wb') as file:
+        pickle.dump(results_dic, file)    
 
     return cv_results, best_params, best_classifier
 
@@ -513,6 +514,76 @@ def get_permutation_importance(ID,
         plt.show
     
     return(feature_imp)
+
+
+
+
+def plot_2D_heatmap_fixed_params(ID, cv_results, param1, param2, figsize, save, show):
+    """
+    Function to plot a 2D heatmap of the given parameters param1 and param2. 
+    The remaining parameters are fixed to their best values.
+    """
+    
+    # get paramters that should be fixed to their best values
+    param_cols = [i for i in cv_results.columns if i.startswith("param_")]
+    fixed_params = {key: value for key, value in best_params.items() if key != param1 and key != param2}
+    
+    # get results dataframe with fixed parameters
+    cv_results_fixed = cv_results.copy()
+    for col, value in fixed_params.items():
+        cv_results_fixed = cv_results_fixed[cv_results_fixed['param_' + col] == value]
+
+    # pivot results dataframe
+    heatmap_data = cv_results_fixed.pivot(index='param_'+ param1, 
+                                    columns='param_'+ param2, 
+                                    values='mean_test_score')
+
+    # create a figure and axis
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # create a heatmap
+    cax = ax.matshow(heatmap_data, cmap='viridis')
+
+    # set the tick labels 
+    ax.set_xticks(range(len(heatmap_data.columns)))
+    ax.set_yticks(range(len(heatmap_data.index)))
+
+    if is_numeric(heatmap_data.columns.values):
+        ax.set_xticklabels(['{:.1e}'.format(i) for i in heatmap_data.columns.values])
+    else:
+        ax.set_xticklabels([i for i in heatmap_data.columns.values])
+
+    if is_numeric(heatmap_data.index.values):
+        ax.set_yticklabels(['{:.1e}'.format(i) for i in heatmap_data.index.values])
+    else:
+        ax.set_yticklabels([i for i in heatmap_data.index.values])
+
+    # label the axes
+    ax.set_xlabel(param2)
+    ax.set_ylabel(param1)
+
+    # add colorbar
+    cbar = fig.colorbar(cax)
+
+    # annotate each cell with score values
+    for i in range(len(heatmap_data.index)):
+        for j in range(len(heatmap_data.columns)):
+            score = heatmap_data.values[i, j] * 100
+            ax.text(j, i, f'{score:.1f}', ha='center', va='center', color='w')
+
+    # add fixed parameters
+    ax.text(0, len(heatmap_data.index) + 1, f'fixed parameters: {fixed_params}', ha='left', va='center', color='black')  
+    
+    # save figure
+    if save:
+        plt.savefig(f"{results_dir}/heatmap2D_fixed_params_ID{ID}.png", format="png")
+    
+    # display the heatmap
+    if show:
+        plt.show()
+
+
+
 
 
 
