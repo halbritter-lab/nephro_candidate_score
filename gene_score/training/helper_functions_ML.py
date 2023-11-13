@@ -403,6 +403,25 @@ def train_with_grid_search(ID,
     return cv_results, best_params, best_classifier
 
 
+
+
+def get_config_results_dics(ID):
+    
+    with open(f"{config_dir}/config_dic_ID{ID}.pkl", 'rb') as file:
+        config_dic = pickle.load(file)
+        
+    with open(f"{results_dir}/results_ID{ID}.pkl", 'rb') as file:
+        results_dic = pickle.load(file)
+    
+    print(config_dic['ID'])
+    return config_dic, results_dic
+
+
+
+
+
+
+
 # function to get params in param_grid that have multiple values (for display in a heatmap)
 def get_heatmap_params(param_grid):
     len_list = [len(param_grid[i]) for i in param_grid.keys()]
@@ -471,40 +490,25 @@ def get_permutation_importance(ID,
                                features,
                                classifier,
                                scoring,
-                               plot
+                               plot,
+                               random_state
                               ):
     # fit best classfier with full training data
     classifier.fit(X_train, y_train)
     
     # get permutation importance
-    perm_importance = permutation_importance(classifier, X_train, y_train, scoring=scoring)
+    perm_importance = permutation_importance(classifier, X_train, y_train, scoring=scoring, random_state=random_state)
     
     # create a df sorted by feature importance
     sorted_idx = perm_importance.importances_mean.argsort()
     feature_imp = pd.DataFrame({'feature': [features[i] for i in sorted_idx],
                                 'perm_imp': perm_importance.importances_mean[sorted_idx]}).sort_values('perm_imp', ascending=False)
-    
-    # add classfier type to df
-#     feature_imp['classifier'] = str(type(classifier).__name__).lower()
-    
-    # add classifier parameters and scoring to df
-#     clf_params = classifier.get_params()
-
-#     for i in list(clf_params.keys()):
-#         feature_imp[i] = clf_params[i]
         
     feature_imp['scoring'] = scoring
     
     # save results
-#     date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
-#     classifier_type = str(type(classifier).__name__).lower().replace('classifier', 'clf')
-    
-#     est = ''
-#     if 'estimator' in list(clf_params.keys()):       # in case the classifier has its own estimator (e.g. in AdaBoost), also store estimator in filename
-#         est = str(clf_params['estimator']).lower().replace('classifier', 'clf').replace('(', '_').replace(')', '_').replace('=', '-')    
-    
-#     file_name = f'{results_dir}/perm_importance_ID{ID}.csv'
-    feature_imp.to_csv(f'{results_dir}/perm_importance_ID{ID}.csv')
+    date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
+    feature_imp.to_csv(f'{results_dir}/perm_importance_ID{ID}_rs-{random_state}_{date_time}.csv', index=False)
     
     # plot feature importance
     if plot:
