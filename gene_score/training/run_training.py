@@ -64,7 +64,7 @@ from sklearn.ensemble import RandomForestClassifier
 # }
 
 
-
+# ## Ridge Classifier
 # estimator = None
 # clf = RidgeClassifier()
 # model = "logReg"
@@ -86,18 +86,19 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 
-
+# ## QuadraticDiscriminantAnalysis()
 # estimator = None
 # clf = QuadraticDiscriminantAnalysis()
 # model = "QDA"
 # param_grid = {
-#     'reg_param': np.linspace(1e-2, 1e-0, 10), #[ 0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100],
-#     'tol': [0, 1e-6, 1e-5 ]
+#     'reg_param': np.logspace(-2, 0, 10), #[ 0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100],
+#     'tol': [1e-2, 0, 1e+2 ]
 # }
 
 
 
 
+# ## MLP Classifier
 # estimator = None
 # clf = MLPClassifier(random_state=1)
 # model = "MLP"
@@ -132,14 +133,14 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 
-# ## KNN
-estimator = None
-clf = KNeighborsClassifier()
-model = "KNN"
-param_grid = {
-    'n_neighbors': np.arange(10, 100, 2), 
-    'weights' : ['uniform', 'distance']
-}
+# # ## KNN
+# estimator = None
+# clf = KNeighborsClassifier()
+# model = "KNN"
+# param_grid = {
+#     'n_neighbors': np.arange(10, 100, 2), 
+#     'weights' : ['uniform', 'distance']
+# }
 
 
 # ## SVM - linear
@@ -153,7 +154,7 @@ param_grid = {
 # }
 
 
-# ## SVM - poly
+# ## SVM - rbf
 # estimator = None
 # clf = SVC()
 # model = "SVM"
@@ -163,12 +164,27 @@ param_grid = {
 #     'gamma': np.logspace(-7, -4, 15)
 # }
 
+
+## SVM - poly
+estimator = None
+clf = SVC()
+model = "SVM"
+param_grid = {
+    'C': np.logspace(3, 6, 10),
+    'gamma': np.logspace(-5, 5, 10),
+    'kernel': ['poly'],
+    'degree': [3]
+}
+
+
+
+
 cv = 5
 scoring = 'roc_auc'
 feature_groups_selected = ['gnomad', 'cellxgene', 'descartes', 'gtex', 'mgi', 'paralogues', 'phasCons', 'CpG_o2e']
 drop_features = []
 omit_scaling_features = ['paralogues', 'mgi']
-scaling = 'standard'
+scaling = 'robust'
 pca_components = False
 additional_info = '' 
 
