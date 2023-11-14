@@ -522,7 +522,7 @@ def get_permutation_importance(ID,
 
 
 
-def plot_2D_heatmap_fixed_params(ID, cv_results, param1, param2, figsize, save, show):
+def plot_2D_heatmap_fixed_params(ID, cv_results, best_params, param1, param2, figsize, save, show):
     """
     Function to plot a 2D heatmap of the given parameters param1 and param2. 
     The remaining parameters are fixed to their best values.
