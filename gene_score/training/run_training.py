@@ -22,23 +22,40 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.linear_model import RidgeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from xgboost import XGBClassifier
+
 
 
 
 # set config parameters for training
 
-# # AdaBoost classifier with estimator=DecisionTree
+# ## XGBoost
+# estimator = None
+# clf = XGBClassifier(random_state=1, booster='gbtree')
+# model = 'DecisionTree'
+# param_grid = {
+#     'n_estimators': [1, 2, 10, 100],
+#     'max_depth' : [1, 2, 3, 4, 5],
+#     'learning_rate': np.logspace(-3, 0, 5),
+#     'reg_alpha' : np.logspace(-5, 0, 5),
+#     'reg_lambda' : np.logspace(-5, 0, 5),
+#     'subsample': [0.6, 0.8, 1.0],
+#     'gamma': [0.5, 1, 1.5, 2, 5]
+# }
+
+   
+# ## AdaBoost classifier with estimator=DecisionTree
 # estimator = DecisionTreeClassifier(max_depth=2)
 # clf = AdaBoostClassifier(estimator=estimator, random_state=1)
 # model = "DecisionTree"
 # param_grid = {
-#     'n_estimators': np.arange(10, 150, 10),
-#     'learning_rate': np.arange(1e-1, 5e-1, 0.1)
+#     'n_estimators': np.arange(5, 50, 5),
+#     'learning_rate': np.logspace(-2, 0, 10)
 # }
 
 
 # estimator = None
-# clf = DecisionTreeClassifier()
+# clf = DecisionTreeClassifier() # TODO: set random_state =1
 # model = "DecisionTree"
 # param_grid = {
 #     'max_depth': [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], 
@@ -167,11 +184,11 @@ from sklearn.ensemble import RandomForestClassifier
 
 ## SVM - poly
 estimator = None
-clf = SVC()
+clf = SVC(random_state=1)
 model = "SVM"
 param_grid = {
-    'C': np.logspace(3, 6, 10),
-    'gamma': np.logspace(-5, 5, 10),
+    'C': np.logspace(-2, 8, 9),
+    'gamma': np.logspace(-5, -0, 9),
     'kernel': ['poly'],
     'degree': [3]
 }
@@ -184,7 +201,7 @@ scoring = 'roc_auc'
 feature_groups_selected = ['gnomad', 'cellxgene', 'descartes', 'gtex', 'mgi', 'paralogues', 'phasCons', 'CpG_o2e']
 drop_features = []
 omit_scaling_features = ['paralogues', 'mgi']
-scaling = 'robust'
+scaling = 'standard'
 pca_components = False
 additional_info = '' 
 
