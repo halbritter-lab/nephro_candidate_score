@@ -6,7 +6,7 @@
 
 #
 # Set a required running time for the job.
-#SBATCH --time=1-00
+#SBATCH --time=5-00
 #
 # Reserve resouces in partition
 #SBATCH --partition medium
