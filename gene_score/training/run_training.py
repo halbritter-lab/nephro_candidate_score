@@ -25,27 +25,25 @@ from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 
 
+# set classifer and param grid for training
 
-
-# set config parameters for training
-
-# ## XGBoost
-# estimator = None
-# clf = XGBClassifier(random_state=1, booster='gbtree')
-# model = 'DecisionTree'
-# param_grid = {
-#     'n_estimators': [1, 2, 10, 100],
-#     'max_depth' : [1, 2, 3, 4, 5],
-#     'learning_rate': np.logspace(-3, 0, 5),
-#     'reg_alpha' : np.logspace(-5, 0, 5),
-#     'reg_lambda' : np.logspace(-5, 0, 5),
-#     'subsample': [0.6, 0.8, 1.0],
-#     'gamma': [0.5, 1, 1.5, 2, 5]
-# }
+## XGBoost
+estimator = None
+clf = XGBClassifier(random_state=1, booster='gbtree')
+model = 'DecisionTree'
+param_grid = {
+    'n_estimators': np.arange(10, 200, 25),
+    'max_depth' : np.arange(4, 9, 1),
+    'learning_rate': np.logspace(-2, 0, 7),
+    'reg_alpha' : np.logspace(-2, 1, 7),
+    'reg_lambda' : np.logspace(-4, -2, 7),
+    'subsample': [0.8, 0.9, 1.0],
+    'gamma': np.logspace(-3, 0, 7)
+}
 
    
 # ## AdaBoost classifier with estimator=DecisionTree
-# estimator = DecisionTreeClassifier(max_depth=2)
+# estimator = DecisionTreeClassifier(max_depth=2) #TODO: adapt max_depth
 # clf = AdaBoostClassifier(estimator=estimator, random_state=1)
 # model = "DecisionTree"
 # param_grid = {
@@ -54,6 +52,7 @@ from xgboost import XGBClassifier
 # }
 
 
+# ## Decision Tree
 # estimator = None
 # clf = DecisionTreeClassifier() # TODO: set random_state =1
 # model = "DecisionTree"
@@ -65,14 +64,10 @@ from xgboost import XGBClassifier
 # }
 
 
-
-
-
-
+# ## Random Forest
 # estimator = None
 # clf = RandomForestClassifier()
 # model = "DecisionTree"
-
 # param_grid = {
 #     'n_estimators': np.arange(50, 250, 25),
 #     'max_depth': np.arange(10, 50, 5),
@@ -91,8 +86,7 @@ from xgboost import XGBClassifier
 # }
 
 
-
-
+# ## Gaussian Process Classifier
 # estimator = None
 # clf = GaussianProcessClassifier(random_state=1)
 # model = "GPC"
@@ -102,8 +96,7 @@ from xgboost import XGBClassifier
 # }
 
 
-
-# ## QuadraticDiscriminantAnalysis()
+# ## Quadratic Discriminant Analysis
 # estimator = None
 # clf = QuadraticDiscriminantAnalysis()
 # model = "QDA"
@@ -111,8 +104,6 @@ from xgboost import XGBClassifier
 #     'reg_param': np.logspace(-2, 0, 10), #[ 0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100],
 #     'tol': [1e-2, 0, 1e+2 ]
 # }
-
-
 
 
 # ## MLP Classifier
@@ -127,30 +118,7 @@ from xgboost import XGBClassifier
 # }
 
 
-
-
-# estimator = None
-# clf = SVC()
-# model = "SVM"
-# # Define a parameter grid for GridSearch
-# # param_grid = {
-# #     'C': np.logspace(-3, 5, 4),
-# #     'gamma': np.logspace(-9, -1, 4),
-# #     'kernel': ['poly'],
-# #     'degree': [3]
-# # }
-
-# param_grid = {
-#     'C': [0.0001, 0.001, 0.01, 0.1], #np.logspace(-3, 5, 4),
-#     'kernel': ['poly'],
-#     'gamma': [ 1e-09, 1e-08, 1e-07, 1e-06], #[1e-09, 1e-08], #np.logspace(-9, -1, 4),
-#     'degree': [3]
-# }
-
-
-
-
-# # ## KNN
+# ## KNN
 # estimator = None
 # clf = KNeighborsClassifier()
 # model = "KNN"
@@ -182,18 +150,16 @@ from xgboost import XGBClassifier
 # }
 
 
-## SVM - poly
-estimator = None
-clf = SVC(random_state=1)
-model = "SVM"
-param_grid = {
-    'C': np.logspace(-2, 8, 9),
-    'gamma': np.logspace(-5, -0, 9),
-    'kernel': ['poly'],
-    'degree': [3]
-}
-
-
+# ## SVM - poly
+# estimator = None
+# clf = SVC(random_state=1)
+# model = "SVM"
+# param_grid = {
+#     'C': np.logspace(-2, 8, 9),
+#     'gamma': np.logspace(-5, -0, 9),
+#     'kernel': ['poly'],
+#     'degree': [3]
+# }
 
 
 cv = 5
@@ -201,7 +167,7 @@ scoring = 'roc_auc'
 feature_groups_selected = ['gnomad', 'cellxgene', 'descartes', 'gtex', 'mgi', 'paralogues', 'phasCons', 'CpG_o2e']
 drop_features = []
 omit_scaling_features = ['paralogues', 'mgi']
-scaling = 'standard'
+scaling = 'robust'
 pca_components = False
 additional_info = '' 
 
@@ -246,7 +212,6 @@ config_dic['y_train'] = y_train
 with open(f'{config_dir}/config_dic_ID{ID}.pkl', 'wb') as file:
     pickle.dump(config_dic, file)
 
-    
     
 print("ready for training")    
 # train model
