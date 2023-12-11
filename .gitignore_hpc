@@ -2,4 +2,5 @@
 *.ipynb
 *.pkl
 *.png
+training/slurm_out/
 
