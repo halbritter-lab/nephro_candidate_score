@@ -3,4 +3,6 @@
 *.pkl
 *.png
 gene_score/training/slurm_out/
+gene_score/training/__pycache__/
+
 
