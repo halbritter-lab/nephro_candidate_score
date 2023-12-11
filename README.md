@@ -28,31 +28,14 @@ The repository has the following structure:
 
 ```
 .
-├── analyses/
-│   ├── 01_PanelApp/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 01_PanelApp.R
-│   ├── 02_Literature/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 02_Literature.R
-│   ├── 03_DiagnosticPanels/
-│   │   ├── data/
-│   │   ├── results/
-│   │   └── 03_DiagnosticPanels.R
-
-```
-
-
-```
-.
 ├── gene_score/
 │   ├── features/
 │   │   ├── raw/
 │   │   ├── results/
 │   │   ├── scripts/
 │   │   │   ├── cellxgene.R
+│   │   │   ├── descartes.R
+│   │   │   ├── exon_CpG_o2e_ratio.R
 │   │   │   ├── exon_and_prom_conservation.R
 │   │   │   ├── gnomad.R
 │   │   │   ├── gtex.R
@@ -61,22 +44,28 @@ The repository has the following structure:
 │   │   │   ├── nephrogenesis_atlas.R
 │   │   │   ├── paralogues.R
 │   │   │   ├── promoter_CpG_o2e_ratio.R
+│   │   ├── helper_functions.R
 │   ├── labels/
 │   │   ├── raw/
 │   │   ├── results/
 │   │   ├── scripts/
 │   │   │   ├── dispensable_genes.R
 │   │   │   ├── positive_genes.R
+│   ├── raw/
+│   ├── training/
+│   ├── gene_score_preprocessing_master.R
+│   ├── helper_functions.R
+│   ├── hgnc_functions.R
 └── variant_score/
 ```
 
-- The `gene_score/` directory contains TODO
-- The `results/` TODO
+- The `gene_score/` directory contains all scripts relevant for data acquisition and machine learning development of the gene score. Due to large file sizes, the raw data is not completely stored on GitHub.
+- The `variant_score/` TBA
 
 
 ## License
 
-This project is licensed under the terms of the MIT license. For more information, please refer to the [License](LICENSE.md) file.
+This project is licensed under the terms of the MIT license. For more information, please refer to the [License](LICENSE.md) TBA file.
 
 
 ## Creators and contributors
@@ -94,9 +83,10 @@ This project is licensed under the terms of the MIT license. For more informatio
 - <https://scholar.google.com/citations?user=Uvhu3t0AAAAJ>
 
 
-**S?ren Lukassen**
-
-TODO
+**Soeren Lukassen**
+- <https://github.com/slukassen>
+- <https://orcid.org/0000-0001-7045-6327>
+- <https://scholar.google.com/citations?user=wWiHGZkAAAAJ&hl=en>
 
 
 **Constantin Aaron Wolff**
@@ -111,4 +101,4 @@ TODO
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, please feel free to [contact us](contact.md).
+If you have any questions, suggestions, or feedback, please feel free to contact nina.rank@charite.de.
