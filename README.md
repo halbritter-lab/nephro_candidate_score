@@ -6,7 +6,6 @@ Welcome to the GitHub repository  "Nephro Candidate Score". The Nephro Candidate
 
 - [Overview and Methods](#overview-and-methods)
 - [Usage](#usage)
-- [Documentation](#documentation)
 - [File structure](#file-structure)
 - [License](#license)
 - [Creators](#creators-and-contributors)
@@ -18,16 +17,33 @@ TODO
 
 
 ## Usage
-A webtool for single variant scoring is available on TODO.
-A command line tool for scoring .vcf files is available on TODO.
-
-## Documentation
-TODO
+The NCS is publicly available and accessible. A web tool version for single variant scoring is available on TBA.
+A command line tool for scoring .vcf files is available on TBA.
 
 
 ## File Structure
 
 The repository has the following structure:
+
+
+```
+.
+├── analyses/
+│   ├── 01_PanelApp/
+│   │   ├── data/
+│   │   ├── results/
+│   │   └── 01_PanelApp.R
+│   ├── 02_Literature/
+│   │   ├── data/
+│   │   ├── results/
+│   │   └── 02_Literature.R
+│   ├── 03_DiagnosticPanels/
+│   │   ├── data/
+│   │   ├── results/
+│   │   └── 03_DiagnosticPanels.R
+
+```
+
 
 ```
 .
@@ -78,7 +94,7 @@ This project is licensed under the terms of the MIT license. For more informatio
 - <https://scholar.google.com/citations?user=Uvhu3t0AAAAJ>
 
 
-**S�ren Lukassen**
+**S?ren Lukassen**
 
 TODO
 
