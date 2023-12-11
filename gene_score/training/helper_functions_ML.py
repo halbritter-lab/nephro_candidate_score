@@ -322,6 +322,68 @@ def get_training_data(model,
         return X_train, y_train, features_selected
     
 
+    
+def get_feat_reduced_trainig_data(perc_var_exp,    
+                                  model, 
+                                  omit_scaling_features,
+                                  scaling
+                                 ):
+    """
+    Function to return training data on which feature reduction has been performed using PCA.
+    
+    """
+    
+    # load reduced_training_data
+    feat_train_red = pd.read_csv(f'{train_test_data_dir}/feat_train_reduced_{perc_var_exp}_{data_prep_date}.csv')
+    labels_train = pd.read_csv(f'{train_test_data_dir}/labels_train_{data_prep_date}.csv')
+    
+    # fill features missing values
+    feat_train_red_filled = fill_missing_vals(feat_train_red, model)
+    
+    # get features that should be scaled
+    omit_scaling = get_features_from_groups(omit_scaling_features, feat_train_red) # features that should not be scaled
+    scaling_features = [i for i in feat_train_red.columns if i not in omit_scaling + ['hgnc_id_int']] # features that should be scaled
+    
+    if scaling == 'standard':
+        # create StandardScaler
+        stand_scal = StandardScaler()
+
+        # scale features
+        feat_train_red_scaled = feat_train_red_filled.copy()
+        feat_train_red_scaled[scaling_features] = stand_scal.fit_transform(feat_train_red_scaled[scaling_features])
+        
+        # join training labels with scaled training features 
+        labels_feat_red_train = pd.merge(labels_train, feat_train_red_scaled, on='hgnc_id_int', how='inner')
+
+        
+    elif scaling == 'robust':
+        # create RobustScaler
+        rob_scal = RobustScaler(with_centering=True, with_scaling=True)
+
+        # scale features
+        feat_train_red_scaled = feat_train_red_filled.copy()
+        feat_train_red_scaled[scaling_features] = rob_scal.fit_transform(feat_train_red_scaled[scaling_features])
+        
+        # join training labels with scaled training features 
+        labels_feat_red_train = pd.merge(labels_train, feat_train_red_scaled, on='hgnc_id_int', how='inner')
+        
+    elif scaling == None:
+        labels_feat_red_train = pd.merge(labels_train, feat_train_red_filled, on='hgnc_id_int', how='inner')
+    
+    else:
+        raise ValueError("enter valid scaling ('standard', 'robust', None)")
+
+        
+    # get X_train and y_train as numpy arrays
+    X_train = labels_feat_red_train.drop(columns=['hgnc_id_int', 'ec2345']).values
+    y_train = labels_feat_red_train['ec2345'].values
+    
+    features = [i for i in feat_train_red if i not in ['hgnc_id_int']]
+    
+    return X_train, y_train, features
+           
+
+    
 # function to train using grid search and cross-validation
 def train_with_grid_search(ID,
                            X_train, 
@@ -588,7 +650,29 @@ def plot_2D_heatmap_fixed_params(ID, cv_results, best_params, param1, param2, fi
 
 
 
+def select_feat_from_perm_imp(ID, index):
+    """
+    Function to returns a list of the most important features according to permutation importance analysis
+    (up to the given index) and a list of the remaining features.
+    The index starts at 1.
+    """
+    # get permutation importance csv for given ID
+    pattern = f"perm_imp_sum_rank_ID{ID}"
+    files = os.listdir(results_dir)
+    matching_files = [file for file in files if file.startswith(pattern)]
 
+    if len(matching_files) > 1:
+        raise ValueError(f"Error: More than one permutation importance file for ID{ID}.")
+
+    perm_imp = pd.read_csv(f"{results_dir}/{matching_files[0]}").sort_values(by="rank_value", ascending=False)
+    
+    # select only the most important features up to given index
+    important_feat = list(perm_imp.loc[0:index-1]['feature'])
+    
+    # get the remaining features
+    unimportant_feat = list(perm_imp.loc[index:]['feature'])
+    
+    return important_feat, unimportant_feat
 
 
 
