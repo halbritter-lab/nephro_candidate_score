@@ -32,13 +32,13 @@ estimator = None
 clf = XGBClassifier(random_state=1, booster='gbtree')
 model = 'DecisionTree'
 param_grid = {
-    'n_estimators': np.arange(10, 200, 25),
-    'max_depth' : np.arange(4, 9, 1),
-    'learning_rate': np.logspace(-2, 0, 7),
-    'reg_alpha' : np.logspace(-2, 1, 7),
-    'reg_lambda' : np.logspace(-4, -2, 7),
-    'subsample': [0.8, 0.9, 1.0],
-    'gamma': np.logspace(-3, 0, 7)
+    'n_estimators': np.arange(70, 180, 30),
+    'max_depth' : np.arange(1, 5, 1),
+    'learning_rate': np.linspace(3.2e-2, 3.2e-1, 5), #np.logspace(-2, -1, 5),
+    'reg_alpha' : np.linspace(3.2e-1, 1e1, 5), #np.logspace(-2, 1, 5),
+    'reg_lambda' : np.logspace(-3, 0, 5),
+    'subsample': [0.85, 0.9, 0.95],
+    'gamma': np.logspace(-2, 0, 4)
 }
 
    
@@ -172,7 +172,7 @@ pca_components = False
 additional_info = '' 
 
 # create config files
-ID = create_ML_config(config_dir = 'config_files',
+ID = create_ML_config(config_dir = config_dir,
                      estimator = estimator,
                      clf = clf, 
                      param_grid = param_grid, 
