@@ -2,5 +2,5 @@
 *.ipynb
 *.pkl
 *.png
-training/slurm_out/
+gene_score/training/slurm_out/
 
