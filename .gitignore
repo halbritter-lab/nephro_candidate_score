@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# ipynb checkpoints
+.ipynb_checkpoints/
+
+# raw data files
+gene_score/features/raw/
+gene_score/labels/raw/
