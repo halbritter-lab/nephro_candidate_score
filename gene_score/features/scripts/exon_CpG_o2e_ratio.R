@@ -19,10 +19,13 @@ wd_bef_script_exe <- getwd()
 # set working directory
 setwd(file.path(config_vars$PROJECT_DIR, script_path))
 
+# source helper functions
+source("../../gene_score/helper_functions.R")
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_ts <- read.csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date, ".csv"),
-                     na.strings = c("NA", "NaN", " ", ""))
+canon_ts <- read_gzipped_csv(prefix = "results/ensembl_canonical_ts_",
+                             show_col_types = FALSE,
+                             na = c("NA", "NaN", " ", ""))
 
 # download Ensembl data 
 ensembl <- useEnsembl(biomart = "ensembl", 
