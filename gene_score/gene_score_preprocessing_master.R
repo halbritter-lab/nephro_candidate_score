@@ -77,6 +77,7 @@ HGNC_table <- left_join_rescue_symbol(HGNC_table, descartes_fetal_kid_nptm, by1 
 # get gnomAD features and join with HGNC table
 cat("get gnomad features...")
 source("features/scripts/gnomad.R")
+
 gnomad_constraints <- read_csv(paste0("features/results/gnomad_constraints_", config_vars$creation_date, ".csv"), show_col_types = FALSE)
 HGNC_table <- left_join_rescue_symbol(HGNC_table, gnomad_constraints, by1 = "ensembl_gene_id")
 
