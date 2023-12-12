@@ -6,6 +6,7 @@ library(tidyverse)
 library(jsonlite)
 library(BSgenome.Hsapiens.UCSC.hg38) # approx 700MB
 library(config)
+library(R.utils)
 
 # read configs
 config_vars <- config::get(file = "config.yml")
@@ -51,7 +52,11 @@ canonical_prom <- mart_exp %>%
 
 # write canonical transcripts
 write_csv(canonical_prom, 
-          paste0("results/ensembl_canonical_ts_" , config_vars$creation_date, ".csv"))
+          paste0("results/ensembl_canonical_ts_" , config_vars$creation_date, ".csv"),
+          row.names = FALSE)
+
+gzip(paste0("results/ensembl_canonical_ts_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # create a GRanges object
 canonical_prom_granges <- GRanges(
@@ -82,6 +87,9 @@ canonical_prom <- canonical_prom %>%
 write.csv(canonical_prom[, c("ensembl_gene_id", "symbol", "prom_CpG_o2e_ratio")], 
           paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
+
+gzip(paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

@@ -4,6 +4,7 @@
 library(tidyverse)
 library(biomaRt)
 library(config)
+library(R.utils)
 
 # read configs
 config_vars <- config::get(file = "config.yml")
@@ -87,6 +88,9 @@ no_paralogues <- paralogues_95 %>%
 write.csv(no_paralogues, 
           paste0("results/paralogues_95_85_75_", config_vars$creation_date, ".csv"), 
           row.names = FALSE)
+
+gzip(paste0("results/paralogues_95_85_75_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

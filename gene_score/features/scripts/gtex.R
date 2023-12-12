@@ -74,10 +74,20 @@ rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM_agg %>%
   left_join(symbol_df, by = "ensembl_gene_id")
 
 # write results - nTPM values
-write.csv(rna_tissue_gtex_nTPM_agg, paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(rna_tissue_gtex_nTPM_agg, 
+          paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # write results - tau values
-write.csv(tau_df, paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(tau_df, 
+          paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

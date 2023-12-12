@@ -6,6 +6,7 @@ library(httr)
 library(jsonlite)
 library(progress)
 library(config)
+library(R.utils)
 
 
 # read configs
@@ -63,8 +64,12 @@ datasets_df <- datasets %>%
 )
 
 # write results
-write.csv(datasets_df, paste0("results/cellxgene_datasets_summary", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(datasets_df, 
+          paste0("results/cellxgene_datasets_summary_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
 
+gzip(paste0("results/cellxgene_datasets_summary_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 ########## PRIMARY FILTER DIMENSIONS ##################
 # set the URL
@@ -106,7 +111,6 @@ pfd_tt <- prim_filt_dim_list$tissue_terms
 pfd_tt_df <- pfd_tt %>%
   imap_dfr(~ map_df(.x, ~ tibble(uberon_id = names(.x), tissue = as.character(.x)))) %>%
   mutate(taxon_id = rep(names(pfd_tt), lengths(pfd_tt)))
-
 
 
 ########## QUERY EXPRESSION VALUES ##########
@@ -288,7 +292,12 @@ colnames(expr_val_combined) <- gsub(":", "_", colnames(expr_val_combined))
 expr_val_combined <- left_join(expr_val_combined, distinct(pfd_gt_df[, c("ensembl_gene_id", "symbol")]), by = "ensembl_gene_id")
 
 # write results
-write.csv(expr_val_combined, paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(expr_val_combined, 
+          paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

@@ -68,7 +68,12 @@ gnomad_constraints <- read.delim("raw/gnomad.v2.1.1.lof_metrics.by_gene.txt") %>
 names(gnomad_constraints)[3:length(names(gnomad_constraints))] <- paste0("gnomad_", names(gnomad_constraints)[3:length(names(gnomad_constraints))])
 
 # write results
-write.csv(gnomad_constraints, paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(gnomad_constraints, 
+          paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

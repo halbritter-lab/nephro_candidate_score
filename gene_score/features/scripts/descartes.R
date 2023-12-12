@@ -4,6 +4,7 @@
 library(tidyverse)	
 library(jsonlite) 
 library(config)
+library(R.utils)
 
 # read configs
 config_vars <- config::get(file = "config.yml")
@@ -86,9 +87,19 @@ for (cell_type in cell_types){
 # tpm_df <- tpm_df %>% dplyr::rename(symbol = symbol)
 
 # write results
-write.csv(perc_expr_df, paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"), row.names = FALSE)
-write.csv(tpm_df, paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(perc_expr_df, 
+          paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
 
+gzip(paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
+
+write.csv(tpm_df, 
+          paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 ## Calculate nTPM values
 # Calculate the effective library sizes on complete rows
@@ -131,8 +142,19 @@ fetal_kidney_tau_df <- fetal_kidney_tau_df %>% left_join(distinct(tpm_df[, c("en
 ntpm_df_cc_with_id <- ntpm_df_cc_with_id %>% left_join(distinct(tpm_df[, c("ensembl_gene_id", "symbol")]), by = "ensembl_gene_id")
 
 # write results
-write.csv(fetal_kidney_tau_df, paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"), row.names = FALSE)
-write.csv(ntpm_df_cc_with_id, paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(fetal_kidney_tau_df, 
+          paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
+
+write.csv(ntpm_df_cc_with_id, 
+          paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
+
+gzip(paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), 
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

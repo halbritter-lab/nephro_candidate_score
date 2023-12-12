@@ -1,5 +1,3 @@
-# CAVE: unfinished => check TODO's !!
-
 # Title: Exon and promoter conservation scores
 
 # load libraries
@@ -8,6 +6,7 @@ library(biomaRt)
 library(progress)
 library(phastCons100way.UCSC.hg38)  # PhastCons score ranges from 0 to 1 and represents the probability that a given nucleotide is conserved
 library(config)
+library(R.utils)
 
 # read configs
 config_vars <- config::get(file = "config.yml")
@@ -19,10 +18,13 @@ wd_bef_script_exe <- getwd()
 # set working directory
 setwd(file.path(config_vars$PROJECT_DIR, script_path))
 
+# source helper functions
+source("../../gene_score/helper_functions.R")
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_ts <- read.csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date, ".csv"),
-                       na.strings = c("NA", "NaN", " ", ""))
+canon_ts <- read_gzipped_csv(prefix = "results/ensembl_canonical_ts_",
+                             show_col_types = FALSE,
+                             na = c("NA", "NaN", " ", ""))
 
 # download Ensembl data 
 ensembl <- useEnsembl(biomart = "ensembl", 
@@ -77,14 +79,13 @@ avg_phasCons_ex <- exons_coordinates %>%
     }) %>%
   dplyr::select(-ensembl_transcript_id)
 
-#TODO: check which columns to discard
-
-
 # write results
 write.csv(avg_phasCons_ex, 
           paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
 
+gzip(paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 
 ## Promoter conservation scores
@@ -114,6 +115,8 @@ write.csv(avg_phasCons_prom,
           paste0("results/avg_phasCons_promoter_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
 
+gzip(paste0("results/avg_phasCons_promoter_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

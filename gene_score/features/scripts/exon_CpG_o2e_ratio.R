@@ -7,6 +7,7 @@ library(progress)
 library(phastCons100way.UCSC.hg38)  # PhastCons score ranges from 0 to 1 and represents the probability that a given nucleotide is conserved
 library(BSgenome.Hsapiens.UCSC.hg38) # approx 700MB
 library(config)
+library(R.utils)
 
 # read configs
 config_vars <- config::get(file = "config.yml")
@@ -81,6 +82,9 @@ exons_ratios <- exons_ratios %>%
 write.csv(exons_ratios, 
           paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"), 
           row.names=FALSE)
+
+gzip(paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)

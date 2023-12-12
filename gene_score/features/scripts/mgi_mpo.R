@@ -4,6 +4,7 @@
 library(tidyverse)	
 library(jsonlite) 
 library(config)
+library(R.utils)
 
 # read configs
 config_vars <- config::get(file = "config.yml")
@@ -117,6 +118,9 @@ mgi_pg_mp <- mgi_pg_mp %>%
 write.csv(mgi_pg_mp, 
           paste0("results/mgi_human_genes_associated_MP_0005367_" , config_vars$creation_date, ".csv"), 
           row.names = FALSE)
+
+gzip(paste0("results/mgi_human_genes_associated_MP_0005367_" , config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 # set back former working directory
 setwd(wd_bef_script_exe)
