@@ -51,16 +51,16 @@ left_join_rescue_symbol <- function(x, y, by1) {
 # NOTE: these functions work slightly different, in both cases matching issues arrive. In general left_join_rescue_symbol() should be used.
 
 
-read_gzipped_csv <- function(prefix, show_col_types = FALSE, na = c("", "NA")){
+read_gzipped_csv <- function(prefix, file_date, show_col_types = FALSE, na = c("", "NA")){
   # unzip .csv
-  gunzip(paste0(prefix, config_vars$creation_date, ".csv.gz"))
+  gunzip(paste0(prefix, file_date, ".csv.gz"))
   
   # read .csv
-  res <- read_csv(paste0(prefix, config_vars$creation_date, ".csv"),
+  res <- read_csv(paste0(prefix, file_date, ".csv"),
                   show_col_types = show_col_types,
                   na = na)
   # gzip file again
-  gzip(paste0(prefix, config_vars$creation_date, ".csv"),
+  gzip(paste0(prefix, file_date, ".csv"),
        overwrite = TRUE)
   
   return(res)
