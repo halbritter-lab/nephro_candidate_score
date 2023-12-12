@@ -120,15 +120,12 @@ HGNC_table <- left_join_rescue_symbol(HGNC_table, mgi_mpo_kidney, by1 = "entrez_
 all_gene_features <- HGNC_table %>% 
   dplyr::select(-hgnc_id, -entrez_id, -ensembl_gene_id, -symbol, -alias_symbol, -prev_symbol)
 
-write.csv(all_gene_features, paste0("features/results/gene_features_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(all_gene_features, 
+          paste0("features/results/gene_features_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
 
-
-
-
-
-
-
-
+gzip(paste0("features/results/gene_features_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
 
 
 
