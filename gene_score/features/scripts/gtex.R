@@ -23,12 +23,17 @@ download.file(gtex_download_url,
 unzip(zipfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv.zip"),
       exdir = "raw/")  
 
+unzip(zipfile = paste0("raw/rna_tissue_gtex_", creation_date, ".tsv.zip"),
+      exdir = "raw/")  
+
+file.rename("raw/rna_tissue_gtex.tsv", paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv"))
+
 # load data
-rna_tissue_gtex_nTPM <- read.delim("raw/rna_tissue_gtex.tsv") %>% 
+rna_tissue_gtex_nTPM <- read.delim(paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv")) %>% 
   dplyr::select(ensembl_gene_id = Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
-symbol_df <- read.delim("raw/rna_tissue_gtex.tsv") %>% 
+symbol_df <- read.delim(paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv")) %>% 
   dplyr::select(ensembl_gene_id = Gene, symbol = Gene.name) %>% 
   distinct()
 
