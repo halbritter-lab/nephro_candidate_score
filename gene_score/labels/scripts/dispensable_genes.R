@@ -21,7 +21,7 @@ setwd(paste0(config_vars$projectsdir, project_name, script_path))
 source("../hgnc_functions.R")
 
 # download and unzip file with homozygous loss-of-function variants from gnomad publication
-destfile <-  paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date, ".zip")
+destfile <- paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date, ".zip")
 
 if (!file.exists(destfile)) {
   # if the file doesn't exist, download it
@@ -38,7 +38,7 @@ if (!file.exists(destfile)) {
 hom_ko_genes <- read.table("raw/supplement/supplementary_dataset_7_hom_ko_genes.txt")
 
 # get HGNC ID from gene symbol
-hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>%
+hom_ko_genes <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>%
   tibble() %>%
   dplyr::rename(c("hgnc_id_int" = ".")) %>%
   drop_na(hgnc_id_int)
