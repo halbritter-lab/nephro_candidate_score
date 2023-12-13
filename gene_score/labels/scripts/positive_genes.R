@@ -5,32 +5,38 @@ library(tidyverse)
 library(R.utils)
 library(config)
 
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/labels/"
+
 # read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/labels"
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
-# save current working directory
-wd_bef_script_exe <- getwd()
+# set working directory
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
-# set new working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+# download and unzip genes associated with kidney disease from github repository "kidney-genetics"
+destfile <-  paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv.gz")
 
-# download and unzip genes associated with kidney disease from github repository kidney-genetics
-kg_url <- paste0("https://github.com/halbritter-lab/kidney-genetics/blob/main/analyses/A_MergeAnalysesSources/results/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv.gz?raw=TRUE")
-
-download.file(url = kg_url,
-              destfile = paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv.gz"))
-
-gunzip(filename = paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv.gz"), 
-       destname = paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv"))
+if (!file.exists(destfile)) {
+  # if the file doesn't exist, download it
+  kg_url <- paste0("https://github.com/halbritter-lab/kidney-genetics/blob/main/analyses/A_MergeAnalysesSources/results/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv.gz?raw=TRUE")
+  download.file(url = kg_url,
+                destfile = destfile)
+  } else {
+    cat("'", strsplit(destfile, "/")[[1]][-1], "' already exists. No need to download.", sep ="")
+}
 
 # load data
-kid_gen <- read.csv(paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv")) %>% 
-  rename(hgnc_id_int = "hgnc_id")
-
+kid_gen <- read_csv(destfile, show_col_types = FALSE) %>% 
+  rename(hgnc_id_int = hgnc_id)
 
 # write results
-write.csv(kid_gen, paste0("results/positive_genes_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(kid_gen, paste0("results/positive_genes_", config_vars$creation_date, ".csv"), 
+          row.names = FALSE)
 
-# set back former working directory
-setwd(wd_bef_script_exe)
+gzip(paste0("results/positive_genes_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
+
