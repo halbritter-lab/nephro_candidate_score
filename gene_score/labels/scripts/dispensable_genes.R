@@ -5,27 +5,34 @@ library(tidyverse)
 library(readr)
 library(config)
 
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/labels/"
 
 # read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/labels"
-
-# save current working directory
-wd_bef_script_exe <- getwd()
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
 # set working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # source additional functions
-source(file.path(config_vars$PROJECT_DIR, "gene_score", "hgnc_functions.R"))
+source("../hgnc_functions.R")
 
+# download and unzip file with homozygous loss-of-function variants from gnomad publication
+destfile <-  paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date, ".zip")
 
-# download and unzip file with homozygus loss of function variants from gnomad publication
-download_url <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7334197/bin/41586_2020_2308_MOESM4_ESM.zip"
-download.file(url = download_url,
-              destfile = paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date, ".zip"))
-unzip(zipfile = paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date, ".zip"),
-      exdir = "raw/")
+if (!file.exists(destfile)) {
+  # if the file doesn't exist, download it
+  download_url <- "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7334197/bin/41586_2020_2308_MOESM4_ESM.zip"
+  download.file(url = download_url,
+                destfile = destfile)
+  unzip(zipfile = destfile,
+        exdir = "raw/")
+} else {
+  cat("'", strsplit(destfile, "/")[[1]][-1], "' already exists. No need to download.", sep ="")
+}
 
 # load homozygous knockout genes
 hom_ko_genes <- read.table("raw/supplement/supplementary_dataset_7_hom_ko_genes.txt")
@@ -37,12 +44,19 @@ hom_ko_genes  <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>
   drop_na(hgnc_id_int)
 
 
-
-
 # download OMIM genemap
-# OMIM links to genemap2 file needs to be set in config and applied for at https://www.omim.org/downloads
-download.file(url = config_vars$omim_download_url,
-              destfile = paste0("raw/genemap2_", config_vars$creation_date, ".txt"))
+# OMIM download link to genemap2 file needs to be set in config file and applied for at https://www.omim.org/downloads
+destfile <- paste0("raw/genemap2_", config_vars$creation_date, ".txt")
+destfile_gz <- paste0(destfile, ".gz")
+
+if (!file.exists(destfile_gz)) {
+  # if the file doesn't exist, download it
+  download.file(url = config_vars$omim_download_url,
+                destfile = destfile)
+} else {
+  cat("'", strsplit(destfile_gz, "/")[[1]][-1], "' already exists. No need to download.", sep ="")
+  gunzip(destfile_gz)
+}
 
 # load file and clean column names
 names_col <- read_tsv(paste0("raw/genemap2_", config_vars$creation_date, ".txt"),
@@ -58,6 +72,10 @@ omim_genes_hg38 <-  read.delim2(paste0("raw/genemap2_", config_vars$creation_dat
                                 comment.char = "#") %>% 
   dplyr::mutate_all(~ ifelse(. == "", NA, .))
 colnames(omim_genes_hg38) <- clean_names
+
+# gzip genemap2 file
+gzip(destfile, 
+     overwrite = TRUE)
 
 # filter for morbid genes (genes associated with a phenotype in OMIM)
 # omim_hg38_morbid <- omim_genes_hg38 %>% 
@@ -97,5 +115,5 @@ disp_genes <- hom_ko_genes %>%
 # write results
 write.csv(disp_genes, paste0("results/dispensible_genes_", config_vars$creation_date, ".csv"), row.names = FALSE)
 
-# set back former working directory
-setwd(wd_bef_script_exe)
+gzip(paste0("results/dispensible_genes_", config_vars$creation_date, ".csv"),
+     overwrite = TRUE)
