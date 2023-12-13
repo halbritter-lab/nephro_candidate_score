@@ -17,7 +17,7 @@ config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
 # set working directory
 setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
-# download and unzip genes associated with kidney disease from github repository "kidney-genetics"
+# download genes associated with kidney disease from github repository "kidney-genetics"
 destfile <-  paste0("raw/A_MergeAnalysesSources.", config_vars$kidney_genetics_version, ".csv.gz")
 
 if (!file.exists(destfile)) {
