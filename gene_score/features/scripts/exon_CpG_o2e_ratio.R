@@ -4,7 +4,6 @@
 library(tidyverse)
 library(biomaRt)
 library(progress)
-library(phastCons100way.UCSC.hg38)  # PhastCons score ranges from 0 to 1 and represents the probability that a given nucleotide is conserved
 library(BSgenome.Hsapiens.UCSC.hg38) # approx 700MB
 library(config)
 library(R.utils)
@@ -21,12 +20,8 @@ config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
 # set working directory
 setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
-# source helper functions
-source("../helper_functions.R")
-
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_ts <- read_gzipped_csv(prefix = "results/ensembl_canonical_ts_",
-                             file_date = config_vars$creation_date,
+canon_ts <- read_csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date, ".csv.gz"),
                              show_col_types = FALSE,
                              na = c("NA", "NaN", " ", ""))
 
