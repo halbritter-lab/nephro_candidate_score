@@ -106,7 +106,7 @@ HGNC_table <- left_join_rescue_symbol(HGNC_table, gtex_tau, by1 = "ensembl_gene_
 
 
 # get number of close paralogues (above xth percentile Query% and Target%) and join with HGNC table
-cat("get nunber of close paralogues...")
+cat("get number of close paralogues...")
 source("features/scripts/paralogues.R")
 setwd(init_wd)
 
