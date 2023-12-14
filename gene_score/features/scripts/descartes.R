@@ -6,15 +6,17 @@ library(jsonlite)
 library(config)
 library(R.utils)
 
-# read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/features"
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/features/"
 
-# save current working directory
-wd_bef_script_exe <- getwd()
+# read configs
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
 # set working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # download and read in main clusters and gene IDs
 main_clusters_url <- "https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/labels/kidney_main_cluster_name_lbls.json"
@@ -155,8 +157,4 @@ write.csv(ntpm_df_cc_with_id,
 
 gzip(paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), 
      overwrite = TRUE)
-
-# set back former working directory
-setwd(wd_bef_script_exe)
-
 
