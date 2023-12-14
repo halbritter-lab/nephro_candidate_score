@@ -5,15 +5,17 @@ library(tidyverse)
 library(R.utils)
 
 
-# read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/features"
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/features/"
 
-# save current working directory
-wd_bef_script_exe <- getwd()
+# read configs
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
 # set working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # download and unzip gnomad constraint data
 download_url <- "https://storage.googleapis.com/gcp-public-data--gnomad/release/2.1.1/constraint/gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz"
@@ -74,7 +76,3 @@ write.csv(gnomad_constraints,
 
 gzip(paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"),
      overwrite = TRUE)
-
-# set back former working directory
-setwd(wd_bef_script_exe)
-

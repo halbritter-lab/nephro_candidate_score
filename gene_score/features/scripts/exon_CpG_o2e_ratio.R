@@ -9,18 +9,20 @@ library(BSgenome.Hsapiens.UCSC.hg38) # approx 700MB
 library(config)
 library(R.utils)
 
-# read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/features"
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/features/"
 
-# save current working directory
-wd_bef_script_exe <- getwd()
+# read configs
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
 # set working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # source helper functions
-source("../../gene_score/helper_functions.R")
+source("../helper_functions.R")
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
 canon_ts <- read_gzipped_csv(prefix = "results/ensembl_canonical_ts_",
@@ -89,11 +91,3 @@ write.csv(exons_ratios,
 
 gzip(paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"),
      overwrite = TRUE)
-
-# set back former working directory
-setwd(wd_bef_script_exe)
-
-
-
-
-

@@ -8,20 +8,20 @@ library(BSgenome.Hsapiens.UCSC.hg38) # approx 700MB
 library(config)
 library(R.utils)
 
-# read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/features"
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/features/"
 
-# save current working directory
-wd_bef_script_exe <- getwd()
+# read configs
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
 # set working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 
 # download Ensembl data for all protein coding transcripts in Homo sapiens, Human genes (GRCh38.p13), GRCh38.p13
-
-# download Ensembl data 
 ensembl <- useEnsembl(biomart = "ensembl", 
                       dataset = "hsapiens_gene_ensembl", 
                       version = config_vars$ensembl_biomart_version)
@@ -90,6 +90,3 @@ write.csv(canonical_prom[, c("ensembl_gene_id", "symbol", "prom_CpG_o2e_ratio")]
 
 gzip(paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"),
      overwrite = TRUE)
-
-# set back former working directory
-setwd(wd_bef_script_exe)
