@@ -168,3 +168,5 @@ write.csv(all_gene_features,
 
 gzip(paste0("features/results/gene_features_", config_vars$creation_date, ".csv"),
      overwrite = TRUE)
+
+
