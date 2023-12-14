@@ -2,7 +2,9 @@
 
 # load libraries
 library(tidyverse)
+library(utils)
 library(R.utils)
+library(config)
 
 
 # define relative script path

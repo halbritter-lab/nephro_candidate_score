@@ -2,6 +2,7 @@
 
 # load libraries
 library(tidyverse)
+library(utils)
 library(R.utils)
 library(config)
 
