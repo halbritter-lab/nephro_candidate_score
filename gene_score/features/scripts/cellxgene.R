@@ -9,21 +9,23 @@ library(config)
 library(R.utils)
 
 
-# read configs
-config_vars <- config::get(file = "config.yml")
-script_path <- "gene_score/features"
+# define relative script path
+project_topic <- "nephrology"
+project_name <- "nephro_candidate_score"
+script_path <- "/gene_score/features/"
 
-# save current working directory
-wd_bef_script_exe <- getwd()
+# read configs
+config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
+                           config = project_topic)
 
 # set working directory
-setwd(file.path(config_vars$PROJECT_DIR, script_path))
+setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # source additional functions
-source(file.path(config_vars$PROJECT_DIR, "gene_score", "hgnc_functions.R"))
+source("../hgnc_functions.R")
 
 
-########## DATASETS ##################
+########## DATASETS ##########
 # get all datasets from cellxgene
 datasets_url <- "https://api.cellxgene.cziscience.com/dp/v1/datasets/index"
 
@@ -71,7 +73,7 @@ write.csv(datasets_df,
 gzip(paste0("results/cellxgene_datasets_summary_", config_vars$creation_date, ".csv"),
      overwrite = TRUE)
 
-########## PRIMARY FILTER DIMENSIONS ##################
+########## PRIMARY FILTER DIMENSIONS ##########
 # set the URL
 prim_filt_url <- "https://api.cellxgene.cziscience.com/wmg/v2/primary_filter_dimensions"
 
@@ -149,6 +151,7 @@ create_query_body <- function(datasets_vec,
   return(body)
 }
 
+
 query_cellxgene_POST <- function(url, body) {
   # send the POST request
   response <- POST(url, add_headers(headers), body = toJSON(body))
@@ -215,8 +218,7 @@ get_cellxgene_expr_val <- function(datasets_vec,
 }
                                    
 
-
-###### GET EXPRESSION VALUES FOR "0b4a15a7-4e9e-4555-9733-2423e5c66469" ######
+########## EXPRESSION VALUES FOR "0b4a15a7-4e9e-4555-9733-2423e5c66469" ##########
 # 'Single cell RNA-seq data from normal adult kidney tissue', Bitzer, Michigan
 
 ds_id <- c("0b4a15a7-4e9e-4555-9733-2423e5c66469")
@@ -229,7 +231,6 @@ gene_vec <- pfd_gt_df %>%
 
 # NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
 gene_split_list <- split(gene_vec, ceiling(seq_along(gene_vec) / 1000))
-
 
 # get expression values chunk wise
 expr_val_combined <- data.frame()
@@ -252,8 +253,7 @@ for (i in gene_split_list){
 }
 
 
-
-##### get cell ids
+# get cell IDs
 cell_types <- datasets %>%
   unnest_wider(ds) %>%
   filter(str_detect(explorer_url, ds_id)) %>%
@@ -280,7 +280,6 @@ cell_ontology_term_ids_kid <- cell_types %>%
   filter(cell_label %in% kidney_cell_types) %>% 
   .$cell_ontogolgy_term_id
 
-
 expr_val_combined <- expr_val_combined %>%
   dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc")) %>% 
   dplyr::select(ensembl_gene_id, matches(paste0("^(", paste(cell_ontology_term_ids_kid, collapse = "|"), ")")))
@@ -298,57 +297,3 @@ write.csv(expr_val_combined,
 
 gzip(paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"),
      overwrite = TRUE)
-
-# set back former working directory
-setwd(wd_bef_script_exe)
-
-
-
-
-# 
-# ###### GET EXPRESSION VALUES FOR "d7dcfd8f-2ee7-4385-b9ac-e074c23ed190" (FETAL KIDNEY) ######
-# ds_id <- c("d7dcfd8f-2ee7-4385-b9ac-e074c23ed190")
-# query_taxon <- "NCBITaxon:9606"
-# query_tissue <- "UBERON:0002113"
-# gene_vec <- pfd_gt_df %>%
-#   filter(taxon_id %in% query_taxon, ensembl_gene_id %in% HGNC_table$ensembl_gene_id) %>%
-#   .$ensembl_gene_id %>%
-#   as.vector()
-# 
-# # NOTE: querying all genes at once is not possible => split up the gene vector into junks of approximately length 1000
-# gene_split_list <- split(gene_vec, ceiling(seq_along(gene_vec) / 1000))
-# 
-# # get expression values chunk wise
-# expr_val_combined <- data.frame()
-# pb <- progress_bar$new(total = length(gene_split_list))
-# 
-# for (i in gene_split_list){
-#   pb$tick()  # Increment progress bar
-#   cat("\n")
-#   sub_df <- get_cellxgene_expr_val(datasets_vec = ds_id,
-#                                    query_taxon = query_taxon,
-#                                    query_tissue = query_tissue,
-#                                    development_stage_list = list(),
-#                                    disease_list = list(),
-#                                    gene_ontology_term_ids = i,
-#                                    self_reported_ethnicity_ontology_term_ids = list(),
-#                                    sex_ontology_term_ids = list(),
-#                                    url = "https://api.cellxgene.cziscience.com/wmg/v1/query")
-#   
-#   expr_val_combined <- dplyr::bind_rows(expr_val_combined, sub_df)
-# }
-# 
-# expr_val_combined <- expr_val_combined %>%
-#   dplyr::select(ensembl_gene_id, ends_with("_me"), ends_with("_pc"))
-# 
-# # write results
-# write.csv(expr_val_combined, paste0("gene_score/features/results/cellxgene_expr_d7dcfd8f-2ee7-4385-b9ac-e074c23ed190_", config_vars$creation_date, ".csv"), row.names = FALSE)
-# 
-# 
-# 
-
-
-
-
-
-
