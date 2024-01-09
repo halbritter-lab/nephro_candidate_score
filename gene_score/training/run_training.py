@@ -1,14 +1,13 @@
 # import config
-from config_ML import *
 
 # import basic modules
 import sys
 import numpy as np
 import pandas as pd
+import yaml
 
 # import preprocessing functions
 from helper_functions_ML import *
-
 
 # import classifiers
 from sklearn.ensemble import AdaBoostClassifier
@@ -24,6 +23,23 @@ from sklearn.linear_model import RidgeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 
+# define relative script path
+project_topic = "nephrology"
+project_name = "nephro_candidate_score"
+script_path = "/gene_score/training/"
+
+# read configs
+CONFIG_FILE = "config_NCS.yml" # TODO: change
+# CONFIG_FILE = os.getenv('CONFIG_FILE')
+
+with open(CONFIG_FILE, 'r') as file:
+    config_data = yaml.safe_load(file)
+
+config_vars = config_data[project_topic]
+
+# set working directory
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
+
 
 # set classifer and param grid for training
 
@@ -32,13 +48,13 @@ estimator = None
 clf = XGBClassifier(random_state=1, booster='gbtree')
 model = 'DecisionTree'
 param_grid = {
-    'n_estimators': np.arange(70, 180, 30),
-    'max_depth' : np.arange(1, 5, 1),
-    'learning_rate': np.linspace(3.2e-2, 3.2e-1, 5), #np.logspace(-2, -1, 5),
-    'reg_alpha' : np.linspace(3.2e-1, 1e1, 5), #np.logspace(-2, 1, 5),
-    'reg_lambda' : np.logspace(-3, 0, 5),
-    'subsample': [0.85, 0.9, 0.95],
-    'gamma': np.logspace(-2, 0, 4)
+    'n_estimators': [50, 70, 90], #np.arange(70, 180, 30),
+    'max_depth' : [3,4,5,6], #np.arange(1, 5, 1),
+    'learning_rate': np.linspace(1e-1, 2.5e-1, 3), #np.logspace(-2, -1, 5),
+    'reg_alpha' : np.linspace(3.2e-1, 5, 4), #np.logspace(-2, 1, 5),
+    'reg_lambda' : np.logspace(-4, -2, 4),
+    'subsample': [0.8, 0.85, 0.9],
+    'gamma': np.logspace(-2, 1, 4)
 }
 
    
@@ -172,7 +188,7 @@ pca_components = False
 additional_info = '' 
 
 # create config files
-ID = create_ML_config(config_dir = config_dir,
+ID = create_ML_config(config_dir = "config_files/",
                      estimator = estimator,
                      clf = clf, 
                      param_grid = param_grid, 
@@ -190,7 +206,7 @@ ID = create_ML_config(config_dir = config_dir,
 print(f"Training_ID: ID{ID}")
 
 # get config_dic
-with open(f"{config_dir}/config_dic_ID{ID}.pkl", 'rb') as file:
+with open(f"config_files/config_dic_ID{ID}.pkl", 'rb') as file:
     config_dic = pickle.load(file)
 
 
@@ -209,7 +225,7 @@ config_dic['X_train'] = X_train
 config_dic['y_train'] = y_train
 
 # dump config_dic
-with open(f'{config_dir}/config_dic_ID{ID}.pkl', 'wb') as file:
+with open(f'config_files/config_dic_ID{ID}.pkl', 'wb') as file:
     pickle.dump(config_dic, file)
 
     
