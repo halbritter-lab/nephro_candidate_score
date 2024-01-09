@@ -1,14 +1,11 @@
-# import config
-from config_ML import *
-
 # import basic modules
 import sys
 import numpy as np
 import pandas as pd
+import yaml
 
 # import preprocessing functions
 from helper_functions_ML import *
-
 
 # import classifiers
 from sklearn.ensemble import AdaBoostClassifier
@@ -22,6 +19,23 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.linear_model import RidgeClassifier
 from sklearn.ensemble import RandomForestClassifier
+
+# get config file
+CONFIG_FILE = "config_NCS.yml"   #TODO: CONFIG_FILE = os.getenv('CONFIG_FILE')
+
+# define relative script path
+project_topic = "nephrology"
+project_name = "nephro_candidate_score"
+script_path = "/gene_score/training/"
+
+# read configs
+with open(CONFIG_FILE, 'r') as file:
+    config_data = yaml.safe_load(file)
+
+config_vars = config_data[project_topic]
+
+# set working directory
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 
 
 def main():
@@ -67,22 +81,6 @@ def main():
     date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
     sum_rank_values.to_csv(f'{results_dir}/perm_imp_sum_rank_ID{ID}_{date_time}.csv', index=False)
 
-    
-    
-    
-    
-#     perm_imp = get_permutation_importance(ID=ID,
-#                                X_train=config_dic['X_train'], 
-#                                y_train=config_dic['y_train'], 
-#                                features=config_dic['features'], 
-#                                classifier=results_dic['best_classifier'],
-#                                scoring=config_dic['scoring'],
-#                                plot=False,
-#                                random_state=1
-#                               )    
-
-#     # Print the myID value
-#     print(f"The value of ID is: {ID}")
 
 if __name__ == "__main__":
     main()
