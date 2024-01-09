@@ -1,13 +1,12 @@
 #!/bin/bash
-#
+
 # Identify project and set log path
 #SBATCH --job-name=ML_training
 #SBATCH --output=slurm_out/slurm_%j.out
 
-#
 # Set a required running time for the job.
-#SBATCH --time=5-00
-#
+#SBATCH --time=7-00
+
 # Reserve resouces in partition
 #SBATCH --partition medium
 #SBATCH --ntasks=1
