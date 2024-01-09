@@ -1,9 +1,9 @@
-from config_ML import *
 import pandas as pd
 import numpy as np
 import time
 import os
 import pickle
+import yaml
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import RobustScaler
@@ -13,6 +13,26 @@ from datetime import datetime
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score
 from sklearn.inspection import permutation_importance
+
+
+# define relative script path
+project_topic = "nephrology"
+project_name = "nephro_candidate_score"
+script_path = "/gene_score/training/"
+
+# read configs
+CONFIG_FILE = "config_NCS.yml" # TODO: change
+# CONFIG_FILE = os.getenv('CONFIG_FILE')
+
+with open(CONFIG_FILE, 'r') as file:
+    config_data = yaml.safe_load(file)
+
+config_vars = config_data[project_topic]
+
+# set working directory
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
+
+
 
 class Tee:
     def __init__(self, *files):
@@ -54,10 +74,10 @@ def init_config_ML_training_file(config_dir, date_time):
     init_df = pd.DataFrame(config_dic)
     
     # create csv
-    init_df.to_csv(f"{config_dir}/config_ML_training_{date_time}.csv", index=False)
+    init_df.to_csv(f"config_files/config_ML_training_{date_time}.csv", index=False)
     
     # set file to read-only
-    os.chmod(f"{config_dir}/config_ML_training_{date_time}.csv", 0o444)
+    os.chmod(f"config_files/config_ML_training_{date_time}.csv", 0o444)
     time.sleep(2)
     
     print(f"'config_ML_training_{date_time}.csv' initialized.")
@@ -85,11 +105,11 @@ def get_latest_ML_config_training_file(config_dir):
     if len(date_objects) == 0:
         date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
         init_config_ML_training_file(config_dir, date_time)
-        return(f"{config_dir}/config_ML_training_{date_time}.csv")
+        return(f"config_files/config_ML_training_{date_time}.csv")
         
     else:
         latest_dt = max(date_objects).strftime('%Y-%m-%d--%H-%M-%S')
-        return(f"{config_dir}/config_ML_training_{latest_dt}.csv")
+        return(f"config_files/config_ML_training_{latest_dt}.csv")
 
 
 
@@ -143,7 +163,7 @@ def create_ML_config(config_dir,
                  }
     
     # save the configuration dictionary with pickle
-    with open(f'{config_dir}/config_dic_ID{new_ID}.pkl', 'wb') as file:
+    with open(f'config_files/config_dic_ID{new_ID}.pkl', 'wb') as file:
         pickle.dump(config_dic, file)
     print(f"config_dic_ID{new_ID}.pkl dumped.")
     
@@ -175,11 +195,11 @@ def create_ML_config(config_dir,
     old_config = pd.read_csv(lt_cf)
     
     new_config = pd.concat([old_config, new_row], ignore_index=True)
-    
-    new_config.to_csv(f"{config_dir}/config_ML_training_{date_time}.csv", index=False)
+   
+    new_config.to_csv(f"config_files/config_ML_training_{date_time}.csv", index=False)
     
     # set file to read-only
-    os.chmod(f"{config_dir}/config_ML_training_{date_time}.csv", 0o444)
+    os.chmod(f"config_files/config_ML_training_{date_time}.csv", 0o444)
     
     print(f"New config file: 'config_ML_training_{date_time}.csv' created.")
     
@@ -214,7 +234,7 @@ def get_features_from_groups(groups, feature_df):
 
 # function to return the pre-defined method of filling missing values for each model and feature
 def get_filling_method(model, feature):
-    filling_methods = pd.read_csv(f'{raw_data_dir}/fill_missing_methods_{creation_date}.csv')
+    filling_methods = pd.read_csv(f"raw/fill_missing_methods_{config_vars['creation_date']}.csv.gz")
     method = filling_methods.loc[filling_methods['feature'] == feature, model].values[0]
     return(method)
 
@@ -224,7 +244,7 @@ def fill_missing_vals(df, model):
     df_filled = df.copy()
   
     # median values of training data
-    median_values_train = pd.read_csv(f'{train_test_data_dir}/median_values_train_{data_prep_date}.csv')
+    median_values_train = pd.read_csv(f"train_test_data/median_values_train_{config_vars['data_prep_date']}.csv.gz")
     
     cols_with_missing = df.columns[df.isna().any()].tolist()
     for col in cols_with_missing: 
@@ -258,8 +278,8 @@ def get_training_data(model,
                      ):
     
     # load raw training data
-    feat_train = pd.read_csv(f'{train_test_data_dir}/feat_train_{data_prep_date}.csv')
-    labels_train = pd.read_csv(f'{train_test_data_dir}/labels_train_{data_prep_date}.csv')
+    feat_train = pd.read_csv(f"train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
+    labels_train = pd.read_csv(f"train_test_data/labels_train_{config_vars['data_prep_date']}.csv.gz")
     
     # get selected features
     features_from_groups = get_features_from_groups(feature_groups_selected, feat_train)
@@ -334,8 +354,8 @@ def get_feat_reduced_trainig_data(perc_var_exp,
     """
     
     # load reduced_training_data
-    feat_train_red = pd.read_csv(f'{train_test_data_dir}/feat_train_reduced_{perc_var_exp}_{data_prep_date}.csv')
-    labels_train = pd.read_csv(f'{train_test_data_dir}/labels_train_{data_prep_date}.csv')
+    feat_train_red = pd.read_csv(f"train_test_data/feat_train_reduced_{perc_var_exp}_{config_vars['data_prep_date']}.csv.gz")
+    labels_train = pd.read_csv(f"train_test_data/labels_train_{config_vars['data_prep_date']}.csv.gz")
     
     # fill features missing values
     feat_train_red_filled = fill_missing_vals(feat_train_red, model)
@@ -449,7 +469,7 @@ def train_with_grid_search(ID,
 #     if 'estimator' in list(estimator.get_params().keys()):       # in case the classifier has its own estimator (e.g. in AdaBoost), also store estimator in filename
 #         est = str(estimator.get_params()['estimator']).lower().replace('(', '_').replace(')', '_').replace('=', '-')    
     
-    file_name = f'{results_dir}/cv_results_ID{ID}.csv'
+    file_name = f'results/cv_results_ID{ID}.csv'
     cv_results.to_csv(file_name, index=False)
     
     
@@ -459,7 +479,7 @@ def train_with_grid_search(ID,
                   'best_classifier': best_classifier
                   }
     
-    with open(f'{results_dir}/results_ID{ID}.pkl', 'wb') as file:
+    with open(f'results/results_ID{ID}.pkl', 'wb') as file:
         pickle.dump(results_dic, file)    
 
     return cv_results, best_params, best_classifier
@@ -469,10 +489,10 @@ def train_with_grid_search(ID,
 
 def get_config_results_dics(ID):
     
-    with open(f"{config_dir}/config_dic_ID{ID}.pkl", 'rb') as file:
+    with open(f"config_files/config_dic_ID{ID}.pkl", 'rb') as file:
         config_dic = pickle.load(file)
         
-    with open(f"{results_dir}/results_ID{ID}.pkl", 'rb') as file:
+    with open(f"results/results_ID{ID}.pkl", 'rb') as file:
         results_dic = pickle.load(file)
     
     print(config_dic['ID'])
@@ -535,7 +555,7 @@ def plot_2D_heatmap(ID, cv_results, param1, param2, figsize, save, show):
 
     # save figure
     if save:
-        plt.savefig(f"{results_dir}/heatmap2D_ID{ID}.png", format="png")
+        plt.savefig(f"results/heatmap2D_ID{ID}.png", format="png")
     
     
     # display the heatmap
@@ -570,7 +590,7 @@ def get_permutation_importance(ID,
     
     # save results
     date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
-    feature_imp.to_csv(f'{results_dir}/perm_importance_ID{ID}_rs-{random_state}_{date_time}.csv', index=False)
+    feature_imp.to_csv(f'results/perm_importance_ID{ID}_rs-{random_state}_{date_time}.csv', index=False)
     
     # plot feature importance
     if plot:
@@ -642,7 +662,7 @@ def plot_2D_heatmap_fixed_params(ID, cv_results, best_params, param1, param2, fi
     
     # save figure
     if save:
-        plt.savefig(f"{results_dir}/heatmap2D_fixed_params_ID{ID}.png", format="png")
+        plt.savefig(f"results/heatmap2D_fixed_params_ID{ID}.png", format="png")
     
     # display the heatmap
     if show:
@@ -664,7 +684,7 @@ def select_feat_from_perm_imp(ID, index):
     if len(matching_files) > 1:
         raise ValueError(f"Error: More than one permutation importance file for ID{ID}.")
 
-    perm_imp = pd.read_csv(f"{results_dir}/{matching_files[0]}").sort_values(by="rank_value", ascending=False)
+    perm_imp = pd.read_csv(f"results/{matching_files[0]}").sort_values(by="rank_value", ascending=False)
     
     # select only the most important features up to given index
     important_feat = list(perm_imp.loc[0:index-1]['feature'])
