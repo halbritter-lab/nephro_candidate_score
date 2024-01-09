@@ -1,14 +1,11 @@
-# import config
-from config_ML import *
-
 # import basic modules
 import sys
 import numpy as np
 import pandas as pd
+import yaml
 
 # import preprocessing functions
 from helper_functions_ML import *
-
 
 # import classifiers
 from sklearn.ensemble import AdaBoostClassifier
@@ -23,6 +20,23 @@ from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.linear_model import RidgeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
+
+# get config file
+CONFIG_FILE = "config_NCS.yml"   #TODO: CONFIG_FILE = os.getenv('CONFIG_FILE')
+
+# define relative script path
+project_topic = "nephrology"
+project_name = "nephro_candidate_score"
+script_path = "/gene_score/training/"
+
+# read configs
+with open(CONFIG_FILE, 'r') as file:
+    config_data = yaml.safe_load(file)
+
+config_vars = config_data[project_topic]
+
+# set working directory
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 
 
 # define ID, index of important features, classifier
@@ -66,9 +80,6 @@ additional_info = ''
 # select drop features
 important_feat, unimportant_feat = select_feat_from_perm_imp(ID=ID, index=index)    
 drop_features = unimportant_feat
-
-
-
 
 
 # ## XGBoost
@@ -216,7 +227,7 @@ drop_features = unimportant_feat
 # additional_info = '' 
 
 # create config files
-ID = create_ML_config(config_dir = config_dir,
+ID = create_ML_config(config_dir = "config_files/",
                      estimator = estimator,
                      clf = clf, 
                      param_grid = param_grid, 
@@ -234,18 +245,18 @@ ID = create_ML_config(config_dir = config_dir,
 print(f"Training_ID: ID{ID}")
 
 # get config_dic
-with open(f"{config_dir}/config_dic_ID{ID}.pkl", 'rb') as file:
+with open(f"config_files/config_dic_ID{ID}.pkl", 'rb') as file:
     config_dic = pickle.load(file)
 
 
 # get the training data
 X_train, y_train, features = get_training_data(model=config_dic['model'],
-                                     feature_groups_selected=config_dic['feature_groups_selected'],
+                                               feature_groups_selected=config_dic['feature_groups_selected'],
                                                drop_features=config_dic['drop_features'],
-                                     omit_scaling_features=config_dic['omit_scaling_features'],
-                                     scaling=config_dic['scaling'],
-                                     pca_components=config_dic['pca_components']
-                                    )
+                                               omit_scaling_features=config_dic['omit_scaling_features'],
+                                               scaling=config_dic['scaling'],
+                                               pca_components=config_dic['pca_components']
+                                              )
 
 # fill config_dic with training data and features
 config_dic['features'] = features
@@ -253,11 +264,12 @@ config_dic['X_train'] = X_train
 config_dic['y_train'] = y_train
 
 # dump config_dic
-with open(f'{config_dir}/config_dic_ID{ID}.pkl', 'wb') as file:
+with open(f'config_files/config_dic_ID{ID}.pkl', 'wb') as file:
     pickle.dump(config_dic, file)
 
     
-print("ready for training")    
+print("ready for training") 
+
 # train model
 cv_results, best_params, best_classifier = train_with_grid_search(ID=config_dic['ID'],
                                                                   X_train=X_train, 
