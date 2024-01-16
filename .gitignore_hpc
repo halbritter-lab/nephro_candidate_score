@@ -4,5 +4,7 @@
 *.png
 gene_score/training/slurm_out/
 gene_score/training/__pycache__/
+gene_score/training/functions/__pycache__/
+
 
 
