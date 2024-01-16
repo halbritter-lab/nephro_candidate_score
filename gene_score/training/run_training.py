@@ -29,8 +29,7 @@ project_name = "nephro_candidate_score"
 script_path = "/gene_score/training/"
 
 # read configs
-CONFIG_FILE = "config_NCS.yml" # TODO: change
-# CONFIG_FILE = os.getenv('CONFIG_FILE')
+CONFIG_FILE = os.getenv('CONFIG_FILE')
 
 with open(CONFIG_FILE, 'r') as file:
     config_data = yaml.safe_load(file)
