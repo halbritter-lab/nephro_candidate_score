@@ -3,6 +3,7 @@ import gzip
 import numpy as np
 import pandas as pd
 import os
+import urllib.request
 import yaml
 
 # import third-party modules
@@ -28,22 +29,44 @@ os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 
 
 
-# get HGNC annotated table from kidney-genetics
-hgnc_annotated_url = f"https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/B_AnnotationHGNC/results/non_alt_loci_set_coordinates.{config_vars['hgnc_gt_version']}.csv.gz"
-hgnc_annotated = pd.read_csv(hgnc_annotated_url, compression='gzip')
+# download HGNC annotated table from kidney-genetics
+hgnc_annotated_url = f"https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/B_AnnotationHGNC/results/non_alt_loci_set_coordinates.{config_vars['hgnc_gt_version_vs']}.csv.gz"
+hgnc_annotated_dest_file = f"raw/non_alt_loci_set_coordinates.{config_vars['hgnc_gt_version_vs']}.csv.gz"
+
+# check if the file already exists
+if not os.path.exists(hgnc_annotated_dest_file):
+    # download the file
+    urllib.request.urlretrieve(hgnc_annotated_url, hgnc_annotated_dest_file)
+#     print(f"The file '{hgnc_annotated_dest_file}' has been downloaded.")
+# else:
+#     print(f"The file '{hgnc_annotated_dest_file}' already exists. Skipping the download.")
+
+# read in file    
+hgnc_annotated = pd.read_csv(hgnc_annotated_dest_file, compression='gzip', low_memory=False)
 
 # add a new column without the "HGNC:" prefix
 hgnc_annotated['hgnc_id_int'] = hgnc_annotated['hgnc_id'].str.replace('HGNC:', '')
 
-# convert the 'hgnc_id_int' column to integers
+# convert the 'hgnc_id_int' and 'entrez_id' column to integers
 hgnc_annotated['hgnc_id_int'] = pd.to_numeric(hgnc_annotated['hgnc_id_int'], downcast='integer')
 
-# get positive genes from gene_score/
-pos_genes_url = f"https://github.com/halbritter-lab/nephro_candidate_score/raw/main/gene_score/labels/results/positive_genes_{config_vars['creation_date']}.csv.gz"
-pos_genes = pd.read_csv(pos_genes_url, compression='gzip')
+# download positive genes from kidney-genetics
+pos_genes_url = f"https://github.com/halbritter-lab/kidney-genetics/raw/main/analyses/A_MergeAnalysesSources/results/A_MergeAnalysesSources.{config_vars['kidney_genetics_version_vs']}.csv.gz"
+pos_genes_dest_file = f"raw/A_MergeAnalysesSources.{config_vars['kidney_genetics_version_vs']}.csv.gz"
+
+# check if the file already exists
+if not os.path.exists(pos_genes_dest_file):
+    # download the file
+    urllib.request.urlretrieve(pos_genes_url, pos_genes_dest_file)
+#     print(f"The file  '{pos_genes_dest_file}' has been downloaded.")
+# else:
+#     print(f"The file '{pos_genes_dest_file}' already exists. Skipping the download.")
+
+# read in file    
+pos_genes = pd.read_csv(pos_genes_dest_file, compression='gzip')
 
 # filter only genes with evidence count 2-5, merge with entrez ID from HGNC table, convert entrez ID to integer
-pos_genes2345 = pos_genes.query("evidence_count > 1").merge(hgnc_annotated[['hgnc_id_int', 'entrez_id']], how='left', left_on='hgnc_id_int', right_on='hgnc_id_int')
+pos_genes2345 = pos_genes.query("evidence_count > 1").merge(hgnc_annotated[['hgnc_id_int', 'entrez_id']], how='left', left_on='hgnc_id', right_on='hgnc_id_int')
 pos_genes2345['entrez_id'] = pd.to_numeric(pos_genes2345['entrez_id'], downcast='integer')
 pos_genes2345_entrez_id_list = pos_genes2345['entrez_id'].tolist()
 
