@@ -8,10 +8,11 @@ import os
 os.environ['CONFIG_FILE'] = '/fast/work/users/rankn_c/halbritter/nephro_candidate_score/gene_score/training/config_NCS.yml' # TODO: change
 
 
-# In[ ]:
+# In[2]:
 
 
-
+# TODO: add HGNC table version
+# TODO: get_genes_for_prediction can currently not be used for PCA reduced predictions
 
 
 # In[3]:
@@ -50,7 +51,7 @@ os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 from training.helper_functions_ML import *
 
 
-# In[96]:
+# In[43]:
 
 
 def get_genes_for_prediction(config_dic, gene_set):
@@ -75,24 +76,40 @@ def get_genes_for_prediction(config_dic, gene_set):
     scaling_features = [i for i in config_dic['features'] if i not in omit_scaling_features] # features that should be scaled
 
     scaling = config_dic['scaling']
+    
+    # get training set to calculate mean and std for scaling
+    feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
+    hgnc_ids_train = list(feat_train['hgnc_id_int'])
+        
+#     # scale features
+#     if scaling == 'standard':
+#         # create StandardScaler
+#         stand_scal = StandardScaler()
 
-    # scale features
+#         # scale features
+#         all_genes_scaled = all_genes_filled.copy()
+#         all_genes_scaled[scaling_features] = stand_scal.fit_transform(all_genes_scaled[scaling_features])
+
+
+#     elif scaling == 'robust':
+#         # create RobustScaler
+#         rob_scal = RobustScaler(with_centering=True, with_scaling=True)
+
+#         # scale features
+#         all_genes_scaled = all_genes_filled.copy()
+#         all_genes_scaled[scaling_features] = rob_scal.fit_transform(all_genes_scaled[scaling_features])
+
     if scaling == 'standard':
-        # create StandardScaler
-        stand_scal = StandardScaler()
-
-        # scale features
-        all_genes_scaled = all_genes_filled.copy()
-        all_genes_scaled[scaling_features] = stand_scal.fit_transform(all_genes_scaled[scaling_features])
-
-
-    elif scaling == 'robust':
-        # create RobustScaler
-        rob_scal = RobustScaler(with_centering=True, with_scaling=True)
-
-        # scale features
-        all_genes_scaled = all_genes_filled.copy()
-        all_genes_scaled[scaling_features] = rob_scal.fit_transform(all_genes_scaled[scaling_features])
+        scaler = StandardScaler()
+    if scaling == 'robust':
+        scaler = RobustScaler(with_centering=True, with_scaling=True)
+    
+    # fit the scaler only on the training data to compute mean and std
+    scaler.fit(all_genes_filled.query("hgnc_id_int in @hgnc_ids_train")[scaling_features])
+               
+    # transform all genes (with mean and std from training set)
+    all_genes_scaled = all_genes_filled.copy()
+    all_genes_scaled[scaling_features] = scaler.transform(all_genes_scaled[scaling_features])
 
     ## select genes for predictions    
     # machine learning test set
@@ -131,7 +148,7 @@ def get_genes_for_prediction(config_dic, gene_set):
     return genes_for_predictions
 
 
-# In[56]:
+# In[5]:
 
 
 def get_symbol_from_hgnc_id_int(hgnc_id_int_list):
@@ -160,7 +177,7 @@ def get_symbol_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['symbol'].tolist()
 
 
-# In[42]:
+# In[6]:
 
 
 def get_gene_set_from_hgnc_id_int(hgnc_id_int_list):
@@ -187,7 +204,7 @@ def get_gene_set_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['gene_set'].tolist()
 
 
-# In[97]:
+# In[7]:
 
 
 def get_evidence_count_from_hgnc_id_int(hgnc_id_int_list):
@@ -213,7 +230,64 @@ def get_evidence_count_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['evidence_count'].tolist()
 
 
-# In[98]:
+# In[23]:
+
+
+get_evidence_count_from_hgnc_id_int([325, 132, 2707, 333, 336, 57, 145, 565, 30005, 17968])
+
+
+# In[37]:
+
+
+config_dic['pca']
+
+
+# In[24]:
+
+
+# neg_genes = pd.read_csv(f"labels/results/dispensible_genes_{config_vars['creation_date']}.csv.gz")
+# neg_genes
+
+
+# In[44]:
+
+
+# pred_train = pd.read_csv(f"predictions/results/NGS_predictions_ID97_train_2024-03-14.csv.gz") # TODO: change filename
+# pred_train.query('evidence_count == 5')
+
+
+# In[46]:
+
+
+# ID=97
+# gene_set='train'
+# config_dic, results_dic = get_config_results_dics(ID=ID) 
+
+# # get best parameters
+# best_params = results_dic['best_params']
+
+# # create classifier with best parameters    
+# clf = config_dic['clf']
+
+# # set estimator and best parameters
+# clf.set_params(estimator=config_dic['estimator'])
+# clf.set_params(**best_params)
+
+# # fit classifier with training data
+# clf.fit(config_dic['X_train'], config_dic['y_train'])
+
+
+# # get gene set for prediction
+# genes_for_prediction = get_genes_for_prediction(config_dic=config_dic, gene_set=gene_set)
+
+
+# genes_for_prediction
+
+
+
+
+
+# In[47]:
 
 
 def make_predictions(ID, gene_set, save):
@@ -271,22 +345,12 @@ def make_predictions(ID, gene_set, save):
 # In[46]:
 
 
-# write NCS to json file per gene
 
-# convert to JSON with column names as keys and values in a list
 
-# for row in np.arange(NCS_df.shape[0]):
-#     json_data = NCS_df.iloc[row].to_dict()
-#     hgnc_id_int = json_data['hgnc_id_int']
-#     symbol = json_data['symbol']
 
-#     # save to a file
-#     with open(f'../predictions/results/json/hgnc/{hgnc_id_int}.json', 'w') as json_file:
-#         json.dump(json_data, json_file)
-        
-#     # save to a file
-#     with open(f'../predictions/results/json/symbols/{symbol}.json', 'w') as json_file:
-#         json.dump(json_data, json_file)
+# In[53]:
+
+
 
 
 
@@ -297,13 +361,17 @@ def make_predictions(ID, gene_set, save):
 # TODO: write violin plots and boxplots as functions. write a function for creating the json files
 
 
-# In[92]:
+# In[54]:
 
 
-NGS = make_predictions(ID=90, gene_set='all', save=True) # TODO: add as variable in function!!!
-NGS 
 gene_set = 'all' # TODO: add as variable in function!!!
-ID = 90 # TODO: add as variable in function!!!
+ID = 97 # TODO: add as variable in function!!!
+
+# NGS = make_predictions(ID=ID, gene_set='all', save=True) # TODO: add as variable in function!!!
+NGS = make_predictions(ID=ID, gene_set=gene_set, save=True) # TODO: add as variable in function!!!
+
+
+
 
 ## create NCS boxplots based on evidence counts
 evidence_counts = [-1, 0, 1, 2, 3, 4, 5]
@@ -351,16 +419,37 @@ plt.savefig(f"predictions/results/boxplots_NGS_by_EC_ID{ID}_{gene_set}_{current_
 plt.show()
 
 
-# In[64]:
+# In[58]:
 
 
+# write NGS to json file per gene
+
+# convert to JSON with column names as keys and values in a list
+
+for row in np.arange(NGS.shape[0]):
+    json_data = NGS.iloc[row].to_dict()
+    hgnc_id_int = json_data['hgnc_id_int']
+    symbol = json_data['symbol']
+
+    # save to a file
+    with open(f'predictions/results/json/hgnc/{hgnc_id_int}.json', 'w') as json_file:
+        json.dump(json_data, json_file)
+        
+    # save to a file
+    with open(f'predictions/results/json/symbols/{symbol}.json', 'w') as json_file:
+        json.dump(json_data, json_file)
 
 
+# In[56]:
 
-# In[95]:
+
+NGS
 
 
-### VIOLIN PLOT ###
+# In[11]:
+
+
+### VIOLIN PLOT ### TODO: currently works with ID=90, but not with ID=97
 evidence_counts = [-1, 0, 1, 2, 3, 4, 5]
 
 plt.figure(figsize=(7, 6))
