@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1101, "NCS": 0.051402051001787186, "symbol": "BRCA2", "geneset": "train"}
+{"hgnc_id_int": 1101, "NGS": 0.2702900767326355, "symbol": "BRCA2", "gene_set": "train", "evidence_count": 2.0}
