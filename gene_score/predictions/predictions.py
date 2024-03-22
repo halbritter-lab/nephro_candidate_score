@@ -26,6 +26,8 @@ import yaml
 import os
 import sys
 import json
+from sklearn.metrics import roc_auc_score
+
 
 # set options
 pd.set_option('display.max_colwidth', None)
@@ -51,7 +53,7 @@ os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 from training.helper_functions_ML import *
 
 
-# In[43]:
+# In[4]:
 
 
 def get_genes_for_prediction(config_dic, gene_set):
@@ -70,34 +72,16 @@ def get_genes_for_prediction(config_dic, gene_set):
 
     # fill missing values
     all_genes_filled = fill_missing_vals(all_genes_df, config_dic['model'])
-
-    # get features that should (not) be scaled and scaling method
-    omit_scaling_features = config_dic['omit_scaling_features']
-    scaling_features = [i for i in config_dic['features'] if i not in omit_scaling_features] # features that should be scaled
-
-    scaling = config_dic['scaling']
     
     # get training set to calculate mean and std for scaling
     feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
     hgnc_ids_train = list(feat_train['hgnc_id_int'])
-        
-#     # scale features
-#     if scaling == 'standard':
-#         # create StandardScaler
-#         stand_scal = StandardScaler()
-
-#         # scale features
-#         all_genes_scaled = all_genes_filled.copy()
-#         all_genes_scaled[scaling_features] = stand_scal.fit_transform(all_genes_scaled[scaling_features])
-
-
-#     elif scaling == 'robust':
-#         # create RobustScaler
-#         rob_scal = RobustScaler(with_centering=True, with_scaling=True)
-
-#         # scale features
-#         all_genes_scaled = all_genes_filled.copy()
-#         all_genes_scaled[scaling_features] = rob_scal.fit_transform(all_genes_scaled[scaling_features])
+    
+    # get features that should (not) be scaled and scaling method
+    omit_scaling = get_features_from_groups(config_dic['omit_scaling_features'], feat_train)
+    scaling_features = [i for i in config_dic['features'] if i not in omit_scaling]
+    
+    scaling = config_dic['scaling']
 
     if scaling == 'standard':
         scaler = StandardScaler()
@@ -146,6 +130,7 @@ def get_genes_for_prediction(config_dic, gene_set):
     genes_for_predictions = all_genes_scaled.query("hgnc_id_int in @hgnc_ids_for_prediction")
 
     return genes_for_predictions
+
 
 
 # In[5]:
@@ -230,64 +215,7 @@ def get_evidence_count_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['evidence_count'].tolist()
 
 
-# In[23]:
-
-
-get_evidence_count_from_hgnc_id_int([325, 132, 2707, 333, 336, 57, 145, 565, 30005, 17968])
-
-
-# In[37]:
-
-
-config_dic['pca']
-
-
-# In[24]:
-
-
-# neg_genes = pd.read_csv(f"labels/results/dispensible_genes_{config_vars['creation_date']}.csv.gz")
-# neg_genes
-
-
-# In[44]:
-
-
-# pred_train = pd.read_csv(f"predictions/results/NGS_predictions_ID97_train_2024-03-14.csv.gz") # TODO: change filename
-# pred_train.query('evidence_count == 5')
-
-
-# In[46]:
-
-
-# ID=97
-# gene_set='train'
-# config_dic, results_dic = get_config_results_dics(ID=ID) 
-
-# # get best parameters
-# best_params = results_dic['best_params']
-
-# # create classifier with best parameters    
-# clf = config_dic['clf']
-
-# # set estimator and best parameters
-# clf.set_params(estimator=config_dic['estimator'])
-# clf.set_params(**best_params)
-
-# # fit classifier with training data
-# clf.fit(config_dic['X_train'], config_dic['y_train'])
-
-
-# # get gene set for prediction
-# genes_for_prediction = get_genes_for_prediction(config_dic=config_dic, gene_set=gene_set)
-
-
-# genes_for_prediction
-
-
-
-
-
-# In[47]:
+# In[8]:
 
 
 def make_predictions(ID, gene_set, save):
@@ -313,7 +241,7 @@ def make_predictions(ID, gene_set, save):
     # get gene features as numpy arrays
     X = genes_for_prediction.drop(columns=['hgnc_id_int']).values
     X_hgnc_id_int = genes_for_prediction['hgnc_id_int']
-
+    
     
     ## probability predicition
     # predict probabilities for selected genes (=> 2 dim array, probabilities sum up to 1)
@@ -342,33 +270,38 @@ def make_predictions(ID, gene_set, save):
     return NGS
 
 
+# In[9]:
+
+
+NGS = make_predictions(ID=97, gene_set='train', save=True) # TODO: add as variable in function!!!
+# pd.DataFrame(X_train)
+NGS['ec2345'] = np.where(NGS['evidence_count'] == -1, 0, 1)
+
+
+
+
+
+
+# In[10]:
+
+
+NGS
+
+
+# In[11]:
+
+
+roc_auc_score(NGS['ec2345'], NGS['NGS'])
+
+
 # In[46]:
-
-
-
-
-
-# In[53]:
-
-
-
-
-
-# In[ ]:
-
-
-# CONTINUE HERE: 2024-02-28
-# TODO: write violin plots and boxplots as functions. write a function for creating the json files
-
-
-# In[54]:
 
 
 gene_set = 'all' # TODO: add as variable in function!!!
 ID = 97 # TODO: add as variable in function!!!
 
 # NGS = make_predictions(ID=ID, gene_set='all', save=True) # TODO: add as variable in function!!!
-NGS = make_predictions(ID=ID, gene_set=gene_set, save=True) # TODO: add as variable in function!!!
+NGS = make_predictions(ID=ID, gene_set=gene_set, save=False) # TODO: add as variable in function!!!
 
 
 
@@ -419,12 +352,14 @@ plt.savefig(f"predictions/results/boxplots_NGS_by_EC_ID{ID}_{gene_set}_{current_
 plt.show()
 
 
-# In[58]:
+# In[13]:
 
 
 # write NGS to json file per gene
-
+ID = 97
 # convert to JSON with column names as keys and values in a list
+NGS = make_predictions(ID=ID, gene_set='all', save=True) # TODO: add as variable in function!!!
+
 
 for row in np.arange(NGS.shape[0]):
     json_data = NGS.iloc[row].to_dict()
