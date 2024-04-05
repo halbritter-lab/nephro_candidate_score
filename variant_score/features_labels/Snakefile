@@ -1,0 +1,49 @@
+# Snakefile - extracts variant features from VEP annotated .vcf chromosome-wise in kidney-genetics genes (with evidence count 2-5)
+# input: 
+# - clinvar_vars_kid-gen_2345_vep_anno_{date}.vcf.gz"
+# output: 
+# - raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz (only kidney-genetics genes (with evidence count 2-5))
+# - raw_features_clinvar_vars_kid-gen_2345_prefiltered_chr{chrom}_{date}.csv.gz (was only filtered for kidney-genetics genes in earlier steps, but can contain other genes if variants are annotated later with other genes by VEP)
+
+# import basic modules
+from datetime import datetime
+import numpy as np
+
+# define list of CHROM values and get current date
+CHROM = list(np.arange(22) + 1) + ['X', 'Y', 'MT']  # TODO: Snakemake doesn't launch new rule instances??? update Snakmake?
+CURRENT_DATE = datetime.today().strftime('%Y-%m-%d')
+
+
+# define rule to execute the bash script for each CHROM value
+rule all:
+    input:
+        expand("features_labels/slurm_out/slurm_evf_chr{chrom}_{date}.out", chrom=CHROM, date=CURRENT_DATE),
+        expand("features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz", chrom=CHROM, date=CURRENT_DATE),
+        expand("features_labels/results/raw_features_clinvar_vars_kid-gen_2345_prefiltered_chr{chrom}_{date}.csv.gz", chrom=CHROM, date=CURRENT_DATE)
+                
+
+# define rule to execute the bash script
+rule execute_bash_script:
+    input: 
+        "features_labels/extract_variant_features_per_chrom.sh"
+    output: 
+        "features_labels/slurm_out/slurm_evf_chr{chrom}_{date}.out".format(chrom="{chrom}", date=CURRENT_DATE),
+        "features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz".format(chrom="{chrom}", date=CURRENT_DATE),
+        "features_labels/results/raw_features_clinvar_vars_kid-gen_2345_prefiltered_chr{chrom}_{date}.csv.gz".format(chrom="{chrom}", date=CURRENT_DATE)
+
+    params:
+        chrom="{chrom}",
+        current_date=CURRENT_DATE
+    shell:
+        """
+        sbatch --job-name=extract_variant_features_per_chrom_{params.chrom} \
+               --output=features_labels/slurm_out/slurm_evf_chr{params.chrom}_{params.current_date}.out \
+               --partition medium \
+               --ntasks=8 \
+               --nodes=1 \
+               --mem=8G \
+               --wrap="features_labels/extract_variant_features_per_chrom.sh --CHROM {params.chrom}"
+        """
+        
+        
+      
