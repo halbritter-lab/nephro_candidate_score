@@ -1,0 +1,1 @@
+{"hgncIdInt": 799, "ngs": 0.9619583, "symbol": "ATP1A1", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}
