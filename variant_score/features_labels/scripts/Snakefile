@@ -10,6 +10,7 @@ import numpy as np
 
 # define list of CHROM values and get current date
 CHROM = list(np.arange(22) + 1) + ['X', 'Y', 'MT']  # TODO: Snakemake doesn't launch new rule instances??? update Snakmake?
+
 CURRENT_DATE = datetime.today().strftime('%Y-%m-%d')
 
 # define rule to execute the bash script for each CHROM value
