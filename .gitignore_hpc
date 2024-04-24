@@ -16,4 +16,6 @@ variant_score/training/__pycache__/
 
 variant_score/features_labels/__pycache__/
 variant_score/features_labels/slurm_out/
+variant_score/features_labels/scripts/__pycache__/
+variant_score/training/scripts/__pycache__/
 
