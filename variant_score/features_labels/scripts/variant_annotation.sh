@@ -37,9 +37,9 @@ gzip features_labels/results/clinvar_vars_kid-gen_2345_2024-03-11.vcf
 
 
 # extract relevant features from VEP annotated VCF
-sbatch features_labels/scripts/extract_variant_features_per_chrom.sh
+snakemake --cores 8 -s features_labels/scripts/Snakefile --latency-wait 2000 
+# uses: extract_variant_features_per_chrom.sh, extract_variant_features_per_chrom.py
+
 # results: 
 # - raw_features_clinvar_vars_kid-gen_2345_{datetime.today().strftime('%Y-%m-%d')}.csv.gz # again filtered for kid-gen2345 genes => only variants in kid-gen2345 genes
-
-
 
