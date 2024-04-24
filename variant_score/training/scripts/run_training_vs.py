@@ -5,21 +5,8 @@ import pandas as pd
 import sys
 import yaml
 
-
-# import classifiers
-# from sklearn.ensemble import AdaBoostClassifier
-# from sklearn.neighbors import KNeighborsClassifier
+# import sklearn classifier
 from sklearn.tree import DecisionTreeClassifier
-# from sklearn.svm import SVC
-# from sklearn.svm import LinearSVC
-# from sklearn.naive_bayes import GaussianNB
-# from sklearn.neural_network import MLPClassifier
-# from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
-# from sklearn.gaussian_process import GaussianProcessClassifier
-# from sklearn.linear_model import RidgeClassifier
-# from sklearn.ensemble import RandomForestClassifier
-# from xgboost import XGBClassifier
-
 
 # define relative script path
 project_topic = "nephrology"
@@ -43,60 +30,7 @@ from helper_functions_ML_vs import *
 # set smote
 smote = False
 
-
-# set classifer and param grid for training
-
-# # XGBoost
-# estimator = None
-# clf = XGBClassifier(random_state=1, booster='gbtree')
-# model = 'DecisionTree'
-
-# additional_info = ['SMOTE' if smote == True else ''] 
-
-# param_grid = {
-#     'n_estimators': [70], #np.arange(70, 180, 30),
-#     'max_depth' : [1], #[1,2,3,4,5], #np.arange(1, 5, 1),
-#     'learning_rate': np.logspace(-2, -1, 2), #np.logspace(-2, -1, 5),
-#     'reg_alpha' : np.logspace(-2, 1, 2), #np.logspace(-2, 1, 5),
-#     'reg_lambda' : np.logspace(-4, -2, 2), #np.logspace(-4, -2, 4),
-#     'subsample': [0.8], #[0.8, 0.85, 0.9, 0.95],
-#     'gamma': np.logspace(-2, 1, 2)#, np.logspace(-2, 1, 4)
-# }
-
-# param_grid = {
-#     'n_estimators':  np.arange(70, 180, 30),
-#     'max_depth' : [1,2,3,4,5], #np.arange(1, 5, 1),
-#     'learning_rate': np.logspace(-2, -1, 5),
-#     'reg_alpha' : np.logspace(-2, 1, 5),
-#     'reg_lambda' : np.logspace(-4, -2, 4),
-#     'subsample': [0.8, 0.85, 0.9, 0.95],
-#     'gamma': np.logspace(-2, 1, 4)
-# }
-
-
-# param_grid = {
-#     'n_estimators': [70], #np.arange(70, 180, 30),
-#     'max_depth' : [4], #np.arange(1, 5, 1),
-#     'learning_rate': [0.17600000000000002],
-#     'reg_alpha' : [2.7399999999999998],
-#     'reg_lambda' : [0.001],
-#     'subsample': [0.7, 0.75, 0.8, 0.85],
-#     'gamma': [0.046415888336127774]
-# }
-
-
-   
-# ## AdaBoost classifier with estimator=DecisionTree
-# estimator = DecisionTreeClassifier(max_depth=2) 
-# clf = AdaBoostClassifier(estimator=estimator, random_state=1)
-# model = "DecisionTree"
-# param_grid = {
-#     'n_estimators': np.arange(5, 50, 5),
-#     'learning_rate': np.logspace(-2, 0, 10)
-# }
-
-
-## Decision Tree
+# set classifer and param grid for training - Decision Tree 
 estimator = None
 clf = DecisionTreeClassifier(random_state=1) 
 model = "DecisionTree"
@@ -108,108 +42,7 @@ param_grid = {
 #     'max_leaf_nodes' :[]
 }
 
-
-
-
-# ## Random Forest
-# estimator = None
-# clf = RandomForestClassifier()
-# model = "DecisionTree"
-# param_grid = {
-#     'n_estimators': np.arange(50, 250, 25),
-#     'max_depth': np.arange(10, 50, 5),
-#     'min_samples_leaf': np.arange(2, 10, 1),
-#     'min_samples_split': np.arange(2, 50, 2)
-# }
-
-
-# ## Ridge Classifier
-# estimator = None
-# clf = RidgeClassifier()
-# model = "logReg"
-# param_grid = {
-#     'alpha': np.logspace(3, 5, 10), 
-#     'tol': [1e-6,  1e-5]
-# }
-
-
-# ## Gaussian Process Classifier
-# estimator = None
-# clf = GaussianProcessClassifier(random_state=1)
-# model = "GPC"
-# param_grid = {
-#     'optimizer': ['fmin_l_bfgs_b', None], #[ 0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100],
-#     'n_restarts_optimizer': [0, 5, 10, 15]
-# }
-
-
-# ## Quadratic Discriminant Analysis
-# estimator = None
-# clf = QuadraticDiscriminantAnalysis()
-# model = "QDA"
-# param_grid = {
-#     'reg_param': np.logspace(-2, 0, 10), #[ 0, 0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1.0, 10, 100],
-#     'tol': [1e-2, 0, 1e+2 ]
-# }
-
-
-# ## MLP Classifier
-# estimator = None
-# clf = MLPClassifier(random_state=1)
-# model = "MLP"
-# param_grid = {
-#     'alpha': np.logspace(-2, 3, 10),
-#     'hidden_layer_sizes': [(70,), (60,), (50,), (40,), (50, 10), (50, 20)],
-#     'solver': ['lbfgs'],
-#     'activation': ['logistic', 'tanh', 'relu']
-# }
-
-
-# ## KNN
-# estimator = None
-# clf = KNeighborsClassifier()
-# model = "KNN"
-# param_grid = {
-#     'n_neighbors': np.arange(10, 100, 2), 
-#     'weights' : ['uniform', 'distance']
-# }
-
-
-# ## SVM - linear
-# estimator = None
-# clf = LinearSVC(dual=False)
-# model = "SVM"
-# param_grid = {
-#     'C': np.logspace(-4, 3, 20),
-#     'penalty' : ['l1', 'l2'],
-#     'loss': ['squared_hinge']
-# }
-
-
-# ## SVM - rbf
-# estimator = None
-# clf = SVC()
-# model = "SVM"
-# param_grid = {
-#     'C': np.logspace(2, 4, 13),
-#     'kernel': ['rbf'],
-#     'gamma': np.logspace(-7, -4, 15)
-# }
-
-
-# ## SVM - poly
-# estimator = None
-# clf = SVC(random_state=1)
-# model = "SVM"
-# param_grid = {
-#     'C': np.logspace(-2, 8, 9),
-#     'gamma': np.logspace(-5, -0, 9),
-#     'kernel': ['poly'],
-#     'degree': [3]
-# }
-
-
-
+# set configurations
 cv = 5
 scoring = 'roc_auc'
 drop_features = []
