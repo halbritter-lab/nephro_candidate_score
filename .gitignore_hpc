@@ -5,4 +5,15 @@
 gene_score/training/slurm_out/
 gene_score/training/__pycache__/
 gene_score/training/functions/__pycache__/
+gene_score/predictions/__pycache__/
+
+
+variant_score/__pycache__/
+variant_score/.snakemake/
+
+variant_score/training/slurm_out/
+variant_score/training/__pycache__/
+
+variant_score/features_labels/__pycache__/
+variant_score/features_labels/slurm_out/
 
