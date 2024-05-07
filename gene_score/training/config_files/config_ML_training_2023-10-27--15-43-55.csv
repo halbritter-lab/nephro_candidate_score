@@ -1,0 +1,6 @@
+date_time,ID,estimator,clf,param_grid,cv,scoring,feature_groups_selected,drop_features,omit_scaling_features,model,scaling,pca_components,additional_info
+2023-10-27--14-30-19,0,,,,,,,,,,,False,
+2023-10-27--14-30-21,1,,SVC,"C=[100.0, 10000.0, 13]|kernel=['rbf']|gamma=[1e-07, 0.0001, 15]",5.0,roc_auc,gnomad|cellxgene|descartes|gtex|mgi|paralogues|phasCons|CpG_o2e,,paralogues|mgi,SVM,robust,False,
+2023-10-27--15-07-26,2,,LinearSVC,"C=[0.0001, 1000.0, 20]|penalty=['l1', 'l2']|loss=['squared_hinge']",5.0,roc_auc,gnomad|cellxgene|descartes|gtex|mgi|paralogues|phasCons|CpG_o2e,,paralogues|mgi,SVM,robust,False,
+2023-10-27--15-41-18,3,,GaussianNB,"var_smoothing=[1e-12, 1e-05, 3]|priors=[None]",5.0,roc_auc,gnomad|cellxgene|descartes|gtex|mgi|paralogues|phasCons|CpG_o2e,,paralogues|mgi,NaiveBayes,robust,False,
+2023-10-27--15-43-55,4,,GaussianNB,"var_smoothing=[1e-12, 1e-05, 3]|priors=[None]",5.0,roc_auc,gnomad|cellxgene|descartes|gtex|mgi|paralogues|phasCons|CpG_o2e,,paralogues|mgi,NaiveBayes,standard,False,
