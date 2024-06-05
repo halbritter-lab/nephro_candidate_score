@@ -1,3 +1,0 @@
-date_time,ID,estimator,clf,param_grid,cv,scoring,feature_groups_selected,drop_features,omit_scaling_features,model,scaling,pca_components,additional_info
-2024-04-23--14-08-44,0,,,,,,,,,,,False,
-2024-04-23--14-08-46,1,,DecisionTreeClassifier,"criterion=['gini', 'entropy', 'log_loss']|max_depth=[3, 10, 8]|min_samples_split=[30, 150, 5]|min_samples_leaf=[4, 10, 7]",5.0,roc_auc,Consequence|NMD|gnomaAD_AF|SpliceAI|CADD|IMPACT|phastCons,,,DecisionTree,,False,
