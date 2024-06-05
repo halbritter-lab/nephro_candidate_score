@@ -1,0 +1,3 @@
+date_time,ID,estimator,clf,param_grid,cv,scoring,feature_groups_selected,drop_features,omit_scaling_features,model,scaling,pca_components,additional_info
+2024-05-15--16-33-08,0,,,,,,,,,,,False,
+2024-05-15--16-33-11,1,,LogisticRegression,"penalty=[None, 'l2', 'l1', 'elasticnet']|C=[100, 100000000, 7]",5.0,roc_auc,Consequence|NMD|gnomAD_AF|SpliceAI|CADD|IMPACT|phastCons,,,logReg,standard,False,IMPACT_prop
