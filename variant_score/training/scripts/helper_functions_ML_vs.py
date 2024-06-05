@@ -235,7 +235,7 @@ def get_features_from_groups(groups, feature_df):
     
     feat_dic = {"Consequence":[x for x in feature_df.columns if x.startswith("Csq_")],
                 "NMD":[x for x in feature_df.columns if x.startswith("NMD")],
-                "gnomaAD_AF":[x for x in feature_df.columns if x.startswith("gnomAD")],
+                "gnomAD_AF":[x for x in feature_df.columns if x.startswith("gnomAD")],
                 "SpliceAI":[x for x in feature_df.columns if x.startswith("SpliceAI")],
                 "CADD":[x for x in feature_df.columns if x.startswith("CADD")],
                 "IMPACT":[x for x in feature_df.columns if x.startswith("IMPACT")],
@@ -295,6 +295,7 @@ def get_training_data(model,
                       omit_scaling_features, #=['paralogues', 'mgi'],
                       scaling, # = 'standard',
                       pca_components, # = False
+                      IMPACT_prop=False
                      ):
     
     # load raw training data - gene score
@@ -304,6 +305,12 @@ def get_training_data(model,
     # load raw training data - variant score
     feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date_vs']}.csv.gz")
     labels_train = pd.read_csv(f"training/train_test_data/labels_train_{config_vars['data_prep_date_vs']}.csv.gz")
+    
+    if IMPACT_prop:
+        feat_train = pd.read_csv(f"training/train_test_data/feat_train_IMPACT_prop_{config_vars['data_prep_date_vs']}.csv.gz")
+        labels_train = pd.read_csv(f"training/train_test_data/labels_train_IMPACT_prop_{config_vars['data_prep_date_vs']}.csv.gz")
+        
+    
     
     # get selected features
     features_from_groups = get_features_from_groups(feature_groups_selected, feat_train)
