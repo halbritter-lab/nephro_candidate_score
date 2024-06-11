@@ -88,8 +88,8 @@ no_paralogues <- paralogues_95 %>%
 
 # write results
 write.csv(no_paralogues, 
-          paste0("results/paralogues_95_85_75_", config_vars$creation_date, ".csv"), 
+          paste0("results/paralogues_95_85_75_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/paralogues_95_85_75_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/paralogues_95_85_75_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

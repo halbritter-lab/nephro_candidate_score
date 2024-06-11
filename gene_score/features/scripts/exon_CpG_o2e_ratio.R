@@ -21,7 +21,7 @@ config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
 setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_ts <- read_csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date, ".csv.gz"),
+canon_ts <- read_csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date_gs, ".csv.gz"),
                              show_col_types = FALSE,
                              na = c("NA", "NaN", " ", ""))
 
@@ -81,8 +81,8 @@ exons_ratios <- exons_ratios %>%
 
 # write results
 write.csv(exons_ratios, 
-          paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"), 
+          paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date_gs, ".csv"), 
           row.names=FALSE)
 
-gzip(paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/canonical_ts_exons_CpG_obs_to_exp_ratio_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

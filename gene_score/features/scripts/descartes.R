@@ -22,15 +22,15 @@ setwd(paste0(config_vars$projectsdir, project_name, script_path))
 main_clusters_url <- "https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/labels/kidney_main_cluster_name_lbls.json"
 
 download.file(main_clusters_url, 
-              destfile = paste0("raw/descartes_fetal_kidney_main_clusters_", config_vars$creation_date, ".json"))
+              destfile = paste0("raw/descartes_fetal_kidney_main_clusters_", config_vars$creation_date_gs, ".json"))
 
-main_clusters <- fromJSON( paste0("raw/descartes_fetal_kidney_main_clusters_", config_vars$creation_date, ".json")) 
+main_clusters <- fromJSON( paste0("raw/descartes_fetal_kidney_main_clusters_", config_vars$creation_date_gs, ".json")) 
 
 gene_ids_url <- "https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/counts/gene2ens.csv"
 download.file(gene_ids_url, 
-              destfile = paste0("raw/descartes_gene_ids_url_", config_vars$creation_date, ".csv"))
+              destfile = paste0("raw/descartes_gene_ids_url_", config_vars$creation_date_gs, ".csv"))
 
-gene_ids <- read.csv(paste0("raw/descartes_gene_ids_url_", config_vars$creation_date, ".csv"), header=FALSE) %>% 
+gene_ids <- read.csv(paste0("raw/descartes_gene_ids_url_", config_vars$creation_date_gs, ".csv"), header=FALSE) %>% 
   dplyr::rename(symbol = V1, ensembl_gene_id = V2)
 
 
@@ -38,13 +38,13 @@ gene_ids <- read.csv(paste0("raw/descartes_gene_ids_url_", config_vars$creation_
 get_cell_tpm <- function(cell_type){
   download_url <- paste0("https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/tables/cell_tpm/kidney/", cell_type, ".csv")
   download.file(download_url, 
-                destfile = paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date, ".csv"))
+                destfile = paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date_gs, ".csv"))
 }
 
 get_cell_percentage <- function(cell_type){
   download_url <- paste0("https://atlas.fredhutch.org/data/bbi/descartes/human_gtex/tables/cell_percentage/kidney/", cell_type, ".csv")
   download.file(download_url, 
-                destfile = paste0("raw/descartes_", cell_type, "_percentage_", config_vars$creation_date, ".csv"))
+                destfile = paste0("raw/descartes_", cell_type, "_percentage_", config_vars$creation_date_gs, ".csv"))
 }
 
 # kidney cell types
@@ -63,7 +63,7 @@ for (cell_type in cell_types){
   get_cell_tpm(cell_type)
   
   ## percent expression
-  ct_perc <- read.csv(paste0("raw/descartes_", cell_type, "_percentage_", config_vars$creation_date, ".csv"), header=FALSE)
+  ct_perc <- read.csv(paste0("raw/descartes_", cell_type, "_percentage_", config_vars$creation_date_gs, ".csv"), header=FALSE)
 
   # in case multiple values are available for one gene, take the highest number
   ct_perc <- ct_perc %>% 
@@ -74,7 +74,7 @@ for (cell_type in cell_types){
   perc_expr_df <- left_join(perc_expr_df, ct_perc, by = "symbol")
   
   ## tpm values
-  ct_tpm <- read.csv(paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date, ".csv"), header=FALSE)
+  ct_tpm <- read.csv(paste0("raw/descartes_", cell_type, "_tpm_", config_vars$creation_date_gs, ".csv"), header=FALSE)
   
   # in case multiple values are available for one gene, take the highest number
   ct_tpm <- ct_tpm %>% 
@@ -90,17 +90,17 @@ for (cell_type in cell_types){
 
 # write results
 write.csv(perc_expr_df, 
-          paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"), 
+          paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/descartes_fetal_kidney_percent_expression_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 write.csv(tpm_df, 
-          paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date, ".csv"), 
+          paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/descartes_fetal_kidney_tpm_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 ## Calculate nTPM values
@@ -145,16 +145,16 @@ ntpm_df_cc_with_id <- ntpm_df_cc_with_id %>% left_join(distinct(tpm_df[, c("ense
 
 # write results
 write.csv(fetal_kidney_tau_df, 
-          paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"), 
+          paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/descartes_fetal_kidney_tau_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 write.csv(ntpm_df_cc_with_id, 
-          paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), 
+          paste0("results/descartes_fetal_nptm_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/descartes_fetal_nptm_", config_vars$creation_date, ".csv"), 
+gzip(paste0("results/descartes_fetal_nptm_", config_vars$creation_date_gs, ".csv"), 
      overwrite = TRUE)
 

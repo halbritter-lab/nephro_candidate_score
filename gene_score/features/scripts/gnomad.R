@@ -73,8 +73,8 @@ names(gnomad_constraints)[3:length(names(gnomad_constraints))] <- paste0("gnomad
 
 # write results
 write.csv(gnomad_constraints, 
-          paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"), 
+          paste0("results/gnomad_constraints_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/gnomad_constraints_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/gnomad_constraints_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

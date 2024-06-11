@@ -21,7 +21,7 @@ setwd(paste0(config_vars$projectsdir, project_name, script_path))
 source("../hgnc_functions.R")
 
 # download and unzip file with homozygous loss-of-function variants from gnomad publication
-destfile <- paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date, ".zip")
+destfile <- paste0("raw/41586_2020_2308_MOESM4_ESM_", config_vars$creation_date_gs, ".zip")
 
 if (!file.exists(destfile)) {
   # if the file doesn't exist, download it
@@ -46,7 +46,7 @@ hom_ko_genes <- hgnc_id_from_symbol_grouped(tibble(value = hom_ko_genes$V1)) %>%
 
 # download OMIM genemap
 # OMIM download link to genemap2 file needs to be set in config file and applied for at https://www.omim.org/downloads
-destfile <- paste0("raw/genemap2_", config_vars$creation_date, ".txt")
+destfile <- paste0("raw/genemap2_", config_vars$creation_date_gs, ".txt")
 destfile_gz <- paste0(destfile, ".gz")
 
 if (!file.exists(destfile_gz)) {
@@ -59,7 +59,7 @@ if (!file.exists(destfile_gz)) {
 }
 
 # load file and clean column names
-names_col <- read_tsv(paste0("raw/genemap2_", config_vars$creation_date, ".txt"),
+names_col <- read_tsv(paste0("raw/genemap2_", config_vars$creation_date_gs, ".txt"),
                      col_names = FALSE,
                      skip = 3,
                      n_max = 1,
@@ -67,7 +67,7 @@ names_col <- read_tsv(paste0("raw/genemap2_", config_vars$creation_date, ".txt")
 clean_names <- gsub(" ", "_", gsub("# ", "", names_col[1, ]))
 
 # read omim genemap
-omim_genes_hg38 <-  read.delim2(paste0("raw/genemap2_", config_vars$creation_date, ".txt"), 
+omim_genes_hg38 <-  read.delim2(paste0("raw/genemap2_", config_vars$creation_date_gs, ".txt"), 
                                 header = FALSE, 
                                 comment.char = "#") %>% 
   dplyr::mutate_all(~ ifelse(. == "", NA, .))
@@ -113,7 +113,7 @@ disp_genes <- hom_ko_genes %>%
   distinct()
 
 # write results
-write.csv(disp_genes, paste0("results/dispensible_genes_", config_vars$creation_date, ".csv"), row.names = FALSE)
+write.csv(disp_genes, paste0("results/dispensible_genes_", config_vars$creation_date_gs, ".csv"), row.names = FALSE)
 
-gzip(paste0("results/dispensible_genes_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/dispensible_genes_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

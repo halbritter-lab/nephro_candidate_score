@@ -21,22 +21,22 @@ setwd(paste0(config_vars$projectsdir, project_name, script_path))
 # download and unzip GTEx RNA expression data of different tissues
 gtex_download_url <- "https://www.proteinatlas.org/download/rna_tissue_gtex.tsv.zip"
 download.file(gtex_download_url,
-              destfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv.zip"))
+              destfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date_gs, ".tsv.zip"))
 
-unzip(zipfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv.zip"),
+unzip(zipfile = paste0("raw/rna_tissue_gtex_", config_vars$creation_date_gs, ".tsv.zip"),
       exdir = "raw/")  
 
-unzip(zipfile = paste0("raw/rna_tissue_gtex_", creation_date, ".tsv.zip"),
+unzip(zipfile = paste0("raw/rna_tissue_gtex_", creation_date_gs, ".tsv.zip"),
       exdir = "raw/")  
 
-file.rename("raw/rna_tissue_gtex.tsv", paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv"))
+file.rename("raw/rna_tissue_gtex.tsv", paste0("raw/rna_tissue_gtex_", config_vars$creation_date_gs, ".tsv"))
 
 # load data
-rna_tissue_gtex_nTPM <- read.delim(paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv")) %>% 
+rna_tissue_gtex_nTPM <- read.delim(paste0("raw/rna_tissue_gtex_", config_vars$creation_date_gs, ".tsv")) %>% 
   dplyr::select(ensembl_gene_id = Gene, Tissue, nTPM) %>% 
   spread(key = Tissue, value = nTPM) 
 
-symbol_df <- read.delim(paste0("raw/rna_tissue_gtex_", config_vars$creation_date, ".tsv")) %>% 
+symbol_df <- read.delim(paste0("raw/rna_tissue_gtex_", config_vars$creation_date_gs, ".tsv")) %>% 
   dplyr::select(ensembl_gene_id = Gene, symbol = Gene.name) %>% 
   distinct()
 
@@ -78,16 +78,16 @@ rna_tissue_gtex_nTPM_agg <- rna_tissue_gtex_nTPM_agg %>%
 
 # write results - nTPM values
 write.csv(rna_tissue_gtex_nTPM_agg, 
-          paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date, ".csv"), 
+          paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/rna_tissue_gtex_nTPM_agg_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 # write results - tau values
 write.csv(tau_df, 
-          paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date, ".csv"), 
+          paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/rna_tissues_gtex_nTPM_agg_tau_val_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

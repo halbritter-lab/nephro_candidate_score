@@ -39,10 +39,10 @@ response <- GET(datasets_url, add_headers(headers))
 content <- content(response, as = "text", encoding = "UTF-8")
 
 # write json file
-writeLines(content[[1]], paste0("raw/cellxgene_datasets_", config_vars$creation_date, ".json"))
+writeLines(content[[1]], paste0("raw/cellxgene_datasets_", config_vars$creation_date_gs, ".json"))
 
 # read json file
-datasets_list <- jsonlite::read_json(paste0("raw/cellxgene_datasets_", config_vars$creation_date, ".json"))
+datasets_list <- jsonlite::read_json(paste0("raw/cellxgene_datasets_", config_vars$creation_date_gs, ".json"))
 
 # wrap list in a tibble
 datasets <- tibble(ds = datasets_list)
@@ -67,10 +67,10 @@ datasets_df <- datasets %>%
 
 # write results
 write.csv(datasets_df, 
-          paste0("results/cellxgene_datasets_summary_", config_vars$creation_date, ".csv"), 
+          paste0("results/cellxgene_datasets_summary_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/cellxgene_datasets_summary_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/cellxgene_datasets_summary_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 ########## PRIMARY FILTER DIMENSIONS ##########
@@ -87,10 +87,10 @@ response <- GET(prim_filt_url, add_headers(headers))
 content <- content(response, as = "text", encoding = "UTF-8")
 
 # save content (workaround as fromJSON() is too slow, read_json() reads the file a memory-efficient way)
-writeLines(content[[1]], paste0("raw/primary_filter_dim_content_", config_vars$creation_date, ".json"))            
+writeLines(content[[1]], paste0("raw/primary_filter_dim_content_", config_vars$creation_date_gs, ".json"))            
 
 # read in json file line by line
-prim_filt_dim_list <- jsonlite::read_json(paste0("raw/primary_filter_dim_content_", config_vars$creation_date, ".json"))
+prim_filt_dim_list <- jsonlite::read_json(paste0("raw/primary_filter_dim_content_", config_vars$creation_date_gs, ".json"))
 
 # wrap list in a tibble
 prim_filt_dim <- tibble(pfd = prim_filt_dim_list)
@@ -292,8 +292,8 @@ expr_val_combined <- left_join(expr_val_combined, distinct(pfd_gt_df[, c("ensemb
 
 # write results
 write.csv(expr_val_combined, 
-          paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"), 
+          paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date_gs, ".csv"), 
           row.names = FALSE)
 
-gzip(paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date, ".csv"),
+gzip(paste0("results/cellxgene_expr_0b4a15a7-4e9e-4555-9733-2423e5c66469_", config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
