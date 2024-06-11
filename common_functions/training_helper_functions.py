@@ -380,7 +380,7 @@ def get_training_data(model,
         raise ValueError("enter valid scaling ('standard', 'robust', None)")
 
     
-    # perform PCA if number of pca components are given
+    # perform PCA if number of pca components are given - TODO: omit?? => then delete pca_components argument in all run_training files
     if pca_components:
         if scaling != 'standard':
             raise ValueError("scaling should be 'standard' when performing PCA.")
@@ -785,5 +785,77 @@ def png_to_pdf(png_files, output_pdf):
             # close the figure
             plt.close()
             
-            
+
+def PCA_on_feature_group(group, 
+                         model, 
+                         n_components, 
+                         plot,
+                         omit_scaling_groups,
+                        score):
+    """
+    Function to perform PCA on a specific feature group. 
+    If plot = True: cumulative sum of variance is plotted.
+    If n_components is an integer: a dataframe of the training data with the specified number of PC's is returned.
+    """
+    
+    # get score specific arguments
+    score_string, _, _ = get_score_specific_args(score)
+    
+    # load training features
+    feat_train = pd.read_csv(f"{score_string}/training/train_test_data/feat_train_{config_vars[f'data_prep_date_{score}']}.csv.gz")
+    
+    # get features belonging to given feature group
+    features_selected = get_features_from_groups([group], feat_train, score)
+    
+    # get training dataframe with only features from selected group
+    feat_group_train = feat_train[features_selected]
+    
+    # fill missing values according to given model
+    feat_group_train_filled = fill_missing_vals(df=feat_group_train, model=model, score=score)
+    
+    # create StandardScaler
+    stand_scal = StandardScaler()
+    
+    # get features that should not be scaled
+    omit_scaling = get_features_from_groups(['mgi', 'paralogues'], feat_train, score) 
+    
+    # get features that should be scaled
+    scaling_features = [i for i in features_selected if i not in omit_scaling] 
+
+    # scale features with StandardScaler
+    feat_group_train_scaled = feat_group_train_filled.copy()
+    feat_group_train_scaled[scaling_features] = stand_scal.fit_transform(feat_group_train_scaled[scaling_features])
+
+    # perform PCA
+    all_components = len(features_selected)
+
+    X = feat_group_train_scaled
+
+    full_pca = PCA(n_components=all_components)
+    full_pca.fit(X)
+    cumsum = np.cumsum(full_pca.explained_variance_ratio_)
+    
+    if plot:
+        print(cumsum)
+        plt.plot(cumsum, label = group)
+        plt.xlabel("No. principal components")
+        plt.ylabel("Explained Variance Ratio")
+        plt.legend()
+
+    if n_components:
+        # get a dataframe with PC's
+        pca = PCA(n_components=n_components)
+        pca.fit(X)
+
+        colnames = [f'{group}_PC{i+1}' for i in range(n_components)]
+        pca_df = pd.DataFrame(pca.fit_transform(X), columns=colnames)
+        pca_df['hgnc_id_int'] = feat_train['hgnc_id_int']
+        
+        # get loadings
+        loadings = pca.components_
+        loadings_df = pd.DataFrame(loadings, columns=X.columns, index=[f'PC{i+1}' for i in range(n_components)])
+        
+        return(pca_df, loadings_df, cumsum)
+    else:
+        return(None, None, cumsum)
     

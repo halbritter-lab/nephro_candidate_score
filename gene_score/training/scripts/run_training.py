@@ -7,9 +7,6 @@ import os
 import pandas as pd
 import yaml
 
-# # import preprocessing functions
-# from helper_functions_ML import *
-
 # import classifiers
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -45,11 +42,14 @@ sys.path.append(f"{config_vars['ML_projectsdir']}{project_name}")
 # import common functions
 from common_functions.training_helper_functions import *
 
-smote = False
-
-
 score = 'gs'
 score_string, id_string, label_string = get_score_specific_args(score)
+
+
+# set options
+drop_features = False
+pca_reduced_features = True
+smote = False
 
 
 # set classifer and param grid for training
@@ -190,9 +190,15 @@ score_string, id_string, label_string = get_score_specific_args(score)
 
 estimator = None
 
-model = 'SVC'
+model = 'SVM'
 clf = SVC(random_state=1)
 
+param_grid = {
+    'C': np.logspace(-2, 8, 9),
+    'gamma': np.logspace(-5, -0, 9),
+    'kernel': ['poly'],
+    'degree': [3]
+}
 
 
 cv = 5
@@ -202,54 +208,85 @@ drop_features = []
 omit_scaling_features = ['paralogues', 'mgi']
 scaling = 'robust'
 pca_components = False
-additional_info = 'delete' 
+additional_info = '' 
+additional_info = 'delete' # TODO: remove
 
 
 
+###################################################################################################### 
 ##### OPTION: repeat specific experiment with only most important features (drop other features) #####
-# specify experiment ID of which most important features should be taken for new experiment  
-previous_ID = 41 
 
-# specify how many importamt features should be used
-index = 25
+if drop_features:
 
-# load configuration dictionary of previous experiment
-config_dic, results_dic = get_config_results_dics(ID=previous_ID, score=score) 
+    # specify experiment ID of which most important features should be taken for new experiment  
+    previous_ID = 41 
 
-# select drop features
-important_feat, unimportant_feat = select_feat_from_perm_imp(ID=previous_ID, index=index, score=score)    
-drop_features = unimportant_feat
+    # specify how many importamt features should be used
+    index = 25
 
-# use configuarations as in the previous experiment
-model = config_dic['model']
-param_grid = config_dic['param_grid']
-cv = config_dic['cv']
-scoring = config_dic['scoring']
-feature_groups_selected = config_dic['feature_groups_selected']
-omit_scaling_features = config_dic['omit_scaling_features']
-scaling = config_dic['scaling']
-pca_components = False
-additional_info = ''
-additional_info = 'delete'
-###################################################
+    # load configuration dictionary of previous experiment
+    config_dic, results_dic = get_config_results_dics(ID=previous_ID, score=score) 
+
+    # select drop features
+    important_feat, unimportant_feat = select_feat_from_perm_imp(ID=previous_ID, index=index, score=score)    
+    drop_features = unimportant_feat
+
+    # use configuarations as in the previous experiment
+    model = config_dic['model']
+    param_grid = config_dic['param_grid']
+    cv = config_dic['cv']
+    scoring = config_dic['scoring']
+    feature_groups_selected = config_dic['feature_groups_selected']
+    omit_scaling_features = config_dic['omit_scaling_features']
+    scaling = config_dic['scaling']
+    pca_components = False
+    additional_info = ''
+    additional_info = 'delete' # TODO: remove
+######################################################################################################
+
+
+###################################################################################################### 
+##### OPTION: train with PCA reduced feature set #####
+# Note: the PCA is not performed on all features, but a separate PCA is performed on feature groups, 
+# with high correlation, e.g. gnomad features. The respective PCA reduced feature set was calculated 
+# before and is loaded in get_feat_reduced_trainig_data(...)
+
+if pca_reduced_features:
+
+    # set percentage of variance explained by principal components until which PC should be kept
+    perc_var_exp = 95
+
+    # set names of selecte feature groups (needed for indication in config_ML_training_XXX.csv to indicate 
+    # that PCA reduced feature groups where used)
+    feature_groups_selected = [f'gnomad_PC_{perc_var_exp}', 
+                               f'cellxgene_PC_{perc_var_exp}', 
+                               f'descartes_PC_{perc_var_exp}', 
+                               f'gtex_PC_{perc_var_exp}', 
+                               'mgi', 
+                               'paralogues', 
+                               'phasCons', 
+                               'CpG_o2e']
+
+######################################################################################################
 
 
 # create config files
-ID = create_ML_config(config_dir = f"{score_string}/training/config_files/",
-                     estimator = estimator,
-                     clf = clf, 
-                     param_grid = param_grid, 
-                     cv = cv, 
-                     scoring = scoring,
-                     feature_groups_selected = feature_groups_selected,
-                     drop_features = drop_features,
-                     omit_scaling_features = omit_scaling_features,
-                     model = model, # defines which technique should be used for filling NaN
-                     scaling = scaling,
-                     pca_components = pca_components,
-                     additional_info = additional_info,
-                      score=score
-                    )
+ID = create_ML_config(
+    config_dir = f"{score_string}/training/config_files/",
+    estimator = estimator,
+    clf = clf, 
+    param_grid = param_grid, 
+    cv = cv, 
+    scoring = scoring,
+    feature_groups_selected = feature_groups_selected,
+    drop_features = drop_features,
+    omit_scaling_features = omit_scaling_features,
+    model = model, # defines which technique should be used for filling NaN
+    scaling = scaling,
+    pca_components = pca_components,
+    additional_info = additional_info,
+    score=score
+)
 
 print(f"Training_ID: ID{ID}")
 
@@ -258,16 +295,27 @@ with open(f"{score_string}/training/config_files/config_dic_ID{ID}.pkl", 'rb') a
     config_dic = pickle.load(file)
 
 
-# get the training data
-X_train, y_train, features = get_training_data(
-    model=config_dic['model'],
-    feature_groups_selected=config_dic['feature_groups_selected'],
-    drop_features=config_dic['drop_features'],
-    omit_scaling_features=config_dic['omit_scaling_features'],
-    scaling=config_dic['scaling'],
-    pca_components=config_dic['pca_components'],
-    IMPACT_prop = False, # only needed vor variant score training
-    score=score
+
+if pca_reduced_features:
+    # get the training data
+    X_train, y_train, features = get_feat_reduced_trainig_data(perc_var_exp=perc_var_exp,    
+                                                               model=model, 
+                                                               omit_scaling_features=omit_scaling_features,
+                                                               scaling=scaling,
+                                                              score=score)
+
+
+else:
+    # get the training data
+    X_train, y_train, features = get_training_data(
+        model=config_dic['model'],
+        feature_groups_selected=config_dic['feature_groups_selected'],
+        drop_features=config_dic['drop_features'],
+        omit_scaling_features=config_dic['omit_scaling_features'],
+        scaling=config_dic['scaling'],
+        pca_components=config_dic['pca_components'],
+        IMPACT_prop = False, # only needed vor variant score training
+        score=score
 )
 
 # fill config_dic with training data and features
@@ -280,7 +328,7 @@ with open(f"{score_string}/training/config_files/config_dic_ID{ID}.pkl", 'wb') a
     pickle.dump(config_dic, file)
 
     
-print("ready for training")    
+# print("ready for training")    
 
 # train model
 cv_results, best_params, best_classifier = train_with_grid_search(
