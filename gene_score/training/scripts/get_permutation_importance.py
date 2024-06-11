@@ -88,7 +88,7 @@ def main():
     
     # save results
     date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
-    sum_rank_values.to_csv(f"{score_string}/training/results/perm_imp_sum_rank_ID{ID}_{date_time}.csv", index=False)
+    sum_rank_values.to_csv(f"{score_string}/training/feature_importance/permutation_importance/perm_imp_sum_rank_ID{ID}_{date_time}.csv", index=False)
 
 
 if __name__ == "__main__":
