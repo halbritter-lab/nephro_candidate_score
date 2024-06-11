@@ -657,7 +657,7 @@ def get_permutation_importance(ID,
     
     # save results
     date_time = datetime.today().strftime('%Y-%m-%d--%H-%M-%S')
-    feature_imp.to_csv(f"{score_string}/training/results/perm_importance_ID{ID}_rs-{random_state}_{date_time}.csv", index=False)
+    feature_imp.to_csv(f"{score_string}/training/feature_importance/permutation_importance/perm_importance_ID{ID}_rs-{random_state}_{date_time}.csv", index=False)
     
     # plot feature importance
     if plot:
