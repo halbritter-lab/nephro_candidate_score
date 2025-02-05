@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2546, "NGS": 0.03834209963679314, "symbol": "CTSW", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 2546, "ngs": 0.0383421, "symbol": "CTSW", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

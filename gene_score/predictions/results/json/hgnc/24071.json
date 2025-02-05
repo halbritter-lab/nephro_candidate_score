@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24071, "NGS": 0.1268014907836914, "symbol": "TUBA3D", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24071, "ngs": 0.12680149, "symbol": "TUBA3D", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24796, "NGS": 0.25096574425697327, "symbol": "KANK3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24796, "ngs": 0.25096574, "symbol": "KANK3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

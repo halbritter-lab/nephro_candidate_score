@@ -1,1 +1,1 @@
-{"hgnc_id_int": 326, "NGS": 0.5195599794387817, "symbol": "AGPAT3", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 326, "ngs": 0.51956, "symbol": "AGPAT3", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8791, "NGS": 0.7806863784790039, "symbol": "PDE7A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8791, "ngs": 0.7806864, "symbol": "PDE7A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

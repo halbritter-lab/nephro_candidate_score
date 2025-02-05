@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44318, "NGS": 0.05717393383383751, "symbol": "MEIOSIN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44318, "ngs": 0.057173934, "symbol": "MEIOSIN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

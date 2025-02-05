@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4689, "NGS": 0.01579572819173336, "symbol": "GUCY2D", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 4689, "ngs": 0.015795728, "symbol": "GUCY2D", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

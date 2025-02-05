@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8859, "NGS": 0.8146839737892151, "symbol": "PEX6", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 8859, "ngs": 0.814684, "symbol": "PEX6", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

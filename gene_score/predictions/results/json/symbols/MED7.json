@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2378, "NGS": 0.8046068549156189, "symbol": "MED7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2378, "ngs": 0.80460685, "symbol": "MED7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

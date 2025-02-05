@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7317, "NGS": 0.12352193892002106, "symbol": "MS4A3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7317, "ngs": 0.12352194, "symbol": "MS4A3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

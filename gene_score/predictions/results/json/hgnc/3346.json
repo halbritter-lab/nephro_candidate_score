@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3346, "NGS": 0.5290794372558594, "symbol": "ENDOG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3346, "ngs": 0.52907944, "symbol": "ENDOG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

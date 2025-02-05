@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4034, "NGS": 0.7805690765380859, "symbol": "FXYD7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4034, "ngs": 0.7805691, "symbol": "FXYD7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28352, "NGS": 0.9040895700454712, "symbol": "CUEDC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28352, "ngs": 0.90408957, "symbol": "CUEDC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

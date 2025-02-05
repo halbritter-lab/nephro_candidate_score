@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7517, "NGS": 0.0307768527418375, "symbol": "MUC6", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 7517, "ngs": 0.030776853, "symbol": "MUC6", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3061, "NGS": 0.4779871702194214, "symbol": "DTYMK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3061, "ngs": 0.47798717, "symbol": "DTYMK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

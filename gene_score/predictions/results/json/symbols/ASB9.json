@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17184, "NGS": 0.42519381642341614, "symbol": "ASB9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17184, "ngs": 0.42519382, "symbol": "ASB9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

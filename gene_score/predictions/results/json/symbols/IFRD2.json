@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5457, "NGS": 0.32944074273109436, "symbol": "IFRD2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5457, "ngs": 0.32944074, "symbol": "IFRD2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

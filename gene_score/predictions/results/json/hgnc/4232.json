@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4232, "NGS": 0.9871345162391663, "symbol": "GDNF", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 4232, "ngs": 0.9871345, "symbol": "GDNF", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

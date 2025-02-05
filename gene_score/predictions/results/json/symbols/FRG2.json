@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19136, "NGS": 0.03425334393978119, "symbol": "FRG2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19136, "ngs": 0.034253344, "symbol": "FRG2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

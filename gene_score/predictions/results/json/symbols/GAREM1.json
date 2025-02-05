@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26136, "NGS": 0.9780625700950623, "symbol": "GAREM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26136, "ngs": 0.97806257, "symbol": "GAREM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

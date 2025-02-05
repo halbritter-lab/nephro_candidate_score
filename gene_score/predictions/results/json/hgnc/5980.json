@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5980, "NGS": 0.17993801832199097, "symbol": "IL16", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5980, "ngs": 0.17993802, "symbol": "IL16", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

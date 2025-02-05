@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4519, "NGS": 0.9753888845443726, "symbol": "GPR68", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 4519, "ngs": 0.9753889, "symbol": "GPR68", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3496, "NGS": 0.003137892112135887, "symbol": "MPZL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3496, "ngs": 0.003137892, "symbol": "MPZL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

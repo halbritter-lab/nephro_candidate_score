@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28246, "NGS": 0.8178331851959229, "symbol": "IGSF21", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28246, "ngs": 0.8178332, "symbol": "IGSF21", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

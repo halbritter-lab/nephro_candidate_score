@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12010, "NGS": 0.7946800589561462, "symbol": "TPM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12010, "ngs": 0.79468006, "symbol": "TPM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

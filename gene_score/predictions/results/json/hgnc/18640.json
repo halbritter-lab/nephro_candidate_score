@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18640, "NGS": 0.4494117498397827, "symbol": "LDLRAP1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 18640, "ngs": 0.44941175, "symbol": "LDLRAP1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

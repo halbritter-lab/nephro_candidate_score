@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9182, "NGS": 0.8215107917785645, "symbol": "POLI", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9182, "ngs": 0.8215108, "symbol": "POLI", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

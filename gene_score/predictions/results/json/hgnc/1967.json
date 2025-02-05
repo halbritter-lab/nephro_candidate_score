@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1967, "NGS": 0.010470879264175892, "symbol": "CHRNG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1967, "ngs": 0.010470879, "symbol": "CHRNG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

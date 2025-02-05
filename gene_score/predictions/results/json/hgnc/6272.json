@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6272, "NGS": 0.9840577244758606, "symbol": "KCNK1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6272, "ngs": 0.9840577, "symbol": "KCNK1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

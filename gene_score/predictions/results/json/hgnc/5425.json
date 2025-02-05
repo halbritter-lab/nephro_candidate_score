@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5425, "NGS": 0.007093630265444517, "symbol": "IFNA4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5425, "ngs": 0.0070936303, "symbol": "IFNA4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

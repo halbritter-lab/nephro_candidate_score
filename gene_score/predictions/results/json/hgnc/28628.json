@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28628, "NGS": 0.402305006980896, "symbol": "NOPCHAP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28628, "ngs": 0.402305, "symbol": "NOPCHAP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

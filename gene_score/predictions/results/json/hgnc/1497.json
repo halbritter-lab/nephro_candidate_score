@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1497, "NGS": 0.9616326093673706, "symbol": "CASK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1497, "ngs": 0.9616326, "symbol": "CASK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9062, "NGS": 0.005864287726581097, "symbol": "PLCD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9062, "ngs": 0.0058642877, "symbol": "PLCD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

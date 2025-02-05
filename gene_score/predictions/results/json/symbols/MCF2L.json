@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14576, "NGS": 0.20079723000526428, "symbol": "MCF2L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14576, "ngs": 0.20079723, "symbol": "MCF2L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

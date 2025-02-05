@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14650, "NGS": 0.40928810834884644, "symbol": "PPIG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14650, "ngs": 0.4092881, "symbol": "PPIG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

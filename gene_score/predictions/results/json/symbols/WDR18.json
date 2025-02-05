@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17956, "NGS": 0.4317847192287445, "symbol": "WDR18", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17956, "ngs": 0.43178472, "symbol": "WDR18", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7530, "NGS": 0.8990970849990845, "symbol": "MVK", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 7530, "ngs": 0.8990971, "symbol": "MVK", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

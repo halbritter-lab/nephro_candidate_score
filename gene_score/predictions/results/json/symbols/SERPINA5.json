@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8723, "NGS": 0.9749777317047119, "symbol": "SERPINA5", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 8723, "ngs": 0.97497773, "symbol": "SERPINA5", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

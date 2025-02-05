@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2389, "NGS": 0.891893208026886, "symbol": "CRYAB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2389, "ngs": 0.8918932, "symbol": "CRYAB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

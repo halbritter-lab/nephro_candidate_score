@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4531, "NGS": 0.5715954303741455, "symbol": "OXGR1", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 4531, "ngs": 0.57159543, "symbol": "OXGR1", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

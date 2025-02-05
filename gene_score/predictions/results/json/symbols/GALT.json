@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4135, "NGS": 0.5648083090782166, "symbol": "GALT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4135, "ngs": 0.5648083, "symbol": "GALT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

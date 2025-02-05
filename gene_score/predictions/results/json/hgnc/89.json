@@ -1,1 +1,1 @@
-{"hgnc_id_int": 89, "NGS": 0.906248152256012, "symbol": "ACADM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 89, "ngs": 0.90624815, "symbol": "ACADM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

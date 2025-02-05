@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20295, "NGS": 0.9876170754432678, "symbol": "SLITRK5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20295, "ngs": 0.9876171, "symbol": "SLITRK5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

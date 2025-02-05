@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8656, "NGS": 0.5385826826095581, "symbol": "PCDH11X", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8656, "ngs": 0.5385827, "symbol": "PCDH11X", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

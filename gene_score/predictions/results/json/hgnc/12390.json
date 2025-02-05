@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12390, "NGS": 0.50221848487854, "symbol": "GFUS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12390, "ngs": 0.5022185, "symbol": "GFUS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

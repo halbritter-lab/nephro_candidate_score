@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9804, "NGS": 0.888247549533844, "symbol": "RACGAP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9804, "ngs": 0.88824755, "symbol": "RACGAP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

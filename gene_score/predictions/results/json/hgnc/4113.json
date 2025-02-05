@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4113, "NGS": 0.9088216423988342, "symbol": "GAK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4113, "ngs": 0.90882164, "symbol": "GAK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

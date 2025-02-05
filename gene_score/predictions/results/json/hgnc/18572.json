@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18572, "NGS": 0.1594701111316681, "symbol": "HSDL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18572, "ngs": 0.15947011, "symbol": "HSDL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

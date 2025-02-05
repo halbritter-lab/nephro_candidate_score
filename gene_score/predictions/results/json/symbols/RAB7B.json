@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30513, "NGS": 0.004342992324382067, "symbol": "RAB7B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30513, "ngs": 0.0043429923, "symbol": "RAB7B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

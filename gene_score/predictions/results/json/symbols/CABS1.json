@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30710, "NGS": 0.014594622887670994, "symbol": "CABS1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30710, "ngs": 0.014594623, "symbol": "CABS1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

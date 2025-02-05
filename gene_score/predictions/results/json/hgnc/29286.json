@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29286, "NGS": 0.6184030175209045, "symbol": "ISLR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29286, "ngs": 0.618403, "symbol": "ISLR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

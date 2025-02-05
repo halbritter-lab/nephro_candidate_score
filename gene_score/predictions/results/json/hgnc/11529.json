@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11529, "NGS": 0.6185578107833862, "symbol": "EPCAM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11529, "ngs": 0.6185578, "symbol": "EPCAM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16183, "NGS": 0.5084190368652344, "symbol": "RIMS4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16183, "ngs": 0.50841904, "symbol": "RIMS4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

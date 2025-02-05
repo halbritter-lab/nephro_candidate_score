@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1041, "NGS": 0.018288319930434227, "symbol": "BFSP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1041, "ngs": 0.01828832, "symbol": "BFSP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

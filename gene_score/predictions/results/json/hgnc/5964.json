@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5964, "NGS": 0.7910945415496826, "symbol": "IL10RA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5964, "ngs": 0.79109454, "symbol": "IL10RA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

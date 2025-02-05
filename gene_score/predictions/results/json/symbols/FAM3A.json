@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13749, "NGS": 0.7408051490783691, "symbol": "FAM3A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13749, "ngs": 0.74080515, "symbol": "FAM3A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

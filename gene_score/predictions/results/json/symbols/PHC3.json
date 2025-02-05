@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15682, "NGS": 0.9912938475608826, "symbol": "PHC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15682, "ngs": 0.99129385, "symbol": "PHC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

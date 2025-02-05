@@ -1,1 +1,1 @@
-{"hgnc_id_int": 471, "NGS": 0.5269654989242554, "symbol": "AMPH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 471, "ngs": 0.5269655, "symbol": "AMPH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

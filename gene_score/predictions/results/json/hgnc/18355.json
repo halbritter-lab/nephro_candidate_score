@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18355, "NGS": 0.07817070186138153, "symbol": "CLYBL", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 18355, "ngs": 0.0781707, "symbol": "CLYBL", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

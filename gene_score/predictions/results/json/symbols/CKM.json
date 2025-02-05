@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1994, "NGS": 0.3141602873802185, "symbol": "CKM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1994, "ngs": 0.3141603, "symbol": "CKM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17109, "NGS": 0.6902265548706055, "symbol": "ADAMTS17", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17109, "ngs": 0.69022655, "symbol": "ADAMTS17", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

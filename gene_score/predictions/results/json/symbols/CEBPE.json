@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1836, "NGS": 0.0751693919301033, "symbol": "CEBPE", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1836, "ngs": 0.07516939, "symbol": "CEBPE", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

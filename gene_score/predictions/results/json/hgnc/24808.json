@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24808, "NGS": 0.621955931186676, "symbol": "TRAFD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24808, "ngs": 0.62195593, "symbol": "TRAFD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

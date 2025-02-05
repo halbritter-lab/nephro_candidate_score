@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19832, "NGS": 0.6717348694801331, "symbol": "CLEC14A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19832, "ngs": 0.67173487, "symbol": "CLEC14A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20367, "NGS": 0.7727192044258118, "symbol": "FRY", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20367, "ngs": 0.7727192, "symbol": "FRY", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

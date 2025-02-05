@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12784, "NGS": 0.9702943563461304, "symbol": "WNT5A", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 12784, "ngs": 0.97029436, "symbol": "WNT5A", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10664, "NGS": 0.8381880521774292, "symbol": "CWC27", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 10664, "ngs": 0.83818805, "symbol": "CWC27", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

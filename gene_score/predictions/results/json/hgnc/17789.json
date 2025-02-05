@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17789, "NGS": 0.4755101799964905, "symbol": "LIN7C", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 17789, "ngs": 0.47551018, "symbol": "LIN7C", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

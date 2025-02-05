@@ -1,1 +1,1 @@
-{"hgnc_id_int": 399, "NGS": 0.8046266436576843, "symbol": "ALB", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 399, "ngs": 0.80462664, "symbol": "ALB", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

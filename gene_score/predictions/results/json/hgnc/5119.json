@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5119, "NGS": 0.8454833030700684, "symbol": "HOXB8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5119, "ngs": 0.8454833, "symbol": "HOXB8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

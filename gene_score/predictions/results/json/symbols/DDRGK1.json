@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16110, "NGS": 0.5358416438102722, "symbol": "DDRGK1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16110, "ngs": 0.53584164, "symbol": "DDRGK1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

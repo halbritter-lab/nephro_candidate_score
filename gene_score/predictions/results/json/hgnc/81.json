@@ -1,1 +1,1 @@
-{"hgnc_id_int": 81, "NGS": 0.898700475692749, "symbol": "ABR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 81, "ngs": 0.8987005, "symbol": "ABR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

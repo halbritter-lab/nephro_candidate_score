@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17224, "NGS": 0.7456372976303101, "symbol": "RAB11FIP3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17224, "ngs": 0.7456373, "symbol": "RAB11FIP3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

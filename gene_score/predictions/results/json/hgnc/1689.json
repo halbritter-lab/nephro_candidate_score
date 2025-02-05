@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1689, "NGS": 0.962716281414032, "symbol": "CD59", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1689, "ngs": 0.9627163, "symbol": "CD59", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

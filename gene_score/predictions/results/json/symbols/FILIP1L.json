@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24589, "NGS": 0.1985161453485489, "symbol": "FILIP1L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24589, "ngs": 0.19851615, "symbol": "FILIP1L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

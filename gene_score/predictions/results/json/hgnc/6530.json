@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6530, "NGS": 0.11860869079828262, "symbol": "LCT", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 6530, "ngs": 0.11860869, "symbol": "LCT", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

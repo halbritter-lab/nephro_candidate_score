@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26120, "NGS": 0.08371496200561523, "symbol": "RBFA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26120, "ngs": 0.08371496, "symbol": "RBFA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

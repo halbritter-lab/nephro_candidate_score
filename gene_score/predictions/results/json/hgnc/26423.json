@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26423, "NGS": 0.012430848553776741, "symbol": "SNX32", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 26423, "ngs": 0.012430849, "symbol": "SNX32", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

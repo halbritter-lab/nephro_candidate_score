@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28489, "NGS": 0.014311831444501877, "symbol": "KLHDC9", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 28489, "ngs": 0.014311831, "symbol": "KLHDC9", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

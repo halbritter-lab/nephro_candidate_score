@@ -1,1 +1,1 @@
-{"hgnc_id_int": 465, "NGS": 0.14050181210041046, "symbol": "AMHR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 465, "ngs": 0.14050181, "symbol": "AMHR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

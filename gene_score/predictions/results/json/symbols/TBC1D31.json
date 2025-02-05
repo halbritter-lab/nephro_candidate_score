@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30888, "NGS": 0.23433798551559448, "symbol": "TBC1D31", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 30888, "ngs": 0.23433799, "symbol": "TBC1D31", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

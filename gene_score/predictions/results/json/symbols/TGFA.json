@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11765, "NGS": 0.7423648834228516, "symbol": "TGFA", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 11765, "ngs": 0.7423649, "symbol": "TGFA", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

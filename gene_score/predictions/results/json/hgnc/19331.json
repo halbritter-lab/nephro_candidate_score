@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19331, "NGS": 0.5619338750839233, "symbol": "MMAB", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 19331, "ngs": 0.5619339, "symbol": "MMAB", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13195, "NGS": 0.18465755879878998, "symbol": "ZWINT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13195, "ngs": 0.18465756, "symbol": "ZWINT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

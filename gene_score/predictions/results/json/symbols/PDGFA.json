@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8799, "NGS": 0.9530078768730164, "symbol": "PDGFA", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 8799, "ngs": 0.9530079, "symbol": "PDGFA", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

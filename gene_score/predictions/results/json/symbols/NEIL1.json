@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18448, "NGS": 0.5165097713470459, "symbol": "NEIL1", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 18448, "ngs": 0.5165098, "symbol": "NEIL1", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

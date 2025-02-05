@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29250, "NGS": 0.19965076446533203, "symbol": "WDR35", "gene_set": "test", "evidence_count": 4.0}
+{"hgncIdInt": 29250, "ngs": 0.19965076, "symbol": "WDR35", "geneSet": "test", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

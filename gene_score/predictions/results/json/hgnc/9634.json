@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9634, "NGS": 0.9899975657463074, "symbol": "PTP4A1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9634, "ngs": 0.98999757, "symbol": "PTP4A1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

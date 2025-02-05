@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8100, "NGS": 0.06284570693969727, "symbol": "OC90", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 8100, "ngs": 0.06284571, "symbol": "OC90", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

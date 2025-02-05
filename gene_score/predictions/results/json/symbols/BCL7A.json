@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1004, "NGS": 0.8624082803726196, "symbol": "BCL7A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1004, "ngs": 0.8624083, "symbol": "BCL7A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31986, "NGS": 0.013976539485156536, "symbol": "FOXD4L6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31986, "ngs": 0.0139765395, "symbol": "FOXD4L6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

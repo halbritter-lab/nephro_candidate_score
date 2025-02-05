@@ -1,1 +1,1 @@
-{"hgnc_id_int": 34224, "NGS": 0.055724188685417175, "symbol": "SCYGR5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 34224, "ngs": 0.05572419, "symbol": "SCYGR5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

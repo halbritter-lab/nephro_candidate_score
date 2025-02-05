@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19873, "NGS": 0.9225647449493408, "symbol": "GALNT10", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19873, "ngs": 0.92256474, "symbol": "GALNT10", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

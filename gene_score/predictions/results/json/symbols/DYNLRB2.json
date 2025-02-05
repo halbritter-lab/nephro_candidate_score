@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15467, "NGS": 0.39268743991851807, "symbol": "DYNLRB2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15467, "ngs": 0.39268744, "symbol": "DYNLRB2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

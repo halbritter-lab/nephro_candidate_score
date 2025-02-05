@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1983, "NGS": 0.5976238250732422, "symbol": "UTP4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1983, "ngs": 0.5976238, "symbol": "UTP4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

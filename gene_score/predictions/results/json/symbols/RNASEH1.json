@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18466, "NGS": 0.8313523530960083, "symbol": "RNASEH1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18466, "ngs": 0.83135235, "symbol": "RNASEH1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

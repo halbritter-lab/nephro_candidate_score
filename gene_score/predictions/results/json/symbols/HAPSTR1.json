@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30103, "NGS": 0.6493126153945923, "symbol": "HAPSTR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30103, "ngs": 0.6493126, "symbol": "HAPSTR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

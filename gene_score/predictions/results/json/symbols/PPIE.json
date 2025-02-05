@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9258, "NGS": 0.9817403554916382, "symbol": "PPIE", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9258, "ngs": 0.98174036, "symbol": "PPIE", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

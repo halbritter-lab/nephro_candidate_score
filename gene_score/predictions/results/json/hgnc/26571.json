@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26571, "NGS": 0.05621425807476044, "symbol": "LYSMD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26571, "ngs": 0.056214258, "symbol": "LYSMD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

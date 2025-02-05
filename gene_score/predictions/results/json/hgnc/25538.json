@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25538, "NGS": 0.0460643470287323, "symbol": "DARS2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25538, "ngs": 0.046064347, "symbol": "DARS2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

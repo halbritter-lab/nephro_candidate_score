@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18125, "NGS": 0.053349267691373825, "symbol": "ATP6V1E2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18125, "ngs": 0.053349268, "symbol": "ATP6V1E2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

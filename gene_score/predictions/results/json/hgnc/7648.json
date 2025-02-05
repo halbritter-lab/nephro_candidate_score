@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7648, "NGS": 0.8448522090911865, "symbol": "NBEA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7648, "ngs": 0.8448522, "symbol": "NBEA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

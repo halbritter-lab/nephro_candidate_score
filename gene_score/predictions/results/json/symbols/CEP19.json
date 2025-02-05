@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28209, "NGS": 0.57901930809021, "symbol": "CEP19", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 28209, "ngs": 0.5790193, "symbol": "CEP19", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

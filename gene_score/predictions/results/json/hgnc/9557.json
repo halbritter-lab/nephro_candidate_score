@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9557, "NGS": 0.6355558633804321, "symbol": "PSMD12", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 9557, "ngs": 0.63555586, "symbol": "PSMD12", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 51240, "NGS": 0.004817932844161987, "symbol": "POTEB3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 51240, "ngs": 0.004817933, "symbol": "POTEB3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

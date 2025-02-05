@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11573, "NGS": 0.9368144869804382, "symbol": "TAT", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 11573, "ngs": 0.9368145, "symbol": "TAT", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

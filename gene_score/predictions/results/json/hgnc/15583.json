@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15583, "NGS": 0.317809134721756, "symbol": "LCTL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15583, "ngs": 0.31780913, "symbol": "LCTL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

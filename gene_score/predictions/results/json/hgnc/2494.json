@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2494, "NGS": 0.9401484727859497, "symbol": "CTBP1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 2494, "ngs": 0.9401485, "symbol": "CTBP1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

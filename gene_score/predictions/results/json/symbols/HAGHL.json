@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14177, "NGS": 0.040703948587179184, "symbol": "HAGHL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14177, "ngs": 0.04070395, "symbol": "HAGHL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

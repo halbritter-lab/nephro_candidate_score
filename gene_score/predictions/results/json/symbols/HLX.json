@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4978, "NGS": 0.8138223886489868, "symbol": "HLX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4978, "ngs": 0.8138224, "symbol": "HLX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

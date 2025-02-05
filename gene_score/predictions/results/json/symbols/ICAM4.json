@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5347, "NGS": 0.09616392850875854, "symbol": "ICAM4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5347, "ngs": 0.09616393, "symbol": "ICAM4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

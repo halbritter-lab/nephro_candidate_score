@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23140, "NGS": 0.005320609547197819, "symbol": "ANGPTL6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23140, "ngs": 0.0053206095, "symbol": "ANGPTL6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

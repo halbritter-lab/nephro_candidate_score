@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8632, "NGS": 0.9821366667747498, "symbol": "PBX1", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 8632, "ngs": 0.98213667, "symbol": "PBX1", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

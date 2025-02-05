@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44651, "NGS": 0.00842548068612814, "symbol": "TEX46", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44651, "ngs": 0.008425481, "symbol": "TEX46", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

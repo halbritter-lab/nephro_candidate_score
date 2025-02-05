@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6937, "NGS": 0.700650691986084, "symbol": "MCCC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6937, "ngs": 0.7006507, "symbol": "MCCC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

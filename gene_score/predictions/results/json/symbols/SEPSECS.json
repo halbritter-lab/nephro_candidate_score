@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30605, "NGS": 0.18786431849002838, "symbol": "SEPSECS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30605, "ngs": 0.18786432, "symbol": "SEPSECS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

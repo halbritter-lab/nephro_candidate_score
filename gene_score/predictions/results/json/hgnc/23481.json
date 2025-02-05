@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23481, "NGS": 0.047061268240213394, "symbol": "DUSP29", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23481, "ngs": 0.04706127, "symbol": "DUSP29", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

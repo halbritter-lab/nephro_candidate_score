@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26264, "NGS": 0.6287834048271179, "symbol": "FOXRED2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26264, "ngs": 0.6287834, "symbol": "FOXRED2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

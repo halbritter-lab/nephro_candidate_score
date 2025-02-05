@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29641, "NGS": 0.545316219329834, "symbol": "PWWP3A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29641, "ngs": 0.5453162, "symbol": "PWWP3A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

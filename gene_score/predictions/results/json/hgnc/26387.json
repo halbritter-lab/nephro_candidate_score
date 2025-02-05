@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26387, "NGS": 0.6360529065132141, "symbol": "SLAIN1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26387, "ngs": 0.6360529, "symbol": "SLAIN1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

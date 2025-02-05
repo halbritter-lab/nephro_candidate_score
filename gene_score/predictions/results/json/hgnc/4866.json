@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4866, "NGS": 0.5917244553565979, "symbol": "HEPH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4866, "ngs": 0.59172446, "symbol": "HEPH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

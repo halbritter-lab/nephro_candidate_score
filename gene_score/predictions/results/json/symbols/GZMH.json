@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4710, "NGS": 0.0767446830868721, "symbol": "GZMH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4710, "ngs": 0.07674468, "symbol": "GZMH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

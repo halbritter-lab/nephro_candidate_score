@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1969, "NGS": 0.9357361793518066, "symbol": "CHST1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1969, "ngs": 0.9357362, "symbol": "CHST1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

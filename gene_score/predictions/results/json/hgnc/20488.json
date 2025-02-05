@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20488, "NGS": 0.027553047984838486, "symbol": "L3HYPDH", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 20488, "ngs": 0.027553048, "symbol": "L3HYPDH", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

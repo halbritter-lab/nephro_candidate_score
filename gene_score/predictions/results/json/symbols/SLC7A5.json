@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11063, "NGS": 0.678699254989624, "symbol": "SLC7A5", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 11063, "ngs": 0.67869925, "symbol": "SLC7A5", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

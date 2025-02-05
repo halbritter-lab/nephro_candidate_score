@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22180, "NGS": 0.03695821762084961, "symbol": "MBLAC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22180, "ngs": 0.036958218, "symbol": "MBLAC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9968, "NGS": 0.9016132354736328, "symbol": "REV3L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9968, "ngs": 0.90161324, "symbol": "REV3L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

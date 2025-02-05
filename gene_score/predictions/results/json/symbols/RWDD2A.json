@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21385, "NGS": 0.7327571511268616, "symbol": "RWDD2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21385, "ngs": 0.73275715, "symbol": "RWDD2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

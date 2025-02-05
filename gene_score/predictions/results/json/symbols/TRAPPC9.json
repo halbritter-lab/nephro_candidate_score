@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30832, "NGS": 0.9896432161331177, "symbol": "TRAPPC9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30832, "ngs": 0.9896432, "symbol": "TRAPPC9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

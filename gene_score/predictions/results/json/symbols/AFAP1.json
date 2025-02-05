@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24017, "NGS": 0.6829787492752075, "symbol": "AFAP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24017, "ngs": 0.68297875, "symbol": "AFAP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

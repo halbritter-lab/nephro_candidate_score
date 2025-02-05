@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19661, "NGS": 0.03174930438399315, "symbol": "TNNI3K", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19661, "ngs": 0.031749304, "symbol": "TNNI3K", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

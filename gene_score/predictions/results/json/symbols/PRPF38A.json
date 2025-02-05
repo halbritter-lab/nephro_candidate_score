@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25930, "NGS": 0.782561719417572, "symbol": "PRPF38A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25930, "ngs": 0.7825617, "symbol": "PRPF38A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

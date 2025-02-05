@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19876, "NGS": 0.9453972578048706, "symbol": "EPC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19876, "ngs": 0.94539726, "symbol": "EPC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

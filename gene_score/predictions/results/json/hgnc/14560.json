@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14560, "NGS": 0.43738433718681335, "symbol": "STOML1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14560, "ngs": 0.43738434, "symbol": "STOML1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

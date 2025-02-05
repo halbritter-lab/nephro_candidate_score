@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24678, "NGS": 0.9923431277275085, "symbol": "FTO", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 24678, "ngs": 0.9923431, "symbol": "FTO", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

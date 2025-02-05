@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23157, "NGS": 0.8674131035804749, "symbol": "ALG6", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 23157, "ngs": 0.8674131, "symbol": "ALG6", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

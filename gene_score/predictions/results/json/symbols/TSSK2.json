@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11401, "NGS": 0.050599947571754456, "symbol": "TSSK2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11401, "ngs": 0.050599948, "symbol": "TSSK2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3316, "NGS": 0.9467480182647705, "symbol": "ELF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3316, "ngs": 0.946748, "symbol": "ELF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

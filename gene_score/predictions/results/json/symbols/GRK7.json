@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17031, "NGS": 0.004339723382145166, "symbol": "GRK7", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 17031, "ngs": 0.0043397234, "symbol": "GRK7", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

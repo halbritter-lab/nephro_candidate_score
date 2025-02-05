@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28401, "NGS": 0.17805436253547668, "symbol": "RBM46", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28401, "ngs": 0.17805436, "symbol": "RBM46", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

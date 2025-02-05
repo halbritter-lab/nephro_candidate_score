@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15987, "NGS": 0.8457015156745911, "symbol": "GLRX3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15987, "ngs": 0.8457015, "symbol": "GLRX3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1106, "NGS": 0.8993587493896484, "symbol": "BABAM2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1106, "ngs": 0.89935875, "symbol": "BABAM2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

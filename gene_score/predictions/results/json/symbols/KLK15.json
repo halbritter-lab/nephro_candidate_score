@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20453, "NGS": 0.01362617313861847, "symbol": "KLK15", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20453, "ngs": 0.013626173, "symbol": "KLK15", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3942, "NGS": 0.9754306674003601, "symbol": "MTOR", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 3942, "ngs": 0.97543067, "symbol": "MTOR", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

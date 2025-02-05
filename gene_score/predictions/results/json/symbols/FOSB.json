@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3797, "NGS": 0.9620317220687866, "symbol": "FOSB", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 3797, "ngs": 0.9620317, "symbol": "FOSB", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

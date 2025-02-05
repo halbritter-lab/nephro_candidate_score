@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3249, "NGS": 0.6548648476600647, "symbol": "EIF1", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 3249, "ngs": 0.65486485, "symbol": "EIF1", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

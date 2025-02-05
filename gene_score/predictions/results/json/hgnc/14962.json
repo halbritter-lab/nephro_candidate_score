@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14962, "NGS": 0.3293093740940094, "symbol": "SYT13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14962, "ngs": 0.32930937, "symbol": "SYT13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

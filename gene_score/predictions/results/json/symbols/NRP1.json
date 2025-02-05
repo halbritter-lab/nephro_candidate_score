@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8004, "NGS": 0.9565993547439575, "symbol": "NRP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8004, "ngs": 0.95659935, "symbol": "NRP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27338, "NGS": 0.16109789907932281, "symbol": "PDILT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27338, "ngs": 0.1610979, "symbol": "PDILT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

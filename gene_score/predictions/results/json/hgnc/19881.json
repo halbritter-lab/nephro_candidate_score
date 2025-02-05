@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19881, "NGS": 0.07814601808786392, "symbol": "EMILIN2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19881, "ngs": 0.07814602, "symbol": "EMILIN2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

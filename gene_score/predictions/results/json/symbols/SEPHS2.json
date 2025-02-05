@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19686, "NGS": 0.42492252588272095, "symbol": "SEPHS2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19686, "ngs": 0.42492253, "symbol": "SEPHS2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

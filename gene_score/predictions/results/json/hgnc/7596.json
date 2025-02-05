@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7596, "NGS": 0.38734671473503113, "symbol": "MYO1B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7596, "ngs": 0.3873467, "symbol": "MYO1B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

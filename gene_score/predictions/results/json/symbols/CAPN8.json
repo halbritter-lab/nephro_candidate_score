@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1485, "NGS": 0.04406750574707985, "symbol": "CAPN8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1485, "ngs": 0.044067506, "symbol": "CAPN8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

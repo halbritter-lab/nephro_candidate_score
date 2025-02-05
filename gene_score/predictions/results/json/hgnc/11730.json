@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11730, "NGS": 0.37614044547080994, "symbol": "TERT", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 11730, "ngs": 0.37614045, "symbol": "TERT", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

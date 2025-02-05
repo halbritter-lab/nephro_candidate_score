@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4026, "NGS": 0.7796353101730347, "symbol": "FXYD2", "gene_set": "test", "evidence_count": 5.0}
+{"hgncIdInt": 4026, "ngs": 0.7796353, "symbol": "FXYD2", "geneSet": "test", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

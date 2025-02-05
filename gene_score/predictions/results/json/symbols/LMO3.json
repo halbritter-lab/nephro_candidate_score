@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6643, "NGS": 0.946109414100647, "symbol": "LMO3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6643, "ngs": 0.9461094, "symbol": "LMO3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

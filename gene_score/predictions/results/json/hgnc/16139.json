@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16139, "NGS": 0.09274689108133316, "symbol": "WFDC10A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16139, "ngs": 0.09274689, "symbol": "WFDC10A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

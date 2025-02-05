@@ -1,1 +1,1 @@
-{"hgnc_id_int": 143, "NGS": 0.6614805459976196, "symbol": "ACTC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 143, "ngs": 0.66148055, "symbol": "ACTC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9256, "NGS": 0.0039595989510416985, "symbol": "PPIC", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 9256, "ngs": 0.003959599, "symbol": "PPIC", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

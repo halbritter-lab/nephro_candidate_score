@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28675, "NGS": 0.1935141384601593, "symbol": "VSIG1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28675, "ngs": 0.19351414, "symbol": "VSIG1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

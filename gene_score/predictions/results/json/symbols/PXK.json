@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23326, "NGS": 0.9495050311088562, "symbol": "PXK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23326, "ngs": 0.94950503, "symbol": "PXK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

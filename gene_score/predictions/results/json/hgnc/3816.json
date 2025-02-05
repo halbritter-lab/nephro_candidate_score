@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3816, "NGS": 0.5077633261680603, "symbol": "FOXJ1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 3816, "ngs": 0.5077633, "symbol": "FOXJ1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30453, "NGS": 0.06338600069284439, "symbol": "TVP23C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30453, "ngs": 0.063386, "symbol": "TVP23C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

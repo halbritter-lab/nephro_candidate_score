@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16252, "NGS": 0.009257681667804718, "symbol": "SUN5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16252, "ngs": 0.009257682, "symbol": "SUN5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

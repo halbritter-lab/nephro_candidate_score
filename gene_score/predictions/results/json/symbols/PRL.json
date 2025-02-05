@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9445, "NGS": 0.37685370445251465, "symbol": "PRL", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 9445, "ngs": 0.3768537, "symbol": "PRL", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

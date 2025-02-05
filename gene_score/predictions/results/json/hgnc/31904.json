@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31904, "NGS": 0.002770102582871914, "symbol": "GAGE12D", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31904, "ngs": 0.0027701026, "symbol": "GAGE12D", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21216, "NGS": 0.044998325407505035, "symbol": "BLTP3A", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 21216, "ngs": 0.044998325, "symbol": "BLTP3A", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

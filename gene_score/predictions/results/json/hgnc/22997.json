@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22997, "NGS": 0.016727447509765625, "symbol": "RTL3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22997, "ngs": 0.016727448, "symbol": "RTL3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

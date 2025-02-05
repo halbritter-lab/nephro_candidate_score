@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29149, "NGS": 0.785475492477417, "symbol": "PHLPP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29149, "ngs": 0.7854755, "symbol": "PHLPP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

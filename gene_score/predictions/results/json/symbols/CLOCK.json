@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2082, "NGS": 0.9165109992027283, "symbol": "CLOCK", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 2082, "ngs": 0.916511, "symbol": "CLOCK", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

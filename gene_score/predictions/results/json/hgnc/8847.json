@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8847, "NGS": 0.6896831393241882, "symbol": "PER3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8847, "ngs": 0.68968314, "symbol": "PER3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

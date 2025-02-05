@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9956, "NGS": 0.9953025579452515, "symbol": "RELB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9956, "ngs": 0.99530256, "symbol": "RELB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

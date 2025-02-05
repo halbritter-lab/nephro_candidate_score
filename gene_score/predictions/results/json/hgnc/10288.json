@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10288, "NGS": 0.8348836898803711, "symbol": "RP9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10288, "ngs": 0.8348837, "symbol": "RP9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

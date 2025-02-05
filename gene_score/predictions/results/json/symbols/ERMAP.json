@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15743, "NGS": 0.1331903487443924, "symbol": "ERMAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15743, "ngs": 0.13319035, "symbol": "ERMAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

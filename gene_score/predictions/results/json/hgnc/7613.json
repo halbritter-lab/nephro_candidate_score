@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7613, "NGS": 0.06716129183769226, "symbol": "MYOM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7613, "ngs": 0.06716129, "symbol": "MYOM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

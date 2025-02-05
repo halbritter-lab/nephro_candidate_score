@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4118, "NGS": 0.629361629486084, "symbol": "GALK1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4118, "ngs": 0.6293616, "symbol": "GALK1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

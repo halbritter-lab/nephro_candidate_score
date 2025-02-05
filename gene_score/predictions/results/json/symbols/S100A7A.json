@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21657, "NGS": 0.03755515441298485, "symbol": "S100A7A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21657, "ngs": 0.037555154, "symbol": "S100A7A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

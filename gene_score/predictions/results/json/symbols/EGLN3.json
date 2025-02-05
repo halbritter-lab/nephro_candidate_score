@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14661, "NGS": 0.22545963525772095, "symbol": "EGLN3", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 14661, "ngs": 0.22545964, "symbol": "EGLN3", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10885, "NGS": 0.737463116645813, "symbol": "SIPA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10885, "ngs": 0.7374631, "symbol": "SIPA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

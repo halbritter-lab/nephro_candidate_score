@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26487, "NGS": 0.6094059348106384, "symbol": "VWCE", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26487, "ngs": 0.60940593, "symbol": "VWCE", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

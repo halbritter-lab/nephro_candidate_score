@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19748, "NGS": 0.03514259308576584, "symbol": "ACOT4", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 19748, "ngs": 0.035142593, "symbol": "ACOT4", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

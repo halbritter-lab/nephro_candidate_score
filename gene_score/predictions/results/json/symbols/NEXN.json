@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29557, "NGS": 0.7911516427993774, "symbol": "NEXN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29557, "ngs": 0.79115164, "symbol": "NEXN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

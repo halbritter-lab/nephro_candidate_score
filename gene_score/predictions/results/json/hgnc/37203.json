@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37203, "NGS": 0.8857215642929077, "symbol": "VWC2L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37203, "ngs": 0.88572156, "symbol": "VWC2L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

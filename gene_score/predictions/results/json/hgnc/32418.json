@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32418, "NGS": 0.06599777936935425, "symbol": "RGPD5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32418, "ngs": 0.06599778, "symbol": "RGPD5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

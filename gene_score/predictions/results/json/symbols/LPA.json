@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6667, "NGS": 0.14700184762477875, "symbol": "LPA", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 6667, "ngs": 0.14700185, "symbol": "LPA", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

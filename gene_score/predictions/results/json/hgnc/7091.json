@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7091, "NGS": 0.03953082114458084, "symbol": "MICB", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 7091, "ngs": 0.03953082, "symbol": "MICB", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

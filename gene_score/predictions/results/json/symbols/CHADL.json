@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25165, "NGS": 0.12471597641706467, "symbol": "CHADL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25165, "ngs": 0.12471598, "symbol": "CHADL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

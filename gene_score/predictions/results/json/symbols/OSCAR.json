@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29960, "NGS": 0.3710590600967407, "symbol": "OSCAR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29960, "ngs": 0.37105906, "symbol": "OSCAR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

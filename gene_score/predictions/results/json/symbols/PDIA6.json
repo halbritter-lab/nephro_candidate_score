@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30168, "NGS": 0.693556547164917, "symbol": "PDIA6", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 30168, "ngs": 0.69355655, "symbol": "PDIA6", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

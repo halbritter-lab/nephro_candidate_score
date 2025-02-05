@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29210, "NGS": 0.607257604598999, "symbol": "MIER2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29210, "ngs": 0.6072576, "symbol": "MIER2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

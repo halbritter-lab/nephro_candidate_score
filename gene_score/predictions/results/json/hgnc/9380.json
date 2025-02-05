@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9380, "NGS": 0.9844655394554138, "symbol": "PRKACA", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 9380, "ngs": 0.98446554, "symbol": "PRKACA", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

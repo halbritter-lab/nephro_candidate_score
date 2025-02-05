@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19355, "NGS": 0.9871705174446106, "symbol": "JMJD6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19355, "ngs": 0.9871705, "symbol": "JMJD6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

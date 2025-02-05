@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2672, "NGS": 0.9167471528053284, "symbol": "DAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2672, "ngs": 0.91674715, "symbol": "DAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

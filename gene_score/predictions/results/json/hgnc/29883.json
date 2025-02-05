@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29883, "NGS": 0.05634528025984764, "symbol": "CD300LF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29883, "ngs": 0.05634528, "symbol": "CD300LF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

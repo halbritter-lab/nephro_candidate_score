@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14058, "NGS": 0.2943798303604126, "symbol": "CELF5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14058, "ngs": 0.29437983, "symbol": "CELF5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

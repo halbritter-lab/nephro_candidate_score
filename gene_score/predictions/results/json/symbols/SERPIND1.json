@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4838, "NGS": 0.6127252578735352, "symbol": "SERPIND1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4838, "ngs": 0.61272526, "symbol": "SERPIND1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

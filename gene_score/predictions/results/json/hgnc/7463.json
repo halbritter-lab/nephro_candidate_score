@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7463, "NGS": 0.01509173959493637, "symbol": "MTNR1A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7463, "ngs": 0.01509174, "symbol": "MTNR1A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

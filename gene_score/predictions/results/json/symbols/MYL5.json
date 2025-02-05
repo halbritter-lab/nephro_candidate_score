@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7586, "NGS": 0.008064817637205124, "symbol": "MYL5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7586, "ngs": 0.008064818, "symbol": "MYL5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

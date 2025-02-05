@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12744, "NGS": 0.6477625370025635, "symbol": "MLXIPL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12744, "ngs": 0.64776254, "symbol": "MLXIPL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

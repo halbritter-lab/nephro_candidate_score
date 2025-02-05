@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25832, "NGS": 0.1979365348815918, "symbol": "DHRS12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25832, "ngs": 0.19793653, "symbol": "DHRS12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

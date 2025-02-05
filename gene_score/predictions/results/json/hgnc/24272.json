@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24272, "NGS": 0.7081272006034851, "symbol": "SIDT2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24272, "ngs": 0.7081272, "symbol": "SIDT2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

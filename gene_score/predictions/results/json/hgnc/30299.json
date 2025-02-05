@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30299, "NGS": 0.7486593723297119, "symbol": "LRIF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30299, "ngs": 0.7486594, "symbol": "LRIF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

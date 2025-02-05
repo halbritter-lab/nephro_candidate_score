@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18232, "NGS": 0.022768469527363777, "symbol": "BSPRY", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18232, "ngs": 0.02276847, "symbol": "BSPRY", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

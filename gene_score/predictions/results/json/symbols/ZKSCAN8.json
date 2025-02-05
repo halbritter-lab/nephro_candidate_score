@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12983, "NGS": 0.013573994860053062, "symbol": "ZKSCAN8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12983, "ngs": 0.013573995, "symbol": "ZKSCAN8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

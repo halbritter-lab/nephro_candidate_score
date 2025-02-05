@@ -1,1 +1,1 @@
-{"hgnc_id_int": 598, "NGS": 0.9777233004570007, "symbol": "APLP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 598, "ngs": 0.9777233, "symbol": "APLP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

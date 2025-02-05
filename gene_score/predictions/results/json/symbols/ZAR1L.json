@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37116, "NGS": 0.11803723871707916, "symbol": "ZAR1L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37116, "ngs": 0.11803724, "symbol": "ZAR1L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

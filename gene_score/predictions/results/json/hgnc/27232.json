@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27232, "NGS": 0.5293861627578735, "symbol": "CFAP418", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 27232, "ngs": 0.52938616, "symbol": "CFAP418", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

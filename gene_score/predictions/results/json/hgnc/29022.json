@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29022, "NGS": 0.9644764065742493, "symbol": "SPECC1L", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 29022, "ngs": 0.9644764, "symbol": "SPECC1L", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

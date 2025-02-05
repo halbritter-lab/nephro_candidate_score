@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18171, "NGS": 0.3777898848056793, "symbol": "CD244", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18171, "ngs": 0.37778988, "symbol": "CD244", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

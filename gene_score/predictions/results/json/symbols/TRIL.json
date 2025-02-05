@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22200, "NGS": 0.0344054140150547, "symbol": "TRIL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22200, "ngs": 0.034405414, "symbol": "TRIL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

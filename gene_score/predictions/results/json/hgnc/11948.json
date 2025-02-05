@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11948, "NGS": 0.24537041783332825, "symbol": "TNNT1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11948, "ngs": 0.24537042, "symbol": "TNNT1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

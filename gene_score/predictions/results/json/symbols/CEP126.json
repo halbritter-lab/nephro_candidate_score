@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29264, "NGS": 0.037741903215646744, "symbol": "CEP126", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29264, "ngs": 0.037741903, "symbol": "CEP126", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

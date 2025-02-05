@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28787, "NGS": 0.505609393119812, "symbol": "RILPL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28787, "ngs": 0.5056094, "symbol": "RILPL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

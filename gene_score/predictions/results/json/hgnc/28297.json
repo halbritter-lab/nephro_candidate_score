@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28297, "NGS": 0.015639662742614746, "symbol": "TMEM255B", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 28297, "ngs": 0.015639663, "symbol": "TMEM255B", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

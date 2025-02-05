@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24205, "NGS": 0.10674980282783508, "symbol": "CAPZA3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24205, "ngs": 0.1067498, "symbol": "CAPZA3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

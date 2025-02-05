@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20957, "NGS": 0.0555565319955349, "symbol": "SDHAF4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20957, "ngs": 0.055556532, "symbol": "SDHAF4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1268, "NGS": 0.009832975454628468, "symbol": "TSPEAR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1268, "ngs": 0.009832975, "symbol": "TSPEAR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

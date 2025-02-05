@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15718, "NGS": 0.9424132704734802, "symbol": "APCDD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15718, "ngs": 0.9424133, "symbol": "APCDD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

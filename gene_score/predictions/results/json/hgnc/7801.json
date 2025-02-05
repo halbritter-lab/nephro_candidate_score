@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7801, "NGS": 0.4612376093864441, "symbol": "TONSL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7801, "ngs": 0.4612376, "symbol": "TONSL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14303, "NGS": 0.0819966048002243, "symbol": "XIRP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14303, "ngs": 0.081996605, "symbol": "XIRP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

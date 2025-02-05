@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17084, "NGS": 0.6999887228012085, "symbol": "SYNE2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17084, "ngs": 0.6999887, "symbol": "SYNE2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

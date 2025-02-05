@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14821, "NGS": 0.0035817979369312525, "symbol": "OR5T1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14821, "ngs": 0.003581798, "symbol": "OR5T1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

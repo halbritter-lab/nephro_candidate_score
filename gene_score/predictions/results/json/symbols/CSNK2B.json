@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2460, "NGS": 0.866854727268219, "symbol": "CSNK2B", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 2460, "ngs": 0.8668547, "symbol": "CSNK2B", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

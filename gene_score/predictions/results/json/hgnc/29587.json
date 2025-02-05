@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29587, "NGS": 0.040473926812410355, "symbol": "RFESD", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 29587, "ngs": 0.040473927, "symbol": "RFESD", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

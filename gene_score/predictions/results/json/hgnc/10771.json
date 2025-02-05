@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10771, "NGS": 0.8678669333457947, "symbol": "SF3B4", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 10771, "ngs": 0.86786693, "symbol": "SF3B4", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25700, "NGS": 0.006419796496629715, "symbol": "FN3KRP", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 25700, "ngs": 0.0064197965, "symbol": "FN3KRP", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

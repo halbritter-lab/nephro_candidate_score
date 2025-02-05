@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30047, "NGS": 0.01652916893362999, "symbol": "LIMS3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30047, "ngs": 0.016529169, "symbol": "LIMS3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

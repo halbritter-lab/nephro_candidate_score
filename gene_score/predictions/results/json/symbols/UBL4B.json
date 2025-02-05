@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32309, "NGS": 0.0748470351099968, "symbol": "UBL4B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32309, "ngs": 0.074847035, "symbol": "UBL4B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

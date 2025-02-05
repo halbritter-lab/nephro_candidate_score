@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20673, "NGS": 0.07630832493305206, "symbol": "RNASE9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20673, "ngs": 0.076308325, "symbol": "RNASE9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

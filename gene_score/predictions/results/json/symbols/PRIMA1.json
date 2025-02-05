@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18319, "NGS": 0.7473434209823608, "symbol": "PRIMA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18319, "ngs": 0.7473434, "symbol": "PRIMA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

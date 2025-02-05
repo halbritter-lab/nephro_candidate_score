@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15955, "NGS": 0.1803225725889206, "symbol": "SEZ6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15955, "ngs": 0.18032257, "symbol": "SEZ6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32249, "NGS": 0.09346498548984528, "symbol": "PATE2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32249, "ngs": 0.093464985, "symbol": "PATE2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

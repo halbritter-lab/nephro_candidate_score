@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53427, "NGS": 0.015850797295570374, "symbol": "PNMA8C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53427, "ngs": 0.015850797, "symbol": "PNMA8C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

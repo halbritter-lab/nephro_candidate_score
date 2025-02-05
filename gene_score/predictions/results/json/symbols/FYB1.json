@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4036, "NGS": 0.6542907357215881, "symbol": "FYB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4036, "ngs": 0.65429074, "symbol": "FYB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8822, "NGS": 0.9085877537727356, "symbol": "PEA15", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8822, "ngs": 0.90858775, "symbol": "PEA15", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

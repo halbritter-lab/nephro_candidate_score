@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13189, "NGS": 0.2106953114271164, "symbol": "ZP3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13189, "ngs": 0.21069531, "symbol": "ZP3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

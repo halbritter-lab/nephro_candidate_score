@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11973, "NGS": 0.9552151560783386, "symbol": "TNS1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 11973, "ngs": 0.95521516, "symbol": "TNS1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

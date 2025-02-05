@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13799, "NGS": 0.9170646071434021, "symbol": "ERP29", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13799, "ngs": 0.9170646, "symbol": "ERP29", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23068, "NGS": 0.9289196729660034, "symbol": "TRAPPC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23068, "ngs": 0.9289197, "symbol": "TRAPPC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

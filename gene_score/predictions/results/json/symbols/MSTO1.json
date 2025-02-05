@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29678, "NGS": 0.9507532119750977, "symbol": "MSTO1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29678, "ngs": 0.9507532, "symbol": "MSTO1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

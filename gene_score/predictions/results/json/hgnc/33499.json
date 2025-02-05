@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33499, "NGS": 0.5785647630691528, "symbol": "ATRIP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33499, "ngs": 0.57856476, "symbol": "ATRIP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

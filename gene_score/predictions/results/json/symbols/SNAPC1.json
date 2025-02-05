@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11134, "NGS": 0.0473148487508297, "symbol": "SNAPC1", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 11134, "ngs": 0.04731485, "symbol": "SNAPC1", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

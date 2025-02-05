@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26397, "NGS": 0.014551358297467232, "symbol": "LYPD5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26397, "ngs": 0.014551358, "symbol": "LYPD5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

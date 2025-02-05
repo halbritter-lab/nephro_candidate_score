@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18746, "NGS": 0.06317242234945297, "symbol": "SLURP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18746, "ngs": 0.06317242, "symbol": "SLURP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

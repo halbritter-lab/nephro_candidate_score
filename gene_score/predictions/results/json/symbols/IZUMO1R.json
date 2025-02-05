@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32565, "NGS": 0.0037231058813631535, "symbol": "IZUMO1R", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 32565, "ngs": 0.0037231059, "symbol": "IZUMO1R", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

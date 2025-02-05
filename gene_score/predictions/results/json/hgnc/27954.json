@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27954, "NGS": 0.018197447061538696, "symbol": "TMPRSS11A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27954, "ngs": 0.018197447, "symbol": "TMPRSS11A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

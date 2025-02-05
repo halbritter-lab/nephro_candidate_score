@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13361, "NGS": 0.016137149184942245, "symbol": "MEPE", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 13361, "ngs": 0.01613715, "symbol": "MEPE", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

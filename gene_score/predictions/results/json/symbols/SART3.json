@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16860, "NGS": 0.9093929529190063, "symbol": "SART3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16860, "ngs": 0.90939295, "symbol": "SART3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2547, "NGS": 0.57610023021698, "symbol": "CTSZ", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2547, "ngs": 0.57610023, "symbol": "CTSZ", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

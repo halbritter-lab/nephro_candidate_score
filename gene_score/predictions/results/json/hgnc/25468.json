@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25468, "NGS": 0.836756706237793, "symbol": "ZWILCH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25468, "ngs": 0.8367567, "symbol": "ZWILCH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13572, "NGS": 0.07642174512147903, "symbol": "FCGBP", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 13572, "ngs": 0.076421745, "symbol": "FCGBP", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

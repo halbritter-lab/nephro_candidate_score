@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12635, "NGS": 0.052857667207717896, "symbol": "UTRN", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 12635, "ngs": 0.052857667, "symbol": "UTRN", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

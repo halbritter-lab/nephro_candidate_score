@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32370, "NGS": 0.5656577348709106, "symbol": "GPR176", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32370, "ngs": 0.56565773, "symbol": "GPR176", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

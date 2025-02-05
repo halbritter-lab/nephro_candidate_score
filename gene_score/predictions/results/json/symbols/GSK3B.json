@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4617, "NGS": 0.9407125115394592, "symbol": "GSK3B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4617, "ngs": 0.9407125, "symbol": "GSK3B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

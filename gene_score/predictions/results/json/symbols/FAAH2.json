@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26440, "NGS": 0.03869456425309181, "symbol": "FAAH2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26440, "ngs": 0.038694564, "symbol": "FAAH2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

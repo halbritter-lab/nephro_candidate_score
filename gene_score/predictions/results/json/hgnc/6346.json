@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6346, "NGS": 0.9211309552192688, "symbol": "KLF12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6346, "ngs": 0.92113096, "symbol": "KLF12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

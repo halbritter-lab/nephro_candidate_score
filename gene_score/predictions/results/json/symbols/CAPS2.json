@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16471, "NGS": 0.014459195546805859, "symbol": "CAPS2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16471, "ngs": 0.014459196, "symbol": "CAPS2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

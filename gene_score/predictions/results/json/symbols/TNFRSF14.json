@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11912, "NGS": 0.861476480960846, "symbol": "TNFRSF14", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11912, "ngs": 0.8614765, "symbol": "TNFRSF14", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

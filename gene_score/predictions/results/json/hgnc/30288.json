@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30288, "NGS": 0.5898634791374207, "symbol": "DTL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30288, "ngs": 0.5898635, "symbol": "DTL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

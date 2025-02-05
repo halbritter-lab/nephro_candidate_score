@@ -1,1 +1,1 @@
-{"hgnc_id_int": 35445, "NGS": 0.11252283304929733, "symbol": "LACTBL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 35445, "ngs": 0.11252283, "symbol": "LACTBL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

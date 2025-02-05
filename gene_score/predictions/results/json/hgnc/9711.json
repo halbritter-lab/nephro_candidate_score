@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9711, "NGS": 0.540827751159668, "symbol": "PWP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9711, "ngs": 0.54082775, "symbol": "PWP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

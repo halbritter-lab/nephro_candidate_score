@@ -1,1 +1,1 @@
-{"hgnc_id_int": 633, "NGS": 0.9684215784072876, "symbol": "AQP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 633, "ngs": 0.9684216, "symbol": "AQP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

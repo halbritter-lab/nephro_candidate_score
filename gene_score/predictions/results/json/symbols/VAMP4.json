@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12645, "NGS": 0.9713457822799683, "symbol": "VAMP4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12645, "ngs": 0.9713458, "symbol": "VAMP4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

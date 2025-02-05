@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1859, "NGS": 0.16942919790744781, "symbol": "CEP250", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1859, "ngs": 0.1694292, "symbol": "CEP250", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

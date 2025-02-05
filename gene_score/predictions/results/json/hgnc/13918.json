@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13918, "NGS": 0.07362465560436249, "symbol": "PRRC2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13918, "ngs": 0.073624656, "symbol": "PRRC2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6713, "NGS": 0.7116872668266296, "symbol": "LTB4R", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6713, "ngs": 0.71168727, "symbol": "LTB4R", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

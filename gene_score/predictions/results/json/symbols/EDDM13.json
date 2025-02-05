@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53168, "NGS": 0.017972134053707123, "symbol": "EDDM13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53168, "ngs": 0.017972134, "symbol": "EDDM13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 929, "NGS": 0.864281952381134, "symbol": "B4GALT6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 929, "ngs": 0.86428195, "symbol": "B4GALT6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

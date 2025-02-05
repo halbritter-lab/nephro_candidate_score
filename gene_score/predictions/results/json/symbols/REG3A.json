@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8601, "NGS": 0.2544839680194855, "symbol": "REG3A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8601, "ngs": 0.25448397, "symbol": "REG3A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

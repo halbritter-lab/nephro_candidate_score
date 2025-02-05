@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26827, "NGS": 0.2586999237537384, "symbol": "MPV17L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26827, "ngs": 0.25869992, "symbol": "MPV17L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

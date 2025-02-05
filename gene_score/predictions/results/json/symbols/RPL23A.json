@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10317, "NGS": 0.861846387386322, "symbol": "RPL23A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10317, "ngs": 0.8618464, "symbol": "RPL23A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

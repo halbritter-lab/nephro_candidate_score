@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32308, "NGS": 0.08065691590309143, "symbol": "C1QTNF12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32308, "ngs": 0.080656916, "symbol": "C1QTNF12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

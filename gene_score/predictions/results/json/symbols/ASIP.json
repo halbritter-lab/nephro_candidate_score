@@ -1,1 +1,1 @@
-{"hgnc_id_int": 745, "NGS": 0.6225010752677917, "symbol": "ASIP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 745, "ngs": 0.6225011, "symbol": "ASIP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

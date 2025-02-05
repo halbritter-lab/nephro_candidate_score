@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15989, "NGS": 0.9882248640060425, "symbol": "NAV1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15989, "ngs": 0.98822486, "symbol": "NAV1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

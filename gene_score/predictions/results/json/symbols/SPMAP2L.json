@@ -1,1 +1,1 @@
-{"hgnc_id_int": 43771, "NGS": 0.03018522448837757, "symbol": "SPMAP2L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 43771, "ngs": 0.030185224, "symbol": "SPMAP2L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

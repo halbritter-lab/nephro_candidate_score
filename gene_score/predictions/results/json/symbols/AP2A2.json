@@ -1,1 +1,1 @@
-{"hgnc_id_int": 562, "NGS": 0.941701352596283, "symbol": "AP2A2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 562, "ngs": 0.94170135, "symbol": "AP2A2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

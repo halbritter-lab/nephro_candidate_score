@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19161, "NGS": 0.5830867886543274, "symbol": "STARD8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19161, "ngs": 0.5830868, "symbol": "STARD8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

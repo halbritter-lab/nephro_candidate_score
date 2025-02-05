@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1255, "NGS": 0.06404240429401398, "symbol": "LCA5L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1255, "ngs": 0.064042404, "symbol": "LCA5L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 35153, "NGS": 0.05605797842144966, "symbol": "FAM187A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 35153, "ngs": 0.05605798, "symbol": "FAM187A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

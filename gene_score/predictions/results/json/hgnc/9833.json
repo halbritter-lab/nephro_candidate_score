@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9833, "NGS": 0.06807276606559753, "symbol": "MOK", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 9833, "ngs": 0.068072766, "symbol": "MOK", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

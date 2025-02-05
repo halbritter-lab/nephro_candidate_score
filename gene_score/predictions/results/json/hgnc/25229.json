@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25229, "NGS": 0.433194100856781, "symbol": "LYRM2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25229, "ngs": 0.4331941, "symbol": "LYRM2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

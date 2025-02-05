@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9592, "NGS": 0.9375640749931335, "symbol": "PTGDS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9592, "ngs": 0.9375641, "symbol": "PTGDS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

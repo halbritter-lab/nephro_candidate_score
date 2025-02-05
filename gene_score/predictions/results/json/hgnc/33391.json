@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33391, "NGS": 0.5885642766952515, "symbol": "CALHM6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33391, "ngs": 0.5885643, "symbol": "CALHM6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -52,10 +52,10 @@ canonical_prom <- mart_exp %>%
 
 # write canonical transcripts
 write_csv(canonical_prom, 
-          paste0("results/ensembl_canonical_ts_" , config_vars$creation_date, ".csv"),
+          paste0("results/ensembl_canonical_ts_" , config_vars$creation_date_gs, ".csv"),
           row.names = FALSE)
 
-gzip(paste0("results/ensembl_canonical_ts_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/ensembl_canonical_ts_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 # create a GRanges object
@@ -85,8 +85,8 @@ canonical_prom <- canonical_prom %>%
 
 # write results
 write.csv(canonical_prom[, c("ensembl_gene_id", "symbol", "prom_CpG_o2e_ratio")], 
-          paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"), 
+          paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date_gs, ".csv"), 
           row.names=FALSE)
 
-gzip(paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/canonical_promoter_CpG_obs_to_exp_ratio_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

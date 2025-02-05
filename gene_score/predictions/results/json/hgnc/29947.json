@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29947, "NGS": 0.6720167994499207, "symbol": "TRAK1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29947, "ngs": 0.6720168, "symbol": "TRAK1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22404, "NGS": 0.022962350398302078, "symbol": "GIMAP7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22404, "ngs": 0.02296235, "symbol": "GIMAP7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

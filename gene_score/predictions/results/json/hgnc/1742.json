@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1742, "NGS": 0.061065174639225006, "symbol": "LRBA", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 1742, "ngs": 0.061065175, "symbol": "LRBA", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

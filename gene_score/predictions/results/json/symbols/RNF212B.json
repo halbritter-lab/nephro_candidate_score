@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20438, "NGS": 0.06131282448768616, "symbol": "RNF212B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20438, "ngs": 0.061312824, "symbol": "RNF212B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

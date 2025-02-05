@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7795, "NGS": 0.12872296571731567, "symbol": "NFKB2", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 7795, "ngs": 0.12872297, "symbol": "NFKB2", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

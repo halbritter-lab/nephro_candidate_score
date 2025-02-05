@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26700, "NGS": 0.005525954533368349, "symbol": "NHLRC4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26700, "ngs": 0.0055259545, "symbol": "NHLRC4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

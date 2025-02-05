@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6656, "NGS": 0.6480109095573425, "symbol": "LNPEP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6656, "ngs": 0.6480109, "symbol": "LNPEP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

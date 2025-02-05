@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17325, "NGS": 0.8050709962844849, "symbol": "PRODH2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 17325, "ngs": 0.805071, "symbol": "PRODH2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4096, "NGS": 0.9832665920257568, "symbol": "GADD45B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4096, "ngs": 0.9832666, "symbol": "GADD45B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

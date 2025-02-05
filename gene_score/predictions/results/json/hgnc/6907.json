@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6907, "NGS": 0.06474774330854416, "symbol": "MATN1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6907, "ngs": 0.06474774, "symbol": "MATN1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

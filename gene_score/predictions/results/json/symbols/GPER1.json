@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4485, "NGS": 0.9918931722640991, "symbol": "GPER1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4485, "ngs": 0.9918932, "symbol": "GPER1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

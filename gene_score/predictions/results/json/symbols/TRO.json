@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12326, "NGS": 0.39879143238067627, "symbol": "TRO", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12326, "ngs": 0.39879143, "symbol": "TRO", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

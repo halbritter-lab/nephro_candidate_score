@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12570, "NGS": 0.014418048784136772, "symbol": "UNC93A", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 12570, "ngs": 0.014418049, "symbol": "UNC93A", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17983, "NGS": 0.10383166372776031, "symbol": "MRGPRX2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17983, "ngs": 0.103831664, "symbol": "MRGPRX2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

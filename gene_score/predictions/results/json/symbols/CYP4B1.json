@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2644, "NGS": 0.0019695425871759653, "symbol": "CYP4B1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 2644, "ngs": 0.0019695426, "symbol": "CYP4B1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

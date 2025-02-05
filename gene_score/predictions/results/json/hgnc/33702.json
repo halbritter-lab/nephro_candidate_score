@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33702, "NGS": 0.7557653188705444, "symbol": "MICOS13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33702, "ngs": 0.7557653, "symbol": "MICOS13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1570, "NGS": 0.619878888130188, "symbol": "CCKAR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1570, "ngs": 0.6198789, "symbol": "CCKAR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

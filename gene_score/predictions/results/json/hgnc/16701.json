@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16701, "NGS": 0.8937743902206421, "symbol": "MYL12A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16701, "ngs": 0.8937744, "symbol": "MYL12A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

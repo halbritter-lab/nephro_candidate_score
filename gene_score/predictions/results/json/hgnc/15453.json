@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15453, "NGS": 0.9035317301750183, "symbol": "ACBD3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15453, "ngs": 0.90353173, "symbol": "ACBD3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

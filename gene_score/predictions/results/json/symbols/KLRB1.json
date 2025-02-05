@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6373, "NGS": 0.9819625020027161, "symbol": "KLRB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6373, "ngs": 0.9819625, "symbol": "KLRB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

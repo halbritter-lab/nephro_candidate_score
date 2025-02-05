@@ -1,1 +1,1 @@
-{"hgnc_id_int": 55085, "NGS": 0.06476953625679016, "symbol": "HRURF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 55085, "ngs": 0.064769536, "symbol": "HRURF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

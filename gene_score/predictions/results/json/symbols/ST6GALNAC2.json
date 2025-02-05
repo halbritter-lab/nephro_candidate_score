@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10867, "NGS": 0.0483856201171875, "symbol": "ST6GALNAC2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 10867, "ngs": 0.04838562, "symbol": "ST6GALNAC2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

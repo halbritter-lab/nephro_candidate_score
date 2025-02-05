@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24613, "NGS": 0.9521334767341614, "symbol": "NRROS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24613, "ngs": 0.9521335, "symbol": "NRROS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

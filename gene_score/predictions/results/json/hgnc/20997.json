@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20997, "NGS": 0.03186297416687012, "symbol": "ZMYND15", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20997, "ngs": 0.031862974, "symbol": "ZMYND15", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

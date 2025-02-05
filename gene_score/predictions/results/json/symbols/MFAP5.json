@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29673, "NGS": 0.21021555364131927, "symbol": "MFAP5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29673, "ngs": 0.21021555, "symbol": "MFAP5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

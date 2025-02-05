@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18705, "NGS": 0.002403274876996875, "symbol": "MT4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18705, "ngs": 0.0024032749, "symbol": "MT4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

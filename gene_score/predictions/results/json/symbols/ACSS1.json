@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16091, "NGS": 0.5522567629814148, "symbol": "ACSS1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16091, "ngs": 0.55225676, "symbol": "ACSS1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

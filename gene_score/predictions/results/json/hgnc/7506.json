@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7506, "NGS": 0.7693368792533875, "symbol": "MTX2", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 7506, "ngs": 0.7693369, "symbol": "MTX2", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

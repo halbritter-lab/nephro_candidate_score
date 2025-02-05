@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17428, "NGS": 0.5726915597915649, "symbol": "RAPGEFL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17428, "ngs": 0.57269156, "symbol": "RAPGEFL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

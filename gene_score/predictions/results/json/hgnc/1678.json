@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1678, "NGS": 0.9109667539596558, "symbol": "CD4", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 1678, "ngs": 0.91096675, "symbol": "CD4", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16493, "NGS": 0.9100914001464844, "symbol": "ZMIZ1", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 16493, "ngs": 0.9100914, "symbol": "ZMIZ1", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

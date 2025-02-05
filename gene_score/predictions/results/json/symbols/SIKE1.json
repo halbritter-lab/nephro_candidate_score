@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26119, "NGS": 0.06141335889697075, "symbol": "SIKE1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26119, "ngs": 0.06141336, "symbol": "SIKE1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

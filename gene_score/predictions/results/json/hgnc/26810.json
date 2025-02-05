@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26810, "NGS": 0.27573761343955994, "symbol": "EGFLAM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26810, "ngs": 0.2757376, "symbol": "EGFLAM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16795, "NGS": 0.04595225304365158, "symbol": "RAET1G", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16795, "ngs": 0.045952253, "symbol": "RAET1G", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

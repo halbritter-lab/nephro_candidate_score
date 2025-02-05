@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21709, "NGS": 0.600344717502594, "symbol": "TMUB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21709, "ngs": 0.6003447, "symbol": "TMUB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

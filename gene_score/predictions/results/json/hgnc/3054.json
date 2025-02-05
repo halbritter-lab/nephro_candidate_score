@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3054, "NGS": 0.8596788048744202, "symbol": "DSPP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3054, "ngs": 0.8596788, "symbol": "DSPP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

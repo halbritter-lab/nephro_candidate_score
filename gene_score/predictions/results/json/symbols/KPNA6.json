@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6399, "NGS": 0.9344226121902466, "symbol": "KPNA6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6399, "ngs": 0.9344226, "symbol": "KPNA6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

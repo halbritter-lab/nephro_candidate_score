@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15580, "NGS": 0.06760165840387344, "symbol": "PDE4DIP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15580, "ngs": 0.06760166, "symbol": "PDE4DIP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

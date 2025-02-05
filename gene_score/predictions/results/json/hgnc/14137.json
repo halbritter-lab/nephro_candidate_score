@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14137, "NGS": 0.26729074120521545, "symbol": "JPT2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14137, "ngs": 0.26729074, "symbol": "JPT2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

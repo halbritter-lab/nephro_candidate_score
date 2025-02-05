@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9472, "NGS": 0.9836185574531555, "symbol": "LGMN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9472, "ngs": 0.98361856, "symbol": "LGMN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

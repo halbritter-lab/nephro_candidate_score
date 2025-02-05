@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6215, "NGS": 0.8389238119125366, "symbol": "KARS1", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 6215, "ngs": 0.8389238, "symbol": "KARS1", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

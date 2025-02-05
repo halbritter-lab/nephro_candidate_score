@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24758, "NGS": 0.5137150883674622, "symbol": "ACTMAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24758, "ngs": 0.5137151, "symbol": "ACTMAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

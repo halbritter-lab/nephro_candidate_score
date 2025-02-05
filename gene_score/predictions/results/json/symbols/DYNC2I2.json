@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28296, "NGS": 0.5812705159187317, "symbol": "DYNC2I2", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 28296, "ngs": 0.5812705, "symbol": "DYNC2I2", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

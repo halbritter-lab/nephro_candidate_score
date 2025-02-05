@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24340, "NGS": 0.9915634393692017, "symbol": "NAA35", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24340, "ngs": 0.99156344, "symbol": "NAA35", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

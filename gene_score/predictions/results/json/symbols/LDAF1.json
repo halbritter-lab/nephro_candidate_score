@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30136, "NGS": 0.41907888650894165, "symbol": "LDAF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30136, "ngs": 0.4190789, "symbol": "LDAF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

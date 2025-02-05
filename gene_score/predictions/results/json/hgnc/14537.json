@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14537, "NGS": 0.18476161360740662, "symbol": "NPC2", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 14537, "ngs": 0.18476161, "symbol": "NPC2", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

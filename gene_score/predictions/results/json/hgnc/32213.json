@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32213, "NGS": 0.6221510171890259, "symbol": "DIPK1A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32213, "ngs": 0.622151, "symbol": "DIPK1A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

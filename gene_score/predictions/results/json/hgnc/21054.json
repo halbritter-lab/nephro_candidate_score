@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21054, "NGS": 0.3978017568588257, "symbol": "RSPH3", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 21054, "ngs": 0.39780176, "symbol": "RSPH3", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

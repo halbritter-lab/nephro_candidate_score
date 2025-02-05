@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3659, "NGS": 0.9409726858139038, "symbol": "FEZ1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3659, "ngs": 0.9409727, "symbol": "FEZ1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

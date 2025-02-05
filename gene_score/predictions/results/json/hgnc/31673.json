@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31673, "NGS": 0.14950507879257202, "symbol": "GRXCR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31673, "ngs": 0.14950508, "symbol": "GRXCR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

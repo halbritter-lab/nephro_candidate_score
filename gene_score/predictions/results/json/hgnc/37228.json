@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37228, "NGS": 0.06886816769838333, "symbol": "GOLGA6L10", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 37228, "ngs": 0.06886817, "symbol": "GOLGA6L10", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

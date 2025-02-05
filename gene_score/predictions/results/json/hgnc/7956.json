@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7956, "NGS": 0.9195668697357178, "symbol": "NPY1R", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7956, "ngs": 0.91956687, "symbol": "NPY1R", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

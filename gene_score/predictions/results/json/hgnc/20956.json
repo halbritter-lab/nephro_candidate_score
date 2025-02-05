@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20956, "NGS": 0.6961978077888489, "symbol": "PHACTR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20956, "ngs": 0.6961978, "symbol": "PHACTR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

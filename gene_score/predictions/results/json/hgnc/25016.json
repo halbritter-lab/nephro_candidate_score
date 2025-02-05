@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25016, "NGS": 0.9114246964454651, "symbol": "SSU72", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25016, "ngs": 0.9114247, "symbol": "SSU72", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

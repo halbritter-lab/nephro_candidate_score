@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6040, "NGS": 0.9658570885658264, "symbol": "ILK", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 6040, "ngs": 0.9658571, "symbol": "ILK", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

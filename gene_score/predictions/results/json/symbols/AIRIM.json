@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26039, "NGS": 0.030040619894862175, "symbol": "AIRIM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26039, "ngs": 0.03004062, "symbol": "AIRIM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

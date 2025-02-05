@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25419, "NGS": 0.6884678602218628, "symbol": "ARL13B", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 25419, "ngs": 0.68846786, "symbol": "ARL13B", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

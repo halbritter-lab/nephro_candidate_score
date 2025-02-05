@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17870, "NGS": 0.9788557887077332, "symbol": "INVS", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 17870, "ngs": 0.9788558, "symbol": "INVS", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

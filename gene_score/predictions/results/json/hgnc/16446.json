@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16446, "NGS": 0.035225655883550644, "symbol": "CARD14", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16446, "ngs": 0.035225656, "symbol": "CARD14", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

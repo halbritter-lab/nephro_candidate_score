@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28243, "NGS": 0.21166546642780304, "symbol": "ALKBH6", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 28243, "ngs": 0.21166547, "symbol": "ALKBH6", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

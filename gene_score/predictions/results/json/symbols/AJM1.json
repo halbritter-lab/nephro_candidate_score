@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37284, "NGS": 0.39298075437545776, "symbol": "AJM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37284, "ngs": 0.39298075, "symbol": "AJM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

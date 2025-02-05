@@ -1,1 +1,1 @@
-{"hgnc_id_int": 978, "NGS": 0.2223145216703415, "symbol": "BCCIP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 978, "ngs": 0.22231452, "symbol": "BCCIP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

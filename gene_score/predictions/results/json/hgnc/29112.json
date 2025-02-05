@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29112, "NGS": 0.9828075170516968, "symbol": "IQSEC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29112, "ngs": 0.9828075, "symbol": "IQSEC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

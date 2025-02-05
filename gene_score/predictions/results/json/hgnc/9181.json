@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9181, "NGS": 0.6912010312080383, "symbol": "POLH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9181, "ngs": 0.69120103, "symbol": "POLH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

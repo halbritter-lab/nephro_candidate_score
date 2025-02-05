@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31412, "NGS": 0.3053194284439087, "symbol": "SWI5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31412, "ngs": 0.30531943, "symbol": "SWI5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

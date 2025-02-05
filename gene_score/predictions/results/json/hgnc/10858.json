@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10858, "NGS": 0.9517115950584412, "symbol": "SIAH2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10858, "ngs": 0.9517116, "symbol": "SIAH2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

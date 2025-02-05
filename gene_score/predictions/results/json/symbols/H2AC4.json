@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4734, "NGS": 0.23086044192314148, "symbol": "H2AC4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4734, "ngs": 0.23086044, "symbol": "H2AC4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

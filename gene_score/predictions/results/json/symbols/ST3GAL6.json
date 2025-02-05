@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18080, "NGS": 0.13377612829208374, "symbol": "ST3GAL6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18080, "ngs": 0.13377613, "symbol": "ST3GAL6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

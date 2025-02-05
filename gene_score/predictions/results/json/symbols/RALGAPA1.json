@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17770, "NGS": 0.9657735824584961, "symbol": "RALGAPA1", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 17770, "ngs": 0.9657736, "symbol": "RALGAPA1", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

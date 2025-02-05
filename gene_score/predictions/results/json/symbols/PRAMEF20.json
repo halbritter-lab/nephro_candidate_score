@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25224, "NGS": 0.07449744641780853, "symbol": "PRAMEF20", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25224, "ngs": 0.07449745, "symbol": "PRAMEF20", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

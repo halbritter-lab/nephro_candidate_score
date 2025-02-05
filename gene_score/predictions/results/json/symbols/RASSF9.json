@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15739, "NGS": 0.03186113014817238, "symbol": "RASSF9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15739, "ngs": 0.03186113, "symbol": "RASSF9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

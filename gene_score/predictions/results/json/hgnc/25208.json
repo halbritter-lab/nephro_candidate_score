@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25208, "NGS": 0.003933968022465706, "symbol": "NTN5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25208, "ngs": 0.003933968, "symbol": "NTN5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

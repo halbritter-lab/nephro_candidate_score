@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26902, "NGS": 0.33201906085014343, "symbol": "RELL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26902, "ngs": 0.33201906, "symbol": "RELL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

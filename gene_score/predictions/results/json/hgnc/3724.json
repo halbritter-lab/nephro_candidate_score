@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3724, "NGS": 0.9293515682220459, "symbol": "FKBP8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3724, "ngs": 0.92935157, "symbol": "FKBP8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

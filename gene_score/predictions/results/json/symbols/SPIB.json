@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11242, "NGS": 0.33353039622306824, "symbol": "SPIB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11242, "ngs": 0.3335304, "symbol": "SPIB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21704, "NGS": 0.11894536018371582, "symbol": "LRRC61", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21704, "ngs": 0.11894536, "symbol": "LRRC61", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

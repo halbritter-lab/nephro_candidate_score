@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6179, "NGS": 0.865711510181427, "symbol": "ITPKB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6179, "ngs": 0.8657115, "symbol": "ITPKB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

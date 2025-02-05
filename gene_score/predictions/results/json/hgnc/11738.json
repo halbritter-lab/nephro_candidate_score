@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11738, "NGS": 0.697816014289856, "symbol": "TEX15", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11738, "ngs": 0.697816, "symbol": "TEX15", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

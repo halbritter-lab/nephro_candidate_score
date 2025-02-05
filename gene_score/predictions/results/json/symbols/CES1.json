@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1863, "NGS": 0.191881000995636, "symbol": "CES1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1863, "ngs": 0.191881, "symbol": "CES1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

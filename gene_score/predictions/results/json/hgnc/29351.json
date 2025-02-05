@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29351, "NGS": 0.23376423120498657, "symbol": "ARHGAP39", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29351, "ngs": 0.23376423, "symbol": "ARHGAP39", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

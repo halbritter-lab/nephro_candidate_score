@@ -1,1 +1,1 @@
-{"hgnc_id_int": 269, "NGS": 0.016875961795449257, "symbol": "ADPRH", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 269, "ngs": 0.016875962, "symbol": "ADPRH", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

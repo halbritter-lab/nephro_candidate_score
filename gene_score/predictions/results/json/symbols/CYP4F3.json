@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2646, "NGS": 0.2657039761543274, "symbol": "CYP4F3", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 2646, "ngs": 0.26570398, "symbol": "CYP4F3", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

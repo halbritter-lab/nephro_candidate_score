@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26171, "NGS": 0.331124484539032, "symbol": "FAAP100", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26171, "ngs": 0.33112448, "symbol": "FAAP100", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

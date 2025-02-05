@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11140, "NGS": 0.8956753611564636, "symbol": "SNCB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11140, "ngs": 0.89567536, "symbol": "SNCB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

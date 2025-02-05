@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26145, "NGS": 0.11881576478481293, "symbol": "LDAH", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 26145, "ngs": 0.118815765, "symbol": "LDAH", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

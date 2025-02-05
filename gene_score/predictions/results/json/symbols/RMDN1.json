@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24285, "NGS": 0.10395991802215576, "symbol": "RMDN1", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 24285, "ngs": 0.10395992, "symbol": "RMDN1", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

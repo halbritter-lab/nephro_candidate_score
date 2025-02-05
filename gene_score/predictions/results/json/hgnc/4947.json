@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4947, "NGS": 0.771716833114624, "symbol": "HLA-DRA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4947, "ngs": 0.77171683, "symbol": "HLA-DRA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

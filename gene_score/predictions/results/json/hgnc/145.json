@@ -1,1 +1,1 @@
-{"hgnc_id_int": 145, "NGS": 0.8423680663108826, "symbol": "ACTG2", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 145, "ngs": 0.84236807, "symbol": "ACTG2", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

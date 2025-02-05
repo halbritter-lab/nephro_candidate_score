@@ -1,1 +1,1 @@
-{"hgnc_id_int": 707, "NGS": 0.8536862730979919, "symbol": "ARPC4", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 707, "ngs": 0.8536863, "symbol": "ARPC4", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

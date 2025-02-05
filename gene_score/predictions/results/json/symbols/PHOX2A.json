@@ -1,1 +1,1 @@
-{"hgnc_id_int": 691, "NGS": 0.49463197588920593, "symbol": "PHOX2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 691, "ngs": 0.49463198, "symbol": "PHOX2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

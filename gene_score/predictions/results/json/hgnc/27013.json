@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27013, "NGS": 0.06718794256448746, "symbol": "TRABD2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27013, "ngs": 0.06718794, "symbol": "TRABD2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9844, "NGS": 0.7805574536323547, "symbol": "RAMP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9844, "ngs": 0.78055745, "symbol": "RAMP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

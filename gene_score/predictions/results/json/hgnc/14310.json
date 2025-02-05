@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14310, "NGS": 0.9079017043113708, "symbol": "BRD7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14310, "ngs": 0.9079017, "symbol": "BRD7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

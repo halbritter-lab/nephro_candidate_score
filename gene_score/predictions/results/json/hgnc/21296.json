@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21296, "NGS": 0.364729642868042, "symbol": "EPS8L2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21296, "ngs": 0.36472964, "symbol": "EPS8L2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

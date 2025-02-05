@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15515, "NGS": 0.8817960619926453, "symbol": "ARHGEF16", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15515, "ngs": 0.88179606, "symbol": "ARHGEF16", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

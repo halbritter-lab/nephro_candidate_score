@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1734, "NGS": 0.9073205590248108, "symbol": "CDC34", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1734, "ngs": 0.90732056, "symbol": "CDC34", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8876, "NGS": 0.4433402121067047, "symbol": "PFKL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8876, "ngs": 0.4433402, "symbol": "PFKL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

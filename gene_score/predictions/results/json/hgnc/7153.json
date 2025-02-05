@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7153, "NGS": 0.873813271522522, "symbol": "MMD", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7153, "ngs": 0.8738133, "symbol": "MMD", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

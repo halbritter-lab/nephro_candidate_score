@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27990, "NGS": 0.6400152444839478, "symbol": "BEX5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27990, "ngs": 0.64001524, "symbol": "BEX5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

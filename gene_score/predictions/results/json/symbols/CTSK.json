@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2536, "NGS": 0.0673583522439003, "symbol": "CTSK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2536, "ngs": 0.06735835, "symbol": "CTSK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

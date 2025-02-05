@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24950, "NGS": 0.1761603057384491, "symbol": "SBSN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24950, "ngs": 0.1761603, "symbol": "SBSN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

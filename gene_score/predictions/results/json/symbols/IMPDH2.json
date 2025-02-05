@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6053, "NGS": 0.8848310708999634, "symbol": "IMPDH2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6053, "ngs": 0.8848311, "symbol": "IMPDH2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

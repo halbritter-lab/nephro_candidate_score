@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11882, "NGS": 0.23361192643642426, "symbol": "TMSB4Y", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11882, "ngs": 0.23361193, "symbol": "TMSB4Y", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

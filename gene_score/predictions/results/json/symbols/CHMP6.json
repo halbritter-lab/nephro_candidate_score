@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25675, "NGS": 0.8067060708999634, "symbol": "CHMP6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25675, "ngs": 0.8067061, "symbol": "CHMP6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21041, "NGS": 0.9534008502960205, "symbol": "HECA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21041, "ngs": 0.95340085, "symbol": "HECA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

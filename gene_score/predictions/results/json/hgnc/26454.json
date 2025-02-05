@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26454, "NGS": 0.03412752225995064, "symbol": "TRMT10B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26454, "ngs": 0.034127522, "symbol": "TRMT10B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

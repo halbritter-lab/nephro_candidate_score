@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28756, "NGS": 0.8789108991622925, "symbol": "ABHD17A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28756, "ngs": 0.8789109, "symbol": "ABHD17A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

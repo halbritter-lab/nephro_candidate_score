@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31960, "NGS": 0.0029500143136829138, "symbol": "GAGE2E", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31960, "ngs": 0.0029500143, "symbol": "GAGE2E", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

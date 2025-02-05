@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4296, "NGS": 0.9908011555671692, "symbol": "GLA", "gene_set": "test", "evidence_count": 5.0}
+{"hgncIdInt": 4296, "ngs": 0.99080116, "symbol": "GLA", "geneSet": "test", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

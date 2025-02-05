@@ -1,1 +1,1 @@
-{"hgnc_id_int": 34495, "NGS": 0.06536383926868439, "symbol": "ZSWIM9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 34495, "ngs": 0.06536384, "symbol": "ZSWIM9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25565, "NGS": 0.0755593404173851, "symbol": "FIRRM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25565, "ngs": 0.07555934, "symbol": "FIRRM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24975, "NGS": 0.4780924916267395, "symbol": "NKX1-1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24975, "ngs": 0.4780925, "symbol": "NKX1-1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

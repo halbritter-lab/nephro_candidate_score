@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26464, "NGS": 0.0118849016726017, "symbol": "RASEF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26464, "ngs": 0.011884902, "symbol": "RASEF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

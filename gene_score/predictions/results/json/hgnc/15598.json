@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15598, "NGS": 0.8727330565452576, "symbol": "HAMP", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 15598, "ngs": 0.87273306, "symbol": "HAMP", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

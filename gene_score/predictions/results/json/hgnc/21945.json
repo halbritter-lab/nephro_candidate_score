@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21945, "NGS": 0.20123793184757233, "symbol": "ELAPOR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21945, "ngs": 0.20123793, "symbol": "ELAPOR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7124, "NGS": 0.010414863005280495, "symbol": "MLANA", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 7124, "ngs": 0.010414863, "symbol": "MLANA", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

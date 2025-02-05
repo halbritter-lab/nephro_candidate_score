@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10676, "NGS": 0.769612729549408, "symbol": "SDF2L1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10676, "ngs": 0.7696127, "symbol": "SDF2L1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23788, "NGS": 0.1622072011232376, "symbol": "PPP4R4", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 23788, "ngs": 0.1622072, "symbol": "PPP4R4", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

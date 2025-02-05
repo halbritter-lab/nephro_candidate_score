@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10414, "NGS": 0.9707489609718323, "symbol": "RPS26", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 10414, "ngs": 0.97074896, "symbol": "RPS26", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33287, "NGS": 0.005949249491095543, "symbol": "CT47A6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33287, "ngs": 0.0059492495, "symbol": "CT47A6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

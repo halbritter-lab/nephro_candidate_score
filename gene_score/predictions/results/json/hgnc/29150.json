@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29150, "NGS": 0.9930556416511536, "symbol": "DIP2C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29150, "ngs": 0.99305564, "symbol": "DIP2C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

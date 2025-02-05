@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8889, "NGS": 0.0029206795152276754, "symbol": "PGAM2", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 8889, "ngs": 0.0029206795, "symbol": "PGAM2", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17286, "NGS": 0.40002450346946716, "symbol": "EXOSC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17286, "ngs": 0.4000245, "symbol": "EXOSC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

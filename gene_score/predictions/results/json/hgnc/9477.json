@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9477, "NGS": 0.018387168645858765, "symbol": "PRSS12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9477, "ngs": 0.018387169, "symbol": "PRSS12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16002, "NGS": 0.9697171449661255, "symbol": "MPLKIP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16002, "ngs": 0.96971714, "symbol": "MPLKIP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

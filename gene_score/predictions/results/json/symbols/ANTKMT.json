@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14152, "NGS": 0.45878952741622925, "symbol": "ANTKMT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14152, "ngs": 0.45878953, "symbol": "ANTKMT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7546, "NGS": 0.06852556020021439, "symbol": "MYBBP1A", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 7546, "ngs": 0.06852556, "symbol": "MYBBP1A", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

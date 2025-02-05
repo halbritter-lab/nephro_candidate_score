@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26128, "NGS": 0.5002400875091553, "symbol": "SPRING1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26128, "ngs": 0.5002401, "symbol": "SPRING1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

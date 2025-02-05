@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6316, "NGS": 0.9416182041168213, "symbol": "KHSRP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6316, "ngs": 0.9416182, "symbol": "KHSRP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

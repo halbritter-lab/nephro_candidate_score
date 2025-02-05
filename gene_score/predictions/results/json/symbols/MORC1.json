@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7198, "NGS": 0.3261127769947052, "symbol": "MORC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7198, "ngs": 0.32611278, "symbol": "MORC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

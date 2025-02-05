@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32949, "NGS": 0.9896469712257385, "symbol": "SMPD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32949, "ngs": 0.989647, "symbol": "SMPD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

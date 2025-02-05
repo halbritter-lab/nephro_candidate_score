@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33893, "NGS": 0.059753626585006714, "symbol": "POTEA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33893, "ngs": 0.059753627, "symbol": "POTEA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

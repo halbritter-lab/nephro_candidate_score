@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15985, "NGS": 0.6913211941719055, "symbol": "SVEP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15985, "ngs": 0.6913212, "symbol": "SVEP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

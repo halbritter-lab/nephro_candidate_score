@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5044, "NGS": 0.8600168824195862, "symbol": "HNRNPK", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 5044, "ngs": 0.8600169, "symbol": "HNRNPK", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

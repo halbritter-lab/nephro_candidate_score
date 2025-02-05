@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10416, "NGS": 0.9450475573539734, "symbol": "RPS27", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10416, "ngs": 0.94504756, "symbol": "RPS27", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33178, "NGS": 0.022763710469007492, "symbol": "SPANXN5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33178, "ngs": 0.02276371, "symbol": "SPANXN5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

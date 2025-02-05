@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29486, "NGS": 0.01936928927898407, "symbol": "SPINK6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29486, "ngs": 0.01936929, "symbol": "SPINK6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3555, "NGS": 0.969645082950592, "symbol": "FABP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3555, "ngs": 0.9696451, "symbol": "FABP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

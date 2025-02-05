@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14952, "NGS": 0.4991016983985901, "symbol": "PPP1R14C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14952, "ngs": 0.4991017, "symbol": "PPP1R14C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

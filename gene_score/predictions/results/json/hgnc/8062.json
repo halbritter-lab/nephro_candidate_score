@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8062, "NGS": 0.9322030544281006, "symbol": "NUP153", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8062, "ngs": 0.93220305, "symbol": "NUP153", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

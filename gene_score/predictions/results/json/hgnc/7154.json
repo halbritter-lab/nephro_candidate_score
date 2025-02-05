@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7154, "NGS": 0.1334720402956009, "symbol": "MME", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 7154, "ngs": 0.13347204, "symbol": "MME", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

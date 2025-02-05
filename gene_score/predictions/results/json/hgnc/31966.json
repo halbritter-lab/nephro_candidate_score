@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31966, "NGS": 0.0018939656438305974, "symbol": "CLEC12B", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 31966, "ngs": 0.0018939656, "symbol": "CLEC12B", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

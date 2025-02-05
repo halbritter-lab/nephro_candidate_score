@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53850, "NGS": 0.007512860000133514, "symbol": "TAF11L7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53850, "ngs": 0.00751286, "symbol": "TAF11L7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

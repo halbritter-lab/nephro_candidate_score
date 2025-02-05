@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7739, "NGS": 0.0451032854616642, "symbol": "NEFL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7739, "ngs": 0.045103285, "symbol": "NEFL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

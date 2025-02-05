@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26675, "NGS": 0.235123410820961, "symbol": "TERB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26675, "ngs": 0.23512341, "symbol": "TERB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

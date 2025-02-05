@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28902, "NGS": 0.0638749748468399, "symbol": "SPPL2C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28902, "ngs": 0.063874975, "symbol": "SPPL2C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

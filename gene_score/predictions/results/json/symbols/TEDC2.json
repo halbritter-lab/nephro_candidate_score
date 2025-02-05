@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25849, "NGS": 0.01529635302722454, "symbol": "TEDC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25849, "ngs": 0.015296353, "symbol": "TEDC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

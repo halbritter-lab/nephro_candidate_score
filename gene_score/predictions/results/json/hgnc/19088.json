@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19088, "NGS": 0.9972472786903381, "symbol": "ASH1L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19088, "ngs": 0.9972473, "symbol": "ASH1L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

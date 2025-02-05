@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37453, "NGS": 0.06603355705738068, "symbol": "NPIPB11", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37453, "ngs": 0.06603356, "symbol": "NPIPB11", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26709, "NGS": 0.9834255576133728, "symbol": "SCAI", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26709, "ngs": 0.98342556, "symbol": "SCAI", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

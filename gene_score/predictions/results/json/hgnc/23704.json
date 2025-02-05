@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23704, "NGS": 0.29878395795822144, "symbol": "TTC39B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23704, "ngs": 0.29878396, "symbol": "TTC39B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

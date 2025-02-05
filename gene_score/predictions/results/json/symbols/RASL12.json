@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30289, "NGS": 0.5122097134590149, "symbol": "RASL12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30289, "ngs": 0.5122097, "symbol": "RASL12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

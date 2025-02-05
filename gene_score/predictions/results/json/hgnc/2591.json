@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2591, "NGS": 0.9336697459220886, "symbol": "CYP11B1", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 2591, "ngs": 0.93366975, "symbol": "CYP11B1", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

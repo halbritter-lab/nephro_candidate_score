@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28314, "NGS": 0.13002082705497742, "symbol": "CHCHD7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28314, "ngs": 0.13002083, "symbol": "CHCHD7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

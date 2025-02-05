@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24065, "NGS": 0.9696092009544373, "symbol": "ARMCX3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24065, "ngs": 0.9696092, "symbol": "ARMCX3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

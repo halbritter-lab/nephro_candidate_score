@@ -1,1 +1,1 @@
-{"hgnc_id_int": 811, "NGS": 0.1526498645544052, "symbol": "ATP2A1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 811, "ngs": 0.15264986, "symbol": "ATP2A1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

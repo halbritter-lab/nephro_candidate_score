@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44155, "NGS": 0.06157698482275009, "symbol": "TMEM249", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44155, "ngs": 0.061576985, "symbol": "TMEM249", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

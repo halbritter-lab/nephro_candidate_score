@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6856, "NGS": 0.8855668306350708, "symbol": "MAP3K4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6856, "ngs": 0.88556683, "symbol": "MAP3K4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

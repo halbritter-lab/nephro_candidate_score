@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10473, "NGS": 0.8520721197128296, "symbol": "RUNX3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10473, "ngs": 0.8520721, "symbol": "RUNX3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

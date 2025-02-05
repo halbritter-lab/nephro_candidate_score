@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14966, "NGS": 0.7266675233840942, "symbol": "PXDN", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 14966, "ngs": 0.7266675, "symbol": "PXDN", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1090, "NGS": 0.6625632047653198, "symbol": "DST", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1090, "ngs": 0.6625632, "symbol": "DST", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

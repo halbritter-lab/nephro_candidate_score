@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21079, "NGS": 0.0209858026355505, "symbol": "PBOV1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21079, "ngs": 0.020985803, "symbol": "PBOV1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

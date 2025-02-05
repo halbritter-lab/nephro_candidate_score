@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22199, "NGS": 0.301415354013443, "symbol": "COBL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22199, "ngs": 0.30141535, "symbol": "COBL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

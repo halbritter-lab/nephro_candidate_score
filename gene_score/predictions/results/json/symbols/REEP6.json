@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30078, "NGS": 0.6465484499931335, "symbol": "REEP6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30078, "ngs": 0.64654845, "symbol": "REEP6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

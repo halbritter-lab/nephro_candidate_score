@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30361, "NGS": 0.1494206041097641, "symbol": "RPP25", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30361, "ngs": 0.1494206, "symbol": "RPP25", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

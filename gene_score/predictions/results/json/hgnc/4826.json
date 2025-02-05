@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4826, "NGS": 0.01105407252907753, "symbol": "HBM", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 4826, "ngs": 0.0110540725, "symbol": "HBM", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

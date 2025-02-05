@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8820, "NGS": 0.015545953065156937, "symbol": "PDYN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8820, "ngs": 0.015545953, "symbol": "PDYN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8078, "NGS": 0.9799341559410095, "symbol": "NXPH4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8078, "ngs": 0.97993416, "symbol": "NXPH4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

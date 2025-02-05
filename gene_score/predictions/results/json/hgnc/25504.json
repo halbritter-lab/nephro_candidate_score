@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25504, "NGS": 0.23132896423339844, "symbol": "MAGOHB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25504, "ngs": 0.23132896, "symbol": "MAGOHB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

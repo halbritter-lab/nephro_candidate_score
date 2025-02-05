@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4830, "NGS": 0.15277978777885437, "symbol": "HBE1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4830, "ngs": 0.15277979, "symbol": "HBE1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

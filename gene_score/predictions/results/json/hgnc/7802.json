@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7802, "NGS": 0.6899251937866211, "symbol": "NFRKB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7802, "ngs": 0.6899252, "symbol": "NFRKB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

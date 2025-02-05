@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26838, "NGS": 0.03492625430226326, "symbol": "TIGIT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26838, "ngs": 0.034926254, "symbol": "TIGIT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17841, "NGS": 0.04460781812667847, "symbol": "MORN5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17841, "ngs": 0.044607818, "symbol": "MORN5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

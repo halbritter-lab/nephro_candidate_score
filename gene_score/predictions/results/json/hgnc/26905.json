@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26905, "NGS": 0.06449548900127411, "symbol": "INO80E", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26905, "ngs": 0.06449549, "symbol": "INO80E", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

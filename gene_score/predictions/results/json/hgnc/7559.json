@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7559, "NGS": 0.9722411036491394, "symbol": "MYCN", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 7559, "ngs": 0.9722411, "symbol": "MYCN", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

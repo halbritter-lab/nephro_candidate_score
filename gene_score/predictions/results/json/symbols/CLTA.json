@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2090, "NGS": 0.987754762172699, "symbol": "CLTA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2090, "ngs": 0.98775476, "symbol": "CLTA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

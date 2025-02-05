@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9774, "NGS": 0.9517131447792053, "symbol": "RAB35", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9774, "ngs": 0.95171314, "symbol": "RAB35", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

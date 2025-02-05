@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2542, "NGS": 0.1447989046573639, "symbol": "CTSO", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2542, "ngs": 0.1447989, "symbol": "CTSO", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32790, "NGS": 0.944858729839325, "symbol": "PNO1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32790, "ngs": 0.94485873, "symbol": "PNO1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

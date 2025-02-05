@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16910, "NGS": 0.1467054933309555, "symbol": "CPQ", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16910, "ngs": 0.1467055, "symbol": "CPQ", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

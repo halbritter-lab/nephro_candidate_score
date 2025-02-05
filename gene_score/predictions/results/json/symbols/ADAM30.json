@@ -1,1 +1,1 @@
-{"hgnc_id_int": 208, "NGS": 0.019732248038053513, "symbol": "ADAM30", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 208, "ngs": 0.019732248, "symbol": "ADAM30", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13727, "NGS": 0.8644930124282837, "symbol": "RANBP9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13727, "ngs": 0.864493, "symbol": "RANBP9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

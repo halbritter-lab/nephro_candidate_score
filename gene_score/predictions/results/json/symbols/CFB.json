@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1037, "NGS": 0.9734100103378296, "symbol": "CFB", "gene_set": "test", "evidence_count": 5.0}
+{"hgncIdInt": 1037, "ngs": 0.97341, "symbol": "CFB", "geneSet": "test", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

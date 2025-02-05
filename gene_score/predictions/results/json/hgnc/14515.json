@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14515, "NGS": 0.399467408657074, "symbol": "MRPS18A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14515, "ngs": 0.3994674, "symbol": "MRPS18A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

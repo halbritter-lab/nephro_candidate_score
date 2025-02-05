@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1077, "NGS": 0.9193589687347412, "symbol": "BMPR1B", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 1077, "ngs": 0.91935897, "symbol": "BMPR1B", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

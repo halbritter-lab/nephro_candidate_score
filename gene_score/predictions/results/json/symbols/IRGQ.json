@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24868, "NGS": 0.06811866909265518, "symbol": "IRGQ", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24868, "ngs": 0.06811867, "symbol": "IRGQ", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11822, "NGS": 0.9954355359077454, "symbol": "TIMP3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11822, "ngs": 0.99543554, "symbol": "TIMP3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

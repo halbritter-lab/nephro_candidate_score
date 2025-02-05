@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30185, "NGS": 0.8565757274627686, "symbol": "CRBN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30185, "ngs": 0.8565757, "symbol": "CRBN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

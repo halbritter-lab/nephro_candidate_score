@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9248, "NGS": 0.1691954880952835, "symbol": "PPFIA4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9248, "ngs": 0.16919549, "symbol": "PPFIA4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

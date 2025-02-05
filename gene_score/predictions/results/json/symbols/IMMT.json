@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6047, "NGS": 0.5565138459205627, "symbol": "IMMT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6047, "ngs": 0.55651385, "symbol": "IMMT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

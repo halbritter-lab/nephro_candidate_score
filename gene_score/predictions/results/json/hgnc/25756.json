@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25756, "NGS": 0.5799546837806702, "symbol": "TOMM40L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25756, "ngs": 0.5799547, "symbol": "TOMM40L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

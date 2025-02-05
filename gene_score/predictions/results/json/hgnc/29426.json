@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29426, "NGS": 0.4023170471191406, "symbol": "CCBE1", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 29426, "ngs": 0.40231705, "symbol": "CCBE1", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

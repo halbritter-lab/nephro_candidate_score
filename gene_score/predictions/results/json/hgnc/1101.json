@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1101, "NGS": 0.6520170569419861, "symbol": "BRCA2", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 1101, "ngs": 0.65201706, "symbol": "BRCA2", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

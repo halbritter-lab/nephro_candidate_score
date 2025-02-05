@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33629, "NGS": 0.6448323726654053, "symbol": "CCDC61", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 33629, "ngs": 0.6448324, "symbol": "CCDC61", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

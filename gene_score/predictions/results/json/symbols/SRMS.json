@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11298, "NGS": 0.02425050362944603, "symbol": "SRMS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11298, "ngs": 0.024250504, "symbol": "SRMS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

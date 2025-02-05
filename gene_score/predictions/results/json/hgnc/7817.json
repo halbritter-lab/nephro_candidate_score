@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7817, "NGS": 0.7993327379226685, "symbol": "NHLH1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7817, "ngs": 0.79933274, "symbol": "NHLH1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

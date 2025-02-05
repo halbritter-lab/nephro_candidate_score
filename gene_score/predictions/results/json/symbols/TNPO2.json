@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19998, "NGS": 0.8511925339698792, "symbol": "TNPO2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19998, "ngs": 0.85119253, "symbol": "TNPO2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

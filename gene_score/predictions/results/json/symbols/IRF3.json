@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6118, "NGS": 0.9195127487182617, "symbol": "IRF3", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 6118, "ngs": 0.91951275, "symbol": "IRF3", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

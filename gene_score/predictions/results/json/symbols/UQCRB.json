@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12582, "NGS": 0.9578051567077637, "symbol": "UQCRB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12582, "ngs": 0.95780516, "symbol": "UQCRB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

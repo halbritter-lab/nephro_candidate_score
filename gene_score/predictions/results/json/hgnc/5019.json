@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5019, "NGS": 0.8212989568710327, "symbol": "HMX3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5019, "ngs": 0.82129896, "symbol": "HMX3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

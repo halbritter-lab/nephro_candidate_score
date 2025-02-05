@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16249, "NGS": 0.006676965393126011, "symbol": "R3HDML", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16249, "ngs": 0.0066769654, "symbol": "R3HDML", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

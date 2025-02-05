@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25787, "NGS": 0.42870792746543884, "symbol": "CENPT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25787, "ngs": 0.42870793, "symbol": "CENPT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

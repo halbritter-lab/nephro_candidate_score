@@ -1,1 +1,1 @@
-{"hgnc_id_int": 360, "NGS": 0.21147508919239044, "symbol": "AIRE", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 360, "ngs": 0.21147509, "symbol": "AIRE", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

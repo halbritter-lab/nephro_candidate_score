@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25152, "NGS": 0.4358745515346527, "symbol": "TIMM29", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25152, "ngs": 0.43587455, "symbol": "TIMM29", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

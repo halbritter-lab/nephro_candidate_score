@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29874, "NGS": 0.7193546295166016, "symbol": "THOC7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29874, "ngs": 0.7193546, "symbol": "THOC7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

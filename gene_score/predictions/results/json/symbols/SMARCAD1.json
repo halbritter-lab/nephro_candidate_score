@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18398, "NGS": 0.9836151003837585, "symbol": "SMARCAD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18398, "ngs": 0.9836151, "symbol": "SMARCAD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

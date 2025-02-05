@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18249, "NGS": 0.9590655565261841, "symbol": "KCTD1", "gene_set": "test", "evidence_count": 3.0}
+{"hgncIdInt": 18249, "ngs": 0.95906556, "symbol": "KCTD1", "geneSet": "test", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

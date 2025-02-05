@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8051, "NGS": 0.41949185729026794, "symbol": "NUDT4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8051, "ngs": 0.41949186, "symbol": "NUDT4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

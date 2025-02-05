@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19035, "NGS": 0.27635064721107483, "symbol": "MAST2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 19035, "ngs": 0.27635065, "symbol": "MAST2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

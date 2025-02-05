@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26934, "NGS": 0.2712390422821045, "symbol": "NOP16", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26934, "ngs": 0.27123904, "symbol": "NOP16", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

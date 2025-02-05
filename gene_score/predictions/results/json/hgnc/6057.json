@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6057, "NGS": 0.802557110786438, "symbol": "INA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6057, "ngs": 0.8025571, "symbol": "INA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

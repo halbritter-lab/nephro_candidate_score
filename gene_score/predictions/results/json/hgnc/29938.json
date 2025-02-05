@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29938, "NGS": 0.9491466879844666, "symbol": "CACTIN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29938, "ngs": 0.9491467, "symbol": "CACTIN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

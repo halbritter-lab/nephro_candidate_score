@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1395, "NGS": 0.910485029220581, "symbol": "CACNA1H", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 1395, "ngs": 0.910485, "symbol": "CACNA1H", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

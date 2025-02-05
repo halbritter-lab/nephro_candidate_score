@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11531, "NGS": 0.254177063703537, "symbol": "TADA2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11531, "ngs": 0.25417706, "symbol": "TADA2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

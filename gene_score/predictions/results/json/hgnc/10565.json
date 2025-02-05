@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10565, "NGS": 0.1445133537054062, "symbol": "SCAMP3", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 10565, "ngs": 0.14451335, "symbol": "SCAMP3", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

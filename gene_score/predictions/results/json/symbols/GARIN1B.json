@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30704, "NGS": 0.048595719039440155, "symbol": "GARIN1B", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 30704, "ngs": 0.04859572, "symbol": "GARIN1B", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

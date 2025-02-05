@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1054, "NGS": 0.42567479610443115, "symbol": "BIN3", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 1054, "ngs": 0.4256748, "symbol": "BIN3", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1770, "NGS": 0.93526691198349, "symbol": "CDK10", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1770, "ngs": 0.9352669, "symbol": "CDK10", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

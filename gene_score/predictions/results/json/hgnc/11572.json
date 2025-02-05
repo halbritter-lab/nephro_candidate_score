@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11572, "NGS": 0.1537492722272873, "symbol": "TARS1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11572, "ngs": 0.15374927, "symbol": "TARS1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

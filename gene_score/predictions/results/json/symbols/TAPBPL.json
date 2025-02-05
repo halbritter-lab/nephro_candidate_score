@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30683, "NGS": 0.02671012654900551, "symbol": "TAPBPL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30683, "ngs": 0.026710127, "symbol": "TAPBPL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

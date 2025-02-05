@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14525, "NGS": 0.8881538510322571, "symbol": "CHORDC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14525, "ngs": 0.88815385, "symbol": "CHORDC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

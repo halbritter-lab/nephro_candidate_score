@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23339, "NGS": 0.12514708936214447, "symbol": "ACBD6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23339, "ngs": 0.12514709, "symbol": "ACBD6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

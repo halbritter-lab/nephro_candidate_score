@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12877, "NGS": 0.9436615705490112, "symbol": "ZMPSTE24", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 12877, "ngs": 0.9436616, "symbol": "ZMPSTE24", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1471, "NGS": 0.6742966771125793, "symbol": "CAMLG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1471, "ngs": 0.6742967, "symbol": "CAMLG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

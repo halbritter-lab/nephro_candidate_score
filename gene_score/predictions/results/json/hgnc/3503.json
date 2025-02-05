@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3503, "NGS": 0.045436616986989975, "symbol": "EVPL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3503, "ngs": 0.045436617, "symbol": "EVPL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

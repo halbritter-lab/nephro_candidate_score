@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29788, "NGS": 0.4605821371078491, "symbol": "MTIF3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29788, "ngs": 0.46058214, "symbol": "MTIF3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

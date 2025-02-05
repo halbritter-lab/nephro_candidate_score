@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25384, "NGS": 0.1787847876548767, "symbol": "DRC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25384, "ngs": 0.17878479, "symbol": "DRC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

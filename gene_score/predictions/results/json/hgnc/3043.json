@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3043, "NGS": 0.5621591210365295, "symbol": "PSMG1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3043, "ngs": 0.5621591, "symbol": "PSMG1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

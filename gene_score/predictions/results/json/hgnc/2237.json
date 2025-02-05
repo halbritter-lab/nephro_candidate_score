@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2237, "NGS": 0.40587615966796875, "symbol": "COPG2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2237, "ngs": 0.40587616, "symbol": "COPG2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

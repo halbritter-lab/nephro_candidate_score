@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12760, "NGS": 0.23006249964237213, "symbol": "BRWD1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 12760, "ngs": 0.2300625, "symbol": "BRWD1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

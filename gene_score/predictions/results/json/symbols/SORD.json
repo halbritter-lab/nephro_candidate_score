@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11184, "NGS": 0.6476432681083679, "symbol": "SORD", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11184, "ngs": 0.64764327, "symbol": "SORD", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

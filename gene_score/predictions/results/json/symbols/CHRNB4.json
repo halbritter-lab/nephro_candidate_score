@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1964, "NGS": 0.5333581566810608, "symbol": "CHRNB4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1964, "ngs": 0.53335816, "symbol": "CHRNB4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

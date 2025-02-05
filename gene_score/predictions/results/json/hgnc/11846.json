@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11846, "NGS": 0.9865456819534302, "symbol": "SEC62", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11846, "ngs": 0.9865457, "symbol": "SEC62", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

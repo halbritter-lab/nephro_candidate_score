@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3335, "NGS": 0.026425573974847794, "symbol": "EMP3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3335, "ngs": 0.026425574, "symbol": "EMP3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

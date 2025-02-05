@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8788, "NGS": 0.9443886876106262, "symbol": "PDE6D", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 8788, "ngs": 0.9443887, "symbol": "PDE6D", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

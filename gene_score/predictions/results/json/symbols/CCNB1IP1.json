@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19437, "NGS": 0.9194685816764832, "symbol": "CCNB1IP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19437, "ngs": 0.9194686, "symbol": "CCNB1IP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

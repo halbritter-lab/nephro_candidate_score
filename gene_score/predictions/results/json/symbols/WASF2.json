@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12733, "NGS": 0.8983186483383179, "symbol": "WASF2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12733, "ngs": 0.89831865, "symbol": "WASF2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25209, "NGS": 0.04322582483291626, "symbol": "PRUNE2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25209, "ngs": 0.043225825, "symbol": "PRUNE2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

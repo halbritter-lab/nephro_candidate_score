@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53451, "NGS": 0.008210093714296818, "symbol": "P3R3URF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53451, "ngs": 0.008210094, "symbol": "P3R3URF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

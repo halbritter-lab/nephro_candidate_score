@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9667, "NGS": 0.46218815445899963, "symbol": "PTPRCAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9667, "ngs": 0.46218815, "symbol": "PTPRCAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

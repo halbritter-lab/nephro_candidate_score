@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20860, "NGS": 0.10719579458236694, "symbol": "SLC39A12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20860, "ngs": 0.107195795, "symbol": "SLC39A12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

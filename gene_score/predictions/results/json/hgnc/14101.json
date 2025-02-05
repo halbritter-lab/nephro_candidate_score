@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14101, "NGS": 0.9886177182197571, "symbol": "CNOT7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14101, "ngs": 0.9886177, "symbol": "CNOT7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

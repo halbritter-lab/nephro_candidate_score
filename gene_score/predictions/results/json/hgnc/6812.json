@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6812, "NGS": 0.047469861805438995, "symbol": "MAGEC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6812, "ngs": 0.04746986, "symbol": "MAGEC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

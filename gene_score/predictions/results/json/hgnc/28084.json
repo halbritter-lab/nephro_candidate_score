@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28084, "NGS": 0.008679734542965889, "symbol": "ISX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28084, "ngs": 0.008679735, "symbol": "ISX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

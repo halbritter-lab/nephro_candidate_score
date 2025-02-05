@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4935, "NGS": 0.6865222454071045, "symbol": "HLA-DMB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4935, "ngs": 0.68652225, "symbol": "HLA-DMB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

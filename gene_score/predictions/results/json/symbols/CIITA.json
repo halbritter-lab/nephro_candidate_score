@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7067, "NGS": 0.672373354434967, "symbol": "CIITA", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 7067, "ngs": 0.67237335, "symbol": "CIITA", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

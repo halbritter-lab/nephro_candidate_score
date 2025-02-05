@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11261, "NGS": 0.004066988360136747, "symbol": "SPRR2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11261, "ngs": 0.0040669884, "symbol": "SPRR2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

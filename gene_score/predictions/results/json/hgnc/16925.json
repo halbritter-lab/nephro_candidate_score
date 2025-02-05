@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16925, "NGS": 0.7640775442123413, "symbol": "ARAP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16925, "ngs": 0.76407754, "symbol": "ARAP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

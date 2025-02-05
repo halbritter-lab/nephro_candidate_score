@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23250, "NGS": 0.056167397648096085, "symbol": "DGAT2L6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23250, "ngs": 0.056167398, "symbol": "DGAT2L6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

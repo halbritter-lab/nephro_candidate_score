@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7534, "NGS": 0.9925881028175354, "symbol": "MXI1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7534, "ngs": 0.9925881, "symbol": "MXI1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

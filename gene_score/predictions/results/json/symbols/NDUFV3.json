@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7719, "NGS": 0.02625419944524765, "symbol": "NDUFV3", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 7719, "ngs": 0.0262542, "symbol": "NDUFV3", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21964, "NGS": 0.1595848649740219, "symbol": "LRGUK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21964, "ngs": 0.15958486, "symbol": "LRGUK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

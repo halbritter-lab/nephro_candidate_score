@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2553, "NGS": 0.9413654208183289, "symbol": "CUL3", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 2553, "ngs": 0.9413654, "symbol": "CUL3", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

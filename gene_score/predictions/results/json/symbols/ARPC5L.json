@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23366, "NGS": 0.8816836476325989, "symbol": "ARPC5L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23366, "ngs": 0.88168365, "symbol": "ARPC5L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

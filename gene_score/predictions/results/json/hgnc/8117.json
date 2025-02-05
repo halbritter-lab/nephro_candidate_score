@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8117, "NGS": 0.9532342553138733, "symbol": "TENM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8117, "ngs": 0.95323426, "symbol": "TENM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

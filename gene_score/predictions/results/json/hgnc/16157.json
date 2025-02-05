@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16157, "NGS": 0.3623739182949066, "symbol": "ZSWIM3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16157, "ngs": 0.36237392, "symbol": "ZSWIM3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

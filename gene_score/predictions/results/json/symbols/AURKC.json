@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11391, "NGS": 0.02122059091925621, "symbol": "AURKC", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11391, "ngs": 0.02122059, "symbol": "AURKC", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

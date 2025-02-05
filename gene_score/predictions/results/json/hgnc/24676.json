@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24676, "NGS": 0.8471531867980957, "symbol": "FASTK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24676, "ngs": 0.8471532, "symbol": "FASTK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

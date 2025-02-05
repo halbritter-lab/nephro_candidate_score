@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24983, "NGS": 0.21118275821208954, "symbol": "TUBB8B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24983, "ngs": 0.21118276, "symbol": "TUBB8B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

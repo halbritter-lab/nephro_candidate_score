@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37237, "NGS": 0.009575697593390942, "symbol": "PABPN1L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37237, "ngs": 0.009575698, "symbol": "PABPN1L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

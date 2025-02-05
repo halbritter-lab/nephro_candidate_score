@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37264, "NGS": 0.011085906066000462, "symbol": "C4orf51", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37264, "ngs": 0.011085906, "symbol": "C4orf51", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

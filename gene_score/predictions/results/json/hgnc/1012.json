@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1012, "NGS": 0.09156978875398636, "symbol": "OPN1SW", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1012, "ngs": 0.09156979, "symbol": "OPN1SW", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

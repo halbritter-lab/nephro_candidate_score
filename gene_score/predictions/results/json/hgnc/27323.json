@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27323, "NGS": 0.012876796536147594, "symbol": "FAM153B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27323, "ngs": 0.012876797, "symbol": "FAM153B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

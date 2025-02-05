@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26960, "NGS": 0.22075991332530975, "symbol": "WDR90", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26960, "ngs": 0.22075991, "symbol": "WDR90", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

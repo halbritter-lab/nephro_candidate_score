@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25610, "NGS": 0.27162352204322815, "symbol": "FGGY", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 25610, "ngs": 0.27162352, "symbol": "FGGY", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

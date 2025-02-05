@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29644, "NGS": 0.03968527168035507, "symbol": "GDE1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29644, "ngs": 0.03968527, "symbol": "GDE1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

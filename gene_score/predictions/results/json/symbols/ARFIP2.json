@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17160, "NGS": 0.8889314532279968, "symbol": "ARFIP2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17160, "ngs": 0.88893145, "symbol": "ARFIP2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

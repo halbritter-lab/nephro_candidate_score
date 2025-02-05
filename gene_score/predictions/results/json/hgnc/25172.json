@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25172, "NGS": 0.4380188286304474, "symbol": "FREM3", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 25172, "ngs": 0.43801883, "symbol": "FREM3", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

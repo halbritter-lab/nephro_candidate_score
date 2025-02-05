@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7165, "NGS": 0.029889311641454697, "symbol": "MMP19", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7165, "ngs": 0.029889312, "symbol": "MMP19", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

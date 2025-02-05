@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27102, "NGS": 0.3376831114292145, "symbol": "KIF18B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27102, "ngs": 0.3376831, "symbol": "KIF18B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

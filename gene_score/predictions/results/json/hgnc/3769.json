@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3769, "NGS": 0.3355311155319214, "symbol": "FMO1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3769, "ngs": 0.33553112, "symbol": "FMO1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

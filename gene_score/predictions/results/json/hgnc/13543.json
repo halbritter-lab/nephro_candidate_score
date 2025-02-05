@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13543, "NGS": 0.025319069623947144, "symbol": "ATP10B", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 13543, "ngs": 0.02531907, "symbol": "ATP10B", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

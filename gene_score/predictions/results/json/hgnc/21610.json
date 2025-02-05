@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21610, "NGS": 0.7842844724655151, "symbol": "LNPK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21610, "ngs": 0.7842845, "symbol": "LNPK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

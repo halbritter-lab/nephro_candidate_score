@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28899, "NGS": 0.7092133164405823, "symbol": "GPR180", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28899, "ngs": 0.7092133, "symbol": "GPR180", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

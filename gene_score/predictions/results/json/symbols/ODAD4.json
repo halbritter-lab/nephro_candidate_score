@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25280, "NGS": 0.15348252654075623, "symbol": "ODAD4", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 25280, "ngs": 0.15348253, "symbol": "ODAD4", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

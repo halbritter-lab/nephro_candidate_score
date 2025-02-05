@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4537, "NGS": 0.26735302805900574, "symbol": "P2RY13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4537, "ngs": 0.26735303, "symbol": "P2RY13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

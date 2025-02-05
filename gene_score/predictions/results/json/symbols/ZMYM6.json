@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13050, "NGS": 0.613387405872345, "symbol": "ZMYM6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13050, "ngs": 0.6133874, "symbol": "ZMYM6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

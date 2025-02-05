@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16934, "NGS": 0.8874974250793457, "symbol": "FEM1A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16934, "ngs": 0.8874974, "symbol": "FEM1A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

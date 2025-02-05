@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16495, "NGS": 0.4325180649757385, "symbol": "PLSCR3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16495, "ngs": 0.43251806, "symbol": "PLSCR3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28722, "NGS": 0.06292785704135895, "symbol": "COQ5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28722, "ngs": 0.06292786, "symbol": "COQ5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

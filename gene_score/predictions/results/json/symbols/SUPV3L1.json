@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11471, "NGS": 0.9166673421859741, "symbol": "SUPV3L1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11471, "ngs": 0.91666734, "symbol": "SUPV3L1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

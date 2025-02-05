@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11612, "NGS": 0.840751588344574, "symbol": "TCEA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11612, "ngs": 0.8407516, "symbol": "TCEA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

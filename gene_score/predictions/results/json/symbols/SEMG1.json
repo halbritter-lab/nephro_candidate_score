@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10742, "NGS": 0.18644994497299194, "symbol": "SEMG1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10742, "ngs": 0.18644994, "symbol": "SEMG1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

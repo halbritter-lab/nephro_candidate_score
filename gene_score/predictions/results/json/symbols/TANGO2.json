@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25439, "NGS": 0.29773980379104614, "symbol": "TANGO2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25439, "ngs": 0.2977398, "symbol": "TANGO2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

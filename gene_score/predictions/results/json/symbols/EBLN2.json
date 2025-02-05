@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25493, "NGS": 0.009453925304114819, "symbol": "EBLN2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25493, "ngs": 0.009453925, "symbol": "EBLN2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

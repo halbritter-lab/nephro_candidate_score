@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3553, "NGS": 0.2731342911720276, "symbol": "FAAH", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 3553, "ngs": 0.2731343, "symbol": "FAAH", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

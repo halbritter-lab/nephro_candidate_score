@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12525, "NGS": 0.41807693243026733, "symbol": "UGDH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12525, "ngs": 0.41807693, "symbol": "UGDH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

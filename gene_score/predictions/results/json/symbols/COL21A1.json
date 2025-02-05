@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17025, "NGS": 0.0342320017516613, "symbol": "COL21A1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17025, "ngs": 0.034232, "symbol": "COL21A1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

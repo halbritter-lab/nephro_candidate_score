@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20184, "NGS": 0.664938747882843, "symbol": "JKAMP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20184, "ngs": 0.66493875, "symbol": "JKAMP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

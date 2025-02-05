@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19178, "NGS": 0.9473504424095154, "symbol": "CMTM7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19178, "ngs": 0.94735044, "symbol": "CMTM7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5401, "NGS": 0.019239548593759537, "symbol": "SP110", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5401, "ngs": 0.019239549, "symbol": "SP110", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

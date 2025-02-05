@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26361, "NGS": 0.41655752062797546, "symbol": "HEPACAM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26361, "ngs": 0.41655752, "symbol": "HEPACAM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

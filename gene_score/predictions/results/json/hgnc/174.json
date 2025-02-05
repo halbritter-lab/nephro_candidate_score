@@ -1,1 +1,1 @@
-{"hgnc_id_int": 174, "NGS": 0.9925219416618347, "symbol": "ACVR2B", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 174, "ngs": 0.99252194, "symbol": "ACVR2B", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

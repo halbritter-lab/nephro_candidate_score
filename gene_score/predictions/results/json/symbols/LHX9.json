@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14222, "NGS": 0.9313402771949768, "symbol": "LHX9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14222, "ngs": 0.9313403, "symbol": "LHX9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

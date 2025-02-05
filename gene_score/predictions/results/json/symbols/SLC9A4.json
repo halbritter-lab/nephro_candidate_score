@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11077, "NGS": 0.059193626046180725, "symbol": "SLC9A4", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 11077, "ngs": 0.059193626, "symbol": "SLC9A4", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

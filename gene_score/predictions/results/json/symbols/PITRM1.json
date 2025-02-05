@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17663, "NGS": 0.63075852394104, "symbol": "PITRM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17663, "ngs": 0.6307585, "symbol": "PITRM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

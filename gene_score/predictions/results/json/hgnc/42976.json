@@ -1,1 +1,1 @@
-{"hgnc_id_int": 42976, "NGS": 0.37920495867729187, "symbol": "MROH5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 42976, "ngs": 0.37920496, "symbol": "MROH5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

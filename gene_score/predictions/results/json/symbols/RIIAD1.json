@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26686, "NGS": 0.5853288173675537, "symbol": "RIIAD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26686, "ngs": 0.5853288, "symbol": "RIIAD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

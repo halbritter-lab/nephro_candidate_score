@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8158, "NGS": 0.042529523372650146, "symbol": "OPTC", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8158, "ngs": 0.042529523, "symbol": "OPTC", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

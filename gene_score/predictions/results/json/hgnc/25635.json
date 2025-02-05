@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25635, "NGS": 0.789214551448822, "symbol": "CMTR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25635, "ngs": 0.78921455, "symbol": "CMTR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

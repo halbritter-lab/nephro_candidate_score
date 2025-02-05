@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6353, "NGS": 0.9788733720779419, "symbol": "KLHL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6353, "ngs": 0.9788734, "symbol": "KLHL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

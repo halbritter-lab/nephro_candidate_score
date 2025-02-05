@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17182, "NGS": 0.9946436882019043, "symbol": "ASB7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17182, "ngs": 0.9946437, "symbol": "ASB7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

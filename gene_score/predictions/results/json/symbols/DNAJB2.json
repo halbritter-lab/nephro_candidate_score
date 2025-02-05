@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5228, "NGS": 0.3714916408061981, "symbol": "DNAJB2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5228, "ngs": 0.37149164, "symbol": "DNAJB2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6487, "NGS": 0.9635900259017944, "symbol": "LAMB2", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 6487, "ngs": 0.96359, "symbol": "LAMB2", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

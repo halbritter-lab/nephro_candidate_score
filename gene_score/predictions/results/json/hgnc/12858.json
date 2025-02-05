@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12858, "NGS": 0.593926727771759, "symbol": "ZAP70", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 12858, "ngs": 0.5939267, "symbol": "ZAP70", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

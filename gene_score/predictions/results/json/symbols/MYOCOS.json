@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53429, "NGS": 0.018976181745529175, "symbol": "MYOCOS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53429, "ngs": 0.018976182, "symbol": "MYOCOS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3091, "NGS": 0.9685624241828918, "symbol": "DYRK1A", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 3091, "ngs": 0.9685624, "symbol": "DYRK1A", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

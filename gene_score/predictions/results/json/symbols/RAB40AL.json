@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25410, "NGS": 0.029431940987706184, "symbol": "RAB40AL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25410, "ngs": 0.029431941, "symbol": "RAB40AL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

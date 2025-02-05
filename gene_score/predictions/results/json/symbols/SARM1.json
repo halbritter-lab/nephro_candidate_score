@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17074, "NGS": 0.034175675362348557, "symbol": "SARM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17074, "ngs": 0.034175675, "symbol": "SARM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

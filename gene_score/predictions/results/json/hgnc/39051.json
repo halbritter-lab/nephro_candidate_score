@@ -1,1 +1,1 @@
-{"hgnc_id_int": 39051, "NGS": 0.0069517106749117374, "symbol": "ERVV-2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 39051, "ngs": 0.0069517107, "symbol": "ERVV-2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

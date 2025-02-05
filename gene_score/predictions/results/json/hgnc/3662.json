@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3662, "NGS": 0.9474794864654541, "symbol": "FGB", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 3662, "ngs": 0.9474795, "symbol": "FGB", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

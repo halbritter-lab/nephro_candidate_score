@@ -1,1 +1,1 @@
-{"hgnc_id_int": 55815, "NGS": 0.03777753934264183, "symbol": "SMIM44", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 55815, "ngs": 0.03777754, "symbol": "SMIM44", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

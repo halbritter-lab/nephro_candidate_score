@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12799, "NGS": 0.49227815866470337, "symbol": "WWOX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12799, "ngs": 0.49227816, "symbol": "WWOX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

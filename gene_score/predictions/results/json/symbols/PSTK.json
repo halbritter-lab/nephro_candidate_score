@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28578, "NGS": 0.0329425111413002, "symbol": "PSTK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28578, "ngs": 0.03294251, "symbol": "PSTK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 35237, "NGS": 0.07004617899656296, "symbol": "SRGAP2B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 35237, "ngs": 0.07004618, "symbol": "SRGAP2B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

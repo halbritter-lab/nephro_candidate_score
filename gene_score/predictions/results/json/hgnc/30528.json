@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30528, "NGS": 0.5979061126708984, "symbol": "DNAJC19", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30528, "ngs": 0.5979061, "symbol": "DNAJC19", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

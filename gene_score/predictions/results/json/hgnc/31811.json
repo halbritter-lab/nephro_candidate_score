@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31811, "NGS": 0.2950776219367981, "symbol": "DCAF8L2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31811, "ngs": 0.29507762, "symbol": "DCAF8L2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

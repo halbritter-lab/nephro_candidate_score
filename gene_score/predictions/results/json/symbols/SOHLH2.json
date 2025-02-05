@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26026, "NGS": 0.25224077701568604, "symbol": "SOHLH2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26026, "ngs": 0.25224078, "symbol": "SOHLH2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

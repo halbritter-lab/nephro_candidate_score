@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28600, "NGS": 0.033393487334251404, "symbol": "PROCA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28600, "ngs": 0.033393487, "symbol": "PROCA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

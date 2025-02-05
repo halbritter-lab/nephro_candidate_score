@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18115, "NGS": 0.012134823016822338, "symbol": "DEFB104A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18115, "ngs": 0.012134823, "symbol": "DEFB104A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18464, "NGS": 0.522602915763855, "symbol": "GRID2IP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18464, "ngs": 0.5226029, "symbol": "GRID2IP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

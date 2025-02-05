@@ -1,1 +1,1 @@
-{"hgnc_id_int": 39433, "NGS": 0.3492276668548584, "symbol": "PRSS56", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 39433, "ngs": 0.34922767, "symbol": "PRSS56", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

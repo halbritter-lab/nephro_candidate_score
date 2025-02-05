@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7174, "NGS": 0.3968040645122528, "symbol": "MMP7", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 7174, "ngs": 0.39680406, "symbol": "MMP7", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

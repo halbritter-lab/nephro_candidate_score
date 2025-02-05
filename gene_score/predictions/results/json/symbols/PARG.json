@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8605, "NGS": 0.8621351718902588, "symbol": "PARG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8605, "ngs": 0.8621352, "symbol": "PARG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

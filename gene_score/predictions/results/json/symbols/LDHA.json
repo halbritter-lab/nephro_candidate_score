@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6535, "NGS": 0.841103196144104, "symbol": "LDHA", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 6535, "ngs": 0.8411032, "symbol": "LDHA", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

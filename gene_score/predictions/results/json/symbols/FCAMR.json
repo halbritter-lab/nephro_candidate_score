@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24692, "NGS": 0.10356937348842621, "symbol": "FCAMR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24692, "ngs": 0.10356937, "symbol": "FCAMR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20202, "NGS": 0.010595853440463543, "symbol": "CACNA2D4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20202, "ngs": 0.010595853, "symbol": "CACNA2D4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

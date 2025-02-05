@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19108, "NGS": 0.0046864221803843975, "symbol": "TAS2R19", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19108, "ngs": 0.004686422, "symbol": "TAS2R19", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

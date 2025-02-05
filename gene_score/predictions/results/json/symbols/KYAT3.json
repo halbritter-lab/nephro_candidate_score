@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33238, "NGS": 0.009111445397138596, "symbol": "KYAT3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33238, "ngs": 0.009111445, "symbol": "KYAT3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

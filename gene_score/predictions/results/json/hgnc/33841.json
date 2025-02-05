@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33841, "NGS": 0.0056586978025734425, "symbol": "SPDYE2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33841, "ngs": 0.005658698, "symbol": "SPDYE2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

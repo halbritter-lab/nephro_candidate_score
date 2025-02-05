@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12347, "NGS": 0.9599196314811707, "symbol": "TRRAP", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 12347, "ngs": 0.95991963, "symbol": "TRRAP", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

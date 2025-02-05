@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25061, "NGS": 0.009488647803664207, "symbol": "HOATZ", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25061, "ngs": 0.009488648, "symbol": "HOATZ", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

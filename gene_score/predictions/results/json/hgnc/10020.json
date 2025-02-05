@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10020, "NGS": 0.8116051554679871, "symbol": "RIPK2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10020, "ngs": 0.81160516, "symbol": "RIPK2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

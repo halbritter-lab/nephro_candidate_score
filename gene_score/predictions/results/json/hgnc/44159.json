@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44159, "NGS": 0.37639740109443665, "symbol": "TPBGL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44159, "ngs": 0.3763974, "symbol": "TPBGL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11827, "NGS": 0.9228386282920837, "symbol": "TJP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11827, "ngs": 0.9228386, "symbol": "TJP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

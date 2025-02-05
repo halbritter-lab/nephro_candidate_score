@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5992, "NGS": 0.9335902333259583, "symbol": "IL1B", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 5992, "ngs": 0.93359023, "symbol": "IL1B", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20166, "NGS": 0.018901236355304718, "symbol": "KHNYN", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 20166, "ngs": 0.018901236, "symbol": "KHNYN", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

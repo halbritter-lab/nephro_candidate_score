@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23709, "NGS": 0.17724062502384186, "symbol": "ZSCAN4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23709, "ngs": 0.17724063, "symbol": "ZSCAN4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

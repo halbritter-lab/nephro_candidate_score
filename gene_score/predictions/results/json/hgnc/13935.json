@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13935, "NGS": 0.015804871916770935, "symbol": "LY6G6D", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13935, "ngs": 0.015804872, "symbol": "LY6G6D", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13198, "NGS": 0.22383426129817963, "symbol": "ZXDA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13198, "ngs": 0.22383426, "symbol": "ZXDA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9816, "NGS": 0.26243487000465393, "symbol": "RAD50", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9816, "ngs": 0.26243487, "symbol": "RAD50", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

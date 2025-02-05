@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3008, "NGS": 0.7722769975662231, "symbol": "DPP3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3008, "ngs": 0.772277, "symbol": "DPP3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

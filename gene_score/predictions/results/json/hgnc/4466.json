@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4466, "NGS": 0.9437770247459412, "symbol": "GPR12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4466, "ngs": 0.943777, "symbol": "GPR12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

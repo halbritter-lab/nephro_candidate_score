@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1046, "NGS": 0.9949020147323608, "symbol": "BHLHE40", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1046, "ngs": 0.994902, "symbol": "BHLHE40", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

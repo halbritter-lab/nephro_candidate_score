@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26459, "NGS": 0.008139516226947308, "symbol": "CES5A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26459, "ngs": 0.008139516, "symbol": "CES5A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

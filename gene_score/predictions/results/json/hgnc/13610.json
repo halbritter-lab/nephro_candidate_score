@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13610, "NGS": 0.9552876353263855, "symbol": "KDM2B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13610, "ngs": 0.95528764, "symbol": "KDM2B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

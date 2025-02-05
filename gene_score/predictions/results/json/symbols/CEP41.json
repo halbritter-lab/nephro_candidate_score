@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12370, "NGS": 0.6801614761352539, "symbol": "CEP41", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 12370, "ngs": 0.6801615, "symbol": "CEP41", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

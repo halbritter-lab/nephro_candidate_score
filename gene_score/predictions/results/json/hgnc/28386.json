@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28386, "NGS": 0.009291203692555428, "symbol": "C4orf36", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28386, "ngs": 0.009291204, "symbol": "C4orf36", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

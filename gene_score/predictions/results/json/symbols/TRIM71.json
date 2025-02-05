@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32669, "NGS": 0.9420770406723022, "symbol": "TRIM71", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32669, "ngs": 0.94207704, "symbol": "TRIM71", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

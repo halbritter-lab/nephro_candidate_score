@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26634, "NGS": 0.060002028942108154, "symbol": "KLHL34", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26634, "ngs": 0.06000203, "symbol": "KLHL34", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

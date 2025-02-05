@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25062, "NGS": 0.3459428548812866, "symbol": "CATIP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25062, "ngs": 0.34594285, "symbol": "CATIP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

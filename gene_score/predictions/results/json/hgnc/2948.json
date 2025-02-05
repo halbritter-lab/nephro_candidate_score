@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2948, "NGS": 0.14578966796398163, "symbol": "DNAH2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2948, "ngs": 0.14578967, "symbol": "DNAH2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

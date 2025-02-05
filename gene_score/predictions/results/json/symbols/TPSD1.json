@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14118, "NGS": 0.005679694004356861, "symbol": "TPSD1", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 14118, "ngs": 0.005679694, "symbol": "TPSD1", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

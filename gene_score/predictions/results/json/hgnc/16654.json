@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16654, "NGS": 0.24121126532554626, "symbol": "MRPL50", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16654, "ngs": 0.24121127, "symbol": "MRPL50", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

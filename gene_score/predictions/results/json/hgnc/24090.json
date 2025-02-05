@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24090, "NGS": 0.48813483119010925, "symbol": "ATRAID", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24090, "ngs": 0.48813483, "symbol": "ATRAID", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

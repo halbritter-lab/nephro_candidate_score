@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1556, "NGS": 0.907111406326294, "symbol": "CBX6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1556, "ngs": 0.9071114, "symbol": "CBX6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

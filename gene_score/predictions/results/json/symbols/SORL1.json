@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11185, "NGS": 0.7560457587242126, "symbol": "SORL1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 11185, "ngs": 0.75604576, "symbol": "SORL1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

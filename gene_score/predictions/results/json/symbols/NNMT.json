@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7861, "NGS": 0.49526041746139526, "symbol": "NNMT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7861, "ngs": 0.49526042, "symbol": "NNMT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

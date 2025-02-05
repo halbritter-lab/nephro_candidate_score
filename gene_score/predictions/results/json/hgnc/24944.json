@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24944, "NGS": 0.8445196747779846, "symbol": "DDIT4", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 24944, "ngs": 0.8445197, "symbol": "DDIT4", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

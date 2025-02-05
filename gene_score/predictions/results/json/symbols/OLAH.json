@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25625, "NGS": 0.046916186809539795, "symbol": "OLAH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25625, "ngs": 0.046916187, "symbol": "OLAH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

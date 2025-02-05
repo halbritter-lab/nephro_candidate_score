@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20082, "NGS": 0.5898123979568481, "symbol": "DDX51", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20082, "ngs": 0.5898124, "symbol": "DDX51", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

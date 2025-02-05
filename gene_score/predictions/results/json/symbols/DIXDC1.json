@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23695, "NGS": 0.061603009700775146, "symbol": "DIXDC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23695, "ngs": 0.06160301, "symbol": "DIXDC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

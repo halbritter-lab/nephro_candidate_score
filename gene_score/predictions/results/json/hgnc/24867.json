@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24867, "NGS": 0.4251731336116791, "symbol": "GLTP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24867, "ngs": 0.42517313, "symbol": "GLTP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1449, "NGS": 0.7978618144989014, "symbol": "CALM3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1449, "ngs": 0.7978618, "symbol": "CALM3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13998, "NGS": 0.689749538898468, "symbol": "PRDM13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13998, "ngs": 0.68974954, "symbol": "PRDM13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

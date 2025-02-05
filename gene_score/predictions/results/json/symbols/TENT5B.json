@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28273, "NGS": 0.028584672138094902, "symbol": "TENT5B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28273, "ngs": 0.028584672, "symbol": "TENT5B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

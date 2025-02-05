@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12003, "NGS": 0.7910290956497192, "symbol": "TP73", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12003, "ngs": 0.7910291, "symbol": "TP73", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

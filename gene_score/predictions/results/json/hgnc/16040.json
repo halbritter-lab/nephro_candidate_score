@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16040, "NGS": 0.07005965709686279, "symbol": "ATG4C", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 16040, "ngs": 0.07005966, "symbol": "ATG4C", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

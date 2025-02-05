@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19837, "NGS": 0.017539458349347115, "symbol": "ABHD12B", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 19837, "ngs": 0.017539458, "symbol": "ABHD12B", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 54201, "NGS": 0.01262843981385231, "symbol": "FOXL3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 54201, "ngs": 0.01262844, "symbol": "FOXL3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

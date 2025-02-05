@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28150, "NGS": 0.05025983974337578, "symbol": "CRELD2", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 28150, "ngs": 0.05025984, "symbol": "CRELD2", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

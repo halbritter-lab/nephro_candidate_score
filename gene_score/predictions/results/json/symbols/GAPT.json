@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26588, "NGS": 0.09334766119718552, "symbol": "GAPT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26588, "ngs": 0.09334766, "symbol": "GAPT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

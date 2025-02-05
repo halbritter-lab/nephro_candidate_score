@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26113, "NGS": 0.8179571032524109, "symbol": "TCTN1", "gene_set": "test", "evidence_count": 3.0}
+{"hgncIdInt": 26113, "ngs": 0.8179571, "symbol": "TCTN1", "geneSet": "test", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

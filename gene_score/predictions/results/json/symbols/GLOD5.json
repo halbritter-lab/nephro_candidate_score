@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33358, "NGS": 0.6906406879425049, "symbol": "GLOD5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33358, "ngs": 0.6906407, "symbol": "GLOD5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

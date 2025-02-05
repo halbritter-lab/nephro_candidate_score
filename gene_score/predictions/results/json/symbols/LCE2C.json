@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29460, "NGS": 0.0503951720893383, "symbol": "LCE2C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29460, "ngs": 0.050395172, "symbol": "LCE2C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

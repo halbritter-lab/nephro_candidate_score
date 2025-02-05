@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20192, "NGS": 0.7651954889297485, "symbol": "AP5M1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20192, "ngs": 0.7651955, "symbol": "AP5M1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

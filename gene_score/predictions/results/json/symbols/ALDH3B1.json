@@ -1,1 +1,1 @@
-{"hgnc_id_int": 410, "NGS": 0.02756216563284397, "symbol": "ALDH3B1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 410, "ngs": 0.027562166, "symbol": "ALDH3B1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

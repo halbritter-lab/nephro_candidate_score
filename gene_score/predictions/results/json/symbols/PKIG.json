@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9019, "NGS": 0.6636368036270142, "symbol": "PKIG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9019, "ngs": 0.6636368, "symbol": "PKIG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

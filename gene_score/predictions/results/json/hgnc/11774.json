@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11774, "NGS": 0.9657458066940308, "symbol": "TGFBR3", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 11774, "ngs": 0.9657458, "symbol": "TGFBR3", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

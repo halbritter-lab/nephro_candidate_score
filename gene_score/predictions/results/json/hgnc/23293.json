@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23293, "NGS": 0.9206657409667969, "symbol": "WAPL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23293, "ngs": 0.92066574, "symbol": "WAPL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24500, "NGS": 0.8588581085205078, "symbol": "VIRMA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24500, "ngs": 0.8588581, "symbol": "VIRMA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

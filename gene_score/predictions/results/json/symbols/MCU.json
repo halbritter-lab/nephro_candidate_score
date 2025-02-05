@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23526, "NGS": 0.8605936169624329, "symbol": "MCU", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23526, "ngs": 0.8605936, "symbol": "MCU", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

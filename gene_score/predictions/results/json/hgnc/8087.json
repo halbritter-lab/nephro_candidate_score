@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8087, "NGS": 0.05368852987885475, "symbol": "OAS2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8087, "ngs": 0.05368853, "symbol": "OAS2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

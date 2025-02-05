@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5138, "NGS": 0.5225049257278442, "symbol": "HOXD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5138, "ngs": 0.5225049, "symbol": "HOXD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

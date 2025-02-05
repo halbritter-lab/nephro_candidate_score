@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7562, "NGS": 0.7525044679641724, "symbol": "MYD88", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 7562, "ngs": 0.75250447, "symbol": "MYD88", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

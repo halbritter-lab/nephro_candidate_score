@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14048, "NGS": 0.1716863065958023, "symbol": "MRPS16", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14048, "ngs": 0.1716863, "symbol": "MRPS16", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4459, "NGS": 0.4227789640426636, "symbol": "GPLD1", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 4459, "ngs": 0.42277896, "symbol": "GPLD1", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

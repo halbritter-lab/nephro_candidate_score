@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16812, "NGS": 0.4609975814819336, "symbol": "COQ8A", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 16812, "ngs": 0.46099758, "symbol": "COQ8A", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

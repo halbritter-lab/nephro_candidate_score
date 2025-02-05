@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29151, "NGS": 0.48704013228416443, "symbol": "DTX4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29151, "ngs": 0.48704013, "symbol": "DTX4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

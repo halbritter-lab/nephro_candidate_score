@@ -1,1 +1,1 @@
-{"hgnc_id_int": 607, "NGS": 0.9262884259223938, "symbol": "APOC1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 607, "ngs": 0.9262884, "symbol": "APOC1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

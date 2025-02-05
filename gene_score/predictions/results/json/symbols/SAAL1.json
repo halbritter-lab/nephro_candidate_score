@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25158, "NGS": 0.4048454761505127, "symbol": "SAAL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25158, "ngs": 0.40484548, "symbol": "SAAL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

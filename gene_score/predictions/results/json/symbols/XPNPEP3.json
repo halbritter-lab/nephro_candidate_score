@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28052, "NGS": 0.8322828412055969, "symbol": "XPNPEP3", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 28052, "ngs": 0.83228284, "symbol": "XPNPEP3", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

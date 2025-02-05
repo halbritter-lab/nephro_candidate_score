@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23700, "NGS": 0.014262378215789795, "symbol": "TTC12", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 23700, "ngs": 0.014262378, "symbol": "TTC12", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

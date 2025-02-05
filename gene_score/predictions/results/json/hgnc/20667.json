@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20667, "NGS": 0.35476744174957275, "symbol": "TXNRD3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20667, "ngs": 0.35476744, "symbol": "TXNRD3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

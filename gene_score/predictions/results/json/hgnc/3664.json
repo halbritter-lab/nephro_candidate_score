@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3664, "NGS": 0.14873453974723816, "symbol": "FGD2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3664, "ngs": 0.14873454, "symbol": "FGD2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

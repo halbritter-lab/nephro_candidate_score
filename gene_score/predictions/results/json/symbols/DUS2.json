@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26014, "NGS": 0.33630096912384033, "symbol": "DUS2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26014, "ngs": 0.33630097, "symbol": "DUS2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

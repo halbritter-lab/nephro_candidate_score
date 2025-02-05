@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4087, "NGS": 0.8902365565299988, "symbol": "GABRG2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4087, "ngs": 0.89023656, "symbol": "GABRG2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

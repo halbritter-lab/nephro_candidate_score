@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24695, "NGS": 0.10351678729057312, "symbol": "FAM219B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24695, "ngs": 0.10351679, "symbol": "FAM219B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

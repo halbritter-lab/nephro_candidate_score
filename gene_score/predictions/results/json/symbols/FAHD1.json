@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14169, "NGS": 0.15781749784946442, "symbol": "FAHD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14169, "ngs": 0.1578175, "symbol": "FAHD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

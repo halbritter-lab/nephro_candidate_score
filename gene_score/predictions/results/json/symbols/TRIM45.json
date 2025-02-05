@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19018, "NGS": 0.012009307742118835, "symbol": "TRIM45", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 19018, "ngs": 0.012009308, "symbol": "TRIM45", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

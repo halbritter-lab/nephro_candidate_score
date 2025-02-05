@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4484, "NGS": 0.3636735677719116, "symbol": "GPR3", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 4484, "ngs": 0.36367357, "symbol": "GPR3", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

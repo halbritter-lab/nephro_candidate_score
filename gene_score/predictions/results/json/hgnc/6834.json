@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6834, "NGS": 0.994671642780304, "symbol": "MAOB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6834, "ngs": 0.99467164, "symbol": "MAOB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

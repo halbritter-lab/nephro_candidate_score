@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2417, "NGS": 0.09149637818336487, "symbol": "CRYGS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2417, "ngs": 0.09149638, "symbol": "CRYGS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

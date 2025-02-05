@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20073, "NGS": 0.8199487924575806, "symbol": "SNX27", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20073, "ngs": 0.8199488, "symbol": "SNX27", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

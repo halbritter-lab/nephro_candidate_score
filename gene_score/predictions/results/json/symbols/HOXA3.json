@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5104, "NGS": 0.7610752582550049, "symbol": "HOXA3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5104, "ngs": 0.76107526, "symbol": "HOXA3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

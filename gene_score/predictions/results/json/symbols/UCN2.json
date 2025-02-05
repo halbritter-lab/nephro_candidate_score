@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18414, "NGS": 0.05480436235666275, "symbol": "UCN2", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 18414, "ngs": 0.054804362, "symbol": "UCN2", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

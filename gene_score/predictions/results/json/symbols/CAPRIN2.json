@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21259, "NGS": 0.614906907081604, "symbol": "CAPRIN2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21259, "ngs": 0.6149069, "symbol": "CAPRIN2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

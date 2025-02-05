@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31042, "NGS": 0.9231482744216919, "symbol": "GREB1L", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 31042, "ngs": 0.9231483, "symbol": "GREB1L", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12327, "NGS": 0.0406857505440712, "symbol": "TROAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12327, "ngs": 0.04068575, "symbol": "TROAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

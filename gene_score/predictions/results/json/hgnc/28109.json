@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28109, "NGS": 0.07419158518314362, "symbol": "SKA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28109, "ngs": 0.074191585, "symbol": "SKA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18629, "NGS": 0.06854142248630524, "symbol": "STAB2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18629, "ngs": 0.06854142, "symbol": "STAB2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

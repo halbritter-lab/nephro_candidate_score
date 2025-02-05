@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26656, "NGS": 0.036549221724271774, "symbol": "MFSD6L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26656, "ngs": 0.03654922, "symbol": "MFSD6L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

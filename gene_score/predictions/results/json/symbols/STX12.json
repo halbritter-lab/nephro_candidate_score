@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11430, "NGS": 0.49814674258232117, "symbol": "STX12", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11430, "ngs": 0.49814674, "symbol": "STX12", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

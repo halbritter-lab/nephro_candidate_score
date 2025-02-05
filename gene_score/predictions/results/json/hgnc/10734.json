@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10734, "NGS": 0.07335174083709717, "symbol": "SEMA4F", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10734, "ngs": 0.07335174, "symbol": "SEMA4F", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

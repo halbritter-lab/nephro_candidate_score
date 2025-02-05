@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25470, "NGS": 0.6369269490242004, "symbol": "SUSD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25470, "ngs": 0.63692695, "symbol": "SUSD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

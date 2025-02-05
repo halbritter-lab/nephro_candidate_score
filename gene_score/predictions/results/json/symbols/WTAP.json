@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16846, "NGS": 0.8785507082939148, "symbol": "WTAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16846, "ngs": 0.8785507, "symbol": "WTAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

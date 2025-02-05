@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33803, "NGS": 0.29134857654571533, "symbol": "VMAC", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33803, "ngs": 0.29134858, "symbol": "VMAC", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

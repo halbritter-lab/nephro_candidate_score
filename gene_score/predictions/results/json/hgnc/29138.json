@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29138, "NGS": 0.7190582156181335, "symbol": "FAM169A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29138, "ngs": 0.7190582, "symbol": "FAM169A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

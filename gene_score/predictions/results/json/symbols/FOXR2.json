@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30469, "NGS": 0.026889324188232422, "symbol": "FOXR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30469, "ngs": 0.026889324, "symbol": "FOXR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

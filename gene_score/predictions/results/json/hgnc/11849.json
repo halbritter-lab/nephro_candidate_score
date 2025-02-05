@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11849, "NGS": 0.42502447962760925, "symbol": "TLR3", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 11849, "ngs": 0.42502448, "symbol": "TLR3", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

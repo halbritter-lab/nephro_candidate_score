@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6772, "NGS": 0.3457784354686737, "symbol": "SMAD6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6772, "ngs": 0.34577844, "symbol": "SMAD6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

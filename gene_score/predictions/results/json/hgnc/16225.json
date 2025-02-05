@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16225, "NGS": 0.017557041719555855, "symbol": "SLX4IP", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 16225, "ngs": 0.017557042, "symbol": "SLX4IP", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

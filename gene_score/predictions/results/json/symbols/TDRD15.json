@@ -1,1 +1,1 @@
-{"hgnc_id_int": 45037, "NGS": 0.09685561805963516, "symbol": "TDRD15", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 45037, "ngs": 0.09685562, "symbol": "TDRD15", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

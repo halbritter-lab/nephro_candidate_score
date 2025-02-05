@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11741, "NGS": 0.9531481266021729, "symbol": "TFAM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11741, "ngs": 0.9531481, "symbol": "TFAM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

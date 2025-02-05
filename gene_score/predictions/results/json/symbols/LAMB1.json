@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6486, "NGS": 0.5830156207084656, "symbol": "LAMB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6486, "ngs": 0.5830156, "symbol": "LAMB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

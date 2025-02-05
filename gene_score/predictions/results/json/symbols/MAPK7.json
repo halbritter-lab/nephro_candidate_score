@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6880, "NGS": 0.986491322517395, "symbol": "MAPK7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6880, "ngs": 0.9864913, "symbol": "MAPK7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

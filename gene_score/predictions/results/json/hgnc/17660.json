@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17660, "NGS": 0.12638328969478607, "symbol": "DCLRE1A", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 17660, "ngs": 0.12638329, "symbol": "DCLRE1A", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

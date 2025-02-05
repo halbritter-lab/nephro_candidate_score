@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1478, "NGS": 0.008447336032986641, "symbol": "CAPN11", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 1478, "ngs": 0.008447336, "symbol": "CAPN11", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20225, "NGS": 0.7407637238502502, "symbol": "DPF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20225, "ngs": 0.7407637, "symbol": "DPF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

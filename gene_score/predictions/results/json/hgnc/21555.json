@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21555, "NGS": 0.35900619626045227, "symbol": "EYS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21555, "ngs": 0.3590062, "symbol": "EYS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

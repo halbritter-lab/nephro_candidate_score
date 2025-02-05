@@ -1,1 +1,1 @@
-{"hgnc_id_int": 740, "NGS": 0.002087883884087205, "symbol": "ASCL3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 740, "ngs": 0.002087884, "symbol": "ASCL3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

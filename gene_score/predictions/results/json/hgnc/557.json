@@ -1,1 +1,1 @@
-{"hgnc_id_int": 557, "NGS": 0.618928849697113, "symbol": "SYNRG", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 557, "ngs": 0.61892885, "symbol": "SYNRG", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

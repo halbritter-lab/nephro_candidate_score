@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12392, "NGS": 0.9495331645011902, "symbol": "DNAJC7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12392, "ngs": 0.94953316, "symbol": "DNAJC7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37216, "NGS": 0.39407601952552795, "symbol": "LIPT2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 37216, "ngs": 0.39407602, "symbol": "LIPT2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

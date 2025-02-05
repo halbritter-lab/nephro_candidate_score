@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20293, "NGS": 0.965176522731781, "symbol": "ABHD13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20293, "ngs": 0.9651765, "symbol": "ABHD13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

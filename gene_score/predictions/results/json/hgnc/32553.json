@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32553, "NGS": 0.04996676370501518, "symbol": "CEMP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32553, "ngs": 0.049966764, "symbol": "CEMP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

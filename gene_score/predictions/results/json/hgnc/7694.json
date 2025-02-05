@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7694, "NGS": 0.9068547487258911, "symbol": "NDUFAB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7694, "ngs": 0.90685475, "symbol": "NDUFAB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

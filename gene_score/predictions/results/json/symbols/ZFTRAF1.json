@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17806, "NGS": 0.7147230505943298, "symbol": "ZFTRAF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17806, "ngs": 0.71472305, "symbol": "ZFTRAF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

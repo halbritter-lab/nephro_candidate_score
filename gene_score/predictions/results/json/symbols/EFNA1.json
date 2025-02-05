@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3221, "NGS": 0.6275153756141663, "symbol": "EFNA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3221, "ngs": 0.6275154, "symbol": "EFNA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

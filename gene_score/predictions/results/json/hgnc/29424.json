@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29424, "NGS": 0.6114368438720703, "symbol": "ANKRD24", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29424, "ngs": 0.61143684, "symbol": "ANKRD24", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

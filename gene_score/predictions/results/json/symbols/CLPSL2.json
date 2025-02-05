@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21250, "NGS": 0.0814380869269371, "symbol": "CLPSL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21250, "ngs": 0.08143809, "symbol": "CLPSL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

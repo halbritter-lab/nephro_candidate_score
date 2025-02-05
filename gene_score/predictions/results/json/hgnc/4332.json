@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4332, "NGS": 0.8921710252761841, "symbol": "BICRA", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 4332, "ngs": 0.892171, "symbol": "BICRA", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

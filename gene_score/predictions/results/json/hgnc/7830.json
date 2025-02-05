@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7830, "NGS": 0.8404811024665833, "symbol": "NKG7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7830, "ngs": 0.8404811, "symbol": "NKG7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

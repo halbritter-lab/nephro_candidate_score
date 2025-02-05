@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14681, "NGS": 0.951300323009491, "symbol": "SPATA2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14681, "ngs": 0.9513003, "symbol": "SPATA2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

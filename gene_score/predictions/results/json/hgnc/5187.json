@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5187, "NGS": 0.9144451022148132, "symbol": "PRMT1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5187, "ngs": 0.9144451, "symbol": "PRMT1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29479, "NGS": 0.0820072814822197, "symbol": "CENPK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29479, "ngs": 0.08200728, "symbol": "CENPK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

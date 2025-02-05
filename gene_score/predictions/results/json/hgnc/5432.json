@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5432, "NGS": 0.5048728585243225, "symbol": "IFNAR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5432, "ngs": 0.50487286, "symbol": "IFNAR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

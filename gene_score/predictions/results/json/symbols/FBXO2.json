@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13581, "NGS": 0.24125918745994568, "symbol": "FBXO2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13581, "ngs": 0.24125919, "symbol": "FBXO2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

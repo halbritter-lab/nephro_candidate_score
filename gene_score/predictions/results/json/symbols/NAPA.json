@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7641, "NGS": 0.8807308077812195, "symbol": "NAPA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7641, "ngs": 0.8807308, "symbol": "NAPA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

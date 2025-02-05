@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15703, "NGS": 0.3216971457004547, "symbol": "RHOF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15703, "ngs": 0.32169715, "symbol": "RHOF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

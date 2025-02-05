@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27421, "NGS": 0.0749952420592308, "symbol": "C10orf53", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 27421, "ngs": 0.07499524, "symbol": "C10orf53", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

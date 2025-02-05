@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9977, "NGS": 0.018741246312856674, "symbol": "RFPL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9977, "ngs": 0.018741246, "symbol": "RFPL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

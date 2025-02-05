@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25189, "NGS": 0.9928909540176392, "symbol": "ALKBH8", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 25189, "ngs": 0.99289095, "symbol": "ALKBH8", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

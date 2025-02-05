@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15749, "NGS": 0.0152511578053236, "symbol": "BPIFA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15749, "ngs": 0.015251158, "symbol": "BPIFA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

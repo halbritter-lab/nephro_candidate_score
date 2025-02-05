@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23414, "NGS": 0.3158979117870331, "symbol": "WASHC2C", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 23414, "ngs": 0.3158979, "symbol": "WASHC2C", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

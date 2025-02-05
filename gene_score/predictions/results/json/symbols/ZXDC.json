@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28160, "NGS": 0.27873820066452026, "symbol": "ZXDC", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28160, "ngs": 0.2787382, "symbol": "ZXDC", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

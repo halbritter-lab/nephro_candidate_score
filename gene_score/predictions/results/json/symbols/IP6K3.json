@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17269, "NGS": 0.009166169911623001, "symbol": "IP6K3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17269, "ngs": 0.00916617, "symbol": "IP6K3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

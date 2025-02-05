@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13479, "NGS": 0.012060476467013359, "symbol": "UGT2B28", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13479, "ngs": 0.0120604765, "symbol": "UGT2B28", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

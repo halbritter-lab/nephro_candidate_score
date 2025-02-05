@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16976, "NGS": 0.001326750498265028, "symbol": "BNIPL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16976, "ngs": 0.0013267505, "symbol": "BNIPL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

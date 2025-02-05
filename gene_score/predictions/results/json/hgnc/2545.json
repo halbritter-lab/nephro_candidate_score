@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2545, "NGS": 0.8552438616752625, "symbol": "CTSS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2545, "ngs": 0.85524386, "symbol": "CTSS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

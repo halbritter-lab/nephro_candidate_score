@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6816, "NGS": 0.11870525777339935, "symbol": "MAK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6816, "ngs": 0.11870526, "symbol": "MAK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

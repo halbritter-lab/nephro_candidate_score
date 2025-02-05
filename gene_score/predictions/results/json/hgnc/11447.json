@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11447, "NGS": 0.9757181406021118, "symbol": "STYX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11447, "ngs": 0.97571814, "symbol": "STYX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

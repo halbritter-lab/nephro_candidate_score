@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23252, "NGS": 0.012870070524513721, "symbol": "AWAT1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23252, "ngs": 0.0128700705, "symbol": "AWAT1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

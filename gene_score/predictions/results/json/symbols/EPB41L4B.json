@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19818, "NGS": 0.7814081311225891, "symbol": "EPB41L4B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19818, "ngs": 0.78140813, "symbol": "EPB41L4B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

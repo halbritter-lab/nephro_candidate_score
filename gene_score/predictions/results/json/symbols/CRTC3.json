@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26148, "NGS": 0.9818353652954102, "symbol": "CRTC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26148, "ngs": 0.98183537, "symbol": "CRTC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

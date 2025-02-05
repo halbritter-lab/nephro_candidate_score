@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26809, "NGS": 0.008284245617687702, "symbol": "RPTN", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 26809, "ngs": 0.008284246, "symbol": "RPTN", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

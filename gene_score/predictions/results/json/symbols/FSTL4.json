@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21389, "NGS": 0.72626131772995, "symbol": "FSTL4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21389, "ngs": 0.7262613, "symbol": "FSTL4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

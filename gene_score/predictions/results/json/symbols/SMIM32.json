@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53640, "NGS": 0.14290928840637207, "symbol": "SMIM32", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53640, "ngs": 0.14290929, "symbol": "SMIM32", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

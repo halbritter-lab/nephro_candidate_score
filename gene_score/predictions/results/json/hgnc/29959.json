@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29959, "NGS": 0.01268498133867979, "symbol": "TTC33", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 29959, "ngs": 0.012684981, "symbol": "TTC33", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

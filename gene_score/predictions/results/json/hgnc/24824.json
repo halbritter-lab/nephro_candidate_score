@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24824, "NGS": 0.8910623788833618, "symbol": "FZR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24824, "ngs": 0.8910624, "symbol": "FZR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

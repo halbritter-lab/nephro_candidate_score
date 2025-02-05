@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23469, "NGS": 0.0032285614870488644, "symbol": "AKR1C8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23469, "ngs": 0.0032285615, "symbol": "AKR1C8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

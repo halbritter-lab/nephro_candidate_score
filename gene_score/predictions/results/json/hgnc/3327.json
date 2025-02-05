@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3327, "NGS": 0.07712506502866745, "symbol": "ELN", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 3327, "ngs": 0.077125065, "symbol": "ELN", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

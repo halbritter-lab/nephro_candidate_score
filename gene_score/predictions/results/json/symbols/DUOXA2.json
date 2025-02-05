@@ -1,1 +1,1 @@
-{"hgnc_id_int": 32698, "NGS": 0.00432309927418828, "symbol": "DUOXA2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 32698, "ngs": 0.0043230993, "symbol": "DUOXA2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

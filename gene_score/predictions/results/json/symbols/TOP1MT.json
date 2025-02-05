@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29787, "NGS": 0.0969717875123024, "symbol": "TOP1MT", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29787, "ngs": 0.09697179, "symbol": "TOP1MT", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

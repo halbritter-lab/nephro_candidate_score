@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8763, "NGS": 0.9798787832260132, "symbol": "PDCD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8763, "ngs": 0.9798788, "symbol": "PDCD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

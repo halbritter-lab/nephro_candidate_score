@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25237, "NGS": 0.5716372132301331, "symbol": "TMX4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25237, "ngs": 0.5716372, "symbol": "TMX4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

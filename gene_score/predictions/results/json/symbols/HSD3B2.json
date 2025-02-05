@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5218, "NGS": 0.484377920627594, "symbol": "HSD3B2", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 5218, "ngs": 0.48437792, "symbol": "HSD3B2", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

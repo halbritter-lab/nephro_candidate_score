@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30009, "NGS": 0.789592444896698, "symbol": "PEF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30009, "ngs": 0.78959244, "symbol": "PEF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

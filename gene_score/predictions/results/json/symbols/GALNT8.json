@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4130, "NGS": 0.003374244784936309, "symbol": "GALNT8", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 4130, "ngs": 0.0033742448, "symbol": "GALNT8", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

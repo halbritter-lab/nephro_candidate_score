@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3360, "NGS": 0.7598777413368225, "symbol": "ENSA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3360, "ngs": 0.75987774, "symbol": "ENSA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

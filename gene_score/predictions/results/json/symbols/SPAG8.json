@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14105, "NGS": 0.007358409930020571, "symbol": "SPAG8", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 14105, "ngs": 0.00735841, "symbol": "SPAG8", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1316, "NGS": 0.9611262679100037, "symbol": "EML4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1316, "ngs": 0.96112627, "symbol": "EML4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

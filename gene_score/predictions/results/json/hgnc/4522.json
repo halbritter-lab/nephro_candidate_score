@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4522, "NGS": 0.2807721495628357, "symbol": "NPBWR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4522, "ngs": 0.28077215, "symbol": "NPBWR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

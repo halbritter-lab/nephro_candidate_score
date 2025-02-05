@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17804, "NGS": 0.22315910458564758, "symbol": "PIPOX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17804, "ngs": 0.2231591, "symbol": "PIPOX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

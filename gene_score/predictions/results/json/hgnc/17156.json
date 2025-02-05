@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17156, "NGS": 0.3225673735141754, "symbol": "LY96", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17156, "ngs": 0.32256737, "symbol": "LY96", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

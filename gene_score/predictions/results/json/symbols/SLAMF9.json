@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18430, "NGS": 0.05236354470252991, "symbol": "SLAMF9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18430, "ngs": 0.052363545, "symbol": "SLAMF9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

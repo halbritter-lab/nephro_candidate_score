@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19124, "NGS": 0.6661645770072937, "symbol": "FIP1L1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 19124, "ngs": 0.6661646, "symbol": "FIP1L1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

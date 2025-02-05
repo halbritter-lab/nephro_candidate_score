@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1958, "NGS": 0.539440393447876, "symbol": "CHRNA4", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 1958, "ngs": 0.5394404, "symbol": "CHRNA4", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

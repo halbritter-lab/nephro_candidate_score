@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26633, "NGS": 0.037657465785741806, "symbol": "SLFN11", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26633, "ngs": 0.037657466, "symbol": "SLFN11", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

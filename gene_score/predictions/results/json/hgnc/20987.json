@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20987, "NGS": 0.09240662306547165, "symbol": "ANKMY1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20987, "ngs": 0.09240662, "symbol": "ANKMY1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

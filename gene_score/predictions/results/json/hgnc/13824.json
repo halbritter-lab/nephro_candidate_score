@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13824, "NGS": 0.3206517994403839, "symbol": "MMS19", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13824, "ngs": 0.3206518, "symbol": "MMS19", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

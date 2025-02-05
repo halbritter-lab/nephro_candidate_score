@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15465, "NGS": 0.9180526733398438, "symbol": "GPHN", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 15465, "ngs": 0.9180527, "symbol": "GPHN", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

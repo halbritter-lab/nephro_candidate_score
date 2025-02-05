@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24686, "NGS": 0.11761491000652313, "symbol": "FBLIM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24686, "ngs": 0.11761491, "symbol": "FBLIM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

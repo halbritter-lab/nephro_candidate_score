@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23511, "NGS": 0.07481274008750916, "symbol": "TBATA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23511, "ngs": 0.07481274, "symbol": "TBATA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

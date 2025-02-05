@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26943, "NGS": 0.5239567756652832, "symbol": "CXXC5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26943, "ngs": 0.5239568, "symbol": "CXXC5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

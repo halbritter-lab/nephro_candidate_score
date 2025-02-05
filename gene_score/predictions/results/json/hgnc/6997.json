@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6997, "NGS": 0.876217246055603, "symbol": "MEF2D", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6997, "ngs": 0.87621725, "symbol": "MEF2D", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

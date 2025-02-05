@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17075, "NGS": 0.9390092492103577, "symbol": "TAB2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17075, "ngs": 0.93900925, "symbol": "TAB2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

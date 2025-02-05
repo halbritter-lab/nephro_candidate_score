@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12485, "NGS": 0.9453661441802979, "symbol": "UBE2I", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 12485, "ngs": 0.94536614, "symbol": "UBE2I", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

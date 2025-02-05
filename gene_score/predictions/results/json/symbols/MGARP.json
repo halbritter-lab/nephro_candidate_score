@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29969, "NGS": 0.40324634313583374, "symbol": "MGARP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29969, "ngs": 0.40324634, "symbol": "MGARP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

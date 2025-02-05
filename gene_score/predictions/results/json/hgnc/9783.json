@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9783, "NGS": 0.8552083373069763, "symbol": "RAB5A", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 9783, "ngs": 0.85520834, "symbol": "RAB5A", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13013, "NGS": 0.2618871331214905, "symbol": "KAT6A", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 13013, "ngs": 0.26188713, "symbol": "KAT6A", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

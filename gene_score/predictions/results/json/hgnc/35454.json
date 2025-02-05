@@ -1,1 +1,1 @@
-{"hgnc_id_int": 35454, "NGS": 0.7516472339630127, "symbol": "ECSCR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 35454, "ngs": 0.75164723, "symbol": "ECSCR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

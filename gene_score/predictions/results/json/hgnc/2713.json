@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2713, "NGS": 0.7766266465187073, "symbol": "DCTN3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2713, "ngs": 0.77662665, "symbol": "DCTN3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

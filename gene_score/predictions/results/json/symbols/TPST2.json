@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12021, "NGS": 0.8835828304290771, "symbol": "TPST2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12021, "ngs": 0.88358283, "symbol": "TPST2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

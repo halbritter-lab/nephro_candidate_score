@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16132, "NGS": 0.8668712973594666, "symbol": "SRXN1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16132, "ngs": 0.8668713, "symbol": "SRXN1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

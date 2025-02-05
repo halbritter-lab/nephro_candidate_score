@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22937, "NGS": 0.03449707850813866, "symbol": "NLRP13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22937, "ngs": 0.03449708, "symbol": "NLRP13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

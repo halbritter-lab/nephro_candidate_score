@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7981, "NGS": 0.988063633441925, "symbol": "NR4A2", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 7981, "ngs": 0.98806363, "symbol": "NR4A2", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

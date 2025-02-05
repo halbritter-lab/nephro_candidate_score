@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11183, "NGS": 0.7917718887329102, "symbol": "SON", "gene_set": "test", "evidence_count": 2.0}
+{"hgncIdInt": 11183, "ngs": 0.7917719, "symbol": "SON", "geneSet": "test", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

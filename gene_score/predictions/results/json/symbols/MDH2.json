@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6971, "NGS": 0.9123392105102539, "symbol": "MDH2", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 6971, "ngs": 0.9123392, "symbol": "MDH2", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

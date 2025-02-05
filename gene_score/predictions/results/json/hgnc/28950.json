@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28950, "NGS": 0.10085034370422363, "symbol": "KIAA0040", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28950, "ngs": 0.10085034, "symbol": "KIAA0040", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

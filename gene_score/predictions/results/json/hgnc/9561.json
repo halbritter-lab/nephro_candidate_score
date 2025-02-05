@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9561, "NGS": 0.8896094560623169, "symbol": "PSMD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9561, "ngs": 0.88960946, "symbol": "PSMD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

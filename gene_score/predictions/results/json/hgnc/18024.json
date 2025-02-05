@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18024, "NGS": 0.7920722365379333, "symbol": "FSD2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18024, "ngs": 0.79207224, "symbol": "FSD2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

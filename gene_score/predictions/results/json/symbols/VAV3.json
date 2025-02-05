@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12659, "NGS": 0.834198534488678, "symbol": "VAV3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 12659, "ngs": 0.83419853, "symbol": "VAV3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

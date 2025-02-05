@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8734, "NGS": 0.8854177594184875, "symbol": "NUP85", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 8734, "ngs": 0.88541776, "symbol": "NUP85", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

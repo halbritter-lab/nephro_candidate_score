@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31700, "NGS": 0.8203858733177185, "symbol": "ZBTB7C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31700, "ngs": 0.8203859, "symbol": "ZBTB7C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

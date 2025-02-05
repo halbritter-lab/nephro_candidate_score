@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33895, "NGS": 0.017269186675548553, "symbol": "POTEE", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33895, "ngs": 0.017269187, "symbol": "POTEE", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

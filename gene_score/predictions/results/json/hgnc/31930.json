@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31930, "NGS": 0.01175060123205185, "symbol": "ZNF662", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 31930, "ngs": 0.011750601, "symbol": "ZNF662", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

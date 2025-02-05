@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24140, "NGS": 0.9295496940612793, "symbol": "MGAT5B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24140, "ngs": 0.9295497, "symbol": "MGAT5B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

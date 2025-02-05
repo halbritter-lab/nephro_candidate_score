@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25161, "NGS": 0.4195883274078369, "symbol": "PHF21B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25161, "ngs": 0.41958833, "symbol": "PHF21B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

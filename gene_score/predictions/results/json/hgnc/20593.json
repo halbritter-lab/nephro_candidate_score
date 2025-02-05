@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20593, "NGS": 0.8880515098571777, "symbol": "VPS39", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20593, "ngs": 0.8880515, "symbol": "VPS39", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

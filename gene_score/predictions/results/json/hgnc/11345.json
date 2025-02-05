@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11345, "NGS": 0.7328412532806396, "symbol": "RECK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11345, "ngs": 0.73284125, "symbol": "RECK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

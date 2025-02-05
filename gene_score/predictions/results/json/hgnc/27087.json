@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27087, "NGS": 0.7156778573989868, "symbol": "MOSMO", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27087, "ngs": 0.71567786, "symbol": "MOSMO", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

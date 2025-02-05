@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4613, "NGS": 0.3414011299610138, "symbol": "GSC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4613, "ngs": 0.34140113, "symbol": "GSC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30228, "NGS": 0.6520802974700928, "symbol": "PREPL", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 30228, "ngs": 0.6520803, "symbol": "PREPL", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

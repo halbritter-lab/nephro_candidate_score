@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11874, "NGS": 0.0031779322307556868, "symbol": "TMOD4", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 11874, "ngs": 0.0031779322, "symbol": "TMOD4", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

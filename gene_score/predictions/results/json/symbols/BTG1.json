@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1130, "NGS": 0.9926430583000183, "symbol": "BTG1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1130, "ngs": 0.99264306, "symbol": "BTG1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

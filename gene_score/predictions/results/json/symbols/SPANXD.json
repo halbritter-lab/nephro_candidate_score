@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14332, "NGS": 0.01221441850066185, "symbol": "SPANXD", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14332, "ngs": 0.0122144185, "symbol": "SPANXD", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

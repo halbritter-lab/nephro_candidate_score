@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6369, "NGS": 0.2212332934141159, "symbol": "KLK8", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6369, "ngs": 0.2212333, "symbol": "KLK8", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27106, "NGS": 0.983285129070282, "symbol": "NOTUM", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27106, "ngs": 0.9832851, "symbol": "NOTUM", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

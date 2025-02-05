@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30259, "NGS": 0.8306723833084106, "symbol": "PDXP", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 30259, "ngs": 0.8306724, "symbol": "PDXP", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

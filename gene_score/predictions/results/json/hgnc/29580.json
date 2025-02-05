@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29580, "NGS": 0.012878838926553726, "symbol": "SSMEM1", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 29580, "ngs": 0.012878839, "symbol": "SSMEM1", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

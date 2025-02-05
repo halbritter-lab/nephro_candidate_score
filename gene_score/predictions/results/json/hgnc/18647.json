@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18647, "NGS": 0.3114868104457855, "symbol": "RTN4IP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18647, "ngs": 0.3114868, "symbol": "RTN4IP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

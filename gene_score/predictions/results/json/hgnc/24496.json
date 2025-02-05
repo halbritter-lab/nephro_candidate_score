@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24496, "NGS": 0.05967869982123375, "symbol": "NEPRO", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24496, "ngs": 0.0596787, "symbol": "NEPRO", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

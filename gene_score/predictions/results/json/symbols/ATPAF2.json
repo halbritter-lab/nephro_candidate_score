@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18802, "NGS": 0.5865099430084229, "symbol": "ATPAF2", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 18802, "ngs": 0.58650994, "symbol": "ATPAF2", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

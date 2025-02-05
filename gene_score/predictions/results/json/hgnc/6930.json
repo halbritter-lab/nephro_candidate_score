@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6930, "NGS": 0.1886260211467743, "symbol": "MC2R", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 6930, "ngs": 0.18862602, "symbol": "MC2R", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

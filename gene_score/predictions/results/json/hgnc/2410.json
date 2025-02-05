@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2410, "NGS": 0.002605642657727003, "symbol": "CRYGC", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2410, "ngs": 0.0026056427, "symbol": "CRYGC", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,0 +1,19 @@
+default:
+  omim_download_url: "https://data.omim.org/downloads/1R83aw9QTZ66GmeYgYPVAQ/genemap2.txt" # set your omim download link for genemap
+  ensembl_biomart_version: 109 # Ensembl Biomart Genes version
+  
+nephrology:
+  projectsdir: "/Users/nrank/Desktop/BioInf/halbritter/" # path to your project where feature/label aquisition is done
+  ML_projectsdir: "/data/gpfs-1/users/rankn_c/work/halbritter/" # path to your project, might be the same as 'projectsdir' if features/label aquisition and machine learning part is done on the same machine
+  creation_date_gs: "2023-10-12" # date of feature/label aquisition for the gene score in the format "YYYY-MM-DD", e.g. "2023-10-12"
+  creation_date_vs: "2024-04-08" # date of feature/label aquisition for the variant score in the format "YYYY-MM-DD", e.g. "2023-10-12"
+
+  data_prep_date_gs: "2023-10-16" # date of preprocessing features/labels for machine learning of the gene score in the format "YYYY-MM-DD", e.g. "2023-10-16"
+  data_prep_date_vs: "2024-05-15" # date of preprocessing features/labels for machine learning of the variant score in the format "YYYY-MM-DD", e.g. "2023-10-16"
+  kidney_genetics_version_gs: "2023-10-04" # date of kidney-genetics version used for gene score, check for latest version on https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/A_MergeAnalysesSources/results
+  kidney_genetics_version_vs: "2023-11-21" # date of kidney-genetics version used for variant score, check for latest version on https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/A_MergeAnalysesSources/results. Can be the same as 'kidney_genetics_version' if no new version of A_MergeAnalysesSources was released between gene score training and variant score training
+  hgnc_gt_version_gs: "2023-10-10" # date of most recent HGNC annotated gene table version used for gene score, https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/B_AnnotationHGNC/results
+  hgnc_gt_version_vs: "2023-11-21" # date of most recent HGNC annotated gene table version used for variant score, https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/B_AnnotationHGNC/results. Can be the same as 'hgnc_gt_version' if no new version of HGNC annotated gene table was released between gene score training and variant score training
+  clinvar_version: "20240301" # date/version of the most recent Clinvar VCF
+
+

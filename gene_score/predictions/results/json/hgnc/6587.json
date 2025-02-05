@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6587, "NGS": 0.32339295744895935, "symbol": "LHFPL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6587, "ngs": 0.32339296, "symbol": "LHFPL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

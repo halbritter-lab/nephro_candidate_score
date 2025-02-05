@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6158, "NGS": 0.7071596384048462, "symbol": "ITGB4", "gene_set": "train", "evidence_count": 2.0}
+{"hgncIdInt": 6158, "ngs": 0.70715964, "symbol": "ITGB4", "geneSet": "train", "evidenceCount": 2.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

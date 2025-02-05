@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20789, "NGS": 0.14174193143844604, "symbol": "ATG4D", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20789, "ngs": 0.14174193, "symbol": "ATG4D", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

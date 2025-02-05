@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1698, "NGS": 0.2629411220550537, "symbol": "CD79A", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 1698, "ngs": 0.26294112, "symbol": "CD79A", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

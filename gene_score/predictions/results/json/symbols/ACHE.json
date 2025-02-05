@@ -1,1 +1,1 @@
-{"hgnc_id_int": 108, "NGS": 0.7941853404045105, "symbol": "ACHE", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 108, "ngs": 0.79418534, "symbol": "ACHE", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

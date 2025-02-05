@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25246, "NGS": 0.7875673174858093, "symbol": "ENKD1", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 25246, "ngs": 0.7875673, "symbol": "ENKD1", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

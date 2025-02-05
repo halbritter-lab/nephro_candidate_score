@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44405, "NGS": 0.11401364952325821, "symbol": "GOLGA8N", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44405, "ngs": 0.11401365, "symbol": "GOLGA8N", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

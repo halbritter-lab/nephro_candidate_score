@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53789, "NGS": 0.0222170352935791, "symbol": "CFAP97D2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53789, "ngs": 0.022217035, "symbol": "CFAP97D2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

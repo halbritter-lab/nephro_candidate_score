@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15774, "NGS": 0.015153312124311924, "symbol": "MBD3L1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15774, "ngs": 0.015153312, "symbol": "MBD3L1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

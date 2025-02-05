@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6135, "NGS": 0.01396230049431324, "symbol": "ITGA10", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6135, "ngs": 0.0139623005, "symbol": "ITGA10", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

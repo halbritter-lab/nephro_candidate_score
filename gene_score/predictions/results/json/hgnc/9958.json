@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9958, "NGS": 0.9771051406860352, "symbol": "REN", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 9958, "ngs": 0.97710514, "symbol": "REN", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

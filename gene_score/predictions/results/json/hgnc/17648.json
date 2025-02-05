@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17648, "NGS": 0.17551037669181824, "symbol": "POPDC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17648, "ngs": 0.17551038, "symbol": "POPDC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

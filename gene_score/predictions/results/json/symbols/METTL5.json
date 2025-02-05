@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25006, "NGS": 0.49490639567375183, "symbol": "METTL5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25006, "ngs": 0.4949064, "symbol": "METTL5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

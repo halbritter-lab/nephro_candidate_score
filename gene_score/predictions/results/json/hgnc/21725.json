@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21725, "NGS": 0.009427949786186218, "symbol": "GALNTL5", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 21725, "ngs": 0.00942795, "symbol": "GALNTL5", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

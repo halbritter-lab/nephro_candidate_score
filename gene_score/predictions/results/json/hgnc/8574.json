@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8574, "NGS": 0.6066173315048218, "symbol": "PAFAH1B1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8574, "ngs": 0.60661733, "symbol": "PAFAH1B1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16864, "NGS": 0.3933838903903961, "symbol": "DLGAP5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16864, "ngs": 0.3933839, "symbol": "DLGAP5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

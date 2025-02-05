@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21449, "NGS": 0.2028537541627884, "symbol": "ITIH5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21449, "ngs": 0.20285375, "symbol": "ITIH5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

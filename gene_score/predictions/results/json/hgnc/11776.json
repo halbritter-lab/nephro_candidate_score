@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11776, "NGS": 0.8270136713981628, "symbol": "TGIF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11776, "ngs": 0.8270137, "symbol": "TGIF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

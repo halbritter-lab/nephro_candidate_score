@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18243, "NGS": 0.3486103415489197, "symbol": "RCBTB1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18243, "ngs": 0.34861034, "symbol": "RCBTB1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

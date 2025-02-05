@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27455, "NGS": 0.10215923935174942, "symbol": "RCOR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27455, "ngs": 0.10215924, "symbol": "RCOR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

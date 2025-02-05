@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7037, "NGS": 0.00807231292128563, "symbol": "MELTF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7037, "ngs": 0.008072313, "symbol": "MELTF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

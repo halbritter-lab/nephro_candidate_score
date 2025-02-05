@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18984, "NGS": 0.003937129396945238, "symbol": "BMAL2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 18984, "ngs": 0.0039371294, "symbol": "BMAL2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

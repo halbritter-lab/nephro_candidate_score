@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29346, "NGS": 0.021005675196647644, "symbol": "LRRC27", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 29346, "ngs": 0.021005675, "symbol": "LRRC27", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

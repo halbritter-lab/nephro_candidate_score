@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5292, "NGS": 0.5486218929290771, "symbol": "HTR1F", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5292, "ngs": 0.5486219, "symbol": "HTR1F", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

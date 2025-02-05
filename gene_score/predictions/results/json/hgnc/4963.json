@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4963, "NGS": 0.03941520303487778, "symbol": "HLA-F", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4963, "ngs": 0.039415203, "symbol": "HLA-F", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

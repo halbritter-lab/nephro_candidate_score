@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11717, "NGS": 0.8761090040206909, "symbol": "TEAD4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11717, "ngs": 0.876109, "symbol": "TEAD4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

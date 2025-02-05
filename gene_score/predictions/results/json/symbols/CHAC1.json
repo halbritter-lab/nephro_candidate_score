@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28680, "NGS": 0.2347150295972824, "symbol": "CHAC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28680, "ngs": 0.23471503, "symbol": "CHAC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

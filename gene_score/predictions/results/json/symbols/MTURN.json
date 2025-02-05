@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25457, "NGS": 0.650924563407898, "symbol": "MTURN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25457, "ngs": 0.65092456, "symbol": "MTURN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

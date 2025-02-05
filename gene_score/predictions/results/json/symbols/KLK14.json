@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6362, "NGS": 0.009926666505634785, "symbol": "KLK14", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 6362, "ngs": 0.0099266665, "symbol": "KLK14", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

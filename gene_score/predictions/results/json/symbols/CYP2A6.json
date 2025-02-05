@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2610, "NGS": 0.1432972252368927, "symbol": "CYP2A6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2610, "ngs": 0.14329723, "symbol": "CYP2A6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20273, "NGS": 0.06001682206988335, "symbol": "EMC9", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 20273, "ngs": 0.060016822, "symbol": "EMC9", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

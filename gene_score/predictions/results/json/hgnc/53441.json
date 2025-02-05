@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53441, "NGS": 0.014582790434360504, "symbol": "CCDC195", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53441, "ngs": 0.01458279, "symbol": "CCDC195", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

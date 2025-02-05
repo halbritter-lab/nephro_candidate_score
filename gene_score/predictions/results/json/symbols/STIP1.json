@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11387, "NGS": 0.9324405193328857, "symbol": "STIP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11387, "ngs": 0.9324405, "symbol": "STIP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

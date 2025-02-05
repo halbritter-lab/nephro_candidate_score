@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26922, "NGS": 0.18259717524051666, "symbol": "ERCC6L2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26922, "ngs": 0.18259718, "symbol": "ERCC6L2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

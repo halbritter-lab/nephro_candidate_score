@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16870, "NGS": 0.12673398852348328, "symbol": "MELK", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 16870, "ngs": 0.12673399, "symbol": "MELK", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

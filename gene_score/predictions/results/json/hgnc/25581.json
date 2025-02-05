@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25581, "NGS": 0.2676807641983032, "symbol": "UBA6", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25581, "ngs": 0.26768076, "symbol": "UBA6", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

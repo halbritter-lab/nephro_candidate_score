@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30830, "NGS": 0.9562579989433289, "symbol": "LIN9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30830, "ngs": 0.956258, "symbol": "LIN9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1136, "NGS": 0.03340047597885132, "symbol": "BTN2A1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1136, "ngs": 0.033400476, "symbol": "BTN2A1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

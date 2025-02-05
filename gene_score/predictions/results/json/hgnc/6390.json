@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6390, "NGS": 0.007627603132277727, "symbol": "KIF25", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 6390, "ngs": 0.007627603, "symbol": "KIF25", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

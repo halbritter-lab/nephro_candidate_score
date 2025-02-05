@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24056, "NGS": 0.2413925677537918, "symbol": "AKR7L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24056, "ngs": 0.24139257, "symbol": "AKR7L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

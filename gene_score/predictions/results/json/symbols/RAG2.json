@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9832, "NGS": 0.46726953983306885, "symbol": "RAG2", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 9832, "ngs": 0.46726954, "symbol": "RAG2", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

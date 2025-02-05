@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24517, "NGS": 0.10980105400085449, "symbol": "NOC2L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24517, "ngs": 0.109801054, "symbol": "NOC2L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30770, "NGS": 0.5094799399375916, "symbol": "NATD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30770, "ngs": 0.50947994, "symbol": "NATD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

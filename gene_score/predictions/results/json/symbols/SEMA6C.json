@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10740, "NGS": 0.03906043618917465, "symbol": "SEMA6C", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10740, "ngs": 0.039060436, "symbol": "SEMA6C", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

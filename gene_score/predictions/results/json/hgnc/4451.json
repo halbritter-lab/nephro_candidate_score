@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4451, "NGS": 0.9890992641448975, "symbol": "GPC3", "gene_set": "train", "evidence_count": 4.0}
+{"hgncIdInt": 4451, "ngs": 0.98909926, "symbol": "GPC3", "geneSet": "train", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

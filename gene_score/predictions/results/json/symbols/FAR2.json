@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25531, "NGS": 0.8770180344581604, "symbol": "FAR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25531, "ngs": 0.87701803, "symbol": "FAR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

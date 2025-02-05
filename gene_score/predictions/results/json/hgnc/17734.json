@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17734, "NGS": 0.014080609194934368, "symbol": "TAAR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17734, "ngs": 0.014080609, "symbol": "TAAR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

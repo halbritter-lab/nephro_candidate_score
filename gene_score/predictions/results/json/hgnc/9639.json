@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9639, "NGS": 0.12152186781167984, "symbol": "HACD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9639, "ngs": 0.12152187, "symbol": "HACD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23818, "NGS": 0.5940024256706238, "symbol": "RRP1B", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 23818, "ngs": 0.5940024, "symbol": "RRP1B", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

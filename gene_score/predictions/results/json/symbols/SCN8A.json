@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10596, "NGS": 0.8903478384017944, "symbol": "SCN8A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10596, "ngs": 0.89034784, "symbol": "SCN8A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

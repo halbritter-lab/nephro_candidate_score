@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20320, "NGS": 0.9659218192100525, "symbol": "PSPC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20320, "ngs": 0.9659218, "symbol": "PSPC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

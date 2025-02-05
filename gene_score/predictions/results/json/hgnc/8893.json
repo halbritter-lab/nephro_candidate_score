@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8893, "NGS": 0.8690212368965149, "symbol": "PGF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8893, "ngs": 0.86902124, "symbol": "PGF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

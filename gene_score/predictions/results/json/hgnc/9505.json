@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9505, "NGS": 0.17228832840919495, "symbol": "CYTH4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9505, "ngs": 0.17228833, "symbol": "CYTH4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

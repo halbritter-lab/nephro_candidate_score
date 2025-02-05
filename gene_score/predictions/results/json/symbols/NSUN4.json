@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31802, "NGS": 0.03645331412553787, "symbol": "NSUN4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31802, "ngs": 0.036453314, "symbol": "NSUN4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

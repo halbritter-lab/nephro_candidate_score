@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21581, "NGS": 0.7528972029685974, "symbol": "CARMIL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21581, "ngs": 0.7528972, "symbol": "CARMIL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

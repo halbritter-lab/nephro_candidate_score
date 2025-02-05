@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1954, "NGS": 0.5974761247634888, "symbol": "CHRM5", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 1954, "ngs": 0.5974761, "symbol": "CHRM5", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

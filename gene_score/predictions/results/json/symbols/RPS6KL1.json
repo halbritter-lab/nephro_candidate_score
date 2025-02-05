@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20222, "NGS": 0.10945218056440353, "symbol": "RPS6KL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20222, "ngs": 0.10945218, "symbol": "RPS6KL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

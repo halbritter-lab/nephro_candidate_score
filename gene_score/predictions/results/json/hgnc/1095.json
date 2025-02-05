@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1095, "NGS": 0.0036796957720071077, "symbol": "BPI", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1095, "ngs": 0.0036796958, "symbol": "BPI", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

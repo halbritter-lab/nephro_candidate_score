@@ -1,1 +1,1 @@
-{"hgnc_id_int": 414, "NGS": 0.8841179013252258, "symbol": "ALDOA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 414, "ngs": 0.8841179, "symbol": "ALDOA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

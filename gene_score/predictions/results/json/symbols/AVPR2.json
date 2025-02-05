@@ -1,1 +1,1 @@
-{"hgnc_id_int": 897, "NGS": 0.9922583699226379, "symbol": "AVPR2", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 897, "ngs": 0.99225837, "symbol": "AVPR2", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

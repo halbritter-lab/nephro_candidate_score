@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16717, "NGS": 0.3662901818752289, "symbol": "DHX32", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16717, "ngs": 0.36629018, "symbol": "DHX32", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

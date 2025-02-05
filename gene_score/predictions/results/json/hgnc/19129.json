@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19129, "NGS": 0.6328031420707703, "symbol": "PSAT1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19129, "ngs": 0.63280314, "symbol": "PSAT1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

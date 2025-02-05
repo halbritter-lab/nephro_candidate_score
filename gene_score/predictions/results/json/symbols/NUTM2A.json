@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23438, "NGS": 0.15693943202495575, "symbol": "NUTM2A", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 23438, "ngs": 0.15693943, "symbol": "NUTM2A", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

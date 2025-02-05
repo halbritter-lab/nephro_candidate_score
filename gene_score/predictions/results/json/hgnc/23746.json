@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23746, "NGS": 0.32714247703552246, "symbol": "NECAB2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23746, "ngs": 0.32714248, "symbol": "NECAB2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

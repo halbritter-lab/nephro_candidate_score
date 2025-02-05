@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6068, "NGS": 0.013588469475507736, "symbol": "INHBC", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6068, "ngs": 0.0135884695, "symbol": "INHBC", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

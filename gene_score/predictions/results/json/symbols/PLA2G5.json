@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9038, "NGS": 0.06290677189826965, "symbol": "PLA2G5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9038, "ngs": 0.06290677, "symbol": "PLA2G5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

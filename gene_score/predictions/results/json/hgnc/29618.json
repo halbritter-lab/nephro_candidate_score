@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29618, "NGS": 0.18901053071022034, "symbol": "ELAPOR1", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 29618, "ngs": 0.18901053, "symbol": "ELAPOR1", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

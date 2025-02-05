@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8603, "NGS": 0.03485024720430374, "symbol": "PAPSS1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8603, "ngs": 0.034850247, "symbol": "PAPSS1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

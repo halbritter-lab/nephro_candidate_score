@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20443, "NGS": 0.9853448271751404, "symbol": "MTSS1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20443, "ngs": 0.9853448, "symbol": "MTSS1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

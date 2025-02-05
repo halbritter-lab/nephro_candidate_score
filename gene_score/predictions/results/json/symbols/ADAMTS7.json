@@ -1,1 +1,1 @@
-{"hgnc_id_int": 223, "NGS": 0.4146958887577057, "symbol": "ADAMTS7", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 223, "ngs": 0.4146959, "symbol": "ADAMTS7", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25444, "NGS": 0.05744680017232895, "symbol": "HJURP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25444, "ngs": 0.0574468, "symbol": "HJURP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

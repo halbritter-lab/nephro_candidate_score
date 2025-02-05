@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30661, "NGS": 0.9526151418685913, "symbol": "UBA2", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 30661, "ngs": 0.95261514, "symbol": "UBA2", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29164, "NGS": 0.4843592345714569, "symbol": "TBC1D30", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29164, "ngs": 0.48435923, "symbol": "TBC1D30", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

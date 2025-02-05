@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6341, "NGS": 0.6651262640953064, "symbol": "KISS1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 6341, "ngs": 0.66512626, "symbol": "KISS1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

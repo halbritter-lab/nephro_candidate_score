@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8740, "NGS": 0.9254971146583557, "symbol": "CHMP1A", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 8740, "ngs": 0.9254971, "symbol": "CHMP1A", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

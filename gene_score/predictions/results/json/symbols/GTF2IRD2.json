@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30775, "NGS": 0.0051651899702847, "symbol": "GTF2IRD2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 30775, "ngs": 0.00516519, "symbol": "GTF2IRD2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

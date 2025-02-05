@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19268, "NGS": 0.9303731322288513, "symbol": "UBE2J2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19268, "ngs": 0.93037313, "symbol": "UBE2J2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

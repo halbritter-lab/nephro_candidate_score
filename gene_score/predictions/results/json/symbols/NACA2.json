@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23290, "NGS": 0.14304445683956146, "symbol": "NACA2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23290, "ngs": 0.14304446, "symbol": "NACA2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

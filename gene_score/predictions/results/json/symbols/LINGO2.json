@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21207, "NGS": 0.8455150723457336, "symbol": "LINGO2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21207, "ngs": 0.8455151, "symbol": "LINGO2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

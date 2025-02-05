@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28454, "NGS": 0.762820839881897, "symbol": "DERL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28454, "ngs": 0.76282084, "symbol": "DERL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

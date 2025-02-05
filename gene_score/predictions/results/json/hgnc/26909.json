@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26909, "NGS": 0.00392670463770628, "symbol": "HTRA4", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 26909, "ngs": 0.0039267046, "symbol": "HTRA4", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

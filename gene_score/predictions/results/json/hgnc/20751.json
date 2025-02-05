@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20751, "NGS": 0.9847917556762695, "symbol": "WDFY3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20751, "ngs": 0.98479176, "symbol": "WDFY3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

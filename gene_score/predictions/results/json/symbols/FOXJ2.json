@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24818, "NGS": 0.8017160892486572, "symbol": "FOXJ2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24818, "ngs": 0.8017161, "symbol": "FOXJ2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

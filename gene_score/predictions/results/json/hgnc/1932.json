@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1932, "NGS": 0.06979737430810928, "symbol": "CHI3L1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1932, "ngs": 0.069797374, "symbol": "CHI3L1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

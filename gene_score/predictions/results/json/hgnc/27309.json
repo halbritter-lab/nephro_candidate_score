@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27309, "NGS": 0.3914159834384918, "symbol": "DHFR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 27309, "ngs": 0.39141598, "symbol": "DHFR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

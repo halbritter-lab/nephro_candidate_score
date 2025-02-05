@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7527, "NGS": 0.06771650165319443, "symbol": "MUTYH", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 7527, "ngs": 0.0677165, "symbol": "MUTYH", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

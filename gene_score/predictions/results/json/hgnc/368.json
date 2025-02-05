@@ -1,1 +1,1 @@
-{"hgnc_id_int": 368, "NGS": 0.9877739548683167, "symbol": "AKAP10", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 368, "ngs": 0.98777395, "symbol": "AKAP10", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

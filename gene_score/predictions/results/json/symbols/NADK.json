@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29831, "NGS": 0.6134987473487854, "symbol": "NADK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29831, "ngs": 0.61349875, "symbol": "NADK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

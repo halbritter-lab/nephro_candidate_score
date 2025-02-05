@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5950, "NGS": 0.17713066935539246, "symbol": "IGSF3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5950, "ngs": 0.17713067, "symbol": "IGSF3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

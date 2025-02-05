@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11309, "NGS": 0.640078604221344, "symbol": "SRPX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11309, "ngs": 0.6400786, "symbol": "SRPX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

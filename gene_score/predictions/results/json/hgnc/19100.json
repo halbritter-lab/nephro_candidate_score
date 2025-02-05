@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19100, "NGS": 0.6211287975311279, "symbol": "IL23R", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 19100, "ngs": 0.6211288, "symbol": "IL23R", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

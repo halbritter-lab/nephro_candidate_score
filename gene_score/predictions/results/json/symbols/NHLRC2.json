@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24731, "NGS": 0.9509174823760986, "symbol": "NHLRC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24731, "ngs": 0.9509175, "symbol": "NHLRC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

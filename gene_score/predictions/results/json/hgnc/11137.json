@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11137, "NGS": 0.7589897513389587, "symbol": "SNAPC4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11137, "ngs": 0.75898975, "symbol": "SNAPC4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

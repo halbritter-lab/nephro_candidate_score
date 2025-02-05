@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24261, "NGS": 0.9433859586715698, "symbol": "CIAO2B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24261, "ngs": 0.94338596, "symbol": "CIAO2B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

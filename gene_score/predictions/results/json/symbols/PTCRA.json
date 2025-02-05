@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21290, "NGS": 0.027156159281730652, "symbol": "PTCRA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21290, "ngs": 0.02715616, "symbol": "PTCRA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

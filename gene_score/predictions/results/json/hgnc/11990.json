@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11990, "NGS": 0.6733870506286621, "symbol": "TOP2B", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 11990, "ngs": 0.67338705, "symbol": "TOP2B", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

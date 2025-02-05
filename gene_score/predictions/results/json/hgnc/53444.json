@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53444, "NGS": 0.007895924150943756, "symbol": "UPK3BL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 53444, "ngs": 0.007895924, "symbol": "UPK3BL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

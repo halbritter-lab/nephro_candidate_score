@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4172, "NGS": 0.9988206028938293, "symbol": "GATA3", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 4172, "ngs": 0.9988206, "symbol": "GATA3", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

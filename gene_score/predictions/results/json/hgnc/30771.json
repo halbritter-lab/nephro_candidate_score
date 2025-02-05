@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30771, "NGS": 0.030017659068107605, "symbol": "ELOA2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30771, "ngs": 0.030017659, "symbol": "ELOA2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

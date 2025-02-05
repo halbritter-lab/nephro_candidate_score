@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14335, "NGS": 0.1937321424484253, "symbol": "PLEKHA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14335, "ngs": 0.19373214, "symbol": "PLEKHA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

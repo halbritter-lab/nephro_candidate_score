@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6441, "NGS": 0.004606116563081741, "symbol": "KRT4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6441, "ngs": 0.0046061166, "symbol": "KRT4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

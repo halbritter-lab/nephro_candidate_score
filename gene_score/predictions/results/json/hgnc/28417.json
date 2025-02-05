@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28417, "NGS": 0.010509268380701542, "symbol": "AARSD1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28417, "ngs": 0.010509268, "symbol": "AARSD1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

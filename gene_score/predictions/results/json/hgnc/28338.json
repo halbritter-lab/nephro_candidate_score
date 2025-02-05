@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28338, "NGS": 0.9109160900115967, "symbol": "DENND5B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28338, "ngs": 0.9109161, "symbol": "DENND5B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

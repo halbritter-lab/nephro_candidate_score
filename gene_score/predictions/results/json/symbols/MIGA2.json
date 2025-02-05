@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23621, "NGS": 0.9233840703964233, "symbol": "MIGA2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23621, "ngs": 0.9233841, "symbol": "MIGA2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

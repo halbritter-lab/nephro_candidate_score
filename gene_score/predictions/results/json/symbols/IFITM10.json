@@ -1,1 +1,1 @@
-{"hgnc_id_int": 40022, "NGS": 0.13683083653450012, "symbol": "IFITM10", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 40022, "ngs": 0.13683084, "symbol": "IFITM10", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

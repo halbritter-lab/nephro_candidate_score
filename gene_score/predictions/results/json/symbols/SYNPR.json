@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16507, "NGS": 0.1811274290084839, "symbol": "SYNPR", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16507, "ngs": 0.18112743, "symbol": "SYNPR", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

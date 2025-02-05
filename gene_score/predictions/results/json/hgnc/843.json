@@ -1,1 +1,1 @@
-{"hgnc_id_int": 843, "NGS": 0.9021754860877991, "symbol": "ATP5MC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 843, "ngs": 0.9021755, "symbol": "ATP5MC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

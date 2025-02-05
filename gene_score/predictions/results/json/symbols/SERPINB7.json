@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13902, "NGS": 0.0020451818127185106, "symbol": "SERPINB7", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 13902, "ngs": 0.0020451818, "symbol": "SERPINB7", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

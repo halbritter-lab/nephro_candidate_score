@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26575, "NGS": 0.09422829747200012, "symbol": "PRIMPOL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26575, "ngs": 0.0942283, "symbol": "PRIMPOL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

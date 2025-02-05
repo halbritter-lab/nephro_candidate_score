@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21755, "NGS": 0.13141551613807678, "symbol": "CHST13", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21755, "ngs": 0.13141552, "symbol": "CHST13", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

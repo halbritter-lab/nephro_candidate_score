@@ -1,1 +1,1 @@
-{"hgnc_id_int": 4204, "NGS": 0.49298030138015747, "symbol": "GCNT2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 4204, "ngs": 0.4929803, "symbol": "GCNT2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

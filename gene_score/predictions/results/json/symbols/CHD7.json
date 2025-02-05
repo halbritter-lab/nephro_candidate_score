@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20626, "NGS": 0.8468985557556152, "symbol": "CHD7", "gene_set": "test", "evidence_count": 4.0}
+{"hgncIdInt": 20626, "ngs": 0.84689856, "symbol": "CHD7", "geneSet": "test", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12874, "NGS": 0.8376672267913818, "symbol": "ZIC3", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 12874, "ngs": 0.8376672, "symbol": "ZIC3", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

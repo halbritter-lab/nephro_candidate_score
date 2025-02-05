@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16660, "NGS": 0.29539334774017334, "symbol": "FERD3L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16660, "ngs": 0.29539335, "symbol": "FERD3L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

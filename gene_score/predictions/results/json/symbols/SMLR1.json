@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44670, "NGS": 0.37834686040878296, "symbol": "SMLR1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44670, "ngs": 0.37834686, "symbol": "SMLR1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

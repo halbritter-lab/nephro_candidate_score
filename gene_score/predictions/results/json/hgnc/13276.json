@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13276, "NGS": 0.8293226957321167, "symbol": "EI24", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13276, "ngs": 0.8293227, "symbol": "EI24", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

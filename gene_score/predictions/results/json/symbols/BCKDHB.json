@@ -1,1 +1,1 @@
-{"hgnc_id_int": 987, "NGS": 0.7380050420761108, "symbol": "BCKDHB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 987, "ngs": 0.73800504, "symbol": "BCKDHB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

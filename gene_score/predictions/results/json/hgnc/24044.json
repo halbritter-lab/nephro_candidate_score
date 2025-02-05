@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24044, "NGS": 0.990445613861084, "symbol": "FAM72A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24044, "ngs": 0.9904456, "symbol": "FAM72A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

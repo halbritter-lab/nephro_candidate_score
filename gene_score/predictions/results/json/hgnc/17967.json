@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17967, "NGS": 0.26708629727363586, "symbol": "IRAK4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17967, "ngs": 0.2670863, "symbol": "IRAK4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23302, "NGS": 0.1733642816543579, "symbol": "HKDC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23302, "ngs": 0.17336428, "symbol": "HKDC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

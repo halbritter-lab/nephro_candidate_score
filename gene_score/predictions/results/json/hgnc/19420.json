@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19420, "NGS": 0.002605133457109332, "symbol": "STOML3", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 19420, "ngs": 0.0026051335, "symbol": "STOML3", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

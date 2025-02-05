@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24435, "NGS": 0.04480331763625145, "symbol": "CYTL1", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 24435, "ngs": 0.044803318, "symbol": "CYTL1", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

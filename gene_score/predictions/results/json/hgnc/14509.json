@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14509, "NGS": 0.23407302796840668, "symbol": "MRPS23", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14509, "ngs": 0.23407303, "symbol": "MRPS23", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

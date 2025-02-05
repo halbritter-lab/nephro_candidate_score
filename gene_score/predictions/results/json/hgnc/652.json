@@ -1,1 +1,1 @@
-{"hgnc_id_int": 652, "NGS": 0.9463988542556763, "symbol": "ARF1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 652, "ngs": 0.94639885, "symbol": "ARF1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

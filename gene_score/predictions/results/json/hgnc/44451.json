@@ -1,1 +1,1 @@
-{"hgnc_id_int": 44451, "NGS": 0.04153735563158989, "symbol": "USP17L23", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 44451, "ngs": 0.041537356, "symbol": "USP17L23", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

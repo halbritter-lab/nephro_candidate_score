@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8602, "NGS": 0.9793333411216736, "symbol": "PAPPA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8602, "ngs": 0.97933334, "symbol": "PAPPA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

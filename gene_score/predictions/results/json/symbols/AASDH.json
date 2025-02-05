@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23993, "NGS": 0.26857855916023254, "symbol": "AASDH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23993, "ngs": 0.26857856, "symbol": "AASDH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18165, "NGS": 0.5098077654838562, "symbol": "STYXL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18165, "ngs": 0.50980777, "symbol": "STYXL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

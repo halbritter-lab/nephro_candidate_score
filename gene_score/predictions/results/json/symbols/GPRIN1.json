@@ -1,1 +1,1 @@
-{"hgnc_id_int": 24835, "NGS": 0.04933987185359001, "symbol": "GPRIN1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 24835, "ngs": 0.04933987, "symbol": "GPRIN1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

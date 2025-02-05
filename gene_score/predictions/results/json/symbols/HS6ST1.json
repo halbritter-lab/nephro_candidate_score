@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5201, "NGS": 0.16655892133712769, "symbol": "HS6ST1", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 5201, "ngs": 0.16655892, "symbol": "HS6ST1", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21078, "NGS": 0.4149842858314514, "symbol": "HDDC2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21078, "ngs": 0.4149843, "symbol": "HDDC2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

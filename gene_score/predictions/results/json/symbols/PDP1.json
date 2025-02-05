@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9279, "NGS": 0.975609540939331, "symbol": "PDP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9279, "ngs": 0.97560954, "symbol": "PDP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

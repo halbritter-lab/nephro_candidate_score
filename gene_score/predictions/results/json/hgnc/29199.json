@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29199, "NGS": 0.4822353422641754, "symbol": "TMCC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29199, "ngs": 0.48223534, "symbol": "TMCC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

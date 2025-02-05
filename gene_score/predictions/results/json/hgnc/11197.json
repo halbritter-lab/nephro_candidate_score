@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11197, "NGS": 0.9033512473106384, "symbol": "SOX21", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11197, "ngs": 0.90335125, "symbol": "SOX21", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

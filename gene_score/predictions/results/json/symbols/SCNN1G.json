@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10602, "NGS": 0.9944544434547424, "symbol": "SCNN1G", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 10602, "ngs": 0.99445444, "symbol": "SCNN1G", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

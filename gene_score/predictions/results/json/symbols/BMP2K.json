@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18041, "NGS": 0.9627159237861633, "symbol": "BMP2K", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18041, "ngs": 0.9627159, "symbol": "BMP2K", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

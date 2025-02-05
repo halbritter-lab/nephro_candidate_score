@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6484, "NGS": 0.22913514077663422, "symbol": "LAMA4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6484, "ngs": 0.22913514, "symbol": "LAMA4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

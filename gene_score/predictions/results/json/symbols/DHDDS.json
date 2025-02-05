@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20603, "NGS": 0.8715050220489502, "symbol": "DHDDS", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 20603, "ngs": 0.871505, "symbol": "DHDDS", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28499, "NGS": 0.9791330695152283, "symbol": "VSTM2A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28499, "ngs": 0.97913307, "symbol": "VSTM2A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14651, "NGS": 0.5825934410095215, "symbol": "PPIH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14651, "ngs": 0.58259344, "symbol": "PPIH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

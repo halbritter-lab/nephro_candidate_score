@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30081, "NGS": 0.8774518370628357, "symbol": "POP4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30081, "ngs": 0.87745184, "symbol": "POP4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18536, "NGS": 0.9378135204315186, "symbol": "HELQ", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18536, "ngs": 0.9378135, "symbol": "HELQ", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

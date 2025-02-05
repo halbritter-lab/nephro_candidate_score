@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22004, "NGS": 0.02454141341149807, "symbol": "WIPF3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22004, "ngs": 0.024541413, "symbol": "WIPF3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14906, "NGS": 0.6731264591217041, "symbol": "NIN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14906, "ngs": 0.67312646, "symbol": "NIN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

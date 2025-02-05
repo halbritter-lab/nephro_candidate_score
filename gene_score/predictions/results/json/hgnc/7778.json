@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7778, "NGS": 0.8794498443603516, "symbol": "NFATC4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7778, "ngs": 0.87944984, "symbol": "NFATC4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

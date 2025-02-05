@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28476, "NGS": 0.020076774060726166, "symbol": "YIPF2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28476, "ngs": 0.020076774, "symbol": "YIPF2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

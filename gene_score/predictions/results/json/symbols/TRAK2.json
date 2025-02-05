@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13206, "NGS": 0.06663176417350769, "symbol": "TRAK2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 13206, "ngs": 0.066631764, "symbol": "TRAK2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

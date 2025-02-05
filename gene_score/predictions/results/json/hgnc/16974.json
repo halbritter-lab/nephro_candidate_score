@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16974, "NGS": 0.9623484015464783, "symbol": "SRCAP", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 16974, "ngs": 0.9623484, "symbol": "SRCAP", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11600, "NGS": 0.12968769669532776, "symbol": "TBX22", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11600, "ngs": 0.1296877, "symbol": "TBX22", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

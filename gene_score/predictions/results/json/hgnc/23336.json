@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23336, "NGS": 0.002558670938014984, "symbol": "A2ML1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23336, "ngs": 0.002558671, "symbol": "A2ML1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

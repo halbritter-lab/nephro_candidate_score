@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10897, "NGS": 0.957975447177887, "symbol": "SKIL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10897, "ngs": 0.95797545, "symbol": "SKIL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

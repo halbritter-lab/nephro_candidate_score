@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18590, "NGS": 0.06072695553302765, "symbol": "PNPLA3", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 18590, "ngs": 0.060726956, "symbol": "PNPLA3", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

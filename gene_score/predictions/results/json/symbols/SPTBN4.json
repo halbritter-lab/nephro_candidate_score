@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14896, "NGS": 0.8001875877380371, "symbol": "SPTBN4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14896, "ngs": 0.8001876, "symbol": "SPTBN4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

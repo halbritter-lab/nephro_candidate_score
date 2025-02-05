@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3309, "NGS": 0.16309046745300293, "symbol": "ELANE", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3309, "ngs": 0.16309047, "symbol": "ELANE", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

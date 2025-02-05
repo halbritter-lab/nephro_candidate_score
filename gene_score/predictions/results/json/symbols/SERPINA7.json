@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11583, "NGS": 0.06903225928544998, "symbol": "SERPINA7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11583, "ngs": 0.06903226, "symbol": "SERPINA7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

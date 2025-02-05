@@ -1,1 +1,1 @@
-{"hgnc_id_int": 25451, "NGS": 0.7274203300476074, "symbol": "HNRNPUL2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 25451, "ngs": 0.72742033, "symbol": "HNRNPUL2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

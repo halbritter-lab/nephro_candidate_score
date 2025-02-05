@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23643, "NGS": 0.02476467750966549, "symbol": "ANKRD18A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23643, "ngs": 0.024764678, "symbol": "ANKRD18A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

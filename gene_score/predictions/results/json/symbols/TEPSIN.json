@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26458, "NGS": 0.413574755191803, "symbol": "TEPSIN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26458, "ngs": 0.41357476, "symbol": "TEPSIN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

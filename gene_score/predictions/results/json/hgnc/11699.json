@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11699, "NGS": 0.5594004392623901, "symbol": "SERINC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11699, "ngs": 0.55940044, "symbol": "SERINC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20392, "NGS": 0.9914263486862183, "symbol": "SULF2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20392, "ngs": 0.99142635, "symbol": "SULF2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

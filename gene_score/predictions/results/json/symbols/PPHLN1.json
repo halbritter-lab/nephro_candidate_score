@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19369, "NGS": 0.8927591443061829, "symbol": "PPHLN1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19369, "ngs": 0.89275914, "symbol": "PPHLN1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

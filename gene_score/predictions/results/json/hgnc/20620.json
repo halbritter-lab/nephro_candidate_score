@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20620, "NGS": 0.7694927453994751, "symbol": "TNFAIP8L3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20620, "ngs": 0.76949275, "symbol": "TNFAIP8L3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15763, "NGS": 0.05772138386964798, "symbol": "POLR3F", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15763, "ngs": 0.057721384, "symbol": "POLR3F", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

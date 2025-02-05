@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29675, "NGS": 0.7466140985488892, "symbol": "CLCC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29675, "ngs": 0.7466141, "symbol": "CLCC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14638, "NGS": 0.0653725415468216, "symbol": "ABCA13", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 14638, "ngs": 0.06537254, "symbol": "ABCA13", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26777, "NGS": 0.011385933496057987, "symbol": "ALDH1L2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 26777, "ngs": 0.0113859335, "symbol": "ALDH1L2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

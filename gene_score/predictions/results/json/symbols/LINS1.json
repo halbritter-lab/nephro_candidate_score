@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30922, "NGS": 0.1652108132839203, "symbol": "LINS1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30922, "ngs": 0.16521081, "symbol": "LINS1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

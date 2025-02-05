@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30718, "NGS": 0.023838739842176437, "symbol": "DNAJB13", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 30718, "ngs": 0.02383874, "symbol": "DNAJB13", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

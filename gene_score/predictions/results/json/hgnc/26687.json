@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26687, "NGS": 0.018693974241614342, "symbol": "ZNF610", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26687, "ngs": 0.018693974, "symbol": "ZNF610", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

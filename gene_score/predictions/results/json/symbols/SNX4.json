@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11175, "NGS": 0.4818990230560303, "symbol": "SNX4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11175, "ngs": 0.48189902, "symbol": "SNX4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

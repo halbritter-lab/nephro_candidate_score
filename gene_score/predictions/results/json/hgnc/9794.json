@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9794, "NGS": 0.9023225903511047, "symbol": "RABAC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9794, "ngs": 0.9023226, "symbol": "RABAC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

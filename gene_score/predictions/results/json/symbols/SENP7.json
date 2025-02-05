@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30402, "NGS": 0.41329386830329895, "symbol": "SENP7", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30402, "ngs": 0.41329387, "symbol": "SENP7", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

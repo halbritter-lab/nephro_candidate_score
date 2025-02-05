@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15919, "NGS": 0.07081636041402817, "symbol": "ACOT8", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 15919, "ngs": 0.07081636, "symbol": "ACOT8", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

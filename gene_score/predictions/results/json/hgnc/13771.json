@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13771, "NGS": 0.7885712385177612, "symbol": "SOST", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 13771, "ngs": 0.78857124, "symbol": "SOST", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2888, "NGS": 0.9013392925262451, "symbol": "DISC1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2888, "ngs": 0.9013393, "symbol": "DISC1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

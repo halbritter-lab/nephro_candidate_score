@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19299, "NGS": 0.9474887847900391, "symbol": "PIP4P1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 19299, "ngs": 0.9474888, "symbol": "PIP4P1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

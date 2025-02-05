@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14956, "NGS": 0.030519839376211166, "symbol": "MUC15", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14956, "ngs": 0.03051984, "symbol": "MUC15", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

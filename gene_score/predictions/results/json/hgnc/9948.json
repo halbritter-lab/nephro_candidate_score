@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9948, "NGS": 0.11085978150367737, "symbol": "RECQL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9948, "ngs": 0.11085978, "symbol": "RECQL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

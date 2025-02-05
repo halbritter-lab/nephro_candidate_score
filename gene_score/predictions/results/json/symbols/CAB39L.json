@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20290, "NGS": 0.05645908787846565, "symbol": "CAB39L", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20290, "ngs": 0.056459088, "symbol": "CAB39L", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

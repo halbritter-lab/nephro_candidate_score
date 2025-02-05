@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1667, "NGS": 0.017046866938471794, "symbol": "CD38", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 1667, "ngs": 0.017046867, "symbol": "CD38", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

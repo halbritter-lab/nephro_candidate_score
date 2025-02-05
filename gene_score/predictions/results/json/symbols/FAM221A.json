@@ -1,1 +1,1 @@
-{"hgnc_id_int": 27977, "NGS": 0.017514152452349663, "symbol": "FAM221A", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 27977, "ngs": 0.017514152, "symbol": "FAM221A", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

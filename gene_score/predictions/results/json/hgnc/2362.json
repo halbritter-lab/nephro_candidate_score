@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2362, "NGS": 0.9592711925506592, "symbol": "CRK", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2362, "ngs": 0.9592712, "symbol": "CRK", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

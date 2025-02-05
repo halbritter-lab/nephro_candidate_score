@@ -1,1 +1,1 @@
-{"hgnc_id_int": 29583, "NGS": 0.0020123214926570654, "symbol": "GCSAML", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 29583, "ngs": 0.0020123215, "symbol": "GCSAML", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

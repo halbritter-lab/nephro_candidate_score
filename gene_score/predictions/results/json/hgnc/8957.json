@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8957, "NGS": 0.6683607697486877, "symbol": "PIGA", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 8957, "ngs": 0.66836077, "symbol": "PIGA", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

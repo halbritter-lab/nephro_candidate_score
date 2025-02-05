@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30494, "NGS": 0.8458582758903503, "symbol": "USF3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30494, "ngs": 0.8458583, "symbol": "USF3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

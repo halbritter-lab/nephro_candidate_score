@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28460, "NGS": 0.05702657252550125, "symbol": "HROB", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28460, "ngs": 0.057026573, "symbol": "HROB", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

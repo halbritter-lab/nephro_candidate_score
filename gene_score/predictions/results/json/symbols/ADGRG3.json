@@ -1,1 +1,1 @@
-{"hgnc_id_int": 13728, "NGS": 0.04819793999195099, "symbol": "ADGRG3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 13728, "ngs": 0.04819794, "symbol": "ADGRG3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

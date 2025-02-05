@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9086, "NGS": 0.8610467910766602, "symbol": "PLP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9086, "ngs": 0.8610468, "symbol": "PLP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

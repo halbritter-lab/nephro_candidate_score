@@ -1,1 +1,1 @@
-{"hgnc_id_int": 10700, "NGS": 0.3222030699253082, "symbol": "SEC22B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 10700, "ngs": 0.32220307, "symbol": "SEC22B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

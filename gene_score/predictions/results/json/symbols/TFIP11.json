@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17165, "NGS": 0.8154725432395935, "symbol": "TFIP11", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17165, "ngs": 0.81547254, "symbol": "TFIP11", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

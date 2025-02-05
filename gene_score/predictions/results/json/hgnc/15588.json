@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15588, "NGS": 0.4376644790172577, "symbol": "SYTL4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15588, "ngs": 0.43766448, "symbol": "SYTL4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

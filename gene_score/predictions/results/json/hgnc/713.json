@@ -1,1 +1,1 @@
-{"hgnc_id_int": 713, "NGS": 0.0927896797657013, "symbol": "ARSA", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 713, "ngs": 0.09278968, "symbol": "ARSA", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3974, "NGS": 0.5936830639839172, "symbol": "FTCD", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3974, "ngs": 0.59368306, "symbol": "FTCD", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

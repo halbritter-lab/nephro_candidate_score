@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1189, "NGS": 0.7530049681663513, "symbol": "AHSA1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1189, "ngs": 0.75300497, "symbol": "AHSA1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

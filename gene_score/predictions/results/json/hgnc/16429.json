@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16429, "NGS": 0.45187219977378845, "symbol": "LIAS", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16429, "ngs": 0.4518722, "symbol": "LIAS", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

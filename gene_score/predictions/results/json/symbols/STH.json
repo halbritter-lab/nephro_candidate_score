@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18839, "NGS": 0.02320638671517372, "symbol": "STH", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18839, "ngs": 0.023206387, "symbol": "STH", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

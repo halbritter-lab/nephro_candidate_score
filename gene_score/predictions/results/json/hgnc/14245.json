@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14245, "NGS": 0.05237006023526192, "symbol": "SNUPN", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14245, "ngs": 0.05237006, "symbol": "SNUPN", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 12697, "NGS": 0.04350536689162254, "symbol": "VIT", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 12697, "ngs": 0.043505367, "symbol": "VIT", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

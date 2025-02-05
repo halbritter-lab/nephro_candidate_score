@@ -1,1 +1,1 @@
-{"hgnc_id_int": 53, "NGS": 0.7576247453689575, "symbol": "ABCC2", "gene_set": null, "evidence_count": 0.0}
+{"hgncIdInt": 53, "ngs": 0.75762475, "symbol": "ABCC2", "geneSet": "none", "evidenceCount": 0.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

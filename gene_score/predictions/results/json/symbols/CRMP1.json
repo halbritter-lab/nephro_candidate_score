@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2365, "NGS": 0.9723306894302368, "symbol": "CRMP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2365, "ngs": 0.9723307, "symbol": "CRMP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

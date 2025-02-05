@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18156, "NGS": 0.08542482554912567, "symbol": "ACOT11", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18156, "ngs": 0.085424826, "symbol": "ACOT11", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

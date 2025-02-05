@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14583, "NGS": 0.14484697580337524, "symbol": "VPS11", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14583, "ngs": 0.14484698, "symbol": "VPS11", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5145, "NGS": 0.8632907867431641, "symbol": "HPCAL1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5145, "ngs": 0.8632908, "symbol": "HPCAL1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1406, "NGS": 0.8664710521697998, "symbol": "CACNG2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1406, "ngs": 0.86647105, "symbol": "CACNG2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

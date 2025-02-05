@@ -1,1 +1,1 @@
-{"hgnc_id_int": 550, "NGS": 0.09377873688936234, "symbol": "AOC3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 550, "ngs": 0.09377874, "symbol": "AOC3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

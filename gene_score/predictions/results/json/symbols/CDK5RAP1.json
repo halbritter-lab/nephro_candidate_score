@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15880, "NGS": 0.4218410551548004, "symbol": "CDK5RAP1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15880, "ngs": 0.42184106, "symbol": "CDK5RAP1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

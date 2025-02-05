@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6502, "NGS": 0.9868812561035156, "symbol": "RPSA", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 6502, "ngs": 0.98688126, "symbol": "RPSA", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

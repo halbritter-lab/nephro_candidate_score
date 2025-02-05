@@ -1,1 +1,1 @@
-{"hgnc_id_int": 5002, "NGS": 0.39727115631103516, "symbol": "HMG20B", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 5002, "ngs": 0.39727116, "symbol": "HMG20B", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

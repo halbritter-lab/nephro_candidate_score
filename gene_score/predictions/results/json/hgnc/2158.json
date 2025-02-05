@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2158, "NGS": 0.4088914394378662, "symbol": "CNP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2158, "ngs": 0.40889144, "symbol": "CNP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

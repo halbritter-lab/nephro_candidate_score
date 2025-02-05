@@ -1,1 +1,1 @@
-{"hgnc_id_int": 43619, "NGS": 0.06112424284219742, "symbol": "MGAT4D", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 43619, "ngs": 0.061124243, "symbol": "MGAT4D", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

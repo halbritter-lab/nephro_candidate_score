@@ -1,1 +1,1 @@
-{"hgnc_id_int": 22226, "NGS": 0.1287594884634018, "symbol": "RADIL", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 22226, "ngs": 0.12875949, "symbol": "RADIL", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

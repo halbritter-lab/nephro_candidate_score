@@ -1,1 +1,1 @@
-{"hgnc_id_int": 33742, "NGS": 0.03494911640882492, "symbol": "CAVIN4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 33742, "ngs": 0.034949116, "symbol": "CAVIN4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 37253, "NGS": 0.25602924823760986, "symbol": "RFX8", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 37253, "ngs": 0.25602925, "symbol": "RFX8", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19104, "NGS": 0.6763607859611511, "symbol": "NPHP4", "gene_set": "train", "evidence_count": 5.0}
+{"hgncIdInt": 19104, "ngs": 0.6763608, "symbol": "NPHP4", "geneSet": "train", "evidenceCount": 5.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

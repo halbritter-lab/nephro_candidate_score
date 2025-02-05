@@ -1,1 +1,1 @@
-{"hgnc_id_int": 31110, "NGS": 0.6710994839668274, "symbol": "CTXN3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 31110, "ngs": 0.6710995, "symbol": "CTXN3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

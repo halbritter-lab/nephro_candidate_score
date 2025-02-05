@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15943, "NGS": 0.23727239668369293, "symbol": "PARD6A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15943, "ngs": 0.2372724, "symbol": "PARD6A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

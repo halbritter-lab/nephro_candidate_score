@@ -1,1 +1,1 @@
-{"hgnc_id_int": 1618, "NGS": 0.9484411478042603, "symbol": "CCT5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 1618, "ngs": 0.94844115, "symbol": "CCT5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

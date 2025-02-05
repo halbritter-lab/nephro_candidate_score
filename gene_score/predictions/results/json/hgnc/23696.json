@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23696, "NGS": 0.991541862487793, "symbol": "TIPARP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 23696, "ngs": 0.99154186, "symbol": "TIPARP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

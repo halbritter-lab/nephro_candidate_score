@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15480, "NGS": 0.1146162822842598, "symbol": "DIAPH3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 15480, "ngs": 0.11461628, "symbol": "DIAPH3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -21,7 +21,7 @@ config_vars <- config::get(file = Sys.getenv("CONFIG_FILE"),
 setwd(paste0(config_vars$projectsdir, project_name, script_path))
 
 # load canonical transcripts (from script "promoter_CpG_o2e_ratio.R")
-canon_ts <- read_csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date, ".csv.gz"),
+canon_ts <- read_csv(paste0("results/ensembl_canonical_ts_", config_vars$creation_date_gs, ".csv.gz"),
                              show_col_types = FALSE,
                              na = c("NA", "NaN", " ", ""))
 
@@ -80,10 +80,10 @@ avg_phasCons_ex <- exons_coordinates %>%
 
 # write results
 write.csv(avg_phasCons_ex, 
-          paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date, ".csv"), 
+          paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date_gs, ".csv"), 
           row.names=FALSE)
 
-gzip(paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/avg_phasCons_scores_per_transcript_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)
 
 
@@ -111,8 +111,8 @@ avg_phasCons_prom <- canon_ts %>%
 
 # write results
 write.csv(avg_phasCons_prom, 
-          paste0("results/avg_phasCons_promoter_" , config_vars$creation_date, ".csv"), 
+          paste0("results/avg_phasCons_promoter_" , config_vars$creation_date_gs, ".csv"), 
           row.names=FALSE)
 
-gzip(paste0("results/avg_phasCons_promoter_" , config_vars$creation_date, ".csv"),
+gzip(paste0("results/avg_phasCons_promoter_" , config_vars$creation_date_gs, ".csv"),
      overwrite = TRUE)

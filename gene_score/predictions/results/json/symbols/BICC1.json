@@ -1,1 +1,1 @@
-{"hgnc_id_int": 19351, "NGS": 0.98282790184021, "symbol": "BICC1", "gene_set": "train", "evidence_count": 3.0}
+{"hgncIdInt": 19351, "ngs": 0.9828279, "symbol": "BICC1", "geneSet": "train", "evidenceCount": 3.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

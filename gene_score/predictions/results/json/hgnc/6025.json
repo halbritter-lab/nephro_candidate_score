@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6025, "NGS": 0.009036640636622906, "symbol": "CXCL8", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 6025, "ngs": 0.009036641, "symbol": "CXCL8", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

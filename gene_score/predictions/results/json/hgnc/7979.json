@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7979, "NGS": 0.9943771958351135, "symbol": "NR3C2", "gene_set": "test", "evidence_count": 4.0}
+{"hgncIdInt": 7979, "ngs": 0.9943772, "symbol": "NR3C2", "geneSet": "test", "evidenceCount": 4.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 15766, "NGS": 0.9750629663467407, "symbol": "ADNP", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 15766, "ngs": 0.97506297, "symbol": "ADNP", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

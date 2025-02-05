@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14279, "NGS": 0.07470488548278809, "symbol": "MRPL14", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14279, "ngs": 0.074704885, "symbol": "MRPL14", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

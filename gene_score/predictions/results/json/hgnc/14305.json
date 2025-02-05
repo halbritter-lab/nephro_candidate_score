@@ -1,1 +1,1 @@
-{"hgnc_id_int": 14305, "NGS": 0.035383615642786026, "symbol": "CMYA5", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 14305, "ngs": 0.035383616, "symbol": "CMYA5", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

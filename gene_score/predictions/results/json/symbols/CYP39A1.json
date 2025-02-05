@@ -1,1 +1,1 @@
-{"hgnc_id_int": 17449, "NGS": 0.020492568612098694, "symbol": "CYP39A1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 17449, "ngs": 0.020492569, "symbol": "CYP39A1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

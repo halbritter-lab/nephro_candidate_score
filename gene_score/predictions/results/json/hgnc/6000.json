@@ -1,1 +1,1 @@
-{"hgnc_id_int": 6000, "NGS": 0.13872866332530975, "symbol": "IL1RN", "gene_set": null, "evidence_count": 1.0}
+{"hgncIdInt": 6000, "ngs": 0.13872866, "symbol": "IL1RN", "geneSet": "none", "evidenceCount": 1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

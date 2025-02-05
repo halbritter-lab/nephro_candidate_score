@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3243, "NGS": 0.8428160548210144, "symbol": "EHD2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3243, "ngs": 0.84281605, "symbol": "EHD2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

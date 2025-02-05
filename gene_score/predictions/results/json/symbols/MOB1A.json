@@ -1,1 +1,1 @@
-{"hgnc_id_int": 16015, "NGS": 0.9458083510398865, "symbol": "MOB1A", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 16015, "ngs": 0.94580835, "symbol": "MOB1A", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

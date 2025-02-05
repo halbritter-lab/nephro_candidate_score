@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21375, "NGS": 0.8072943091392517, "symbol": "LRRC73", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21375, "ngs": 0.8072943, "symbol": "LRRC73", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

@@ -1,1 +1,1 @@
-{"hgnc_id_int": 8742, "NGS": 0.8522046804428101, "symbol": "PCP4", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 8742, "ngs": 0.8522047, "symbol": "PCP4", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

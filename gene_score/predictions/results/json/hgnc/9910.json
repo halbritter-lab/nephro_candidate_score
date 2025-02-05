@@ -1,1 +1,1 @@
-{"hgnc_id_int": 9910, "NGS": 0.963789701461792, "symbol": "RBMX", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 9910, "ngs": 0.9637897, "symbol": "RBMX", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

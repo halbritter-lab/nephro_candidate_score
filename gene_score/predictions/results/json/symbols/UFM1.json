@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20597, "NGS": 0.6256410479545593, "symbol": "UFM1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20597, "ngs": 0.62564105, "symbol": "UFM1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

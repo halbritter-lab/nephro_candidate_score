@@ -1,1 +1,1 @@
-{"hgnc_id_int": 21484, "NGS": 0.717688798904419, "symbol": "MCM9", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 21484, "ngs": 0.7176888, "symbol": "MCM9", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

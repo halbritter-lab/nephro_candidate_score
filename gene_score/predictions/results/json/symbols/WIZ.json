@@ -1,1 +1,1 @@
-{"hgnc_id_int": 30917, "NGS": 0.977986752986908, "symbol": "WIZ", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 30917, "ngs": 0.97798675, "symbol": "WIZ", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

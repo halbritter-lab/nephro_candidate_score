@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26786, "NGS": 0.055762629956007004, "symbol": "ZFP41", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26786, "ngs": 0.05576263, "symbol": "ZFP41", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

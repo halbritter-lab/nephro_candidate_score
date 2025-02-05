@@ -1,1 +1,1 @@
-{"hgnc_id_int": 23061, "NGS": 0.009768112562596798, "symbol": "UPP2", "gene_set": "train", "evidence_count": -1.0}
+{"hgncIdInt": 23061, "ngs": 0.009768113, "symbol": "UPP2", "geneSet": "train", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

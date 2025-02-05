@@ -1,1 +1,1 @@
-{"hgnc_id_int": 28238, "NGS": 0.527787983417511, "symbol": "NXPE3", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 28238, "ngs": 0.527788, "symbol": "NXPE3", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

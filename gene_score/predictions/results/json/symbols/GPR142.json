@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20088, "NGS": 0.004894508048892021, "symbol": "GPR142", "gene_set": "test", "evidence_count": -1.0}
+{"hgncIdInt": 20088, "ngs": 0.004894508, "symbol": "GPR142", "geneSet": "test", "evidenceCount": -1.0, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

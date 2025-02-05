@@ -1,1 +1,1 @@
-{"hgnc_id_int": 20528, "NGS": 0.01511510368436575, "symbol": "KRTAP10-11", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 20528, "ngs": 0.015115104, "symbol": "KRTAP10-11", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

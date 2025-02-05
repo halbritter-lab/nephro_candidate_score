@@ -1,1 +1,1 @@
-{"hgnc_id_int": 11610, "NGS": 0.20403024554252625, "symbol": "TCAP", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 11610, "ngs": 0.20403025, "symbol": "TCAP", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

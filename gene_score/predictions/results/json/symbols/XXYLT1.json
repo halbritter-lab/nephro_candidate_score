@@ -1,1 +1,1 @@
-{"hgnc_id_int": 26639, "NGS": 0.0380992516875267, "symbol": "XXYLT1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 26639, "ngs": 0.03809925, "symbol": "XXYLT1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

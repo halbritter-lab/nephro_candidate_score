@@ -1,1 +1,1 @@
-{"hgnc_id_int": 2675, "NGS": 0.1145845428109169, "symbol": "DAPK2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 2675, "ngs": 0.11458454, "symbol": "DAPK2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

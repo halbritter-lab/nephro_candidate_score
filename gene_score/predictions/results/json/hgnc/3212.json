@@ -1,1 +1,1 @@
-{"hgnc_id_int": 3212, "NGS": 0.6041972041130066, "symbol": "EEF1E1", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 3212, "ngs": 0.6041972, "symbol": "EEF1E1", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

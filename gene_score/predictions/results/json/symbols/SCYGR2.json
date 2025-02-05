@@ -1,1 +1,1 @@
-{"hgnc_id_int": 34220, "NGS": 0.03931863233447075, "symbol": "SCYGR2", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 34220, "ngs": 0.039318632, "symbol": "SCYGR2", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

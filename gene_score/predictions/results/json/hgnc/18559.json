@@ -1,1 +1,1 @@
-{"hgnc_id_int": 18559, "NGS": 0.32673490047454834, "symbol": "TFB2M", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 18559, "ngs": 0.3267349, "symbol": "TFB2M", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}

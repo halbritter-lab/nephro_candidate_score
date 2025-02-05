@@ -1,1 +1,1 @@
-{"hgnc_id_int": 7807, "NGS": 0.978416919708252, "symbol": "NGEF", "gene_set": null, "evidence_count": NaN}
+{"hgncIdInt": 7807, "ngs": 0.9784169, "symbol": "NGEF", "geneSet": "none", "evidenceCount": null, "meta": {"date": "2024-03-22", "classifier": "XGBClassifier", "ID": 97, "version": "0.1.0"}}
