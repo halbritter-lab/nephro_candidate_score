@@ -19,3 +19,25 @@ variant_score/features_labels/slurm_out/
 variant_score/features_labels/scripts/__pycache__/
 variant_score/training/scripts/__pycache__/
 
+# GSEA1 results file
+gene_score/predictions/results/GSEA1_pre_res_ranking_2025-07-07.csv.gz
+
+
+# annotation by MouseMine and InterMine, EC=2-5 in kidney-genetics
+gene_score/predictions/curation_kid-gen.csv
+
+
+# variant-linker test data
+variant_score/training/train_test_data/variant-linker_test_variants_2025-05-14.txt
+variant_score/training/train_test_data/variant-linker_test_variants_gnomAD_CADD_2025-04-17.txt
+variant_score/training/train_test_data/variant-linker_test_variants_man_annot_2025-04-17.txt
+variant_score/training/train_test_data/variant-linker_test_variants_man_annot_cleaned_2025-04-17.txt
+
+# older 
+gene_score/predictions/results/ID97_pre_res_kid_GO_permutations_subset
+
+# plots
+gene_score/predictions/results/distribution_NGS_novel_genes_ID97_all_2024-09-17.pdf
+gene_score/predictions/results/boxplots_NGS_by_EC_ID97_all_2024-09-16.pdf
+gene_score/predictions/results/boxplots_NGS_by_EC_ID97_all_2024-09-17.pdf
+
