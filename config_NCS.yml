@@ -4,7 +4,7 @@ default:
   
 nephrology:
   projectsdir: "/Users/nrank/Desktop/BioInf/halbritter/" # path to your project where feature/label aquisition is done
-  ML_projectsdir: "/data/gpfs-1/users/rankn_c/work/halbritter/" # path to your project, might be the same as 'projectsdir' if features/label aquisition and machine learning part is done on the same machine
+  ML_projectsdir: "/data/cephfs-1/home/users/rankn_c/work/halbritter/" # path to your project, might be the same as 'projectsdir' if features/label aquisition and machine learning part is done on the same machine
   creation_date_gs: "2023-10-12" # date of feature/label aquisition for the gene score in the format "YYYY-MM-DD", e.g. "2023-10-12"
   creation_date_vs: "2024-04-08" # date of feature/label aquisition for the variant score in the format "YYYY-MM-DD", e.g. "2023-10-12"
 
