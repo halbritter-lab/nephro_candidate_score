@@ -153,6 +153,22 @@ This script extracts positional information from canonical transcripts of protei
 
 #### Number of extracted features: 1
 
+### descartes.R
+#### Datasource:  
+Descartes (Cao et al. 2020). A human cell atlas of fetal gene expression.  
+Cao J, O'Day DR, Pliner HA, Kingsley PD, Deng M, Daza RM, Zager MA et al. *Science*, 2020.
+
+#### Description  
+This script extracts single-cell RNA (ssRNA) expression data from the Descartes human fetal cell atlas. Specifically, it pulls gene expression (TPM), percent expressed in cells, normalized TPM (nTPM), and tissue specificity index (τ) values for selected fetal kidney cell types: mesangial, metanephric, ureteric bud, stromal, and vascular endothelial cells. The data is downloaded from the Fred Hutch BBI Descartes portal.  
+The normalized tissue specificity index τ is calculated according to Yanai et al.(Yanai et al. Genome-wide midrange transcription profiles reveal expression level relationships in human tissue specification, Bioinformatics, Volume 21, Issue 5, March 2005, Pages 650?659, https://doi.org/10.1093/bioinformatics/bti042) , representing how specific a gene is to fetal kidney cell types (τ ∈ [0,1], with higher values indicating higher specificity).
+
+#### Required libraries
+- `tidyverse`: for data processing.
+- `jsonlite`: for parsing .json files.
+- `config`: for loading configurations.
+- `R.utils`: for gzipping files.
+
+#### Number of extracted features: 5 × 2 (TPM + % expression per cell type) + 5 (nTPM) + 1 (τ) = 16
 
 
 
