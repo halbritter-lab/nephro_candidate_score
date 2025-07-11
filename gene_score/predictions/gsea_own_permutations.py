@@ -13,8 +13,6 @@ import sys
 import urllib.request
 import yaml
 
-
-
 # import third-party modules
 import gseapy as gp
 
@@ -39,12 +37,9 @@ config_vars = config_data[project_topic]
 # set working directory
 os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 
-subset = 4  # CAVE: change np.random.seed with every subset
+subset = 4  # TODO: change np.random.seed with every subset
 print(f"subset: {subset}")
 
-# TODO: customize results version 
-ID = 97
-results_date = "2024-03-22"
 
 ###############################################################################################
 # get GO terms and associated genes from library 'GO_Biological_Process_2023'
@@ -67,7 +62,7 @@ GO_BP_human_all_genes = list(set(GO_BP_human_exploded.tolist()))
 
 ## check which genes have no match in NGS
 # load Nephro Gene Score (NGS)
-NGS = pd.read_csv(f"predictions/results/NGS_predictions_ID{ID}_all_{results_date}.csv.gz")
+NGS = pd.read_csv(f"predictions/results/NGS_predictions_ID{config_vars['ID_ngs']}_all_{config_vars['ngs_results_date']}.csv.gz")
 NGS['symbol'] = NGS['symbol'].str.upper()
 NGS['hgnc_id'] = "HGNC:" + NGS['hgnc_id_int'].astype(str)
 
@@ -193,9 +188,7 @@ NGS_ranked = NGS.sort_values('NGS', ascending = False).reset_index(drop = True)[
 
 # scale NGS value so that it reaches from -1 to +1
 if scale:
-#     NGS_ranked['NGS'] = 2 * NGS_ranked['NGS'] - 1
-    NGS_ranked['NGS'] = NGS_ranked['NGS'] - 0.5
-    
+    NGS_ranked['NGS'] = 2 * NGS_ranked['NGS'] - 1    
     
 ###############################################################################################
     
@@ -246,18 +239,22 @@ pre_res_kid_GO = gp.prerank(rnk = NGS_pre_res_NES_ranked[['GO_term', 'NES']],
                            )
 
 # get results
-# pre_res_kid_GO.res2d
-
 current_date = datetime.now().strftime("%Y-%m-%d")
 
+# write csv of the observed GSEA2 result
 pre_res_kid_GO.res2d.to_csv(f"ID{ID}_pre_res_kid_GO_real_{current_date}.csv", index=False)
+###############################################################################################
 
+
+###############################################################################################
+# perform GSEA1 and GSEA2 1000 times with manual pertubation of the NGS in the first step
 
 set_kidney_GO = {'kid_GO_terms':[i for i in kidney_GO_terms if i in NGS_pre_res['GO_term'].values]}
 
-
-
 def gsea_manual_perm(rnk, set_kidney_GO):
+    """
+    Function that performs GSEA1 and GSEA2 with provided ranked  genes.
+    """
     ## GSEA analysis with ranked gene list (ranked by NGS)    
     # perform GSEA
     
@@ -308,10 +305,10 @@ def gsea_manual_perm(rnk, set_kidney_GO):
 pre_res_kid_GO_permutations = pd.DataFrame()
 
 
-for i in np.arange(250) + 750:
+for i in np.arange(250) + 750: #TODO: change start end endpoint with each subset (only needed for logfile)
     print(i)
     sys.stdout.flush() 
-    np.random.seed(i)  # CAVE!! change seed with other subsets!!
+    np.random.seed(i)  # TODO: change seed with each subset
     
     # shuffle NGS ranking
     NGS_shuffled = NGS_ranked.copy()
@@ -322,9 +319,11 @@ for i in np.arange(250) + 750:
     pre_res_kid_GO_permutations = pd.concat([pre_res_kid_GO_permutations, new_row])
 
         
-    
+# write results of GSEA2 with manually pertubated gene ranking in GSEA1    
 pre_res_kid_GO_permutations.to_csv(f"ID{ID}_pre_res_kid_GO_permutations_subset{subset}_raw_NGS_{current_date}.csv", index=False)
 
+if scaled:
+    pre_res_kid_GO_permutations.to_csv(f"ID{ID}_pre_res_kid_GO_permutations_subset{subset}_scaled_NGS_{current_date}.csv", index=False)
 
 
 

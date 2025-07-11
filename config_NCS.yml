@@ -16,4 +16,11 @@ nephrology:
   hgnc_gt_version_vs: "2023-11-21" # date of most recent HGNC annotated gene table version used for variant score, https://github.com/halbritter-lab/kidney-genetics/tree/main/analyses/B_AnnotationHGNC/results. Can be the same as 'hgnc_gt_version' if no new version of HGNC annotated gene table was released between gene score training and variant score training
   clinvar_version: "20240301" # date/version of the most recent Clinvar VCF
 
+  ID_ngs: "97" # ID of the final chosen model for the N-GS
+  ngs_results_date: "2024-03-22" # date of N-GS prediction for all genes
+  
+
+  
+  
+
 
