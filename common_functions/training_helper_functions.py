@@ -8,8 +8,9 @@ import pandas as pd
 import pickle
 import time
 import yaml
+import shap
 
-# import sklearn modues
+# import sklearn modules
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import RobustScaler
 from sklearn.preprocessing import StandardScaler
@@ -18,18 +19,15 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score
 from sklearn.inspection import permutation_importance # for feature importance by permutation importance
 from imblearn.pipeline import Pipeline # for SMOTE technique
-from imblearn.over_sampling import SMOTE # # for SMOTE technique
+from imblearn.over_sampling import SMOTE # for SMOTE technique
 
 
-import shap
 
 # define relative script path
 project_topic = "nephrology"
 project_name = "nephro_candidate_score"
-# score_path = "/gene_score/"
 
 # read configs
-# CONFIG_FILE = "./training/config_NCS.yml" # TODO: change
 CONFIG_FILE = os.getenv('CONFIG_FILE')
 
 with open(CONFIG_FILE, 'r') as file:
@@ -58,9 +56,11 @@ def is_numeric(x):
     return (all(isinstance(i, (int, float, np.number)) for i in x))
 
 
-
 def get_score_specific_args(score):
-    # check if score is correctly specified
+    """
+    Checks if score is correctly specified.
+    """
+    
     if score not in ['gs', 'vs']:
         raise ValueError(f"Invalid argument: {score}. Allowed values are: 'gs' for gene score or 'vs' for variant score.")
     
@@ -157,8 +157,8 @@ def create_ML_config(config_dir,
                      score
                     ):
     """
-    - dumps the given configurations in pickle with a new ID
-    - updates the config_ML_XXX.csv
+    Dumps the given configurations in pickle with a new ID.
+    Updates the config_ML_XXX.csv.
     """
     
     score_string, _, _ = get_score_specific_args(score)
@@ -237,8 +237,7 @@ def create_ML_config(config_dir,
 # function to select only specific feature names based on feature group
 def get_features_from_groups(groups, feature_df, score):
     """
-    e.g. groups = ['gnomad', 'descartes']
-    
+    E.g. groups = ['gnomad', 'descartes']
     """
     score_string, _, _ = get_score_specific_args(score)
     
@@ -274,8 +273,10 @@ def get_features_from_groups(groups, feature_df, score):
     return(res)   
 
 
-# function to return the pre-defined method of filling missing values for each model and feature
 def get_filling_method(model, feature, score):
+    """
+    Return the pre-defined method of filling missing values for each model and feature.
+    """
     score_string, _, _ = get_score_specific_args(score)
     
     filling_methods = pd.read_csv(f"{score_string}/training/raw/fill_missing_methods_{config_vars[f'creation_date_{score}']}.csv.gz")
@@ -283,8 +284,10 @@ def get_filling_method(model, feature, score):
     return(method)
 
 
-# function to fill missing values with given method
 def fill_missing_vals(df, model, score):
+    """
+    Function to fill missing values with given method.
+    """
     score_string, _, _ = get_score_specific_args(score)
     
     df_filled = df.copy()
@@ -306,14 +309,11 @@ def fill_missing_vals(df, model, score):
             
         elif method == 'median':
             med_val = median_values_train.loc[median_values_train['feature'] == col, 'median'].values[0]
-#             df[col] = \
-#             df[col].fillna(med_val)
             df_filled.fillna({col: med_val}, inplace=True)
 
     return(df_filled)
 
 
-# function to numpy arrays of filled and scaled training data
 def get_training_data(model,
                       feature_groups_selected,
                       drop_features, 
@@ -323,6 +323,9 @@ def get_training_data(model,
                       IMPACT_prop,
                       score
                      ):
+    """
+    Function that returns numpy arrays of filled and scaled training data.
+    """
     
     # get score and ID string
     score_string, id_string, label_string = get_score_specific_args(score)
@@ -463,8 +466,6 @@ def get_feat_reduced_trainig_data(perc_var_exp,
     return X_train, y_train, features
            
 
-    
-# function to train using grid search and cross-validation
 def train_with_grid_search(ID,
                            X_train, 
                            y_train, 
@@ -477,6 +478,10 @@ def train_with_grid_search(ID,
                            #add_to_filename, #=''
                            score
                           ):
+
+    """
+    Function to train using grid search and cross-validation.
+    """
     
     # get score specific arguments
     score_string, _, _ = get_score_specific_args(score)
@@ -548,6 +553,10 @@ def train_with_grid_search(ID,
 
 
 def get_config_results_dics(ID, score):
+    """
+    Function that returns dictionaries with config data and results of the given trainings ID.
+    """
+
     # get score specific arguments
     score_string, _, _ = get_score_specific_args(score)
 
@@ -562,17 +571,20 @@ def get_config_results_dics(ID, score):
     return config_dic, results_dic
 
 
-# function to get params in param_grid that have multiple values (for display in a heatmap)
 def get_heatmap_params(param_grid):
+    """
+    Function to get params in param_grid that have multiple values (for display in a heatmap).
+    """
     len_list = [len(param_grid[i]) for i in param_grid.keys()]
     indices = [i for i, element in enumerate(len_list) if element > 1]
     params = [list(param_grid.keys())[i] for i in indices]
     return params
 
 
-
-# function to create a 2D heatmap with axes=hyperparamters and values=test score
 def plot_2D_heatmap(ID, cv_results, param1, param2, figsize, save, show, score):
+    """
+    Function to create a 2D heatmap with axes=hyperparamters and values=test score.
+    """
     
     # get score specific arguments
     score_string, _, _ = get_score_specific_args(score)
@@ -625,9 +637,6 @@ def plot_2D_heatmap(ID, cv_results, param1, param2, figsize, save, show, score):
         plt.show()
  
     
-    
-
-# function to get feature importance by using permutation importance 
 def get_permutation_importance(ID,
                                X_train, 
                                y_train, 
@@ -638,6 +647,9 @@ def get_permutation_importance(ID,
                                random_state,
                                score
                               ):
+    """
+    Function to get feature importance by using permutation importance.
+    """
     
     # get score specific arguments
     score_string, _, _ = get_score_specific_args(score)
@@ -768,6 +780,10 @@ def select_feat_from_perm_imp(ID, index, score):
 
 
 def png_to_pdf(png_files, output_pdf):
+    """
+    Function that creates a pdf file from given png_files.
+    """
+    
     # create a PDF file to save the images
     with PdfPages(output_pdf) as pdf:
         for png_file in png_files:
