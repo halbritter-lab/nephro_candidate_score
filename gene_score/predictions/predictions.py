@@ -1,21 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+#### N-GS predictions and results analysis ####
+# converted from .ipynb
 
-
-import os
-os.environ['CONFIG_FILE'] = '/fast/work/users/rankn_c/halbritter/nephro_candidate_score/gene_score/training/config_NCS.yml' # TODO: change
-
-
-# In[2]:
-
-
-# TODO: add HGNC table version
 # TODO: get_genes_for_prediction can currently not be used for PCA reduced predictions
-
-
-# In[3]:
 
 
 # import basic modules
@@ -48,12 +37,25 @@ with open(CONFIG_FILE, 'r') as file:
 config_vars = config_data[project_topic]
 
 # set working directory
-os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}")
 
-from training.helper_functions_ML import *
+#from training.helper_functions_ML import *
 
 
-# In[4]:
+# In[6]:
+
+
+# import common functions
+from common_functions.training_helper_functions import *
+
+
+# In[ ]:
+
+
+
+
+
+# In[17]:
 
 
 def get_genes_for_prediction(config_dic, gene_set):
@@ -65,20 +67,20 @@ def get_genes_for_prediction(config_dic, gene_set):
     
     ## prepare full gene set for prediction
     # load full gene set
-    raw_feat = pd.read_csv(f"features/results/gene_features_{config_vars['creation_date']}.csv.gz")
+    raw_feat = pd.read_csv(f"gene_score/features/results/gene_features_{config_vars['creation_date_gs']}.csv.gz")
 
     # select only features that were also used in the training process
     all_genes_df = raw_feat[['hgnc_id_int'] + config_dic['features']] # TODO: if drop features, add!
 
     # fill missing values
-    all_genes_filled = fill_missing_vals(all_genes_df, config_dic['model'])
+    all_genes_filled = fill_missing_vals(all_genes_df, config_dic['model'], score='gs')
     
     # get training set to calculate mean and std for scaling
-    feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
+    feat_train = pd.read_csv(f"gene_score/training/train_test_data/feat_train_{config_vars['data_prep_date_gs']}.csv.gz")
     hgnc_ids_train = list(feat_train['hgnc_id_int'])
     
     # get features that should (not) be scaled and scaling method
-    omit_scaling = get_features_from_groups(config_dic['omit_scaling_features'], feat_train)
+    omit_scaling = get_features_from_groups(config_dic['omit_scaling_features'], feat_train, score='gs')
     scaling_features = [i for i in config_dic['features'] if i not in omit_scaling]
     
     scaling = config_dic['scaling']
@@ -98,18 +100,18 @@ def get_genes_for_prediction(config_dic, gene_set):
     ## select genes for predictions    
     # machine learning test set
     if gene_set == 'test':
-        feat_test = pd.read_csv(f"training/train_test_data/feat_test_{config_vars['data_prep_date']}.csv.gz")
+        feat_test = pd.read_csv(f"gene_score/training/train_test_data/feat_test_{config_vars['data_prep_date_gs']}.csv.gz")
         hgnc_ids_for_prediction = list(feat_test['hgnc_id_int'])
     
     # machine learning training set
     elif gene_set == 'train':
-        feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
+        feat_train = pd.read_csv(f"gene_score/training/train_test_data/feat_train_{config_vars['data_prep_date_gs']}.csv.gz")
         hgnc_ids_for_prediction = list(feat_train['hgnc_id_int'])
     
     # machine learning training and test set
     elif gene_set == 'train_test':
-        feat_test = pd.read_csv(f"training/train_test_data/feat_test_{config_vars['data_prep_date']}.csv.gz")
-        feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
+        feat_test = pd.read_csv(f"gene_score/training/train_test_data/feat_test_{config_vars['data_prep_date_gs']}.csv.gz")
+        feat_train = pd.read_csv(f"gene_score/training/train_test_data/feat_train_{config_vars['data_prep_date_gs']}.csv.gz")
         hgnc_ids_for_prediction = list(feat_test['hgnc_id_int']) + list(feat_train['hgnc_id_int'])
     
     # all genes 
@@ -118,8 +120,8 @@ def get_genes_for_prediction(config_dic, gene_set):
     
     # genes without known labels (all but training and test genes)
     elif gene_set == 'unknown':
-        feat_test = pd.read_csv(f"training/train_test_data/feat_test_{config_vars['data_prep_date']}.csv.gz")
-        feat_train = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")
+        feat_test = pd.read_csv(f"gene_score/training/train_test_data/feat_test_{config_vars['data_prep_date_gs']}.csv.gz")
+        feat_train = pd.read_csv(f"gene_score/training/train_test_data/feat_train_{config_vars['data_prep_date_gs']}.csv.gz")
         hgnc_ids_for_prediction = list(set(all_genes_scaled['hgnc_id_int']) - set(feat_test['hgnc_id_int']) - set(feat_train['hgnc_id_int']))
         
     # error in case of undefined/invalid gene set     
@@ -133,7 +135,7 @@ def get_genes_for_prediction(config_dic, gene_set):
 
 
 
-# In[5]:
+# In[18]:
 
 
 def get_symbol_from_hgnc_id_int(hgnc_id_int_list):
@@ -142,7 +144,7 @@ def get_symbol_from_hgnc_id_int(hgnc_id_int_list):
     on the HGNC table of kidney-genetics on github.
     """
     # HGNC table gitHub raw URL 
-    url = 'https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/B_AnnotationHGNC/results/non_alt_loci_set_coordinates.2023-11-21.csv.gz'
+    url = f"https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/B_AnnotationHGNC/results/non_alt_loci_set_coordinates.{config_vars['hgnc_gt_version_vs']}.csv.gz"
 
     # read the .csv file into a DataFrame
     hgnc_annotated = pd.read_csv(url, compression='gzip')
@@ -162,15 +164,15 @@ def get_symbol_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['symbol'].tolist()
 
 
-# In[6]:
+# In[19]:
 
 
 def get_gene_set_from_hgnc_id_int(hgnc_id_int_list):
     """
     Function that annotates a gene list of HGNC IDs with their gene set (train, test, None).
     """
-    test_ids = pd.read_csv(f"training/train_test_data/feat_test_{config_vars['data_prep_date']}.csv.gz")['hgnc_id_int'].tolist()
-    train_ids = pd.read_csv(f"training/train_test_data/feat_train_{config_vars['data_prep_date']}.csv.gz")['hgnc_id_int'].tolist()
+    test_ids = pd.read_csv(f"gene_score/training/train_test_data/feat_test_{config_vars['data_prep_date_gs']}.csv.gz")['hgnc_id_int'].tolist()
+    train_ids = pd.read_csv(f"gene_score/training/train_test_data/feat_train_{config_vars['data_prep_date_gs']}.csv.gz")['hgnc_id_int'].tolist()
     
     def classify_gene_set(hgnc_id_int):
         if hgnc_id_int in train_ids:
@@ -189,7 +191,7 @@ def get_gene_set_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['gene_set'].tolist()
 
 
-# In[7]:
+# In[20]:
 
 
 def get_evidence_count_from_hgnc_id_int(hgnc_id_int_list):
@@ -197,8 +199,8 @@ def get_evidence_count_from_hgnc_id_int(hgnc_id_int_list):
     Function that annotates a gene list of HGNC IDs with their evidence count.
     """
     # get positive and dispensible/negative genes
-    pos_genes = pd.read_csv(f"labels/results/positive_genes_{config_vars['creation_date']}.csv.gz")
-    neg_genes = pd.read_csv(f"labels/results/dispensible_genes_{config_vars['creation_date']}.csv.gz")
+    pos_genes = pd.read_csv(f"gene_score/labels/results/positive_genes_{config_vars['creation_date_gs']}.csv.gz")
+    neg_genes = pd.read_csv(f"gene_score/labels/results/dispensible_genes_{config_vars['creation_date_gs']}.csv.gz")
     
     # set evidence count of dispensible genes to -1
     neg_genes['evidence_count'] = -1
@@ -215,12 +217,12 @@ def get_evidence_count_from_hgnc_id_int(hgnc_id_int_list):
     return genes_df['evidence_count'].tolist()
 
 
-# In[8]:
+# In[21]:
 
 
 def make_predictions(ID, gene_set, save):
     # get configuration dictionary and results dictionary of the chosen experiment
-    config_dic, results_dic = get_config_results_dics(ID=ID) 
+    config_dic, results_dic = get_config_results_dics(ID=ID, score='gs') 
     
     # get best parameters
     best_params = results_dic['best_params']
@@ -265,7 +267,7 @@ def make_predictions(ID, gene_set, save):
     # save csv
     if save:
         current_date = datetime.now().strftime("%Y-%m-%d")
-        NGS.to_csv(f"predictions/results/NGS_predictions_ID{ID}_{gene_set}_{current_date}.csv.gz", index=False, compression='gzip')
+        NGS.to_csv(f"gene_score/predictions/results/NGS_predictions_ID{ID}_{gene_set}_{current_date}.csv.gz", index=False, compression='gzip')
         
     return NGS
 
@@ -273,29 +275,52 @@ def make_predictions(ID, gene_set, save):
 # In[9]:
 
 
-NGS = make_predictions(ID=97, gene_set='train', save=True) # TODO: add as variable in function!!!
-# pd.DataFrame(X_train)
+# make predictions for final chosen model for training set
+NGS = make_predictions(ID=97, gene_set='train', save=False) 
 NGS['ec2345'] = np.where(NGS['evidence_count'] == -1, 0, 1)
-
-
-
-
-
-
-# In[10]:
-
-
-NGS
-
-
-# In[11]:
-
 
 roc_auc_score(NGS['ec2345'], NGS['NGS'])
 
 
-# In[46]:
+# In[20]:
 
+
+# make predictions for final chosen model for test set
+NGS = make_predictions(ID=97, gene_set='test', save=True) 
+NGS['ec2345'] = np.where(NGS['evidence_count'] == -1, 0, 1)
+
+# calculate AUC
+roc_auc_score(NGS['ec2345'], NGS['NGS'])
+
+
+# In[19]:
+
+
+## Plot AUCs
+from sklearn.metrics import roc_curve, auc
+
+
+fpr1, tpr1, _ = roc_curve(NGS['ec2345'], NGS['NGS'])
+roc_auc1 = auc(fpr1, tpr1)
+
+# plotting
+plt.figure()
+plt.plot(fpr1, tpr1, color='darkorange', lw=2, label=f'{gene_set}(AUC = %0.2f)' % roc_auc1)
+
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC) Curve')
+plt.legend(loc='lower right')
+plt.show()
+
+
+# In[38]:
+
+
+# Boxplot
 
 gene_set = 'all' # TODO: add as variable in function!!!
 ID = 97 # TODO: add as variable in function!!!
@@ -305,14 +330,13 @@ NGS = make_predictions(ID=ID, gene_set=gene_set, save=False) # TODO: add as vari
 
 
 
-
 ## create NCS boxplots based on evidence counts
 evidence_counts = [-1, 0, 1, 2, 3, 4, 5]
 
 plt.figure(figsize=(7, 6))
 for count in evidence_counts:
     subset_df = NGS[NGS['evidence_count'] == count]
-    plt.boxplot(subset_df['NGS'], positions=[count], widths=0.6, showfliers=False, vert=True)
+    plt.boxplot(subset_df['NGS'], positions=[count], widths=0.6, showfliers=True, vert=True)
 
     # Add count above the boxplot
     num_genes = len(subset_df)
@@ -322,346 +346,165 @@ for count in evidence_counts:
 # add the boxplot for evidence_count = nan
 subset_nan = NGS[NGS['evidence_count'].isna()]
 if not subset_nan.empty:
-    boxplot_nan = plt.boxplot(subset_nan['NGS'], positions=[6], widths=0.6, showfliers=False, vert=True, boxprops=dict(color='red'))
+    boxplot_nan = plt.boxplot(subset_nan['NGS'], positions=[6], widths=0.6, showfliers=True, vert=True, boxprops=dict(color='red'))
     num_genes_nan = len(subset_nan)
     plt.text(6, -0.05, f'{num_genes_nan}', ha='center', va='bottom')
         
 # plot the gene number label
-plt.text(7, -0.05, 'no. genes', ha='center', va='bottom')
+plt.text(7.05, -0.05, 'no. genes', ha='center', va='bottom')
 
 # add a horizontal line
 plt.axhline(y=-0.01, color='black', linestyle='--', xmin=0, xmax=1)
 
         
 # Set labels and title
-plt.xlabel('Evidence Count')
-plt.ylabel('Nephro Gene Score')
-plt.title('Boxplots of Nephro Gene Score by Evidence Count')
+plt.xlabel('Evidence Count$^*$', fontsize=14)
+plt.ylabel('Nephro Gene Score', fontsize=14)
+# plt.title('Boxplots of Nephro Gene Score by Evidence Count', fontsize=15)
 
 # Customize x-axis tick labels
-custom_labels = {6: 'new \n genes', -1: 'dispensible \n genes'}  # Set 'apple' label for x-position 7
+custom_labels = {6: 'novel \n genes', -1: 'dispensable \n genes'}  # Set 'apple' label for x-position 7
 tick_labels = [custom_labels.get(pos, pos) for pos in [-1, 0, 1, 2, 3, 4, 5, 6]]
-plt.xticks([-1, 0, 1, 2, 3, 4, 5, 6], tick_labels)
+plt.xticks([-1, 0, 1, 2, 3, 4, 5, 6], tick_labels, fontsize=12)
+plt.yticks(fontsize=12)
 
 # save plot
 current_date = datetime.now().strftime("%Y-%m-%d")
-plt.savefig(f"predictions/results/boxplots_NGS_by_EC_ID{ID}_{gene_set}_{current_date}.png", dpi = 300, format='png')
+plt.savefig(f"gene_score/predictions/results/boxplots_NGS_by_EC_ID{ID}_{gene_set}_{current_date}.png", dpi = 450, format='png')
+plt.savefig(f"gene_score/predictions/results/boxplots_NGS_by_EC_ID{ID}_{gene_set}_{current_date}.pdf", dpi = 450, format='pdf')
 
 
 # Show the plot
 plt.show()
 
 
-# In[13]:
+# In[77]:
 
 
 # write NGS to json file per gene
-ID = 97
+# ID = 97
 # convert to JSON with column names as keys and values in a list
-NGS = make_predictions(ID=ID, gene_set='all', save=True) # TODO: add as variable in function!!!
+# NGS = make_predictions(ID=ID, gene_set='all', save=True) # TODO: add as variable in function!!!
 
+NGS_filepath = "predictions/results/NGS_predictions_ID97_all_2024-03-22.csv.gz"
 
-for row in np.arange(NGS.shape[0]):
-    json_data = NGS.iloc[row].to_dict()
-    hgnc_id_int = json_data['hgnc_id_int']
+NGS_for_json = pd.read_csv(NGS_filepath)
+
+# replace NaN values of 'gene_set' with "none"
+NGS_for_json['gene_set'] = NGS_for_json['gene_set'].fillna('none')
+
+# replace NaN values of 'evidence_count' with None
+NGS_for_json['evidence_count'] = NGS_for_json['evidence_count'].replace({np.nan: None})
+
+# rename df to camelCase
+NGS_for_json = NGS_for_json.rename(columns={'hgnc_id_int': 'hgncIdInt',
+                                            'NGS':'ngs',
+                                            'symbol': 'symbol',
+                                            'gene_set': 'geneSet',
+                                            'evidence_count': 'evidenceCount'})
+
+# add metadata
+meta_date = NGS_filepath.split("_")[-1].split(".")[0]
+meta_ID = int([i for i in NGS_filepath.split("_") if i.startswith("ID")][0].split("ID")[-1]) # TODO: change??
+config_dic, results_dic = get_config_results_dics(ID=int(meta_ID))
+meta_clf = str(type(config_dic['clf']).__name__)
+meta_version = "0.1.0" # TODO: specifiy manually??
+
+meta_dic = {'date': meta_date, 'classifier': meta_clf, 'ID': meta_ID, 'version': meta_version}
+
+for row in np.arange(NGS_for_json.shape[0]):
+    json_data = NGS_for_json.iloc[row].to_dict()
+    json_data['meta'] = meta_dic
+    hgnc_id_int = json_data['hgncIdInt']
     symbol = json_data['symbol']
 
     # save to a file
-    with open(f'predictions/results/json/hgnc/{hgnc_id_int}.json', 'w') as json_file:
+    with open(f'predictions/results/json/hgnc_new/{hgnc_id_int}.json', 'w') as json_file:
         json.dump(json_data, json_file)
         
     # save to a file
-    with open(f'predictions/results/json/symbols/{symbol}.json', 'w') as json_file:
+    with open(f'predictions/results/json/symbols_new/{symbol}.json', 'w') as json_file:
         json.dump(json_data, json_file)
 
 
-# In[56]:
+# In[9]:
 
 
-NGS
+# create an index for hgnc ids
 
+# Directory containing the JSON files
+folder_path = 'gene_score/predictions/results/json/hgnc/'
 
-# In[11]:
+# List to store numbers extracted from file names
+numbers = []
 
+# Iterate over files in the directory
+for filename in os.listdir(folder_path):
+    # Check if file is JSON
+    if filename.endswith('.json'):
+        # Extract number from filename
+#         number = int(filename.split('.')[0]) # Extract number as numeric
+        number = filename.split('.')[0]  # Extract number as string
 
-### VIOLIN PLOT ### TODO: currently works with ID=90, but not with ID=97
-evidence_counts = [-1, 0, 1, 2, 3, 4, 5]
+        numbers.append(number)
 
-plt.figure(figsize=(7, 6))
+# Sort the numbers
+# numbers.sort()
+numbers.sort(key=int) # if numbers are extracted as string
 
-for count in evidence_counts:
-    subset_df = NGS[NGS['evidence_count'] == count]
-    
-    # plot violin plot
-    violin_parts = plt.violinplot(dataset=[subset_df['NGS']], positions=[count], widths=0.6, vert=True, 
-                                  showextrema=False)
+# Create the hgnc_index.json file
+output_file = 'gene_score/predictions/results/json/hgnc_index.json'
+with open(output_file, 'w') as f:
+    json.dump(numbers, f, indent=4)
 
-    # set facecolor for the violin plot
-    for part in violin_parts['bodies']:
-        part.set_facecolor('red')  
-    
-    # add count above the violin plot
-    num_genes = len(subset_df)
-    if num_genes > 0:
-        plt.text(count, -0.05, f'{num_genes}', ha='center', va='bottom')
-        
-    # add median line in black
-    median_val = np.median(subset_df['NGS'])
-    plt.plot([count - 0.2, count + 0.2], [median_val, median_val], color='black', linestyle='-', linewidth=1)
+print(f'Successfully created {output_file} with sorted numbers: {numbers}')
 
-    # add mean line in red
-    mean_val = np.mean(subset_df['NGS'])
-    plt.plot([count - 0.2, count + 0.2], [mean_val, mean_val], color='red', linestyle='-', linewidth=1)
 
+# In[10]:
 
-# add label for median an mean
-plt.plot([], [], color='black', linestyle='-', linewidth=1, label='median')
-plt.plot([], [], color='red', linestyle='-', linewidth=1, label='mean')
 
-  
-# add the violin plot for evidence_count = nan
-subset_nan = NGS[NGS['evidence_count'].isna()]
-if not subset_nan.empty:
-    violinplot_nan = plt.violinplot(dataset=[subset_nan['NGS']], positions=[6], widths=0.6, vert=True, showextrema=False)
-    num_genes_nan = len(subset_nan)
-    plt.text(6, -0.05, f'{num_genes_nan}', ha='center', va='bottom')
+# create summary json file with info of all genes
 
-    
-    # add median line in black for NaN
-    median_nan = np.median(subset_nan['NGS'])
-    plt.plot([6 - 0.2, 6 + 0.2], [median_nan, median_nan], color='black', linestyle='-', linewidth=1)
+# Directory containing the JSON files
+folder_path = 'gene_score/predictions/results/json/symbols/'
 
-    # add mean line in red for NaN
-    mean_nan = np.mean(subset_nan['NGS'])
-    plt.plot([6 - 0.2, 6 + 0.2], [mean_nan, mean_nan], color='red', linestyle='-', linewidth=1)
-    
+# List to store all gene data
+gene_data_list = []
 
-# plot the gene number label
-plt.text(7.5, -0.05, 'no. genes', ha='center', va='bottom')
+# Iterate over files in the directory
+for filename in os.listdir(folder_path):
+    if filename.endswith('.json'):
+        file_path = os.path.join(folder_path, filename)
+        try:
+            with open(file_path, 'r') as f:
+                data = json.load(f)
+                gene_data_list.append(data)
+        except json.JSONDecodeError as e:
+            print(f"Error reading {filename}: {e}")
 
+# Create the summary JSON file
+output_file = 'gene_score/predictions/results/json/gene_info_summary.json'
+with open(output_file, 'w') as f:
+    json.dump(gene_data_list, f, indent=4)
 
-# add a horizontal line
-plt.axhline(y=-0.01, color='black', linestyle='--', xmin=0, xmax=1)
+print(f'Successfully created {output_file} with {len(gene_data_list)} entries.')
 
-# set labels and title
-plt.xlabel('Evidence Count')
-plt.ylabel('Nephro Gene Score')
-plt.title('Violinplots of Nephro Gene Score by Evidence Count')
 
-# sustomize x-axis tick labels
-custom_labels = {6: 'new \n genes', -1: 'dispensable \n genes'}  # Set 'apple' label for x-position 7
-tick_labels = [custom_labels.get(pos, pos) for pos in [-1, 0, 1, 2, 3, 4, 5, 6]]
-plt.xticks([-1, 0, 1, 2, 3, 4, 5, 6], tick_labels)
+# In[37]:
 
-# add legend
-plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
-# save plot
-current_date = datetime.now().strftime("%Y-%m-%d")
-plt.savefig(f"predictions/results/violinplots_NGS_by_EC_ID{ID}_{gene_set}_{current_date}.png", dpi=300, format='png')
+# Plot N-GS distribution of novel genes
+a = pd.read_csv("gene_score/predictions/results/NGS_predictions_ID97_all_2024-03-22.csv.gz")
+a = a.query("evidence_count.isna()")
 
-# show the plot
-plt.show()
+plt.hist(a['NGS'], bins=100, density=True)
+plt.xlabel('Nephro Gene Score', fontsize=14)
+plt.ylabel('No. genes', fontsize=14)
 
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
 
-# In[ ]:
-
-
-# NOTES - TO BE DELETED
-
-# import preprocessing functions
-# sys.path.append(f"{config_vars['ML_projectsdir']}{project_name}/gene_score/training")
-# from functions.helper_functions_ML import *
-
-
-
-# script_path = "/gene_score/predictions/" # TODO remove second time, as soon as paths are set to absolute path in helper_functions_ML.py
-
-
-
-# example
-a = get_genes_for_prediction(config_dic = config_dic, gene_set = 'unknown')
-a 
-
-
-# jan = get_symbol_from_hgnc_id_int([37133, 24086, 5, 100000000000])
-
-get_evidence_count_from_hgnc_id_int([37133, 24086, 5, 100000000000, 36, 38])
-        
-    
-# get_gene_set_from_hgnc_id_int([37133, 24086, 5, 100000000000, 36, 38])
-    
-    
-# example
-j = make_predictions(ID=90, gene_set='all', save=True)
-
-
-# pos_genes = pd.read_csv(f"labels/results/positive_genes_{config_vars['creation_date']}.csv.gz")
-# neg_genes = pd.read_csv(f"labels/results/dispensible_genes_{config_vars['creation_date']}.csv.gz")
-
-# # # merge 
-# # NCS_df = pd.merge(NCS_df, pos_genes[['hgnc_id_int', 'evidence_count']], how='left', left_on='hgnc_id_int', right_on='hgnc_id_int')
-
-# # # set evidence_count to -1 for dispensible genes
-# # mask = NCS_df['hgnc_id_int'].isin(neg_genes['hgnc_id_int'])
-# # NCS_df.loc[mask, 'evidence_count'] = -1
-
-# pos_genes
-# neg_genes['evidence_count'] = -1
-# annotated_genes = pd.concat([pos_genes[['hgnc_id_int', 'evidence_count']], neg_genes], ignore_index=True)
-# annotated_genes.shape
-
-    
-
-    
-    
-# # create final model to predict values for all genes
-# from xgboost import XGBClassifier
-
-# # define training ID of the finally chosen model
-# ID = 90 # TODO: change, if needed
-
-# # get config_dic and results_dic
-# config_dic, results_dic = get_config_results_dics(ID=ID)    
-
-# # get best params
-# best_params = results_dic['best_params']
-
-# ## create XGBoost classifier with best params
-# estimator = None
-# clf = XGBClassifier(random_state=1, 
-#                     booster='gbtree',
-#                     gamma=best_params['gamma'],
-#                     learning_rate=best_params['gamma'],
-#                     max_depth=best_params['max_depth'],
-#                     n_estimators=best_params['n_estimators'],
-#                     reg_alpha=best_params['reg_alpha'],
-#                     reg_lambda=best_params['reg_lambda'],
-#                     subsample=best_params['subsample']
-#                    )
-
-# # fit classifier with training data
-# clf.fit(config_dic['X_train'], config_dic['y_train'])
-
-
-# ## prepare full gene set for prediction
-# # load gene set
-# raw_feat = pd.read_csv(f"../features/results/gene_features_{config_vars['creation_date']}.csv.gz")
-
-# # select only features that were also used in the training process
-# all_genes_df = raw_feat[['hgnc_id_int'] + config_dic['features']] # TODO: if drop features, add!
-
-# # fill missing values
-# all_genes_filled = fill_missing_vals(all_genes_df, config_dic['model'])
-
-# # get features that should (not) be scaled and scaling method
-# omit_scaling_features = config_dic['omit_scaling_features']
-# scaling_features = [i for i in config_dic['features'] if i not in omit_scaling_features] # features that should be scaled
-    
-# scaling = config_dic['scaling']
-    
-# # scale features
-# if scaling == 'standard':
-#     # create StandardScaler
-#     stand_scal = StandardScaler()
-    
-#     # scale features
-#     all_genes_scaled = all_genes_filled.copy()
-#     all_genes_scaled[scaling_features] = stand_scal.fit_transform(all_genes_scaled[scaling_features])
-
-        
-# elif scaling == 'robust':
-#     # create RobustScaler
-#     rob_scal = RobustScaler(with_centering=True, with_scaling=True)
-    
-#     # scale features
-#     all_genes_scaled = all_genes_filled.copy()
-#     all_genes_scaled[scaling_features] = rob_scal.fit_transform(all_genes_scaled[scaling_features])
-        
-
-# # get all scaled gene features as numpy arrays
-# X_all = all_genes_scaled.drop(columns=['hgnc_id_int']).values
-# X_all_hgnc_id_int = all_genes_scaled['hgnc_id_int']
-
-# ## probability predicition
-# # predict probabilities for all genes (=> 2 dim array, probabilities sum up to 1)
-# probabilities = clf.predict_proba(X_all)
-
-# # get disease gene probabilities
-# disease_gene_prob = probabilities[:, 1]
-
-# # create the NCS df
-# NCS_df = pd.DataFrame({'hgnc_id_int': X_all_hgnc_id_int, 'NCS': disease_gene_prob})
-
-
-# ## get annotated HGNC table from kidney-genetics
-# # gitHub raw URL 
-# url = 'https://raw.githubusercontent.com/halbritter-lab/kidney-genetics/main/analyses/B_AnnotationHGNC/results/non_alt_loci_set_coordinates.2023-11-21.csv.gz'
-
-# # read the CSV file into a DataFrame
-# hgnc_annotated = pd.read_csv(url, compression='gzip')
-
-# # add a new column without the "HGNC:" prefix
-# hgnc_annotated['hgnc_id_int'] = hgnc_annotated['hgnc_id'].str.replace('HGNC:', '')
-
-# # convert the 'hgnc_id_without_prefix' column to integers
-# hgnc_annotated['hgnc_id_int'] = pd.to_numeric(hgnc_annotated['hgnc_id_int'], downcast='integer')
-
-# # annotate NCS_df with symbol
-# NCS_df = pd.merge(NCS_df, hgnc_annotated[['hgnc_id_int', 'symbol']], how='left', left_on='hgnc_id_int', right_on='hgnc_id_int')
-
-# # write csv
-# current_date = datetime.now().strftime("%Y-%m-%d")
-# # NCS_df.to_csv(f"results/NCS_predictions_ID{ID}_{current_date}.csv.gz", index=False, compression='gzip')
-
-
-# In[ ]:
-
-
-# NOTES - TO BE DELETED
-
-
-# ## create NCS boxplots based on evidence counts
-# evidence_counts = [-1, 0, 1, 2, 3, 4, 5]
-
-# plt.figure(figsize=(7, 6))
-# for count in evidence_counts:
-#     subset_df = NCS_df[NCS_df['evidence_count'] == count]
-#     plt.boxplot(subset_df['NCS'], positions=[count], widths=0.6, showfliers=False, vert=True)
-
-#     # Add count above the boxplot
-#     num_genes = len(subset_df)
-#     if num_genes > 0:
-#         plt.text(count, -0.05, f'{num_genes}', ha='center', va='bottom')
-        
-# # add the boxplot for evidence_count = nan
-# subset_nan = NCS_df[NCS_df['evidence_count'].isna()]
-# if not subset_nan.empty:
-#     boxplot_nan = plt.boxplot(subset_nan['NCS'], positions=[6], widths=0.6, showfliers=False, vert=True, boxprops=dict(color='red'))
-#     num_genes_nan = len(subset_nan)
-#     plt.text(6, -0.05, f'{num_genes_nan}', ha='center', va='bottom')
-        
-# # plot the gene number label
-# plt.text(7, -0.05, 'no. genes', ha='center', va='bottom')
-
-# # add a horizontal line
-# plt.axhline(y=-0.01, color='black', linestyle='--', xmin=0, xmax=1)
-
-        
-# # Set labels and title
-# plt.xlabel('Evidence Count')
-# plt.ylabel('NCS')
-# plt.title('Boxplots of NCS by Evidence Count')
-
-# # Customize x-axis tick labels
-# custom_labels = {6: 'new \n genes', -1: 'dispensible \n genes'}  # Set 'apple' label for x-position 7
-# tick_labels = [custom_labels.get(pos, pos) for pos in [-1, 0, 1, 2, 3, 4, 5, 6]]
-# plt.xticks([-1, 0, 1, 2, 3, 4, 5, 6], tick_labels)
-
-# # save plot
-# # plt.savefig(f"results/boxplots_NCS_by_EC_ID{ID}_{current_date}.png", dpi = 300, format='png')
-
-
-# # Show the plot
-# plt.show()
+plt.title('Distribution of Nephro Gene Score \n for Novel Genes', fontsize=14)
+plt.savefig(f"gene_score/predictions/results/distribution_NGS_novel_genes_ID{ID}_{gene_set}_{current_date}.png", dpi = 450, format='png')
+plt.savefig(f"gene_score/predictions/results/distribution_NGS_novel_genes_ID{ID}_{gene_set}_{current_date}.pdf", dpi = 450, format='pdf')
 
