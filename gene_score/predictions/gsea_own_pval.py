@@ -289,11 +289,11 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 
 if scale:
     NGS_pre_res.to_csv(f"predictions/results/GSEA1_NGS_scaled_ranking_{current_date}.csv.gz", index=False, compression='gzip')
-    with open(f"predictions/results/GSEA1_pre_res_scaled_ranking_{current_date}.csv.gz", 'wb') as f:
+    with open(f"predictions/results/GSEA1_pre_res_scaled_ranking_{current_date}.pkl", 'wb') as f:
         pickle.dump(pre_res, f)
 else:
     NGS_pre_res.to_csv(f"predictions/results/GSEA1_NGS_ranking_{current_date}.csv.gz", index=False, compression='gzip')
-    with open(f"predictions/results/GSEA1_pre_res_ranking_{current_date}.csv.gz", 'wb') as f:
+    with open(f"predictions/results/GSEA1_pre_res_ranking_{current_date}.pkl", 'wb') as f:
         pickle.dump(pre_res, f)
 
 
@@ -337,10 +337,10 @@ gsea1_top20.to_csv(f"predictions/results/GSEA_NGS_ranking_top20_{current_date}.c
 
 # Plots
 if scale:
-    with open(f"predictions/results/GSEA1_pre_res_scaled_ranking_{current_date}.csv.gz", 'rb') as f:
+    with open(f"predictions/results/GSEA1_pre_res_scaled_ranking_{current_date}.pkl", 'rb') as f:
         pre_res = pickle.load(f)
 else: 
-    with open(f"predictions/results/GSEA1_pre_res_ranking_{current_date}.csv.gz", 'rb') as f:
+    with open(f"predictions/results/GSEA1_pre_res_ranking_{current_date}.pkl", 'rb') as f:
         pre_res = pickle.load(f)
 
 terms = pre_res.res2d.Term
