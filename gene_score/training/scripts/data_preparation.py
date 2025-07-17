@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-import os
-os.environ['CONFIG_FILE'] = '/fast/work/users/rankn_c/halbritter/nephro_candidate_score/config_NCS.yml' 
-# TODO: change
-
-
-# In[2]:
+#### Data preparation file ####
+# - loads features/labels
+# - creates 80%/20% training/test sets
+# - creates PCA reduced training sets
 
 
 # import basic modules
@@ -124,21 +119,10 @@ median_values_train.columns = ['feature', 'median']
 median_values_train.to_csv(f"gene_score/training/train_test_data/median_values_train_{config_vars['data_prep_date_gs']}.csv.gz", index=False, compression='gzip')
 
 
-# In[ ]:
-
 
 # Note: labels_train contains more genes than feat_train as also some pseudogenes are included in labels_train. 
 # These are filtered out in raw_feat (and so in feat_train). In the training process later, labels_train and
 # feat_train are merged by an inner join joined on 'hgnc_id_int' (inner join), so no problem arises.
-
-
-# In[ ]:
-
-
-
-
-
-# In[14]:
 
 
 ## Create a training set that contains the most important principal components of each feature group, that 
@@ -208,17 +192,6 @@ for group in groups_for_PCA:
     feat_train_reduced_99.to_csv(f"gene_score/training/train_test_data/feat_train_reduced_99_{data_prep_date_gs}.csv", index=False)
   
     
-    
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 

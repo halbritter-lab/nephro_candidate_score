@@ -1,5 +1,3 @@
-# import config
-
 # import basic modules
 import sys
 import numpy as np
