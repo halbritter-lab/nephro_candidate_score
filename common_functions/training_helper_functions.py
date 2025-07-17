@@ -18,8 +18,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import roc_auc_score
 from sklearn.inspection import permutation_importance # for feature importance by permutation importance
-from imblearn.pipeline import Pipeline # for SMOTE technique
-from imblearn.over_sampling import SMOTE # for SMOTE technique
+#from imblearn.pipeline import Pipeline # for SMOTE technique
+#from imblearn.over_sampling import SMOTE # for SMOTE technique
 
 
 
