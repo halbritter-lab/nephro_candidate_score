@@ -1,46 +1,55 @@
 # Snakefile - extracts variant features from VEP annotated .vcf chromosome-wise in kidney-genetics genes (with evidence count 2-5)
-# input: 
-# - clinvar_vars_kid-gen_2345_vep_anno_{date}.vcf.gz"
-# output: 
-# - raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz (only kidney-genetics genes (with evidence count 2-5))
+# Input:
+# - clinvar_vars_kid-gen_2345_vep_anno_{date}.vcf.gz
+# Output:
+# - raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz
 
-# import basic modules
+# Import required modules
 from datetime import datetime
 import numpy as np
 
-# define list of CHROM values and get current date
-CHROM = list(np.arange(22) + 1) + ['X', 'Y', 'MT']  # TODO: Snakemake doesn't launch new rule instances??? update Snakmake?
+# Set config file
+configfile: "config_NCS.yml"
 
+# Define list of chromosomes and current date
+CHROM = list(np.arange(1, 23)) + ['X', 'Y', 'MT']
 CURRENT_DATE = datetime.today().strftime('%Y-%m-%d')
 
-# define rule to execute the bash script for each CHROM value
+# Load the base project path from the config file
+project_dir = config["nephrology"]["ML_projectsdir"] + "nephro_candidate_score/"
+script_path = project_dir + "variant_score/features_labels/scripts/extract_variant_features_per_chrom.sh"
+
+# Define final output files for rule all
 rule all:
     input:
-        expand("features_labels/slurm_out/slurm_evf_chr{chrom}_{date}.out", chrom=CHROM, date=CURRENT_DATE),
-        expand("features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz", chrom=CHROM, date=CURRENT_DATE)
-                
+        expand(
+            project_dir + "variant_score/features_labels/slurm_out/slurm_evf_chr{chrom}_{date}.out",
+            chrom=CHROM,
+            date=CURRENT_DATE
+        ),
+        expand(
+            project_dir + "variant_score/features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz",
+            chrom=CHROM,
+            date=CURRENT_DATE
+        )
 
-# define rule to execute the bash script
+# Define the rule to run bash job for each chromosome
 rule execute_bash_script:
     input: 
-        "features_labels/scripts/extract_variant_features_per_chrom.sh"
+        script_path
     output: 
-        "features_labels/slurm_out/slurm_evf_chr{chrom}_{date}.out".format(chrom="{chrom}", date=CURRENT_DATE),
-        "features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{date}.csv.gz".format(chrom="{chrom}", date=CURRENT_DATE)
-
+        lambda wildcards: project_dir + f"variant_score/features_labels/slurm_out/slurm_evf_chr{wildcards.chrom}_{CURRENT_DATE}.out",
+        lambda wildcards: project_dir + f"variant_score/features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{wildcards.chrom}_{CURRENT_DATE}.csv.gz"
     params:
         chrom="{chrom}",
         current_date=CURRENT_DATE
     shell:
         """
         sbatch --job-name=extract_variant_features_per_chrom_{params.chrom} \
-               --output=features_labels/slurm_out/slurm_evf_chr{params.chrom}_{params.current_date}.out \
+               --output={output[0]} \
                --partition medium \
                --ntasks=8 \
                --nodes=1 \
                --mem=8G \
-               --wrap="features_labels/scripts/extract_variant_features_per_chrom.sh --CHROM {params.chrom}"
+               --wrap='{input} --CHROM {params.chrom}'
         """
-        
-        
-      
