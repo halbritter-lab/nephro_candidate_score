@@ -1,18 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-import os
-os.environ['CONFIG_FILE'] = '/fast/work/users/rankn_c/halbritter/nephro_candidate_score/gene_score/training/config_NCS.yml' # TODO: change
-
-# in terminal:
-# export CONFIG_FILE=/fast/work/users/rankn_c/halbritter/nephro_candidate_score/gene_score/training/config_NCS.yml
-
-
-# In[2]:
-
+#### Preprocess features and labels ####
+# This script loads the raw VEP-annotated ClinVar variants, analyses the features (e.g. check for missing values),
+# preprocess the features and outputs the preprocessed final features_labels file.
+# converted from .ipynb
 
 # import basic modules
 import numpy as np
@@ -24,6 +16,7 @@ import vcf
 import gzip
 import re
 from datetime import datetime
+import os
 
 
 # set options
@@ -38,7 +31,6 @@ CONFIG_FILE = os.getenv('CONFIG_FILE')
 # define relative script path
 project_topic = "nephrology"
 project_name = "nephro_candidate_score"
-script_path = "/variant_score/"
 
 # read configs
 with open(CONFIG_FILE, 'r') as file:
@@ -47,13 +39,13 @@ with open(CONFIG_FILE, 'r') as file:
 config_vars = config_data[project_topic]
 
 # set working directory
-os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}")
 
 
-# In[4]:
+# In[3]:
 
 
-# EXTRACTED FEATURES FROM VEP ANNOTATION
+# load extracted features from VEP annotation
 
 # create empty df
 raw_feat = pd.DataFrame()
@@ -61,11 +53,10 @@ raw_feat = pd.DataFrame()
 # concatenate features for all chromosomes (exclude MT variants for now)
 all_chrom = list(np.arange(22) + 1) + ['X', 'Y']
 
-feat_date = "2024-04-04" # TODO: change
 
 for chrom in all_chrom:
     print(chrom)
-    chrom_feat = pd.read_csv(f"features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{feat_date}.csv.gz", low_memory=False)
+    chrom_feat = pd.read_csv(f"variant_score/features_labels/results/raw_features_clinvar_vars_kid-gen_2345_chr{chrom}_{config_vars['raw_features_clinvar_kid-gen_date_vs']}.csv.gz", low_memory=False)
     
     # calculate maximum length of REF and ALT for each row and remove REF or ALT values longer than 50 characters
     if chrom_feat.shape[0] > 0:
@@ -87,20 +78,7 @@ impact_mapping = {'HIGH': 4, 'MODERATE': 3, 'LOW': 2, 'MODIFIER': 1}
 raw_feat['IMPACT_num'] = raw_feat['IMPACT'].map(impact_mapping)
 
 
-# # calculate maximum length of REF and ALT for each row
-# raw_feat['max_length_REF_ALT'] = raw_feat.apply(lambda row: max(len(row['REF']), len(row['ALT'])), axis=1)
-# raw_feat = raw_feat.query("max_length_REF_ALT <= 50")
-
-raw_feat.head()
-
-
-# In[ ]:
-
-
-
-
-
-# In[5]:
+# In[4]:
 
 
 # # check for which features there > 1 value per variant
@@ -124,13 +102,7 @@ raw_feat.head()
 # unequal_entries
 
 
-# In[ ]:
-
-
-
-
-
-# In[6]:
+# In[5]:
 
 
 # # manually check variants with multiple values per same variant for different features
@@ -139,20 +111,14 @@ raw_feat.head()
 # df.groupby('var_ID').size().reset_index(name='count').query("count > 1")
 
 
-# In[7]:
+# In[6]:
 
 
 # count_gr1 = df.query(f'{column_to_check}.notna()').groupby('var_ID').size().reset_index(name='count').query("count > 1")
 # count_gr1
 
 
-# In[ ]:
-
-
-
-
-
-# In[8]:
+# In[7]:
 
 
 # # get pairs of genes with same variant
@@ -170,7 +136,7 @@ raw_feat.head()
 #         print(list({tuple(sublist) for sublist in gene_pairs}))
 
 
-# In[9]:
+# In[ ]:
 
 
 # double_varIds = df.query(f'{column_to_check}.notna()').groupby('var_ID').size().reset_index(name='count').query("count > 1")['var_ID']
@@ -179,9 +145,7 @@ raw_feat.head()
 # # raw_feat.query("var_ID in @ double_varIds")[['var_ID', 'HGNC_ID', 'SYMBOL', 'hgnc_id_int']]
 
 
-
-
-# In[10]:
+# In[9]:
 
 
 # get unique CLNSIG values
@@ -200,7 +164,7 @@ raw_feat.head()
 
 
 
-# In[11]:
+# In[10]:
 
 
 ## FINDINGS:
@@ -223,7 +187,7 @@ raw_feat.head()
 # MaxEntScan_diff: This represents the difference between the MaxEntScan scores of the alternative and reference sequences. A positive difference indicates that the mutation strengthens the splice site, while a negative difference suggests a weakening of the splice site.
 
 
-# In[12]:
+# In[11]:
 
 
 # filter only for B/LB, P/LP
@@ -233,7 +197,7 @@ selected_CLNSIG = ['Benign/Likely_benign', 'Likely_benign', 'Benign', 'Pathogeni
 raw_feat = raw_feat.query("CLNSIG in @selected_CLNSIG")
 
 
-# In[13]:
+# In[12]:
 
 
 # check missing value proportion
@@ -250,20 +214,6 @@ def get_missing_val_prop(col_to_check):
 
 for col in raw_feat.columns:
     print(f"missing value proportion for {col}: {get_missing_val_prop(col)}")
-#     print(get_missing_val_prop(col))
-#     print("---------")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
@@ -303,19 +253,33 @@ def get_single_feature_df(feature, method, ms_aggregation_symbol=None, ms_prefix
         return(feat_df.groupby('var_ID').min().reset_index())
     
     elif method == 'multiple_split': # splits multiple values per variant in separate columns
-        if ms_aggregation_symbol is None:
-            raise ValueError("Provide 'ms_aggregation_symbol' argument.")
-        # aggregate all values per variant of the given feature
-        feat_df = feat_df.groupby('var_ID')[feature].agg(f"{ms_aggregation_symbol}".join).reset_index()
         
-        # split the feature column into multiple separate columns for each distinct value, respectively
-        dummy_columns = feat_df[feature].str.get_dummies(sep=ms_aggregation_symbol)
-        if ms_prefix is None:
-            ms_prefix = feature
-        dummy_columns = dummy_columns.add_prefix(f"{ms_prefix}_")
+        # if only one not NaN value exists for feature
+        if len(feat_df.query(f"{feature}.notna()")[feature].unique()) == 1:
+            unique_feature_val = feat_df.query(f"{feature}.notna()")[feature].unique()[0]
+            
+            feat_df = feat_df.query(f'{feature}.notna()').drop_duplicates()
 
-        # concatenate the dummy columns with the original DataFrame
-        return(pd.concat([feat_df, dummy_columns], axis=1))
+            feat_mapping = {unique_feature_val: 1}
+            feat_df[unique_feature_val] = feat_df[feature].map(feat_mapping)
+            feat_df = feat_df.drop(columns=[feature])
+            return(feat_df)
+
+        # if multiple not NaN values exist for feature
+        else:
+            if ms_aggregation_symbol is None:
+                raise ValueError("Provide 'ms_aggregation_symbol' argument.")
+            # aggregate all values per variant of the given feature
+            feat_df = feat_df.groupby('var_ID')[feature].agg(f"{ms_aggregation_symbol}".join).reset_index()
+
+            # split the feature column into multiple separate columns for each distinct value, respectively
+            dummy_columns = feat_df[feature].str.get_dummies(sep=ms_aggregation_symbol)
+            if ms_prefix is None:
+                ms_prefix = feature
+            dummy_columns = dummy_columns.add_prefix(f"{ms_prefix}_")
+
+            # concatenate the dummy columns with the original DataFrame
+            return(pd.concat([feat_df, dummy_columns], axis=1))
     
     else:
         raise ValueError("'method' argument must be 'notna', 'max', 'min', or 'multiple_split'.")
@@ -329,6 +293,45 @@ def get_single_feature_df(feature, method, ms_aggregation_symbol=None, ms_prefix
 
 
 # In[15]:
+
+
+# import pandas as pd
+
+# feature = 'NMD'
+
+# # Assuming your DataFrame is named df
+# feat_df = raw_feat[['var_ID', feature]].drop_duplicates()
+
+
+# unique_feature_val = feat_df.query(f"{feature}.notna()")[feature].unique()[0]
+
+# # Create dummy variables for the 'NMD' column
+# # dummy_df = pd.get_dummies(feat_df['NMD'])
+
+# # Select the 'NMD_escaping_variant' column
+# # unique_val_column = dummy_df[unique_feature_val]
+
+# feat_mapping = {unique_feature_val: 1}
+# feat_df[unique_feature_val] = feat_df[feature].map(feat_mapping)
+
+
+
+# # Rename the column to 'NMD_escaping_variant' and assign it back to the DataFrame
+# # feat_df[unique_feature_val] = unique_val_column
+
+# # Fill NaN values with NaN (optional, but may be useful if there are other columns with NaN values)
+# # feat_df[feat_df].fillna(value=pd.NA, inplace=True)
+
+# # Drop the original 'NMD' column if necessary
+# # df.drop(columns=['NMD'], inplace=True)
+
+# # feat_df.query("NMD.notna()")
+
+# # df['my_column'] = df['my_column'].astype(int)
+# feat_df.query("NMD.notna()")
+
+
+# In[17]:
 
 
 features_labels = raw_feat[['var_ID', 'CLNSIG']].drop_duplicates()
@@ -368,7 +371,7 @@ feature_args = {
     'gnomADe_AF': ['notna', None, None],
     'gnomADg_AF': ['notna', None, None],
     'CADD_PHRED': ['notna',  None, None],
-    'NMD': ['notna',  None, None],
+    'NMD': ['multiple_split',  None, None],
     'SpliceAI_pred_DS_AG': ['notna', None, None],
     'SpliceAI_pred_DS_AL': ['notna', None, None],
     'SpliceAI_pred_DS_DG': ['notna', None, None],
@@ -384,29 +387,26 @@ for feat in selected_features:
                       ms_aggregation_symbol = feature_args[feat][1],
                       ms_prefix=feature_args[feat][2]
                      ) 
+    
+    
     features_labels = pd.merge(features_labels, single_feat, how='left', left_on='var_ID', right_on='var_ID')
     
 
 
-# In[16]:
-
-
-features_labels
-
-
-# In[17]:
+# In[20]:
 
 
 # remove variants that have only missing values in features
-features_labels = features_labels.dropna(subset=selected_features, how='all')
+features = list(set(features_labels.columns) - set(['var_ID', 'CLNSIG', 'P_LP']))
+features_labels = features_labels.dropna(subset=features, how='all')
 
 # drop unnecessary columns
 features_labels = features_labels.drop(columns=['CLNSIG', 'Consequence'])
 
 # write csv
 current_date = datetime.today().strftime('%Y-%m-%d')
-current_date = "2024-04-08"
-features_labels.to_csv(f"features_labels/results/features_labels_{current_date}.csv.gz", index=False, compression='gzip')
+# current_date = "2024-04-08"
+features_labels.to_csv(f"variant_score/features_labels/results/features_labels_{current_date}.csv.gz", index=False, compression='gzip')
 
 
 
@@ -414,13 +414,4 @@ features_labels.to_csv(f"features_labels/results/features_labels_{current_date}.
 
 
 
-
-
-# In[ ]:
-
-
-# @Bernt: how can a BLOSUM62 value of the same variant be different for two different transcripts => which one to use?
-# @Bernt: remove very long REF ALT? => 50, done
-# @Bernt: excluded features with high missing value prop => yes, done
-# @Bernt: exclude MT variants? => yes, done
 
