@@ -15,7 +15,6 @@ CONFIG_FILE = os.getenv('CONFIG_FILE')
 # define relative script path
 project_topic = "nephrology"
 project_name = "nephro_candidate_score"
-script_path = "/variant_score/"
 
 # read configs
 with open(CONFIG_FILE, 'r') as file:
@@ -24,7 +23,7 @@ with open(CONFIG_FILE, 'r') as file:
 config_vars = config_data[project_topic]
 
 # set working directory
-os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}")
 
 
 # download HGNC annotated table from kidney-genetics
@@ -50,7 +49,7 @@ hgnc_annotated['hgnc_id_int'] = pd.to_numeric(hgnc_annotated['hgnc_id_int'], dow
 
 # download positive genes from kidney-genetics
 pos_genes_url = f"https://github.com/halbritter-lab/kidney-genetics/raw/main/analyses/A_MergeAnalysesSources/results/A_MergeAnalysesSources.{config_vars['kidney_genetics_version_vs']}.csv.gz"
-pos_genes_dest_file = f"raw/A_MergeAnalysesSources.{config_vars['kidney_genetics_version_vs']}.csv.gz"
+pos_genes_dest_file = f"variant_score/raw/A_MergeAnalysesSources.{config_vars['kidney_genetics_version_vs']}.csv.gz"
 
 # check if the file already exists
 if not os.path.exists(pos_genes_dest_file):
@@ -72,7 +71,7 @@ pos_genes2345_entrez_id_list = pos_genes2345['entrez_id'].tolist()
 
 ## Filter Clinvar VCF file for variants in kidney-genetics genes with evidence count 2-5
 # open VCF, this will read in the header
-reader = vcfpy.Reader.from_path(f"raw/clinvar_{config_vars['clinvar_version']}.vcf.gz")
+reader = vcfpy.Reader.from_path(f"variant_score/raw/clinvar_{config_vars['clinvar_version']}.vcf.gz")
 
 # create a VCF writer
 writer = vcfpy.Writer.from_path('/dev/stdout', reader.header)

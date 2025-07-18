@@ -4,8 +4,6 @@
 
 # execution from nephro_candidate_score/variant_score
 
-# export config file
-export CONFIG_FILE=/fast/work/users/rankn_c/halbritter/nephro_candidate_score/gene_score/training/config_NCS.yml
 
 
 ## download ClinVar VCF file for GRCh38
