@@ -23,7 +23,6 @@ with open(CONFIG_FILE, 'r') as file:
 config_vars = config_data[project_topic]
 
 # set working directory
-# os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
 os.chdir(f"{config_vars['ML_projectsdir']}{project_name}")
 
 # append path where common functions are located
@@ -31,7 +30,6 @@ sys.path.append(f"{config_vars['ML_projectsdir']}{project_name}")
 
 
 # import common functions
-# from helper_functions_ML_vs import *
 from common_functions.training_helper_functions import *
 
 score = 'vs'
@@ -69,8 +67,6 @@ additional_info = 'IMPACT_prop'
 additional_info = 'delete' 
 
 
-
-
 # set names of selected feature groups
 feature_groups_selected = ['Consequence',
 #                            'NMD',
@@ -80,9 +76,6 @@ feature_groups_selected = ['Consequence',
                            'IMPACT',
 #                            'phastCons'
                           ]
-
-
-
 
 
 # set configurations
