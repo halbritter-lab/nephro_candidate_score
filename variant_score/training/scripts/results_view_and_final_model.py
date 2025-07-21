@@ -1,28 +1,27 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
-import os
-os.environ['CONFIG_FILE'] = '/fast/work/users/rankn_c/halbritter/nephro_candidate_score/gene_score/training/config_NCS.yml' # TODO: change
-# TODO: change
-
-
-# In[3]:
+#### Results and final model ####
+# loads the final model, analyses its results/feature importance (SHAP values)
+# converted from .ipynb
 
 
 # import basic modules
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import random
 import pandas as pd
+import sys
 import yaml
 
 # import sklearn functions
 from sklearn.tree import plot_tree
 from sklearn.metrics import roc_auc_score
 from sklearn.tree import DecisionTreeClassifier, export_text
+from sklearn.metrics import roc_curve, auc
+from sklearn.linear_model import LogisticRegression
+
 
 # set options
 pd.set_option('display.max_colwidth', None)
@@ -35,7 +34,6 @@ CONFIG_FILE = os.getenv('CONFIG_FILE')
 # define relative script path
 project_topic = "nephrology"
 project_name = "nephro_candidate_score"
-script_path = "/variant_score/"
 
 # read configs
 with open(CONFIG_FILE, 'r') as file:
@@ -44,146 +42,166 @@ with open(CONFIG_FILE, 'r') as file:
 config_vars = config_data[project_topic]
 
 # set working directory
-os.chdir(f"{config_vars['ML_projectsdir']}{project_name}{script_path}")
+os.chdir(f"{config_vars['ML_projectsdir']}{project_name}")
 
-# import preprocessing functions
-from helper_functions_ML_vs import *
+# append path where common functions are located
+sys.path.append(f"{config_vars['ML_projectsdir']}{project_name}")
+
+# import common functions
+from common_functions.training_helper_functions import *
+
+score = 'vs'
+score_string, id_string, label_string = get_score_specific_args(score)
 
 
-# In[28]:
+# In[3]:
 
 
-config_dir = "training/config_files"
+config_dir = "variant_score/training/config_files"
 
 # read latest config table
-print(get_latest_ML_config_training_file(config_dir))
-pd.read_csv(get_latest_ML_config_training_file(config_dir))
+print(get_latest_ML_config_training_file(config_dir, score))
+pd.read_csv(get_latest_ML_config_training_file(config_dir, score))
 
 
-# In[29]:
+# In[4]:
 
 
-ID = 1
-config_dic, results_dic = get_config_results_dics(ID=ID)    
+ID = 3 # finally chosen LogReg model
+config_dic, results_dic = get_config_results_dics(ID=ID, score=score)    
 
 print(results_dic['best_params'])
 results_dic['cv_results']['mean_test_score'].max()
 
 
-# In[36]:
+# In[6]:
+
+
+feat_train = pd.read_csv(f"variant_score/training/train_test_data/feat_train_IMPACT_prop_{config_vars['data_prep_date_vs']}.csv.gz")
+labels_train = pd.read_csv(f"variant_score/training/train_test_data/labels_train_IMPACT_prop_{config_vars['data_prep_date_vs']}.csv.gz")
+
+labels_feat_train = pd.merge(labels_train, feat_train, on='var_ID', how='inner') 
+labels_feat_train[['var_ID', 'P_LP'] + config_dic['features']].head(10)
+
+
+# In[9]:
 
 
 # plot 2D heatmap with fixed other hyperparamters (to best values)    
-ID = 1
-# config_dic, results_dic = get_config_results_dics(ID=ID)  
-
-
 plot_2D_heatmap_fixed_params(ID=ID, 
                             cv_results=results_dic['cv_results'], 
                             best_params = results_dic['best_params'],
-                            param1='max_depth', 
-                            param2='min_samples_split', 
+                            param1='penalty', 
+                            param2='C', 
                             figsize=(15,10), 
                             save=False, 
                             show=True)
 
 
-# In[46]:
+# In[7]:
 
 
-results_dic['cv_results']
-
-
-# In[33]:
-
-
-# Plot decision tree
-X = config_dic['X_train']
-y = config_dic['y_train']
-
-# Train a decision tree classifier
 clf = results_dic['best_classifier']
-clf.fit(X, y)
-
-# Plot the decision tree
-plt.figure(figsize=(10,8))
-plot_tree(clf, max_depth=5, filled=True, feature_names=config_dic['features'], class_names=['(Likely) Benign','(Likely) Patho'],
-         fontsize=7)
-plt.show()
-
-
-# In[ ]:
-
-
-
-
-
-# In[32]:
-
-
-# feature importance of best classifier
-pd.DataFrame({'feature': config_dic['features'], 'feat_imp' : clf.feature_importances_}).sort_values(by='feat_imp', ascending=False)
-
-
-# In[44]:
-
-
-##  train DT on full training set
-# define maximum depth
-# TODO: less deep or deeper?
-max_depth = 5 # instead of 9, as less deep DT perform already very well, use less deep DT
-
-# define param dic
-params = {'criterion': 'entropy',
-          'max_depth': max_depth, 
-          'min_samples_leaf': 10,
-          'min_samples_split': 150}
-
-# create classifier with best parameters    
-clf = DecisionTreeClassifier(random_state=1)    
-
-# set parameters
-clf.set_params(**params)
-
-# fit classifier
 clf.fit(config_dic['X_train'], config_dic['y_train'])
 
-# predict training set (=> 2 dim array, probabilities sum up to 1)
-probabilities = clf.predict_proba(config_dic['X_train'])
 
-# get training AUC
-training_auc = roc_auc_score(config_dic['y_train'], probabilities[:, 1])  # Use the probabilities of the positive class
-print("Training AUC:", training_auc)
+# In[8]:
 
 
+# Extract coefficients and intercept for LogReg model
+coefficients = clf.coef_
+intercept = clf.intercept_
 
-# In[55]:
+print(config_dic['features'])
+print(coefficients)
+print(intercept)
 
-
-# Plot the decision tree
-plt.figure(figsize=(14,10))
-plot_tree(clf, filled=True, feature_names=config_dic['features'], class_names=['(Likely) Benign','(Likely) Patho'],
-         fontsize=7)
-plt.show()
-
-
-# In[51]:
-
-
-# export the decision tree to text format
-tree_rules = export_text(clf, feature_names=config_dic['features'])
-print(tree_rules)
-
-
-# In[53]:
-
-
-# feature importance
-pd.DataFrame({'feature': config_dic['features'], 'feat_imp' : clf.feature_importances_}).sort_values(by='feat_imp', ascending=False)
+pd.DataFrame({'feature':config_dic['features'], 'coeff': coefficients[0] }).sort_values("coeff")
 
 
 # In[ ]:
 
 
 
+
+
+# In[9]:
+
+
+feat = pd.DataFrame(config_dic['X_train'])
+feat.columns = config_dic['features']
+feat_labels = pd.concat([feat, pd.DataFrame({'P_LP': config_dic['y_train']})], axis=1)
+feat_labels['y_pred'] = clf.predict_proba(config_dic['X_train'])[:, -1]
+feat_labels['log_proba'] = clf.predict_log_proba(config_dic['X_train'])[:, -1]
+feat_labels
+
+
+# In[10]:
+
+
+sampled_df = feat_labels.sample(n=1000)
+color_map = {1: 'red', 0: 'blue'}
+
+plt.scatter(sampled_df['log_proba'].values, sampled_df['y_pred'].values,
+           c=sampled_df['P_LP'].map(color_map),
+           cmap=plt.cm.bwr,
+           s=1)
+plt.xlabel('log_proba')
+plt.ylabel('pred')
+plt.xlim([-10, sampled_df['log_proba'].values.max()])
+
+
+# In[23]:
+
+
+# SHAP values
+import shap
+import warnings
+from sklearn.preprocessing import StandardScaler
+
+
+warnings.filterwarnings("ignore", message="is_sparse is deprecated and will be removed in a future version.")
+
+ID = 3
+config_dic, results_dic = get_config_results_dics(ID=ID, score='vs') 
+features = config_dic['features']
+
+random.seed(1)
+sample_indices = random.sample(range(0, config_dic['X_train'].shape[0]), 900) # CAVE: low sample size => result very instable!!!
+
+# X = config_dic['X_train'][sample_indices, :]
+X = config_dic['X_train'] #[sample_indices, :]
+
+
+# initialize StandardScaler
+# scaler = StandardScaler()
+
+# fit the scaler to your training data and transform it
+# X_scaled = scaler.fit_transform(X)
+
+# X_lab = pd.DataFrame(X_scaled, columns=features)
+X_lab = pd.DataFrame(X, columns=features)
+
+# y = config_dic['y_train'][sample_indices]
+y = config_dic['y_train']
+clf = results_dic['best_classifier']
+clf.random_state = 1 
+
+model = clf.fit(X_lab, y)
+
+explainer = shap.Explainer(model.predict, X_lab)  
+# explainer = shap.Explainer(model, X_lab)  # 38
+
+# explainer = shap.TreeExplainer(model, X_lab ) 
+shap_values = explainer(X_lab)
+
+# # dump SHAP values in pickle - DONT DUMP IN PICKLE - USE JSON
+# with open(f"training/feature_importance/SHAP_values/values/SHAP_values_ID{ID}_{datetime.today().strftime('%Y-%m-%d')}.pkl", 'wb') as file:
+#     pickle.dump(shap_values, file)
+
+
+# In[17]:
+
+
+shap.summary_plot(shap_values, max_display=20, show=True, plot_size=[10, 8]) 
 
