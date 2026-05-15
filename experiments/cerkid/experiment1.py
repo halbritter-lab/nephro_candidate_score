@@ -24,8 +24,7 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 
 
 NGS_predictions_path = (
-    "/data/cephfs-1/home/users/rankn_c/work/"
-    "halbritter/nephro_candidate_score/gene_score/"
+    "/nephro_candidate_score/gene_score/"
     "predictions/results/"
     "NGS_predictions_ID97_all_2024-03-22.csv.gz"
 )
@@ -38,14 +37,12 @@ agde_annotation_path = (
 )
 
 kid_gen_path = (
-    "/data/cephfs-1/home/users/rankn_c/work/"
-    "halbritter/nephro_candidate_score/gene_score/labels/raw/"
+    "/nephro_candidate_score/gene_score/labels/raw/"
     "A_MergeAnalysesSources.2023-10-04.csv.gz"
 )
 
 morbid_genes_path = (
-    "/data/cephfs-1/home/users/rankn_c/work/"
-    "halbritter/ncs_experiments/"
+    "/nephro_candidate_score/experiments/raw/"
     "MorbidGenes_2025_07.xlsx"
 )
 
