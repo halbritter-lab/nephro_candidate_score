@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
 from scipy.stats import fisher_exact
+from matplotlib.patches import Patch
 
 # import third-party modules
 import gseapy as gp
@@ -147,7 +148,6 @@ bars = plt.bar(df['GENE'], df['Count'], color=df['color'])
 plt.xticks(rotation=90)
 
 # Custom legend
-from matplotlib.patches import Patch
 legend_elements = [
     Patch(facecolor='#808080', label='Evidence count 2–5'),
     Patch(facecolor='#377EB8', label='Evidence count 0–1'),
